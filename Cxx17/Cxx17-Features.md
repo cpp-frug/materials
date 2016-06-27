@@ -4,9 +4,10 @@ Title   |C++17 sera une version mineure
 Authors |Oliver H, Lucas
 License |CC by-sa
 
+C++17 sera une version mineure
+------------------------------
 
 La nouvelle version du standard C++, nommée **C++17**, est prévue pour l'année prochaine (2017).
-
 
 Les sceptiques qui ne sont pas certains que C++17 sortira en 2017, utilisent plutôt la dénomination **C++1z**. Ainsi **z** peut signifier `7`, `8` ou `9` (ou encore `A` en hexadécimal) car si le nouveau standard C++ est finalement reporté à l'année 2018, son nom sera **C++18**.
 
@@ -26,6 +27,7 @@ Cette dépêche présente plusieurs des fonctionnalités du C++17 (liste non exh
 * [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
 * [Journal de rewind "C++17 est sur les rails" a propos de la première réunion](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
 * [Dépêche LinuxFr "Codeurs, Traducteurs, CppReference a besoin de vous" (2012)](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
+* [Préparation d'une présentation basée sur cette dépêche](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
 
 ----
 
@@ -73,15 +75,15 @@ Fonctionnalités au niveau du langage C++
   Exemple : **`namespace A::B {`** correspond à **`namespace A { namespace B {`** ;
 
 * Liaison entre retour de fonction structuré et variables locales [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html), exemple :
-  
-  ```cpp
-  struct Structure { int a; double b; };
-  Structure fonction();
-  const auto [ x, y ] = fonction();
-  ```
+    
+    ```cpp
+    struct Structure { int a; double b; };
+    Structure fonction();
+    const auto [ x, y ] = fonction();
+    ```
 
 * `constexpr if`, exemple :
-
+    
     ```cpp
     // ----- Trois définitions avant C++17 -----
     
@@ -116,7 +118,7 @@ Fonctionnalités au niveau du langage C++
         constexpr if (sizeof...(r))
             fonction_variadique_template(r...);
     }
-    ```
+    ```   
 
 Fonctionnalités au niveau de la bibliothèque STL
 ------------------------------------------------
@@ -170,6 +172,13 @@ D'ici la standardisation finale C++17, le comité va s’efforcer à corriger le
 
 [CppReference a aussi besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous) comme nous le disait nazcafan en 2012. D'autant plus que les pages Anglaise C++17 sont incomplètes ou inexistantes, et c'est pire du côté des pages Françaises !
 
+
+Vous pouvez également détailler et/ou étendre ces fonctionnalités C++17 sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Soit en clonant ce dépôt et en poussant vos contributions *(pull request)*. Soit en demandant les droits en écriture via la page des [*"issues"*](https://github.com/cpp-frug/materials/issues) (expliquer ses motivations). L'idée de ce dépôt Git est de permettre le travail collaboratif et le partage de la documentation pour par exemple :
+
+* Ajouter un article Wikipédia C++17 en Français ;
+* Permettre d'animer des conférences sur ce sujet *(Meetup)*.
+
+![Logo de la communauté C++ francophone](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
 
 Version mineure
 ---------------
