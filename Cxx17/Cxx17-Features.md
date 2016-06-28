@@ -6,17 +6,13 @@ License |CC by-sa
 C++17 sera une version mineure
 ------------------------------
 
-La nouvelle version du standard C++, nommée **C++17**, est prévue pour l'année prochaine (2017).
-
-
-Les sceptiques qui ne sont pas certains que C++17 sortira en 2017, utilisent plutôt la dénomination **C++1z**. Ainsi **z** peut signifier `7`, `8` ou `9` (ou encore `A` en hexadécimal) car si le nouveau standard C++ est finalement reporté à l'année 2018, son nom sera **C++18**.
-
-Mais bon, ceux qui suivent le nouveau process de standardisation ISO C++ sont confiants que **C++1z** verra bien le jour en 2017 (et non pas en 2018).
-
-Cette dépêche présente plusieurs des fonctionnalités du C++17 (liste non exhaustive). Cela est possible car le périmètre fonctionnel du C++17 vient tout juste d'être figé en deux rencontres du comité de standardisation ISO :
+Le périmètre fonctionnel du standard C++17 vient tout juste d'être figé en deux rencontres du comité de standardisation ISO :
 
 1. [Début mars 2016](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), le comité de standardisation ISO C++ a validé quelques fonctionnalités et en a invalidé d’autres, ce qui créa une certaine déception ;
 2. [Fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz), à Oulu (Finlande), le comité vient de clore l'ajout de nouvelles fonctionnalités.
+
+
+Cette dépêche *"bookmark"* présente plusieurs des nouvelles fonctionnalités apportées par C++17 (liste non exhaustive).
 
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
@@ -33,6 +29,22 @@ Cette dépêche présente plusieurs des fonctionnalités du C++17 (liste non exh
 * [Préparation d'une présentation basée sur cette dépêche](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
 
 ----
+
+C++17 ou C++1z ?
+----------------
+
+
+La prochaine version du standard C++, nommée **C++17**, est prévue pour l'année prochaine (2017).
+
+
+Les sceptiques qui ne sont pas certains que C++17 sortira en 2017, utilisent plutôt la dénomination **C++1z**. Ainsi **z** peut signifier `7`, `8` ou `9` (ou encore `A` en hexadécimal). Car si le nouveau standard C++ est finalement reporté à l'année 2018, son nom sera **C++18** (c'est le cas de l'[option de compilation `-std=c++1z`](https://gcc.gnu.org/projects/cxx-status.html) ou du [tag c++1z sur stackoverflow](http://stackoverflow.com/tags/c%2b%2b1z/info)).
+
+
+Cette méfiance vient de **C++0x** qui n'avait pas de date butoir pour être publiée et a mis une dizaine d'année à se stabiliser pour finalement sortir en 2011. La publication était prévue avant 2010. Pour trouver une logique entre **0x** et **11**, on peut dire que **x** vaut **A** en hexadécimal (**0A** vaut **11** en base 10).
+
+
+Mais bon, ceux qui suivent le nouveau process de standardisation ISO C++ sont confiants que **C++1z** verra bien le jour en 2017 (et non pas en 2018, ni après).
+
 
 Fonctionnalités au niveau du langage C++
 ----------------------------------------
@@ -190,10 +202,10 @@ Donc, aucune _grosse_ fonctionnalité majeure !
 
 Les fonctionnalités suivantes n’ont pas été considérées comme suffisamment matures pour être inclues dans cette version du standard :
 
-* [Concepts](http://fr.cppreference.com/w/cpp/concept) (en [Anglais](http://en.cppreference.com/w/cpp/language/constraints));
-* Coroutines ;
-* Modules ;
-* Uniform call syntax.
+* [Concepts](http://fr.cppreference.com/w/cpp/concept) (en [Anglais](http://en.cppreference.com/w/cpp/language/constraints)) ;
+* Modules, par exemple **`import std.string;`** à la place de **`#include <string>`** [*(A Module System for C++)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) ;
+* Syntaxe d'appel uniforme [*(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ;
+* [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf).
 
 Le comité attend de voir des implémentations satisfaisantes dans les compilateurs avant de les inclure...
 
@@ -205,4 +217,3 @@ Cette nouvelle version C++17 apporte bon nombre de nouveautés intéressantes (e
 Face à la déception de cette _petite_ version mineure, le comité réfléchit à améliorer le processus de standardisation en livrant une nouvelle version tous les deux ans (au lieu de trois ans), mais aussi en facilitant la contribution de la communauté C++.
 
 Donc, après le C++17, nous devrions avoir un C++19 avec, espérons-le, au moins une _grosse_ fonctionnalité majeure. À suivre…
-
