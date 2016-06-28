@@ -1,7 +1,6 @@
 
-Title   |C++17 sera une version mineure
+Authors |Oliver H, Lucas et palm123
 --------|------------------------------
-Authors |Oliver H, Lucas
 License |CC by-sa
 
 C++17 sera une version mineure
@@ -9,14 +8,18 @@ C++17 sera une version mineure
 
 La nouvelle version du standard C++, nommée **C++17**, est prévue pour l'année prochaine (2017).
 
+
 Les sceptiques qui ne sont pas certains que C++17 sortira en 2017, utilisent plutôt la dénomination **C++1z**. Ainsi **z** peut signifier `7`, `8` ou `9` (ou encore `A` en hexadécimal) car si le nouveau standard C++ est finalement reporté à l'année 2018, son nom sera **C++18**.
 
-Mais bon, ceux qui suivent le nouveau process de standardisation ISO C++ sont certains que 2017 verra le jour de **C++17** (et non pas en 2018).
+Mais bon, ceux qui suivent le nouveau process de standardisation ISO C++ sont confiants que **C++1z** verra bien le jour en 2017 (et non pas en 2018).
 
 Cette dépêche présente plusieurs des fonctionnalités du C++17 (liste non exhaustive). Cela est possible car le périmètre fonctionnel du C++17 vient tout juste d'être figé en deux rencontres du comité de standardisation ISO :
 
 1. [Début mars 2016](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), le comité de standardisation ISO C++ a validé quelques fonctionnalités et en a invalidé d’autres, ce qui créa une certaine déception ;
 2. [Fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz), à Oulu (Finlande), le comité vient de clore l'ajout de nouvelles fonctionnalités.
+
+
+![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
 
 ----
 
@@ -167,21 +170,21 @@ Comment participer ?
 --------------------
 
 
-D'ici la standardisation finale C++17, le comité va s’efforcer à corriger les incohérences et les zones floues. Toute la communauté C++ est donc invitée à participer via [les dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus), notamment sur [le dépôt _"draft" (ébauche_)](https://github.com/cplusplus/draft).
-
+D'ici la standardisation finale C++17, le comité va s’efforcer de corriger les incohérences et les zones floues. Toute la communauté C++ est donc invitée à participer via [les dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus), notamment sur [le dépôt _"draft" (ébauche_)](https://github.com/cplusplus/draft).
 
 [CppReference a aussi besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous) comme nous le disait nazcafan en 2012. D'autant plus que les pages Anglaise C++17 sont incomplètes ou inexistantes, et c'est pire du côté des pages Françaises !
 
 
-Vous pouvez également détailler et/ou étendre ces fonctionnalités C++17 sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Soit en clonant ce dépôt et en poussant vos contributions *(pull request)*. Soit en demandant les droits en écriture via la page des [*"issues"*](https://github.com/cpp-frug/materials/issues) (expliquer ses motivations). L'idée de ce dépôt Git est de permettre le travail collaboratif et le partage de la documentation pour par exemple :
+Cette dépêche LinuxFr restera figée après publication et vous souhaitez peut-être l'enrichir en donnant des exemples pour chacune des nouvelles fonctionnalités. C'est possible sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (lire le [`README.md`](https://github.com/cpp-frug/materials/blob/master/README.md) pour contribuer). L'idée de ce dépôt Git est de permettre le travail collaboratif et le partage de la documentation pour par exemple :
 
 * Ajouter un article Wikipédia C++17 en Français ;
-* Permettre d'animer des conférences sur ce sujet *(Meetup)*.
+* Organiser des conférences sur ce sujet *(Meetup)* ;
+* Publier un billet *(post)* sur tout autre site *(blog)* plus détaillé que l'original publié ici sur LinuxFr.
 
 ![Logo de la communauté C++ francophone](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
 
-Version mineure
----------------
+C++17 est finalement une version mineure
+----------------------------------------
 
 Donc, aucune _grosse_ fonctionnalité majeure !
 
@@ -194,12 +197,12 @@ Les fonctionnalités suivantes n’ont pas été considérées comme suffisammen
 
 Le comité attend de voir des implémentations satisfaisantes dans les compilateurs avant de les inclure...
 
-Déception et future version
----------------------------
-
+Déception et nouveau process de standardisation pour C++19
+----------------------------------------------------------
 
 Cette nouvelle version C++17 apporte bon nombre de nouveautés intéressantes (et d’autres dont on ne voit pas encore l’intérêt). Cependant de nombreux développeurs C++ s’attendaient à une version majeure, un comme peu comme le C++11 avait été.
 
-Face à la déception de cette _petite_ version mineur, le comité réfléchit à améliorer le processus de standardisation en livrant une nouvelle version tous les deux ans (au lieu de trois ans), mais aussi en facilitant la contribution de la communauté C++.
+Face à la déception de cette _petite_ version mineure, le comité réfléchit à améliorer le processus de standardisation en livrant une nouvelle version tous les deux ans (au lieu de trois ans), mais aussi en facilitant la contribution de la communauté C++.
 
 Donc, après le C++17, nous devrions avoir un C++19 avec, espérons-le, au moins une _grosse_ fonctionnalité majeure. À suivre…
+
