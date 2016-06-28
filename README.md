@@ -11,4 +11,11 @@ L'idée est de :
     * des dépêches ;
     * de la formation ;
     * ajouter/améliorer des articles Wikipédia ;
-    * ajouter/améliorer toutautre type de documentation.
+    * ajouter/améliorer tout autre type de documentation.
+
+Trois façons pour contribuer :
+
+1. Cloner ce dépôt et pousser vos contributions *(pull request)* ;
+2. Demandant les droits en écriture via la page des [*"issues"*](issues) (expliquer ses motivations) ;
+3. En remontant des erreurs/incohérences/ambiguités/... toujours sur la page des [*"issues"*](issues) (expliquer ses motivations).
+ 
