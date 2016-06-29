@@ -12,8 +12,7 @@ Le périmètre fonctionnel du standard C++17 vient tout juste d'être figé en d
 2. [Fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz), à Oulu (Finlande), le comité vient de clore l'ajout de nouvelles fonctionnalités.
 
 
-Cette dépêche *"bookmark"* présente plusieurs des nouvelles fonctionnalités apportées par C++17 (liste non exhaustive).
-
+Cette dépêche *"bookmark"* liste plusieurs des nouvelles fonctionnalités apportées par C++17. Par contre, cette liste n'est pas complète et pas toujours détaillée. Comme cette dépêche LinuxFr restera figée après publication, nous vous proposons de continuer à l'enrichir sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (lire le [`README.md`](https://github.com/cpp-frug/materials/blob/master/README.md) pour contribuer). L'idée est de permettre le partage d'un contenu Markdown CC-BY-SA en Français pour la création de conférences, de billet de blog, d'un article Wikipédia...
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
 
@@ -30,27 +29,102 @@ Cette dépêche *"bookmark"* présente plusieurs des nouvelles fonctionnalités 
 
 ----
 
-C++17 ou C++1z ?
-----------------
+Cycle et nommage des versions
+-----------------------------
 
 
-La prochaine version du standard C++, nommée **C++17**, est prévue pour l'année prochaine (2017).
+Après la version majeure **C++98** (et son correctif **C++03**), un nouveau standard C++ devait être publié dans les années suivantes. Comme sa date de publication n'était pas fixée, cette version a été nommée temporairement **C++0x**. Mais avec l'ajout continuel de nouvelles fonctionnalités, le comité de standardisation n'arrivait pas à stabiliser le standard. Et finalement **C++0x** a été publié en 2011 !
 
 
-Les sceptiques qui ne sont pas certains que C++17 sortira en 2017, utilisent plutôt la dénomination **C++1z**. Ainsi **z** peut signifier `7`, `8` ou `9` (ou encore `A` en hexadécimal). Car si le nouveau standard C++ est finalement reporté à l'année 2018, son nom sera **C++18** (c'est le cas de l'[option de compilation `-std=c++1z`](https://gcc.gnu.org/projects/cxx-status.html) ou du [tag c++1z sur stackoverflow](http://stackoverflow.com/tags/c%2b%2b1z/info)).
+Afin d'éviter tout nouveau glissement, le comité a alors décidé de publier un nouveau standard C++ tous les 3 ans, en figeant les fonctionnalités l'année N-1. Avec un cycle d'une version majeure (**C++11**) suivie d'une version mineure (**C++14**).
 
 
-Cette méfiance vient de **C++0x** qui n'avait pas de date butoir pour être publiée et a mis une dizaine d'année à se stabiliser pour finalement sortir en 2011. La publication était prévue avant 2010. Pour trouver une logique entre **0x** et **11**, on peut dire que **x** vaut **A** en hexadécimal (**0A** vaut **11** en base 10).
+Bien que ce process de standardisation ISO C++ permet de publier les nouvelles versions à la date prévue, les appellations **C++1y** (pour **C++14**) et **C++1z** (pour **C++17**) perdurent. Par exemple, l'[option de compilation `-std=c++1z`](https://gcc.gnu.org/projects/cxx-status.html) ou le [tag c++1z sur stackoverflow](http://stackoverflow.com/tags/c%2b%2b1z/info).
 
 
-Mais bon, ceux qui suivent le nouveau process de standardisation ISO C++ sont confiants que **C++1z** verra bien le jour en 2017 (et non pas en 2018, ni après).
-
+Les membres du comité de standardisation utilisent le terme **C++17** (et non pas C++1z). Soyons confiants, **C++1z** verra bien le jour en 2017 (et non pas en 2018, ni après).
 
 Fonctionnalités au niveau du langage C++
 ----------------------------------------
 
-* [Attributs](http://en.cppreference.com/w/cpp/language/attributes) `[[fallthrough]]`, `[[nodiscard]]` et `[[maybe_unused]]` ;
-
+* Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes) (ce qui double le nombre d'attributs standards)
+    * `[[fallthrough]]` indique au compilateur (ou à l'outil d'analyse de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
+      
+      ```cpp
+      switch (valeur)
+      {
+          case 1:
+              std::cout <<"valeur 1"  "\n";
+              break;
+          case 2:
+              std::cout <<"valeur 2"  "\n";
+              [[fallthrough]]; // pas de break
+          case 3:              // on continue avec le case suivant
+              std::cout <<"valeur 2 ou 3"  "\n";
+              break;
+          case 4:
+              std::cout <<"valeur 4"  "\n";
+              // ici le break manque (c'est un bug)
+              // => Le compilateur peut afficher un warning
+          default:
+              std::cout <<"valeur différente de 1, 2, 3, 4" "\n";
+              break;
+      }
+      ```
+    * `[[nodiscard]]` indique que la valeur de retour d'une fonction ne doit pas être ignorée.
+      
+      ```cpp
+      // Ancienne version de la fonction foo()
+      // void foo(int a) { std::cout << (42/a); }
+      
+      // Nouvelle version de la fonction foo()
+      [[nodiscard]] int foo(int a)
+      {
+          if (a == 0)      // cette erreur doit être
+              return -1;   // récupérée par l'appelant
+          
+          std::cout << (42/a);
+          return 0;        // pas de problème
+      }
+      
+      // la fonction main() utilise l'ancienne version de foo()
+      int main (int argc, char *argv[])
+      {
+           foo (argc-1);  // Valeur de retour ignorée
+      }                   // => le compilateur peut avertir
+      ```
+    * `[[maybe_unused]]` [(qui devait s'appeler `[[unused]]`)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) indique quand une variable peut ne pas être utilisée et permet donc de supprimer des avertissements _(warning)_ inutiles. Cet attribut peut s'appliquer aux fonctions, aux paramètres de fonctions et aux variables.
+      
+      ```cpp
+      [[maybe_unused]] void foo (int a)
+      { std::cout << (42/a); }
+      
+      int main (int argc, [[maybe_unused]] char *argv[])
+      {
+           [[maybe_unused]] bool impaire = argc % 2;
+           assert(impaire); // assert() est généralement désactivé 
+      }                     // en mode Release (-DNDEBUG)
+      
+      // Avant, des macros permettaient d'éviter les warnings
+      #ifdef DOXYGEN_PARSING
+      #  define FOR_DOXYGEN(x) x
+      #else
+      #  define FOR_DOXYGEN(x)
+      #endif
+      
+      #ifdef NDEBUG
+      #  define DEBUG_ONLY(x)
+      #else
+      #  define DEBUG_ONLY(x) x
+      #endif
+      
+      int main (int argc, char** FOR_DOXYGEN(argv))
+      {
+           DEBUG_ONLY(bool impaire = argc % 2);
+           assert(impaire);
+      }
+      ```
+      [Mozilla propose aussi `DebugOnly<T>`](https://developer.mozilla.org/docs/Mozilla/Debugging/DebugOnly%3CT%3E) (plus élégant qu'une macro).
 
 * [Lambdas](http://en.cppreference.com/w/cpp/language/lambda)
     * `constexpr` par défaut si répond aux critères `constexpr`
@@ -94,10 +168,10 @@ Fonctionnalités au niveau du langage C++
     ```cpp
     struct Structure { int a; double b; };
     Structure fonction();
-    const auto [ x, y ] = fonction();
+    auto [ x, y ] = fonction();
     ```
 
-* `constexpr if`, exemple :
+* `constexpr if`
     
     ```cpp
     // ----- Trois définitions avant C++17 -----
@@ -111,7 +185,7 @@ Fonctionnalités au niveau du langage C++
     void fonction_variadique_template (const T& t) 
     {
         // Gère un seul argument T
-        // [...]
+        std::cout << t << std::endl;
     }
     
     template <class T, class... Reste> 
@@ -127,7 +201,7 @@ Fonctionnalités au niveau du langage C++
     void fonction_variadique_template (const T& t, const Reste&... r) 
     {
         // Gère un seul argument T
-        // [...]
+        std::cout << t << std::endl;
     
         // Gère le reste
         constexpr if (sizeof...(r))
@@ -187,11 +261,11 @@ D'ici la standardisation finale C++17, le comité va s’efforcer de corriger le
 [CppReference a aussi besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous) comme nous le disait nazcafan en 2012. D'autant plus que les pages Anglaise C++17 sont incomplètes ou inexistantes, et c'est pire du côté des pages Françaises !
 
 
-Cette dépêche LinuxFr restera figée après publication et vous souhaitez peut-être l'enrichir en donnant des exemples pour chacune des nouvelles fonctionnalités. C'est possible sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (lire le [`README.md`](https://github.com/cpp-frug/materials/blob/master/README.md) pour contribuer). L'idée de ce dépôt Git est de permettre le travail collaboratif et le partage de la documentation pour par exemple :
+Cette dépêche LinuxFr restera figée après publication et vous pouvez quand même continuer à l'enrichir sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (lire le [`README.md`](https://github.com/cpp-frug/materials/blob/master/README.md) pour contribuer). Ce contenu CC-BY-SA permet par exemple :
 
-* Ajouter un article Wikipédia C++17 en Français ;
-* Organiser des conférences sur ce sujet *(Meetup)* ;
-* Publier un billet *(post)* sur tout autre site *(blog)* plus détaillé que l'original publié ici sur LinuxFr.
+* D'ajouter un article Wikipédia C++17 en Français ;
+* D'organiser des conférences sur ce sujet *(Meetup)* ;
+* De Publier un billet *(post)* sur tout autre site *(blog)*.
 
 ![Logo de la communauté C++ francophone](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
 
