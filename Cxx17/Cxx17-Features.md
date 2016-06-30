@@ -1,20 +1,21 @@
 
-Authors |Oliver H, Lucas et palm123
---------|------------------------------
-License |CC by-sa
+Pour contribuer à ce document, merci de lire le [`README.md`](https://github.com/cpp-frug/materials/blob/master/README.md) |
+-----------------------------------------------------------------------------------------------------|
+
 
 C++17 sera une version mineure
 ------------------------------
 
-Le périmètre fonctionnel du standard C++17 vient tout juste d'être figé en deux rencontres du comité de standardisation ISO :
+Authors |Oliver H, Lucas et palm123
+--------|------------------------------
+License |CC by-sa
 
-1. [Début mars 2016](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), le comité de standardisation ISO C++ a validé quelques fonctionnalités et en a invalidé d’autres, ce qui créa une certaine déception ;
-2. [Fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz), à Oulu (Finlande), le comité vient de clore l'ajout de nouvelles fonctionnalités.
 
-
-Cette dépêche *"bookmark"* liste plusieurs des nouvelles fonctionnalités apportées par C++17. Par contre, cette liste n'est pas complète et pas toujours détaillée. Comme cette dépêche LinuxFr restera figée après publication, nous vous proposons de continuer à l'enrichir sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (lire le [`README.md`](https://github.com/cpp-frug/materials/blob/master/README.md) pour contribuer). L'idée est de permettre le partage d'un contenu Markdown CC-BY-SA en Français pour la création de conférences, de billet de blog, d'un article Wikipédia...
+Les fonctionnalités du **C++17** viennent tout juste d'être sélectionnées. Faisons donc le tour des nouveautés :-)
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
+
+Pour des questions de *"timing"*, la rédaction de cette dépêche n'est pas complète. De plus, cette dépêche LinuxFr restera figée après publication. Nous vous proposons donc de continuer à l'enrichir sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Cela nous permettra de partager nos recherches individuelles et de permettre la réutilisation d'un contenu libre (CC-BY-SA) pour des *"Meetups"*, la création d'un article Wikipédia en Français...
 
 ----
 
@@ -25,7 +26,7 @@ Cette dépêche *"bookmark"* liste plusieurs des nouvelles fonctionnalités appo
 * [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
 * [Journal de rewind "C++17 est sur les rails" a propos de la première réunion](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
 * [Dépêche LinuxFr "Codeurs, Traducteurs, CppReference a besoin de vous" (2012)](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
-* [Préparation d'une présentation basée sur cette dépêche](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
+* [Contenu Markdown de cette dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
 
 ----
 
@@ -43,6 +44,13 @@ Bien que ce process de standardisation ISO C++ permet de publier les nouvelles v
 
 
 Les membres du comité de standardisation utilisent le terme **C++17** (et non pas C++1z). Soyons confiants, **C++1z** verra bien le jour en 2017 (et non pas en 2018, ni après).
+
+
+Donc en 2016 (années N-1), le comité de standardisation ISO C++ (une centaine de personnes) s'est rencontré deux fois afin de figer le périmètre fonctionnel du **C++17** :
+
+
+1. [Une semaine début mars](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), pour valider des fonctionnalités _mineures_ et invalider des fonctionnalités _majeures_ ;
+2. [Une semaine fin juin](https://www.reddit.com/r/cpp/comments/4pmlpz), à Oulu (Finlande), pour définitivement clore l'ajout de nouvelles fonctionnalités.
 
 Fonctionnalités au niveau du langage C++
 ----------------------------------------
@@ -107,9 +115,9 @@ Fonctionnalités au niveau du langage C++
       
       // Avant, des macros permettaient d'éviter les warnings
       #ifdef DOXYGEN_PARSING
-      #  define FOR_DOXYGEN(x) x
+      #  define DOC_ONLY(x) x
       #else
-      #  define FOR_DOXYGEN(x)
+      #  define DOC_ONLY(x)
       #endif
       
       #ifdef NDEBUG
@@ -118,7 +126,7 @@ Fonctionnalités au niveau du langage C++
       #  define DEBUG_ONLY(x) x
       #endif
       
-      int main (int argc, char** FOR_DOXYGEN(argv))
+      int main (int argc, char** DOC_ONLY(argv))
       {
            DEBUG_ONLY(bool impaire = argc % 2);
            assert(impaire);
@@ -261,11 +269,12 @@ D'ici la standardisation finale C++17, le comité va s’efforcer de corriger le
 [CppReference a aussi besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous) comme nous le disait nazcafan en 2012. D'autant plus que les pages Anglaise C++17 sont incomplètes ou inexistantes, et c'est pire du côté des pages Françaises !
 
 
-Cette dépêche LinuxFr restera figée après publication et vous pouvez quand même continuer à l'enrichir sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (lire le [`README.md`](https://github.com/cpp-frug/materials/blob/master/README.md) pour contribuer). Ce contenu CC-BY-SA permet par exemple :
+Comme indiqué dans l’introduction, chacun peut faire profiter les autres de ses recherches **C++17** en enrichissant cette dépêche sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Ainsi nous pourrons partager un contenu libre CC-BY-SA pour :
 
-* D'ajouter un article Wikipédia C++17 en Français ;
-* D'organiser des conférences sur ce sujet *(Meetup)* ;
-* De Publier un billet *(post)* sur tout autre site *(blog)*.
+* Ajouter un article Wikipédia C++17 en Français ;
+* Organiser des conférences sur ce sujet *(Meetup)* ;
+* Publier un billet *(post)* sur tout autre site *(blog)* ;
+* ...
 
 ![Logo de la communauté C++ francophone](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
 
