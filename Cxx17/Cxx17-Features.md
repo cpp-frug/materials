@@ -6,7 +6,7 @@ Pour contribuer à ce document, merci de lire le [`README.md`](https://github.co
 C++17 sera une version mineure
 ------------------------------
 
-Authors |Oliver H, Lucas et palm123
+Authors |Oliver H, Lucas, palm123, Benoît Sibaud et RyDroid
 --------|------------------------------
 License |CC by-sa
 
@@ -15,7 +15,7 @@ Les fonctionnalités du **C++17** viennent tout juste d'être sélectionnées. F
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
 
-Pour des questions de *"timing"*, la rédaction de cette dépêche n'est pas complète. De plus, cette dépêche LinuxFr restera figée après publication. Nous vous proposons donc de continuer à l'enrichir sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Cela nous permettra de partager nos recherches individuelles et de permettre la réutilisation d'un contenu libre (CC-BY-SA) pour des *"Meetups"*, la création d'un article Wikipédia en Français...
+Pour des questions de *"timing"*, la rédaction de cette dépêche n'est pas complète. De plus, cette dépêche LinuxFr.org restera figée après publication. Nous vous proposons donc de continuer à l'enrichir sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Cela nous permettra de partager nos recherches individuelles et de permettre la réutilisation d'un contenu libre (CC-BY-SA) pour des *"Meetups"*, la création d'un article Wikipédia en Français...
 
 ----
 
@@ -46,8 +46,7 @@ Bien que ce process de standardisation ISO C++ permet de publier les nouvelles v
 Les membres du comité de standardisation utilisent le terme **C++17** (et non pas C++1z). Soyons confiants, **C++1z** verra bien le jour en 2017 (et non pas en 2018, ni après).
 
 
-Donc en 2016 (années N-1), le comité de standardisation ISO C++ (une centaine de personnes) s'est rencontré deux fois afin de figer le périmètre fonctionnel du **C++17** :
-
+Donc en 2016 (année N-1), le comité de standardisation ISO C++ (une centaine de personnes) s'est rencontré deux fois afin de figer le périmètre fonctionnel du **C++17** :
 
 1. [Une semaine début mars](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), pour valider des fonctionnalités _mineures_ et invalider des fonctionnalités _majeures_ ;
 2. [Une semaine fin juin](https://www.reddit.com/r/cpp/comments/4pmlpz), à Oulu (Finlande), pour définitivement clore l'ajout de nouvelles fonctionnalités.
@@ -79,7 +78,7 @@ Fonctionnalités au niveau du langage C++
               break;
       }
       ```
-    * `[[nodiscard]]` indique que la valeur de retour d'une fonction ne doit pas être ignorée.
+    * `[[nodiscard]]` indique que la valeur de retour d'une fonction ne doit pas être ignorée. Il y a une extension GNU qui proposait déjà cette fonctionnalité : `__attribute__((warn_unused_result))`.
       
       ```cpp
       // Ancienne version de la fonction foo()
@@ -266,8 +265,7 @@ Comment participer ?
 
 D'ici la standardisation finale C++17, le comité va s’efforcer de corriger les incohérences et les zones floues. Toute la communauté C++ est donc invitée à participer via [les dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus), notamment sur [le dépôt _"draft" (ébauche_)](https://github.com/cplusplus/draft).
 
-[CppReference a aussi besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous) comme nous le disait nazcafan en 2012. D'autant plus que les pages Anglaise C++17 sont incomplètes ou inexistantes, et c'est pire du côté des pages Françaises !
-
+[CppReference a aussi besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous) comme nous le disait nazcafan en 2012. D'autant plus que les pages anglaises C++17 sont incomplètes ou inexistantes, et c'est pire du côté des pages françaises !
 
 Comme indiqué dans l’introduction, chacun peut faire profiter les autres de ses recherches **C++17** en enrichissant cette dépêche sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Ainsi nous pourrons partager un contenu libre CC-BY-SA pour :
 
@@ -283,7 +281,7 @@ C++17 est finalement une version mineure
 
 Donc, aucune _grosse_ fonctionnalité majeure !
 
-Les fonctionnalités suivantes n’ont pas été considérées comme suffisamment matures pour être inclues dans cette version du standard :
+Les fonctionnalités suivantes n’ont pas été considérées comme suffisamment matures pour être incluses dans cette version du standard :
 
 * [Concepts](http://fr.cppreference.com/w/cpp/concept) (en [Anglais](http://en.cppreference.com/w/cpp/language/constraints)) ;
 * Modules, par exemple **`import std.string;`** à la place de **`#include <string>`** [*(A Module System for C++)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) ;
@@ -295,7 +293,7 @@ Le comité attend de voir des implémentations satisfaisantes dans les compilate
 Déception et nouveau process de standardisation pour C++19
 ----------------------------------------------------------
 
-Cette nouvelle version C++17 apporte bon nombre de nouveautés intéressantes (et d’autres dont on ne voit pas encore l’intérêt). Cependant de nombreux développeurs C++ s’attendaient à une version majeure, un comme peu comme le C++11 avait été.
+Cette nouvelle version C++17 apporte bon nombre de nouveautés intéressantes (et d’autres dont on ne voit pas encore l’intérêt). Cependant de nombreux développeurs C++ s’attendaient à une version majeure, un peu comme le C++11 l'avait été.
 
 Face à la déception de cette _petite_ version mineure, le comité réfléchit à améliorer le processus de standardisation en livrant une nouvelle version tous les deux ans (au lieu de trois ans), mais aussi en facilitant la contribution de la communauté C++.
 
