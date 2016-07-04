@@ -27,6 +27,7 @@ Pour des questions de *"timing"*, la rédaction de cette dépêche n'est pas com
 * [Journal de rewind "C++17 est sur les rails" a propos de la première réunion](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
 * [Dépêche LinuxFr "Codeurs, Traducteurs, CppReference a besoin de vous" (2012)](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
 * [Contenu Markdown de cette dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
+* [Première rencontre début mars 2016 très détaillée par botondballo](https://botondballo.wordpress.com/2016/03/21/trip-report-c-standards-meeting-in-jacksonville-february-2016/)
 
 ----
 
@@ -78,7 +79,7 @@ Fonctionnalités au niveau du langage C++
               break;
       }
       ```
-    * `[[nodiscard]]` indique que la valeur de retour d'une fonction ne doit pas être ignorée. Il y a une extension GNU qui proposait déjà cette fonctionnalité : `__attribute__((warn_unused_result))`.
+    * `[[nodiscard]]` indique que la valeur de retour d'une fonction ne doit pas être ignorée. Ce fonctionnent était déjà implémenté par l'extension GNU `__attribute__((warn_unused_result))`.
       
       ```cpp
       // Ancienne version de la fonction foo()
@@ -120,9 +121,9 @@ Fonctionnalités au niveau du langage C++
       #endif
       
       #ifdef NDEBUG
-      #  define DEBUG_ONLY(x)
+      #  define DEBUG_ONLY(x)        // Release
       #else
-      #  define DEBUG_ONLY(x) x
+      #  define DEBUG_ONLY(x) x      // Debug
       #endif
       
       int main (int argc, char** DOC_ONLY(argv))
@@ -178,7 +179,7 @@ Fonctionnalités au niveau du langage C++
     auto [ x, y ] = fonction();
     ```
 
-* `constexpr if`
+* [`if constexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) (initialement [`constexpr_if` et `constexpr_else`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0128r0.html), et encore avant c'était `static_if` et `static_else`)
     
     ```cpp
     // ----- Trois définitions avant C++17 -----
@@ -211,7 +212,7 @@ Fonctionnalités au niveau du langage C++
         std::cout << t << std::endl;
     
         // Gère le reste
-        constexpr if (sizeof...(r))
+        if constexpr (sizeof...(r))
             fonction_variadique_template(r...);
     }
     ```   
@@ -298,3 +299,4 @@ Cette nouvelle version C++17 apporte bon nombre de nouveautés intéressantes (e
 Face à la déception de cette _petite_ version mineure, le comité réfléchit à améliorer le processus de standardisation en livrant une nouvelle version tous les deux ans (au lieu de trois ans), mais aussi en facilitant la contribution de la communauté C++.
 
 Donc, après le C++17, nous devrions avoir un C++19 avec, espérons-le, au moins une _grosse_ fonctionnalité majeure. À suivre…
+
