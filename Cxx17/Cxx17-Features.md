@@ -151,8 +151,46 @@ Fonctionnalités au niveau du langage C++
 * [Déduction des arguments `template` des classes templates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) ;
 
 
-* [`template <auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html) ;
-
+* [`template <auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html) qui permet de remplacer `MaClasse<decltype(entier),entier>` par un élégant `MaClasse<entier>` dans cet exemple :
+    
+    ```cpp
+    // Avant C++17
+    
+    template <typename T, T V>
+    class MaClasse
+    {
+        T fonction_exemple()
+        {
+            T x = V;
+            ++x;
+            return x;
+        }
+    };
+    
+    int main()
+    {
+        int entier = 42;
+        MaClasse<decltype(entier),entier> mon_instance;
+    }
+    
+    // Grâce à C++17
+    
+    template <auto V>
+    class MaClasse
+    {
+        T fonction_exemple()
+        {                    // on peut aussi
+            auto x = V;      // utiliser decltype(v)
+            ++x;
+            return x;
+        }
+    };
+    
+    int main()
+    {
+        int entier = 42;
+        MaClasse<entier> mon_instance;
+    }
 
 * [Guaranteed copy elision](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0135r0.html) ;
 
@@ -299,4 +337,3 @@ Cette nouvelle version C++17 apporte bon nombre de nouveautés intéressantes (e
 Face à la déception de cette _petite_ version mineure, le comité réfléchit à améliorer le processus de standardisation en livrant une nouvelle version tous les deux ans (au lieu de trois ans), mais aussi en facilitant la contribution de la communauté C++.
 
 Donc, après le C++17, nous devrions avoir un C++19 avec, espérons-le, au moins une _grosse_ fonctionnalité majeure. À suivre…
-
