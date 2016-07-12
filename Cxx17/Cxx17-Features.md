@@ -20,7 +20,7 @@ Cette dépêche ne détaille pas toutes les fonctionnalités. Comme cette dépê
 ----
 
 * [Première rencontre début mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
-* [Seconde rencontre fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz)
+* [Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
 * [Dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus)
 * [Article Wikipédia C++14](https://fr.wikipedia.org/wiki/C%2B%2B14)
 * [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
@@ -28,13 +28,68 @@ Cette dépêche ne détaille pas toutes les fonctionnalités. Comme cette dépê
 * [Dépêche LinuxFr "Codeurs, Traducteurs, CppReference a besoin de vous" (2012)](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
 * [Contenu Markdown de cette dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
 * [Première rencontre début mars 2016 très détaillée par botondballo](https://botondballo.wordpress.com/2016/03/21/trip-report-c-standards-meeting-in-jacksonville-february-2016/)
-* [Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
+* [Résumé de la seconde rencontre fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz)
 
 ----
 
+En bref
+-------
+
+
+#### Sucre syntaxique et autres améliorations des bases
+
+- [Déduction des arguments template lors de la déclaration](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) (c'est finit les _helpers_ `make_*`) ;
+- [`template<auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html) pour éviter la redondance dans `MaClasse<decltype(ma_variable),ma_variable>` ;
+- [Variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf) (après les [variables `template`](http://en.cppreference.com/w/cpp/language/variable_template) du C++14) ;
+- [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) pour faire un peu comme `for(init;cond;inc)` ;
+* [`namespace` imbriqué](http://en.cppreference.com/w/cpp/language/namespace) `namespace aaa { namespace bbb { ... } }` --> `namespace aaa::bbb { ... }` ;
+* [Retour de fonction et variables locales](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) `char x; int y; std::tie(x,y) = fonction();` ~~> `auto [ x, y ] = fonction();` ;
+- [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) pour des conditions seulement à la compilation ;
+- Lambda `constexpr` et pouvant capturer `*this` ;
+- ...
+
+#### Bibliothèque standard
+
+- [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant) (voir aussi [`boost::variant`](http://www.boost.org/doc/libs/1_61_0/libs/variant)) ;
+- [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) (voir aussi [`boost::optional`](http://www.boost.org/doc/libs/1_61_0/libs/optional)) ;
+- [`std::any`](http://en.cppreference.com/w/cpp/utility/any) (voir aussi [`boost::any`](http://www.boost.org/doc/libs/1_61_0/libs/any)) ;
+- [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) ;
+- [`std::string::data()`](http://en.cppreference.com/w/cpp/string/basic_string/data) non-`const` ;
+- [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) ;
+- ...
+
+#### Deux nouvelles fonctionnalités importantes
+
+- [Parallélisation de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) ;
+- [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) (voir aussi [`boost::filesystem`](www.boost.org/doc/libs/1_61_0/libs/filesystem)).
+
+#### Fonctionnalités attendues mais finalement reportées
+
+* [Concepts](http://fr.cppreference.com/w/cpp/concept) ;
+* [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) (`#include <string>` --> `import std.string;`) ;
+* [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ;
+* [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ;
+* [Réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ;
+* [_Ranges_](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ;
+* [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ;
+* [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
+
+#### Version mineure ou majeure ?
+
+Nous avions déjà les `std::filesystem` avec `boost`.
+Et que dire des performances des algorithmes parallélisés ?
+
+#### Partager
+
+Pour vraiment apprécier les nouveautés, lisez la suite de cette dépêche. La version la plus à jour étant sur [un dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Et pour aller encore plus loin, explorer soi même les nouveautés et publier ses découvertes sur ce dépôt Git afin d'en faire profiter les autres :-)
+
+
+
+------------------------------------------
+
+
 Cycle et nommage des versions
 -----------------------------
-
 
 Après la version majeure **C++98** (et son correctif **C++03**), un nouveau standard C++ devait être publié dans les années suivantes. Comme sa date de publication n'était pas fixée, cette version a été nommée temporairement **C++0x**. Mais avec l'ajout continuel de nouvelles fonctionnalités, le comité de standardisation n'arrivait pas à stabiliser le standard. Et finalement **C++0x** a été publié en 2011 !
 
@@ -52,6 +107,9 @@ Donc en 2016 (année N-1), le comité de standardisation ISO C++ (une centaine d
 
 1. [Une semaine début mars](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), pour valider des fonctionnalités _mineures_ et invalider des fonctionnalités _majeures_ ;
 2. [Une semaine fin juin](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/), à Oulu (Finlande), pour définitivement clore l'ajout de nouvelles fonctionnalités.
+
+------------------------------------------
+
 
 Fonctionnalités au niveau du langage C++
 ----------------------------------------
@@ -256,6 +314,40 @@ Fonctionnalités au niveau du langage C++
     }
     ```   
 
+Donc en C++17 nous pourrons écrire:
+
+
+```cpp
+#include <array>
+
+struct Retour
+{
+    char  c = 'z';
+    int   i = 9;
+    float f = 3,14;
+};
+
+int main (int argc, [[maybe_unused]] char *argv[])
+{
+    std::array tableau {1, 2, 3, argc}; // Déduction du type int et de la taille
+    
+    auto lambda = [](){ return Retour{'a',0}; }; // lambda constexpr
+
+    if constexpr (auto [a, b, c] = lambda(); a == 'a')
+        return b + tableau[1] * argc;
+    else
+        return b - tableau[2] * argc;
+}
+```
+
+
+
+Alors, cher lecteur LinuxFr, séduit ? conquis ? impatient de coder en C++17 ?
+
+
+---------------------------------------------------
+
+
 Fonctionnalités au niveau de la bibliothèque STL
 ------------------------------------------------
 
@@ -346,15 +438,19 @@ Support des compilateurs
 ------------------------
 
 
-* Mai 2013, [**GCC-4.8.1**](https://gcc.gnu.org/gcc-4.8/changes.html) est annoncé comme le [premier compilateur](https://gcc.gnu.org/projects/cxx-status.html#cxx11) a supporter pleinement C++11 ;
-* Janvier 2014, [**Clang-3.4**](http://llvm.org/releases/3.4/tools/clang/docs/ReleaseNotes.html) est annoncé comme le [premier compilateur](http://clang.llvm.org/cxx_status.html#cxx14) à supporter pleinement C++14 ;
+Les différentes fonctionnalités du C++17 commencent a être implémentées par les principaux compilateurs. Souvent les fonctionnalités sont annoncées comme implémentées, malgré la présence de bugs ou de limitations. Voici une anecdote à ce sujet :   
+
+* Mai 2013, [**GCC-4.8.1**](https://gcc.gnu.org/gcc-4.8/changes.html) est annoncé comme le [premier compilateur a supporter pleinement C++11](https://gcc.gnu.org/projects/cxx-status.html#cxx11) ;
+* Janvier 2014, [**Clang-3.4**](http://llvm.org/releases/3.4/tools/clang/docs/ReleaseNotes.html) est annoncé comme le [premier compilateur à supporter pleinement C++14](http://clang.llvm.org/cxx_status.html#cxx14) ;
 * Avril 2015, [**GCC-5.1**](https://gcc.gnu.org/gcc-5/changes.html) est annoncé comme supporter pleinement C++14 ;
-* Mai 2016, la bibliothèque `boost::hana` est enfin intégrée à `boost` car au moins deux compilateurs supportent les fonctionnalités C++14 utilisées par cette bibliothèque, c'est à dire **Clang-3.5** et **GCC-6** (les versions précédentes ne supportent donc pas pleinement le C++14) ;
+* Mai 2016, la bibliothèque `boost::hana` est enfin intégrée à `boost` car au moins deux compilateurs supportent les fonctionnalités C++14 utilisées par cette bibliothèque, c'est à dire **Clang-3.5** et **GCC-6** (les versions précédentes ne supportaient donc pas pleinement le C++14) ;
 * été 2017, c'est peut-être au tour de Visual C++ d'être annoncé comme étant le premier compilateur à pleinement supporter C++17...
 
 
-Support des fonctionnalités C++17 :
+Il n'existe pas ~~vraiment~~ encore de test de conformité du support des fonctionnalités de telle ou telle version du C++ (pas d'équivalent aux [Acid3](https://fr.wikipedia.org/wiki/Acid3), [Sputnik](Sputnik_(JavaScript_conformance_test)) des technologies du web).
 
+
+Par contre, on peut trouver des tables de compatibilités sur le support (théorique?)  des différentes fonctionnalités C++ :
 
 * sur [cppreference](http://en.cppreference.com/w/cpp/compiler_support) ;
 * sur le site officiel [GCC](https://gcc.gnu.org/projects/cxx-status.html#cxx1z) ;
@@ -362,7 +458,37 @@ Support des fonctionnalités C++17 :
 * sur le _blog_ [Visual C++](https://msdn.microsoft.com/fr-fr/library/hh567368.aspx) [(version en Anglais)](https://blogs.msdn.microsoft.com/vcblog/2015/06/19/c111417-features-in-vs-2015-rtm/).
 
 
-Et toi, cher lecteur LinuxFr, pour quelle années penses-tu pouvoir utiliser les fonctionnalités C++17 dans ton travail ? Dans tes loisirs ? 
+Pour tester le support, on peut se baser sur :
+
+
+* [Boost.Config](http://www.boost.org/doc/libs/1_61_0/libs/config/doc/html/boost_config/boost_macro_reference.html) ;
+* ou mieux, les [recommandations de test des fonctionnalités](http://en.cppreference.com/w/cpp/experimental/feature_test).
+
+
+La [macro `__cplusplus`](http://en.cppreference.com/w/cpp/preprocessor/replace#Predefined_macros) peut aussi être utilisée, mais elle teste avant tout la version C++ qui activée par les options de la ligne de commande :
+
+
+```cpp
+#ifdef __cplusplus // la valeur 199711 n'était pas supporté avant GCC-4.7 (2011)
+#  warning Mon compilateur supporte C++99
+#endif
+
+#if __cplusplus > 201100 // ou tester 201103
+#  warning Compilateur appelé avec une directive du style -std=c++0x
+#endif
+
+#if __cplusplus > 201400 // ou tester 201402
+#  warning Compilateur appelé avec une directive du style -std=c++1y
+#endif
+
+#if __cplusplus > 201700
+#  warning Compilateur appelé avec une directive du style -std=c++1z
+#endif
+```
+
+
+
+Et toi, cher lecteur LinuxFr, dans combien de temps penses-tu pouvoir coder en C++17 dans ton travail ? Dans tes loisirs ?
 
 Comment participer ?
 --------------------
