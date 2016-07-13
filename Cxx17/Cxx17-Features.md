@@ -119,8 +119,8 @@ Fonctionnalités au niveau du langage C++
     * le **C** (C11) n'est plus un sous-ensemble du **C++** (C++17) car pas de multitâche à la C11 ;
     * et peu de changements (la fonction [`aligned_alloc()`](http://en.cppreference.com/w/c/memory/aligned_alloc) avait été intégrée avec C++11).
 
-* Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes) (ce qui double le nombre d'attributs standards)
-    * `[[fallthrough]]` indique au compilateur (ou à l'outil d'analyse de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
+* Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes) `[[fallthrough]]`, `[[nodiscard]]` et `[[maybe_unused]]` (qui complètent les `[[noreturn]]`, `[[carries_dependency]]` et `[[deprecated]]`)
+    1. **`[[fallthrough]]`** indique au compilateur (ou à l'outil d'analyse de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
       
       ```cpp
       switch (valeur)
@@ -143,7 +143,7 @@ Fonctionnalités au niveau du langage C++
               break;
       }
       ```
-    * `[[nodiscard]]` indique que la valeur de retour d'une fonction ne doit pas être ignorée. Ce fonctionnent était déjà implémenté par l'extension GNU `__attribute__((warn_unused_result))`.
+    2. **`[[nodiscard]]`** indique que la valeur de retour d'une fonction ne doit pas être ignorée. Ce fonctionnent était déjà implémenté par l'extension GNU `__attribute__((warn_unused_result))`.
       
       ```cpp
       // Ancienne version de la fonction affiche_division()
@@ -166,7 +166,7 @@ Fonctionnalités au niveau du langage C++
            // La valeur de retour est ignorée
       }    // => le compilateur peut avertir
       ```
-    * `[[maybe_unused]]` [(qui devait s'appeler `[[unused]]`)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) indique quand une variable peut ne pas être utilisée et permet donc de supprimer des avertissements _(warning)_ inutiles. Cet attribut peut s'appliquer aux fonctions, aux paramètres de fonctions et aux variables.
+    3. **`[[maybe_unused]]`** [(qui devait s'appeler `[[unused]]`)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) indique quand une variable peut ne pas être utilisée et permet donc de supprimer des avertissements _(warning)_ inutiles. Cet attribut peut s'appliquer aux fonctions, aux paramètres de fonctions et aux variables.
       
       ```cpp
       [[maybe_unused]] void affiche_division(int a)
@@ -213,13 +213,11 @@ Fonctionnalités au niveau du langage C++
     
     ```cpp
     // Avant C++17
-    
-    template <typename T, T V>
+    template <typename T, T Constante>
     class MaClasse
     {
-        T fonction_exemple()
-        {
-            T x = V;
+        T fonction_exemple() {
+            T x = Constante;
             ++x;
             return x;
         }
@@ -232,15 +230,13 @@ Fonctionnalités au niveau du langage C++
     }
     
     // Grâce à C++17
-    
-    template <auto V>
+    template <auto Constante>
     class MaClasse
     {
-        T fonction_exemple()
-        {                    // on peut aussi
-            auto x = V;      // utiliser decltype(v)
-            ++x;
-            return x;
+        T fonction_exemple() {
+            auto x = Constante;// Ou utiliser
+            ++x;               // decltype(Constante) 
+            return x;          // à la place de auto
         }
     };
     
@@ -268,7 +264,7 @@ Fonctionnalités au niveau du langage C++
 * Sucre synthaxique pour les [`namespace`](http://en.cppreference.com/w/cpp/language/namespace)s imbriqués  *(nested)*  
   Exemple : **`namespace A::B {`** correspond à **`namespace A { namespace B {`** ;
 
-* Liaison entre retour de fonction structuré et variables locales [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html)
+* Déstructuration du retour de fonction [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html)
     
     ```cpp
     struct Structure { int a; double b; };
@@ -432,7 +428,12 @@ Face à la déception de cette version _pas très majeure_, le comité réfléch
 Donc, après le **C++17**, nous devrions avoir un **C++19**. avec, espérons-le, des fonctionnalités majeures. À suivre…
 
 
-Et toi, cher lecteur LinuxFr, es-tu un peu déçu du périmètre fonctionnel C++17 ? Souhaites-tu des version C++ plus fréquentes ?
+Et toi, cher lecteur LinuxFr, es-tu un peu déçu du périmètre fonctionnel C++17 ?
+Souhaites-tu des versions C++ plus fréquentes ?
+Penses-tu que toutes ces nouvelles fonctionnalités ne font que compliquer inutilement le langage le plus complexe que l'humanité ait inventé ?
+Ou au contraire, grâces à ces récentes évolutions, le C++ va progresser dans le classement du _TIOBE Index_ et écarter ses concurrents [Rust](https://fr.wikipedia.org/wiki/Rust_(langage)) et [Pony](http://www.ponylang.org/) ?
+
+![Indice TIOBE de popularité des langages de programmation, la courbe en vert clair représente l'inexorable descente du C++ qui reste quand même en troisième place derrière Java et C, mais devant Python et C#](http://cdn.edureka.co/blog/wp-content/uploads/2016/06/TIOBE-index-2016.png)
 
 ---------------------------------------------------------------
 
@@ -507,5 +508,6 @@ Comme indiqué dans l’introduction, chacun peut faire profiter les autres de s
 * Organiser des conférences *(Meetup)* ;
 * Publier un billet sur tout autre site ;
 * ...
+
 
 ![Logo de la communauté C++ francophone](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
