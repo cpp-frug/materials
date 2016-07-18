@@ -6,7 +6,7 @@ Pour contribuer à ce document, merci de lire le [`README.md`](https://github.co
 C++17 sera une version mineure
 ------------------------------
 
-Authors |Oliver H, Lucas, palm123, Benoît Sibaud et RyDroid
+Authors |Oliver H, olibre, Lucas, palm123, Benoît Sibaud et RyDroid
 --------|------------------------------
 License |CC by-sa
 
@@ -15,7 +15,7 @@ L'ajout de fonctionnalités au **C++17** a été clôturé. Faisons donc le tour
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
 
-Par manque de temps, cette dépêche ne détaille pas toutes les fonctionnalités. Comme cette dépêche LinuxFr.org restera figée après publication, nous vous proposons de continuer à l'enrichir sur [un dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Cela nous permettra de partager nos recherches individuelles et de permettre la réutilisation d'un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia en Français, des *"Meetups"*...
+Par manque de temps, cette dépêche ne détaille pas toutes les fonctionnalités (et contient peut-être quelques erreurs). Comme cette dépêche LinuxFr.org restera figée après publication, nous vous proposons de continuer à l'enrichir sur [un dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Cela nous permettra de partager nos recherches individuelles et de permettre la réutilisation d'un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia en français, des *"Meetups"*...
 
 ----
 
@@ -34,8 +34,19 @@ Par manque de temps, cette dépêche ne détaille pas toutes les fonctionnalité
 
 ----
 
+----------------------------------------------
+
+
 En bref
 -------
+
+
+Cette dépêche étant très longue, ce premier chapitre donne un aperçu rapide.
+
+#### Face cachée du C++
+
+
+Télécharger le PDF du standard du C++ (ISO/IEC 14882) coûte 180 €. Et le document n'est pas libre. Alors, c'est un brouillon _(draft)_ gratuit qui est utilisée. En général, c'est la version du brouillon juste avant les changements éditoriaux mineurs pour en faire un document officiel. Mais, de toutes façons, le standard est rarement utilisée pour apprendre le C++. Le site de référence recommandée est http://cppreference.com/.
 
 
 #### Sucre syntaxique et autres améliorations du langage
@@ -45,25 +56,19 @@ En bref
 - [Variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf) (après les [variables `template`](http://en.cppreference.com/w/cpp/language/variable_template) du C++14) ;
 - [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) pour faire un peu comme `for(init;cond;inc)` ;
 * [`namespace` imbriqué](http://en.cppreference.com/w/cpp/language/namespace) `namespace aaa { namespace bbb { ... } }` --> `namespace aaa::bbb { ... }` ;
-* [Retour de fonction et variables locales](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) `char x; int y; std::tie(x,y) = fonction();` ~~> `auto [ x, y ] = fonction();` ;
+* [Déstructuration du retour de fonction](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) `char x; int y; std::tie(x,y) = fonction();` ~~> `auto [ x, y ] = fonction();` ;
 - [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ;
 - Lambda `constexpr` et pouvant capturer `*this` ;
 - ...
 
 #### Bibliothèque standard
 
-- [`std::variant<>`](http://en.cppreference.com/w/cpp/utility/variant) (voir aussi [`boost::variant<>`](http://www.boost.org/doc/libs/1_61_0/libs/variant)) ;
-- [`std::optional<>`](http://en.cppreference.com/w/cpp/utility/optional) (voir aussi [`boost::optional<>`](http://www.boost.org/doc/libs/1_61_0/libs/optional)) ;
-- [`std::any`](http://en.cppreference.com/w/cpp/utility/any) (voir aussi [`boost::any`](http://www.boost.org/doc/libs/1_61_0/libs/any)) ;
+- [Parallélisation de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) ;
+- Ajout de [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) ;
+- Intégration de bibliothèques  [`filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`variant<>`](http://en.cppreference.com/w/cpp/utility/variant), [`optional<>`](http://en.cppreference.com/w/cpp/utility/optional) et [`any`](http://en.cppreference.com/w/cpp/utility/any) de [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (avec des ~~améliorations~~ changements) ;
 - [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (mieux que `const std::string&`) ;
 - [`std::string::data()`](http://en.cppreference.com/w/cpp/string/basic_string/data) non-`const` ;
-- [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) ;
 - ...
-
-#### Deux nouvelles fonctionnalités importantes
-
-- [Parallélisation de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) ;
-- [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) (voir aussi [`boost::filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem)).
 
 #### Fonctionnalités attendues mais finalement reportées
 
@@ -78,16 +83,54 @@ En bref
 
 #### Version mineure ou majeure ?
 
-Nous avions déjà les `std::filesystem` avec `boost`.
-Et que dire des performances des algorithmes parallélisés ?
+Nous avions déjà l'équivalent de [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) avec [`boost::filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem) (ce dernier supporte les anciennes versions des compilateurs).
+
+Et les algorithmes parallélisés, sont-ils vraiment intéressants pour la production ?
 
 #### Partager
 
-Pour vraiment apprécier les nouveautés, lisez la suite de cette dépêche. La version la plus à jour étant sur [un dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Et pour aller encore plus loin, explorer soi même les nouveautés et publier ses découvertes sur ce dépôt Git afin d'en faire profiter les autres :-)
-
+Pour vraiment apprécier les nouveautés, lisez la suite de cette dépêche. La version la plus à jour étant sur [un dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Et pour aller encore plus loin, explorer soi-même les nouveautés et publier ses découvertes sur ce dépôt Git afin d'en faire profiter les autres :-)
 
 
 ------------------------------------------
+
+
+La face cachée du C++
+---------------------
+    
+| /!\ Chapitre en cours de rédaction /!\  |
+|-----------------------------------------|
+| Toute aide est la bienvenue  :-)        |
+    
+À chaque nouvelle version du standard ISO/IEC 14882, la version précédente est supprimée (_withdraw_ en anglais). Donc les standards [C++98 (ISO/IEC 14882:1998)](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=25845), [C++03 (ISO/IEC 14882:2003)](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=38110) et [C++11 (ISO/IEC 14882:2011)](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=50372) ne sont plus disponibles officiellement.
+    
+Le standard actuel, **C++14** (ISO/IEC 14882:2014) est payant :
+    
+* [182 € (198 francs suisses) sur le site de l'ISO](http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=060&ics3=&csnumber=64029)
+* [238 € (265 $) sur le site de l'ANSI aux États-Unis](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014).
+    
+La notice de droit d'auteur du document ne laisse aucun doute : **le standard C++ n'est pas libre**. Par contre, l'organisme ISO local _pourrait_ donner des permissions de reproduction...
+      
+> © ISO/IEC 2014 – All rights reserved  
+> COPYRIGHT PROTECTED DOCUMENT  
+> All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
+> Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
+            
+TODO
+       
+* https://isocpp.org/std/the-standard
+* Licence/Brevet/... => Lire https://isocpp.org/home/terms-of-use
+* Problèmes de licence/brevet avec d'autres langages comme Java/C#/Go...
+* Par contre, certains langages sont d'avantage libres comme Rust
+* Les dév. C++ ont bien conscience d'avoir le langage le plus complexe
+* On rêve tous à un langage plus simple mais qui _Ne sacrifie pas les performances_
+* Aucun développeur C++ ne connaît vraiment le C++, seulement une portion, souvent petite
+* Ceux qui connaissent le C++, on les appelle des juristes du C++ (_C++ lawyers_) 
+* La spécification fait environ 1500 pages pour le C++14... (compter le nombre de pages des C++98, C++03, C++11 ... C++17)
+* évolution => aller vers un langage plus intuitif, plus sûr et toujours plus performant _(Ne pas sacrifier les performances)_
+* Exemple d'évolution, l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) pour utiliser un sous-ensemble du C++ plus sûr, plus simple, sans sacrifier les performances
+
+------------------------------------------------------
 
 
 Cycle et nommage des versions
@@ -116,12 +159,15 @@ Donc en 2016 (année N-1), le comité de standardisation ISO C++ (une centaine d
 Fonctionnalités au niveau du langage C++
 ----------------------------------------
 
-* **C++17** est maintenant basé sur **C11** au lieu de **C99** + **C Unicode TR** [*(C++17 refers to C11 instead of C99)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r2.html). Ajout des _headers_ `<stdalign.h>` et `<uchar.h>`. On ignore les _headers_ C11 `<stdatomic.h>`, `<threads.h>` et `<stdnoreturn.h>`. [Dépréciation](https://fr.wikipedia.org/wiki/D%C3%A9pr%C3%A9ciation_(informatique)) des _headers_ `<ccomplex>`, `<ctgmath>`, `<cstdalign>`, `<cstdbool>`, `<complex.h>`, `<stdalign.h>`, `<stdbool.h>` et `<tgmath.h>` :
+* **C++17** est maintenant basé sur **C11** au lieu de **C99** + **C Unicode TR** [*(C++17 refers to C11 instead of C99)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r2.html).  
     
-    * le **C** (C11) n'est plus un sous-ensemble du **C++** (C++17) car pas de multitâche à la C11 ;
-    * et finalement peu de changements (par exemple, la fonction [`aligned_alloc()`](http://en.cppreference.com/w/c/memory/aligned_alloc) avait été intégrée avec C++11).
+    Ajout des en-têtes (_headers_) `<stdalign.h>` et `<uchar.h>`. On ignore les en-têtes **C11** `<stdatomic.h>`, `<threads.h>` et `<stdnoreturn.h>`. [Dépréciation](https://fr.wikipedia.org/wiki/D%C3%A9pr%C3%A9ciation_(informatique)) des en-têtes `<ccomplex>`, `<ctgmath>`, `<cstdalign>`, `<cstdbool>`, `<complex.h>`, `<stdalign.h>`, `<stdbool.h>` et `<tgmath.h>`.
+    
+    Donc, **C++17** se base sur une partie du **C11**. Par exemple, la gestion du multitâche du **C** n'est pas prise en compte dans le standard (donc c'est optionnel). Pour la première fois, le **C++** n'est plus rétrocompatible avec le **C** (le **C** était un sous-ensemble du **C++**).  
+    
+    Finalement, peu de changements. Par exemple, la fonction [`aligned_alloc()`](http://en.cppreference.com/w/c/memory/aligned_alloc) avait déjà été intégrée avec **C++11**.
 
-* La macro [**`__has_include(<boost/any.hpp>)`**](http://en.cppreference.com/w/cpp/experimental/feature_test#Language_Features#Function_Macros) qui vérifie si le _header_ `<boost/any.hpp>` est disponible pour inclusion ;
+* La macro [**`__has_include(<boost/any.hpp>)`**](http://en.cppreference.com/w/cpp/experimental/feature_test#Language_Features#Function_Macros) qui vérifie si l'en-tête `<boost/any.hpp>` est disponible pour inclusion ;
     
     ```cpp
     #if __has_include(<boost/any.hpp>)
@@ -131,53 +177,57 @@ Fonctionnalités au niveau du langage C++
     #endif
     ```
 
-
 * Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes) `[[fallthrough]]`, `[[nodiscard]]` et `[[maybe_unused]]` (qui complètent les `[[noreturn]]`, `[[carries_dependency]]` et `[[deprecated]]`)
     - **`[[fallthrough]]`** indique au compilateur (ou à l'outil d'analyse de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
       
       ```cpp
       switch (valeur)
       {
-          case 1:
-              std::cout <<"valeur 1"  "\n";
-              break;
-          case 2:
-              std::cout <<"valeur 2"  "\n";
-              [[fallthrough]]; // pas de break
-          case 3:              // on continue avec le case suivant
-              std::cout <<"valeur 2 ou 3"  "\n";
-              break;
-          case 4:
-              std::cout <<"valeur 4"  "\n";
-              // ici le break manque (c'est un bug)
-              // => Le compilateur peut afficher un warning
-          default:
-              std::cout <<"valeur différente de 1, 2, 3, 4" "\n";
-              break;
+        case 1:
+          std::cout <<" valeur 1";
+          break;
+        case 2:
+          std::cout <<" valeur 2";
+          [[fallthrough]]; // pas de break
+                       // => continue avec
+        case 3:        // le case suivant
+          std::cout <<" valeur 2 ou 3";
+          break;
+        case 4:
+          std::cout <<" valeur 4";
+              // ici le break manque
+              // (un oubli du dév. ?)
+              // => Le compilateur peut
+              // afficher un avertissement
+        default:
+          std::cout <<" valeur différente"
+                      " de 1, 2, 3, 4";
       }
       ```
     - **`[[nodiscard]]`** indique que la valeur de retour d'une fonction ne doit pas être ignorée. Ce fonctionnent était déjà implémenté par l'extension GNU `__attribute__((warn_unused_result))`.
       
       ```cpp
-      // Ancienne version de la fonction affiche_division()
-      // void affiche_division(int a) { std::cout << (42/a); }
+      // Ancienne version de affiche_division()
+      // avec une possible division par zéro 
+      // void affiche_division (int a)
+      // { std::cout << (42/a); }
       
-      // Nouvelle version de la fonction affiche_division()
-      [[nodiscard]] int affiche_division(int a)
-      {
-          if (a == 0)      // cette erreur doit être
-              return -1;   // récupérée par l'appelant
+      // Nouvelle version
+      [[nodiscard]] int affiche_division (int a)
+      {                  // ce code d'erreur
+          if (a == 0)    // doit être récupérée
+              return -1; // par l'appelant
           
           std::cout << (42/a);
-          return 0;        // pas de problème
+          return 0;      // pas de problème
       }
       
-      // Mais la fonction main() n'a pas été mise à jour !
+      // Mais main() n'a pas été mise à jour !
       int main (int argc, char *argv[])
       {
            affiche_division(argc-1);
-           // La valeur de retour est ignorée
-      }    // => le compilateur peut avertir
+           // Le compilateur peut avertir que
+      }    // le code de retour est ignorée
       ```
     - **`[[maybe_unused]]`** [(qui devait s'appeler `[[unused]]`)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) indique quand une variable peut ne pas être utilisée et permet donc de supprimer des avertissements _(warning)_ inutiles. Cet attribut peut s'appliquer aux fonctions, aux paramètres de fonctions et aux variables.
       
@@ -260,8 +310,7 @@ Fonctionnalités au niveau du langage C++
     }
     ```
 
-* [Guaranteed copy elision](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0135r0.html) ;
-
+* Suppression du constructeur de copie inutile ([Guaranteed copy elision](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0135r0.html)) ;
 
 * Spécification de l'ordre d'évaluation des paramètres des fonctions dans les expressions idiomatiques du C++ [*(Fixed order-of-evaluation for idiomatic C++ expressions)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r2.pdf) ;
 
@@ -274,7 +323,7 @@ Fonctionnalités au niveau du langage C++
 * `if(init;condition)` et `switch(init;condition)` pour faire un peu comme `for(init;cond;inc)` [*(If statement with initializer)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) ;
 
 
-* Sucre synthaxique pour les [`namespace`](http://en.cppreference.com/w/cpp/language/namespace)s imbriqués  *(nested)*  
+* Sucre syntaxique pour les [`namespace`](http://en.cppreference.com/w/cpp/language/namespace)s imbriqués  *(nested)*  
   Exemple : **`namespace A::B {`** correspond à **`namespace A { namespace B {`** ;
 
 * Déstructuration du retour de fonction [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html)
@@ -353,8 +402,8 @@ int main(int argc, [[maybe_unused]]char*argv[])
 }
 ```
 
-Alors, cher lecteur LinuxFr ?
-Séduit ? Conquis ?
+Alors, cher lecteur/chère lectrice de LinuxFr.org ?
+Séduit(e) ? Conquis(e) ?
 Impatient de coder en C++17 ?
 La tentation est grande d'épater ses collègues avec du code qu'ils ne comprennent plus...
 
@@ -364,33 +413,47 @@ La tentation est grande d'épater ses collègues avec du code qu'ils ne comprenn
 Fonctionnalités au niveau de la bibliothèque STL
 ------------------------------------------------
 
-* Suppression des [digraphes et trigraphes](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#Removal_of_trigraphs) ;
-
-
-* Ajout des [versions parallélisées de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism) *(Parallelism TS v1)* ;
-
-
-* Ajout [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) *(File System TS v1)* ;
-
-
-* Ajout du Variant et d'une partie des [*Library Fundamentals TS v1*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) :
+* Suppression des [digraphes et trigraphes](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#Removal_of_trigraphs).
     
-    * [`std::variant<int,char,float>`](http://en.cppreference.com/w/cpp/utility/variant) [*(Variant: a type-safe union for C++17)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0088r2.html) ;
-    * [`std::optional<std::string>`](http://en.cppreference.com/w/cpp/utility/optional) ;
-    * [`std::any`](http://en.cppreference.com/w/cpp/utility/any) ;
+    ```cpp
+    TODO Fournir un exemple
+    ```
+    
+    Certaines entreprises maintiennent du très vieux code C/C++ contenant des digraphes/trigraphes. Ces digraphes/trigraphes peuvent être replacés par les caractères correspondant avec un script. Mais ces entreprises préfèrent que les compilateurs conservent cette complexité et que les développeurs aient des surprises quand ils utilisent certains caractères.
+     
+    La dépréciation des digraphes/trigraphes avait été prévue en 2009 pour C++11. Mais certains membres comme IBM et Bloomberg étaient réticents. Finalement, c'est la suppression pure et simple qui a été votée par les membres pour C++17 (sans passer par la dépréciation). IBM a même tenté une dernière [tentative pour conserver les digraphes/trigraphes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4210.pdf) ;
+
+* Ajout des [versions parallélisées de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism) *(Parallelism TS v1)* ; ![Deux cochons en position 69](http://vignette3.wikia.nocookie.net/necyklopedie/images/8/80/Porno_prase.png/revision/latest?cb=20090116191951)
+
+* Ajout de [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem). Enfin le C++ dispose d'une API standardisée pour gérer fichiers et répertoires ! 
+    
+    ```cpp
+    TODO fournir un exemple
+    ```
+    
+    C'est une longue histoire :
+    
+    * 2003 [`boost::filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem) ;
+    * 2004 [requête pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html) ;
+    * 2005 [première proposition détaillée pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1841.html) ;
+    * Il aura fallu une dizaine d'années et trois versions majeures pour permettre au groupe d'étude SW3 _(Study Group 3)_ de rédiger l'ultime spécification technique _(TS)_ [N4100 (le titre est en français dans le document)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) qui correspond au standard [ISO/IEC TS 18822:2015](http://www.iso.org/iso/catalogue_detail.htm?csnumber=63483) ;
+    * L'implémentation de `std::experimental::filesystem` sur plusieurs plateformes et compilateurs ([Visual C++ 2012/2013/2015](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/msdn.microsoft.com/en-us/library/hh874694.aspx) et [GCC-5.3](https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dynamic_or_shared.html#manual.intro.using.linkage.experimental)) a été nécessaire pour décider de l'intégration dans la bibliothèque standard.
+
+* Ajout des [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) (c'est aussi une longue histoire) ;
+
+* Ajout du `std::variant` [*(type-safe union for C++17)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0088r2.html) et d'une partie des [*Library Fundamentals TS v1*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) :
+    
+    * [`std::variant<int,char,float>`](http://en.cppreference.com/w/cpp/utility/variant) en s'inspirant de [`boost::variant<>`](http://www.boost.org/doc/libs/1_61_0/libs/variant) (certains auraient aimé la possibilité d’interdire un objet `std::variant` vide et l'optimisation du `std::variant` pour les types légers) ;
+    * [`std::optional<std::string>`](http://en.cppreference.com/w/cpp/utility/optional) en s'inspirant de [`boost::optional<>`](http://www.boost.org/doc/libs/1_61_0/libs/optional) ;
+    * [`std::any`](http://en.cppreference.com/w/cpp/utility/any) en s'inspirant de [`boost::any`](http://www.boost.org/doc/libs/1_61_0/libs/any) ;
     * [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) ;
     * et [autres extensions](http://en.cppreference.com/w/cpp/experimental/lib_extensions#Merged_into_C++17).
 
-* Ajout des [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) ;
+* Ajout de `hardware_*_interference_size` ;
 
+* Ajout de `.is_always_lockfree()` ;
 
-* Ajout `hardware_*_interference_size` ;
-
-
-* Ajout `.is_always_lockfree()` ;
-
-
-* Ajout [`std::clamp()`](http://en.cppreference.com/w/cpp/algorithm/clamp). Par exemple, `std::clamp(x,4,8)` est l'équivalent de `std::min(std::max(x,4),8)`.
+* Ajout de [`std::clamp()`](http://en.cppreference.com/w/cpp/algorithm/clamp). Par exemple, `std::clamp(x,4,8)` est l'équivalent de `std::min(std::max(x,4),8)`.
 
 * Ajout des fonctions `string::data()` non-const ;
 
@@ -401,28 +464,27 @@ Fonctionnalités au niveau de la bibliothèque STL
 
 * Réservation du nommage `std[0-9]+` pour d'éventuelles futures versions de la ~~STL~~ bibliothèque standard C++ qui casseraient la rétrocompatibilité [*(Reserve a New Library Namespace Future Standardization)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0180r1.html).
 
-C++17 fait l'impasse sur des fonctionnalités _majeurs_
+C++17 fait l'impasse sur des fonctionnalités _majeures_
 ------------------------------------------------------
 
 Deux _gros_ morceaux ont été inclus dans **C++17** :
 
 
-* le Parralélisme avec les [69 algorithmes parralélisées](http://en.cppreference.com/w/cpp/experimental/parallelism) ;
+* le parallélisme avec les [69 algorithmes parallélisées](http://en.cppreference.com/w/cpp/experimental/parallelism) ;
 * et [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem).
 
+Par contre, les fonctionnalités suivantes n’ont pas été considérées comme suffisamment mures pour être incluses :
 
-Par contre, les fonctionnalités suivantes n’ont pas été considérées comme suffisamment matures pour être incluses :
-
-* [Concepts](http://fr.cppreference.com/w/cpp/concept) (voir aussi la [version en Anglais](http://en.cppreference.com/w/cpp/language/constraints)) ;
+* [Concepts](http://fr.cppreference.com/w/cpp/concept) (voir aussi la [version en anglais](http://en.cppreference.com/w/cpp/language/constraints)) ;
 * Modules, par exemple **`import std.string;`** à la place de **`#include <string>`** [*(A Module System for C++)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) ;
 * Syntaxe d'appel uniforme [*(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ;
 * [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ;
 * Réseau [_(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ;
 * Tableaux [_(Array)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3820.html). Une idée de 2013, mais finalement abandonnée ;
 * [_Ranges_](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ;
-* Mémoire Transactionnelle [_(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ;
+* Mémoire transactionnelle [_(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ;
 * Réflexion [_(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) ;
-* et autres extensions majeures à la bibliothèque standard. 
+* et autres extensions majeures de la bibliothèque standard. 
 
 Le comité attend de voir des implémentations satisfaisantes dans les compilateurs avant de les inclure...
 
@@ -434,7 +496,7 @@ Même si **C++17** va un peu plus transcender notre façon de coder en C++, de n
 ---------------------------------------------------------------
 
 
-Déception et nouveau process de standardisation pour ~~C++20~~ C++19
+Déception et nouveau processus de standardisation pour ~~C++20~~ C++19
 --------------------------------------------------------------------
 
 Face à la déception de cette version _pas très majeure_, le comité réfléchit à faciliter la contribution de la communauté C++ et à améliorer le processus de standardisation :
@@ -445,10 +507,10 @@ Face à la déception de cette version _pas très majeure_, le comité réfléch
 
 Donc, après le **C++17**, le comité pourrait clôturer les fonctionnalités du prochain standard dès 2018 et publier un **C++19** en avance sur le **C++20** prévu initialement… Espérons que cet hypothétique **C++19** intégrera des fonctionnalités majeures. À suivre…
 
-Et toi, cher lecteur LinuxFr, es-tu un peu déçu du périmètre fonctionnel C++17 ?
+Et toi, cher lecteur/chère lectrice de LinuxFr.org, es-tu un peu déçu(e) du périmètre fonctionnel C++17 ?
 Souhaites-tu des versions C++ plus fréquentes ?
 Penses-tu que toutes ces nouvelles fonctionnalités ne font que compliquer inutilement le langage le plus complexe que l'humanité ait inventé ?
-Ou au contraire, es-tu persuadé que grâces à ces évolutions, le C++ va progresser dans le classement du _TIOBE Index_ et écarter des prétendants comme ~~[D](https://fr.wikipedia.org/wiki/D_(langage)),~~ [Rust](https://fr.wikipedia.org/wiki/Rust_(langage)) ou [Pony](http://www.ponylang.org/) ?
+Ou au contraire, es-tu persuadé(e) que grâce à ces évolutions, le C++ va progresser dans le classement du _TIOBE Index_ et écarter des prétendants comme ~~[D](https://fr.wikipedia.org/wiki/D_(langage)),~~ [Rust](https://fr.wikipedia.org/wiki/Rust_(langage)) ou [Pony](http://www.ponylang.org/) ?
 
 ![Indice TIOBE de popularité des langages de programmation, la courbe en vert clair représente l'inexorable descente du C++ qui reste quand même en troisième place derrière Java et C, mais devant Python et C#](http://cdn.edureka.co/blog/wp-content/uploads/2016/06/TIOBE-index-2016.png)
 
@@ -458,7 +520,7 @@ Ou au contraire, es-tu persuadé que grâces à ces évolutions, le C++ va progr
 Support des compilateurs
 ------------------------
 
-Les différentes fonctionnalités du C++17 commencent a être implémentées par les principaux compilateurs. Souvent les fonctionnalités sont annoncées comme implémentées, malgré la présence de bugs ou de limitations. Voici une anecdote à ce sujet :   
+Les différentes fonctionnalités du C++17 commencent à être implémentées par les principaux compilateurs. Souvent les fonctionnalités sont annoncées comme implémentées, malgré la présence de bugs ou de limitations. Voici une anecdote à ce sujet :   
 
 Date        | Événement
 ------------|-------------
@@ -466,7 +528,7 @@ Mai 2013    |[**GCC-4.8.1**](https://gcc.gnu.org/gcc-4.8/changes.html) est annon
 Janvier 2014|[**Clang-3.4**](http://llvm.org/releases/3.4/tools/clang/docs/ReleaseNotes.html) est annoncé comme le [premier compilateur C++14](http://clang.llvm.org/cxx_status.html#cxx14).
 Avril 2015  |[**GCC-5.1**](https://gcc.gnu.org/gcc-5/changes.html) est annoncé comme implémentant toutes les fonctionnalités C++14.
 Mai 2016    |La bibliothèque `boost::hana` est enfin intégrée à `boost` car au moins deux compilateurs supportent les fonctionnalités C++14 utilisées par cette bibliothèque : **Clang-3.5** et **GCC-6**. Donc, les versions précédentes **Clang-3.4** et **GCC-5.1** ne supportaient pas tout à fait C++14 !
-été 2017    |C'est peut-être au tour de Visual C++ d'être le premier compilateur C++17...
+Été 2017    |C'est peut-être au tour de Visual C++ d'être le premier compilateur C++17...
 
 Il n'existe pas ~~vraiment~~ encore de test de conformité du support des fonctionnalités de telle ou telle version du C++ (pas d'équivalent aux [Acid3](https://fr.wikipedia.org/wiki/Acid3), [Sputnik](Sputnik_(JavaScript_conformance_test)) des technologies du web).
 
@@ -480,10 +542,9 @@ Par contre, on peut trouver des tables de compatibilité sur le support des diff
 * sur [cppreference](http://en.cppreference.com/w/cpp/compiler_support) ;
 * sur le site officiel [GCC](https://gcc.gnu.org/projects/cxx-status.html#cxx1z) ;
 * sur le site officiel [Clang](http://clang.llvm.org/cxx_status.html#cxx17) et sa [libcxx](http://libcxx.llvm.org/cxx1z_status.html) ;
-* sur le _blog_ [Visual C++](https://msdn.microsoft.com/fr-fr/library/hh567368.aspx) [(version en Anglais)](https://blogs.msdn.microsoft.com/vcblog/2015/06/19/c111417-features-in-vs-2015-rtm/).
+* sur le _blog_ [Visual C++](https://msdn.microsoft.com/fr-fr/library/hh567368.aspx) [(version en anglais)](https://blogs.msdn.microsoft.com/vcblog/2015/06/19/c111417-features-in-vs-2015-rtm/).
 
-
-Changement important des nouvelles versions C++ : **Un compilateur n'est plus obligé d'implémenter toutes les fonctionnalités C++17 pour être annoncé comme supportant C++17**. 
+Changement important des nouvelles versions C++ : **un compilateur n'est plus obligé d'implémenter toutes les fonctionnalités C++17 pour être annoncé comme supportant C++17**. 
 
 Par exemple, un éditeur pourrait vendre un compilateur supportant tout le C++17 sauf [_"attribute specifier sequence"_](http://en.cppreference.com/w/cpp/language/attributes) qu'il juge fastidieux et inutiles pour ses clients/prospects. Cet éditeur peut annoncer que son compilateur est conforme au C++17 excepté ces _"attributs"_. 
 
@@ -498,23 +559,23 @@ En conclusion, pas la peine d'attendre la sortie du standard C++17 (ou des versi
 Tester le support C++17
 -----------------------
 
-Attention, la [macro **`__cplusplus`**](http://en.cppreference.com/w/cpp/preprocessor/replace#Predefined_macros) n'indique pas la version C++ supportée par le compilateur. Mais indique la version C++ activée par les options de compilation :
+Attention, la [macro **`__cplusplus`**](http://en.cppreference.com/w/cpp/preprocessor/replace#Predefined_macros) n'indique pas la version C++ supportée par le compilateur. Mais indique la version C++ activée par les options de compilation. Pour information, GCC avant 4.7 a [`__cplusplus` qui vaut `1` au lieu de `199711`](gcc.gnu.org/bugzilla/show_bug.cgi?id=1773).
 
 ```cpp
-#ifdef __cplusplus // 199711 non supporté avant GCC-4.7
-#  warning Mon compilateur supporte C++99
-#endif
-
-#if __cplusplus > 201100 // ou tester 201103
-#  warning Compilé avec une option comme -std=c++0x
-#endif
-
-#if __cplusplus > 201400 // ou tester 201402
-#  warning Compilé avec une option comme -std=c++1y
-#endif
-
-#if __cplusplus > 201700
-#  warning Compilé avec une option comme -std=c++1z
+#ifdef __cplusplus
+#  if __cplusplus <= 199711 // Bug GCC < 4.7
+#    warning Compilé pour C++99
+#  elif __cplusplus == 201103
+#    warning Compilé pour C++11 (-std=c++0x ?)
+#  elif __cplusplus == 201402 // Défaut GCC-6
+#    warning Compilé pour C++14( -std=c++1y
+#  elif __cplusplus > 201700
+#    warning Compilé pour C++17 (-std=c++1z ?)
+#  else
+#    error Valeur inattendue __cplusplus
+#  endif
+#else
+#  warning __cplusplus non défini
 #endif
 ```
 
@@ -524,7 +585,7 @@ Attention, la [macro **`__cplusplus`**](http://en.cppreference.com/w/cpp/preproc
 Deux alternatives pour vérifier le support des fonctionnalités C++ :
 
 1. les macros [Boost.Config](http://www.boost.org/doc/libs/1_61_0/libs/config/doc/html/boost_config/boost_macro_reference.html) ;
-2. les macros de [test de fonctionnalités C++](en.cppreference.com/w/cpp/experimental/feature_test#Language_Features).
+2. les macros de [test des fonctionnalités C++](en.cppreference.com/w/cpp/experimental/feature_test#Language_Features).
 
 Cette seconde série de macros est plus élégante, mais nécessite un compilateur récent. Voici un exemple d'utilisation :
 
@@ -549,7 +610,7 @@ Cette seconde série de macros est plus élégante, mais nécessite un compilate
 #endif
 ```
 
-Ah ! On me signale que [GCC aurait peut-être implémenté **`__cpp_concepts`**](https://gcc.gnu.org/projects/cxx-status.html#tses), que les documents du comité de standardisation C++ parlent plutôt de [**`__cpp_concepts`**](www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0118r0.pdf) et de [**`__cpp_lib_filesystem`**](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0096r3.html), et la partie `_experimental` sera de toute façon retirée dans quelques années...
+Ah ! On me signale que [GCC aurait implémenté **`__cpp_concepts`**](https://gcc.gnu.org/projects/cxx-status.html#tses), que les documents du comité de standardisation C++ parlent plutôt de [**`__cpp_concepts`**](www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0118r0.pdf) et de [**`__cpp_lib_filesystem`**](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0096r3.html), et la partie `_experimental` sera de toute façon retirée dans quelques années...
 
 Vérifions donc avec et sans `_experimental` :
 
@@ -574,13 +635,37 @@ Vérifions donc avec et sans `_experimental` :
 
 
 
-Nous pouvons aller encore plus loin en testant précisément la [valeur](en.cppreference.com/w/cpp/experimental/feature_test#Language_Features) des `__cpp_concepts` et `__cpp_lib_filesystem` (du style `201501`).
+Pour aller plus loin, tester aussi la [valeur (année mois)](en.cppreference.com/w/cpp/experimental/feature_test#Language_Features) des macros `__cpp_concepts` et `__cpp_lib_filesystem` (du style `201501`).
+
+Pour indiquer les [fonctionnalités C++ utilisées par son code](https://cmake.org/cmake/help/latest/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.html) avec CMake :
+
+```cmake
+# CMake-3.1 a introduit target_compile_features() 
+cmake_minimum_required(VERSION 3.1)
+
+add_library(MaLib malib/src/lib.cpp
+                  malib/include/malib/lib.h)
+target_include_directories(MaLib PUBLIC malib/include)
+
+# lib.cpp utilise le constexpr du C++11
+target_compile_features(MaLib PRIVATE cxx_constexpr)
+
+# L'en-tête publique utilise [[deprecated]] (C++14)
+target_compile_features(MaLib PUBLIC cxx_attribute_deprecated)
+
+# L'application utilise le decltype du C++11
+add_executable(MonApp src/main.cpp)
+target_compile_features(MonApp PRIVATE cxx_decltype)
+target_link_libraries(MonApp MaLib)
+```
 
 
-Et toi, cher lecteur LinuxFr, es-tu content de la disponibilité rapide des fonctionnalités des prochaines versions C++ ?
+
+
+Et toi, cher lecteur/chère lectrice de LinuxFr.org, es-tu content(e) de la disponibilité rapide des fonctionnalités des prochaines versions C++ ?
 Et quand penses-tu que tu pourras utiliser ces nouvelles fonctionnalités C++ dans ton travail ?
-Subis tu l'interdiction d'utiliser C++17 ? (à cause de règles de codage figées ou de l'obligation de rester sur un vieux compilateur ?)
-Et dans tes loisirs, dans combien de temps penses tu passer au C++17 ?
+Subis-tu l'interdiction d'utiliser C++17 ? (à cause de règles de codage figées ou de l'obligation de rester sur un vieux compilateur ?)
+Et dans tes loisirs, dans combien de temps penses-tu passer au C++17 ?
 
 ---------------------------------------------------------------
 
@@ -591,12 +676,11 @@ D'ici la standardisation finale C++17, le comité va s’efforcer de corriger le
 
 [CppReference a aussi besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous) comme nous le disait nazcafan en 2012. D'autant plus, qu'au moment de la rédaction de cette dépêche, les pages anglaises C++17 sont incomplètes ou inexistantes, et c'est pire du côté des pages françaises !
 
-Comme indiqué dans l’introduction, chacun peut faire profiter les autres de ses propres recherches **C++17** en enrichissant cette présentation sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (les personnes intéressées peuvent indiquer dans les commentaires son pseudo Github). Ainsi nous pourrons partager un contenu libre CC-BY-SA pour :
+Comme indiqué dans l’introduction, chacun peut faire profiter les autres de ses propres recherches **C++17** en enrichissant cette présentation sur le [dépôt Git *"materials"* C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md) (les personnes intéressées peuvent indiquer dans les commentaires son pseudo GitHub). Ainsi nous pourrons partager un contenu libre CC-BY-SA pour :
 
-* Ajouter un article Wikipédia C++17 en Français ;
+* Ajouter un article Wikipédia C++17 en français ;
 * Organiser des conférences *(Meetup)* ;
 * Publier un billet sur tout autre site ;
 * ...
-
 
 ![Logo de la communauté C++ francophone](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
