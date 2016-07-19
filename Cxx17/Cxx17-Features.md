@@ -11,6 +11,11 @@ Authors |Oliver H, olibre, Lucas, palm123, Benoît Sibaud et RyDroid
 License |CC by-sa
 
 
+|/!\ Besoin d'aide pour prendre une décision /!\
+|------------------------------------------------
+|La dépêche étant trop longue, nous pourrions la scinder en quatre : (1) Genèse C++17 (2) Nouveautés du langage (3) Nouveautés de la STL (4) Attentes pour C++20. L'idée est de publier une dépêche par semaine. Alors, on tronçonne ? ou pas ?
+
+
 L'ajout de fonctionnalités au **C++17** a été clôturé. Faisons donc le tour des nouveautés et vérifions ce titre provocateur :-)
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
@@ -45,11 +50,11 @@ Cette dépêche étant très longue, ce premier chapitre donne un aperçu rapide
 
 #### La face cachée du C++
     
-D'abord, le standard C++ n'est pas libre. En puis, le [télécharger coûte 180 €](www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029). Alors, on se repli sur la version gratuite : un brouillon _(draft)_ disponible sur [open-std.org](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) et sur [github.com](https://github.com/cplusplus/draft/blob/master/papers/n4296.pdf).
+La spécification C++ n'est pas libre et [son téléchargement coûte 180 €](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029). Alors, on se repli un brouillon _(draft)_ gratuitement disponible sur [open-std.org](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) et sur [github.com](https://github.com/cplusplus/draft/blob/master/papers/n4296.pdf).
     
-Par contre, c'est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) : le langage et l'API sont librement implémentables (pas de brevets logiciels ni de propriété intellectuelle) contrairement à d'autres langages comme Java ou C# !
+Par contre, c'est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) : pas de brevets logiciels ni de propriété intellectuelle sur le langage ni sur l'API de (contrairement à Java ou C#).
     
-Finalement, le standard n'est pas pratique au quotidien. Alors, ce sont plutôt des sites comme [cppreference.com](http://fr.cppreference.com/) qui sont utilisés. Et la plupart des développeurs C++, même expérimentés, n'ont jamais lu le standard !
+Finalement, le standard n'est pas utilisé au quotidien, mais plutôt des sites comme [cppreference.com](http://fr.cppreference.com/) (la plupart des développeurs C++, même expérimentés, n'ont jamais lu le standard).
 
 #### Sucre syntaxique et autres améliorations du langage
 
@@ -97,8 +102,8 @@ Pour vraiment apprécier les nouveautés, lisez la suite de cette dépêche. La 
 ------------------------------------------
 
 
-La face cachée du C++
----------------------
+La spécification du standard C++ n'est ni libre ni gratuite
+-----------------------------------------------------------
     
 Obtenir le standard C++ coûte cher :
     
@@ -111,12 +116,12 @@ De plus, à chaque nouvelle version du standard ISO/IEC 14882, la version préc�
 * C++03 [ISO/IEC 14882:2003](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=38110) supprimé ;
 * C++11 [ISO/IEC 14882:2011](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=50372) supprimé.
     
-On se console avec les brouillons qui sont gratuitement téléchargeables sur deux sites :
+On se console avec les brouillons qui sont gratuits :
     
 * [open-std.org/jtc1/sc22/wg21](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/)
 * [github.com/cplusplus/draft](https://github.com/cplusplus/draft/tree/master/papers)
        
-Les brouillons validées par le comité de standardisation C++ sont fournis à l'ISO qui change la mise en forme pour en faire une version officielle. Le nombre de pages 
+Les brouillons validées par le comité de standardisation C++ sont fournis à l'ISO qui change juste la mise en forme pour la version officielle. Le nombre de pages a considérablement augmenté entre C++03 et C++11 :
     
       Standard                      | Pages
 ------------------------------------|-------
@@ -133,18 +138,21 @@ La notice de droit d'auteur du document ne laisse aucun doute : **le standard C+
 > COPYRIGHT PROTECTED DOCUMENT  
 > All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
 > Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
-            
-Par contre, ce sont bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard peuvent être implémentés librement. Ce qui n'est pas le cas des langages comme Java ou C#.
+
+
+Le C++ reste néanmoins un standard ouvert
+-----------------------------------------
+               
+Par contre, c'est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement. Ce qui n'est pas le cas des langages comme Java ou C#.
     
 Nous aurions aimé un standard plus ouvert comme pour Go ou Rust. Et c'est vers ce sens que le comité s'oriente, en cherchant plus de proximité avec les utilisateurs C++, plus de transparence.
    
 
 Par rapport à tous les langages utilisés en production, avouons que le C++ est le langage le complexe que l'humanité ait pu inventer ! Les développeurs C++ en ont bien conscience. C'est peut-être la raison pour laquelle, par rapport aux autres _meetups_, les conférences sur le C++ ne dénigrent pas les autres langages. Au contraire, nous aimerions un langage plus simple, mais attention qui **"ne sacrifie pas les performances"**.
     
-Le C++ est tellement vaste, qu'aucun développeur C++ ne connaît vraiment le C++ ! Seulement une portion, souvent petite (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts, on les appelle des juristes du C++ (_C++ lawyers_).
+Le C++ est tellement vaste, les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts, sont appelés des juristes du C++ *(C++ lawyers)*.
      
-Pour inverser la tendance, certaines personnes influentes au comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup), le créateur du C++, souhaitent aller rapidement vers un C++ plus intuitif, plus sûr, mais toujours plus performant.
-
+Pour inverser la tendance, certains membres du comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (le créateur du C++) souhaitent accélérer l'évolution du langage vers un C++ plus intuitif, plus sûr, et toujours plus performant.
 
 C'est dans ce cadre, que l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) a été lancé. A la fois pour proposer un sous-ensemble du C++ plus sûr, plus simple et sans sacrifier les performances. Mais aussi pour faire pression aux membres du comité pour adopter les idées de la [Guidelines Support Library](https://github.com/Microsoft/GSL) (voir aussi l'[implémentation de Martin Moene](https://github.com/martinmoene/gsl-lite) compatible avec beaucoup plus de compilateurs).
 
@@ -382,6 +390,42 @@ Fonctionnalités au niveau du langage C++
     }
     ```
 
+
+* Autoriser les évaluations constantes pour tout argument `template` qui n'est pas un type [_(N4198 Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Cela est possible car C++14 a élargit la notion d'expression constante pour les types **pointeur**, **référence** et **pointeur-vers-membre**. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements :
+    
+    Type     | C++14  | C++17
+    ---------|--------|-------
+    Pointeur|`&variable`, tableau, fonction référant un objet statique ou `nullptr` | évaluation d'une adresse constante d'un objet complet statique ou d'une fonction, ou `nullptr`
+    Référence|objet ou fonction référant un objet statique| évaluation d'un *glvalue* constant référant un objet complet statique ou d'une fonction
+    Pointeur-vers-membre|`&S::statique` ou `nullptr`|expression constante
+    
+    ```cpp
+    // ADRESSE = paramètre template
+    // Ce n'est pas un type
+    // mais une constante
+    template<int* ADRESSE>
+    class Ac
+    { };
+    
+    int entier = 42;
+    constexpr int* getPtr()     {return &entier;}
+    constexpr int* getNullptr() {return nullptr;}
+    Ac<&entier>      ok_entier;
+    Ac<getPtr()>     ok_Cxx17; //KO C++14
+    Ac<getNullptr()> ok_nullptr;
+    
+    struct S
+    { int membre; static int statique; };
+    S s;
+    Ac<&s::membre>   ko_adresse_non_statique;
+    Ac<&S::statique> ok_adresse_statique;
+    Ac<&s.statique>  ok_cxx17; //KO C++14
+    
+    int tableau[5];
+    Ac<&tableau[2]> ko_adresse_element;
+    ```
+
+
 * Constante en virgule flottante exprimée en hexadécimal *(Hexadecimal [float point literals](http://en.cppreference.com/w/cpp/language/floating_literal))*, voir l'exemple `float f = 0xA.Bp3f;` ci-dessous ;
 
 
@@ -428,8 +472,10 @@ La tentation est grande d'épater ses collègues avec du code qu'ils ne comprenn
 ---------------------------------------------------
 
 
-Fonctionnalités au niveau de la bibliothèque STL
-------------------------------------------------
+Fonctionnalités au niveau de la bibliothèque standard
+-----------------------------------------------------
+    
+Petit rappel, l'ensemble des fonctionnalités `std::*` ne s'appelle plus [**STL**](https://fr.wikipedia.org/wiki/Standard_Template_Library) _(Standard Template Library)_, mais [**bibliothèque standard du C++**](https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_standard_du_C%2B%2B) _(C++ Standard Library)_.
 
 * Suppression des [digraphes et trigraphes](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#Removal_of_trigraphs).
     
@@ -441,7 +487,9 @@ Fonctionnalités au niveau de la bibliothèque STL
      
     La dépréciation des digraphes/trigraphes avait été prévue en 2009 pour C++11. Mais certains membres comme IBM et Bloomberg étaient réticents. Finalement, c'est la suppression pure et simple qui a été votée par les membres pour C++17 (sans passer par la dépréciation). IBM a même tenté une dernière [tentative pour conserver les digraphes/trigraphes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4210.pdf) ;
 
-* Ajout des [versions parallélisées de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism) *(Parallelism TS v1)* ; ![Deux cochons en position 69](http://vignette3.wikia.nocookie.net/necyklopedie/images/8/80/Porno_prase.png/revision/latest?cb=20090116191951)
+* Ajout des [versions parallélisées de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism) *(Parallelism TS v1)* ;
+    
+    ![Deux cochons en position 69](http://vignette3.wikia.nocookie.net/necyklopedie/images/8/80/Porno_prase.png/revision/latest?cb=20090116191951)
 
 * Ajout des [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math). C'est une longue histoire dont la [première proposition date de 2003](http://open-std.org/JTC1/SC22/WG21/docs/papers/2003/n1422.html) !
     
