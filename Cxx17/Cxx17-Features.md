@@ -43,11 +43,13 @@ En bref
 
 Cette dépêche étant très longue, ce premier chapitre donne un aperçu rapide.
 
-#### Face cachée du C++
-
-
-Télécharger le PDF du standard du C++ (ISO/IEC 14882) coûte 180 €. Et le document n'est pas libre. Alors, c'est un brouillon _(draft)_ gratuit qui est utilisée. En général, c'est la version du brouillon juste avant les changements éditoriaux mineurs pour en faire un document officiel. Mais, de toutes façons, le standard est rarement utilisée pour apprendre le C++. Le site de référence recommandée est http://cppreference.com/.
-
+#### La face cachée du C++
+    
+D'abord, le standard C++ n'est pas libre. En puis, le [télécharger coûte 180 €](www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029). Alors, on se repli sur la version gratuite : un brouillon _(draft)_ disponible sur [open-std.org](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) et sur [github.com](https://github.com/cplusplus/draft/blob/master/papers/n4296.pdf).
+    
+Par contre, c'est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) : le langage et l'API sont librement implémentables (pas de brevets logiciels ni de propriété intellectuelle) contrairement à d'autres langages comme Java ou C# !
+    
+Finalement, le standard n'est pas pratique au quotidien. Alors, ce sont plutôt des sites comme [cppreference.com](http://fr.cppreference.com/) qui sont utilisés. Et la plupart des développeurs C++, même expérimentés, n'ont jamais lu le standard !
 
 #### Sucre syntaxique et autres améliorations du langage
 
@@ -65,7 +67,7 @@ Télécharger le PDF du standard du C++ (ISO/IEC 14882) coûte 180 €. Et le do
 
 - [Parallélisation de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) ;
 - Ajout de [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) ;
-- Intégration de bibliothèques  [`filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`variant<>`](http://en.cppreference.com/w/cpp/utility/variant), [`optional<>`](http://en.cppreference.com/w/cpp/utility/optional) et [`any`](http://en.cppreference.com/w/cpp/utility/any) de [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (avec des ~~améliorations~~ changements) ;
+- Intégration des bibliothèques [`filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`variant`](http://en.cppreference.com/w/cpp/utility/variant), [`optional`](http://en.cppreference.com/w/cpp/utility/optional) et [`any`](http://en.cppreference.com/w/cpp/utility/any) après une longue maturation dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) ;
 - [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (mieux que `const std::string&`) ;
 - [`std::string::data()`](http://en.cppreference.com/w/cpp/string/basic_string/data) non-`const` ;
 - ...
@@ -98,17 +100,33 @@ Pour vraiment apprécier les nouveautés, lisez la suite de cette dépêche. La 
 La face cachée du C++
 ---------------------
     
-| /!\ Chapitre en cours de rédaction /!\  |
-|-----------------------------------------|
-| Toute aide est la bienvenue  :-)        |
+Obtenir le standard C++ coûte cher :
     
-À chaque nouvelle version du standard ISO/IEC 14882, la version précédente est supprimée (_withdraw_ en anglais). Donc les standards [C++98 (ISO/IEC 14882:1998)](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=25845), [C++03 (ISO/IEC 14882:2003)](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=38110) et [C++11 (ISO/IEC 14882:2011)](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=50372) ne sont plus disponibles officiellement.
+* 182 € sur le [site de l'ISO](http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=060&ics3=&csnumber=64029) (198 francs suisses) ;
+* 238 € sur le [site de l'ANSI](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014) (265 $ USA). 
     
-Le standard actuel, **C++14** (ISO/IEC 14882:2014) est payant :
+De plus, à chaque nouvelle version du standard ISO/IEC 14882, la version précédente est supprimée (_withdraw_ en anglais) :
     
-* [182 € (198 francs suisses) sur le site de l'ISO](http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=060&ics3=&csnumber=64029)
-* [238 € (265 $) sur le site de l'ANSI aux États-Unis](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014).
+* C++98 [ISO/IEC 14882:1998](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=25845) supprimé ;
+* C++03 [ISO/IEC 14882:2003](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=38110) supprimé ;
+* C++11 [ISO/IEC 14882:2011](http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?ics1=35&ics2=60&ics3=&csnumber=50372) supprimé.
     
+On se console avec les brouillons qui sont gratuitement téléchargeables sur deux sites :
+    
+* [open-std.org/jtc1/sc22/wg21](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/)
+* [github.com/cplusplus/draft](https://github.com/cplusplus/draft/tree/master/papers)
+       
+Les brouillons validées par le comité de standardisation C++ sont fournis à l'ISO qui change la mise en forme pour en faire une version officielle. Le nombre de pages 
+    
+      Standard                      | Pages
+------------------------------------|-------
+C++98 [ISO/IEC 14882:1998 1998-09-01](http://www.lirmm.fr/~ducour/Doc-objets/ISO+IEC+14882-1998.pdf) | 776 pages
+C++03 [ISO/IEC 14882:2003 2003-10-15](https://github.com/hstefan/htlib/blob/master/res/INCITS%2BISO%2BIEC%2B14882-2003.pdf) | 786 pages (+1%)
+C++11 [ISO/IEC 14882:2011 2011-09-01](http://new.vk.com/doc100509572_160085962?hash=6801602629449dfa59&dl=27c32949114b3322a2)| 1356 pages (+73%)
+C++11 [Draft N3376 2012-02-28](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf)| 1324 pages
+C++14 [Draft N4296 2014-11-19](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) | 1368 pages (+3%)
+C++17 [Draft N4594 2016-05-30](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4594.pdf) (pas encore finalisé)| 1519 pages (+11%)
+
 La notice de droit d'auteur du document ne laisse aucun doute : **le standard C++ n'est pas libre**. Par contre, l'organisme ISO local _pourrait_ donner des permissions de reproduction...
       
 > © ISO/IEC 2014 – All rights reserved  
@@ -116,19 +134,19 @@ La notice de droit d'auteur du document ne laisse aucun doute : **le standard C+
 > All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
 > Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
             
-TODO
-       
-* https://isocpp.org/std/the-standard
-* Licence/Brevet/... => Lire https://isocpp.org/home/terms-of-use
-* Problèmes de licence/brevet avec d'autres langages comme Java/C#/Go...
-* Par contre, certains langages sont d'avantage libres comme Rust
-* Les dév. C++ ont bien conscience d'avoir le langage le plus complexe
-* On rêve tous à un langage plus simple mais qui _Ne sacrifie pas les performances_
-* Aucun développeur C++ ne connaît vraiment le C++, seulement une portion, souvent petite
-* Ceux qui connaissent le C++, on les appelle des juristes du C++ (_C++ lawyers_) 
-* La spécification fait environ 1500 pages pour le C++14... (compter le nombre de pages des C++98, C++03, C++11 ... C++17)
-* évolution => aller vers un langage plus intuitif, plus sûr et toujours plus performant _(Ne pas sacrifier les performances)_
-* Exemple d'évolution, l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) pour utiliser un sous-ensemble du C++ plus sûr, plus simple, sans sacrifier les performances
+Par contre, ce sont bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard peuvent être implémentés librement. Ce qui n'est pas le cas des langages comme Java ou C#.
+    
+Nous aurions aimé un standard plus ouvert comme pour Go ou Rust. Et c'est vers ce sens que le comité s'oriente, en cherchant plus de proximité avec les utilisateurs C++, plus de transparence.
+   
+
+Par rapport à tous les langages utilisés en production, avouons que le C++ est le langage le complexe que l'humanité ait pu inventer ! Les développeurs C++ en ont bien conscience. C'est peut-être la raison pour laquelle, par rapport aux autres _meetups_, les conférences sur le C++ ne dénigrent pas les autres langages. Au contraire, nous aimerions un langage plus simple, mais attention qui **"ne sacrifie pas les performances"**.
+    
+Le C++ est tellement vaste, qu'aucun développeur C++ ne connaît vraiment le C++ ! Seulement une portion, souvent petite (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts, on les appelle des juristes du C++ (_C++ lawyers_).
+     
+Pour inverser la tendance, certaines personnes influentes au comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup), le créateur du C++, souhaitent aller rapidement vers un C++ plus intuitif, plus sûr, mais toujours plus performant.
+
+
+C'est dans ce cadre, que l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) a été lancé. A la fois pour proposer un sous-ensemble du C++ plus sûr, plus simple et sans sacrifier les performances. Mais aussi pour faire pression aux membres du comité pour adopter les idées de la [Guidelines Support Library](https://github.com/Microsoft/GSL) (voir aussi l'[implémentation de Martin Moene](https://github.com/martinmoene/gsl-lite) compatible avec beaucoup plus de compilateurs).
 
 ------------------------------------------------------
 
@@ -151,7 +169,7 @@ Les membres du comité de standardisation utilisent le terme **C++17** (et non p
 Donc en 2016 (année N-1), le comité de standardisation ISO C++ (une centaine de personnes) s'est rencontré deux fois afin de figer le périmètre fonctionnel du **C++17** :
 
 1. [Une semaine début mars](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), pour valider des fonctionnalités _mineures_ et invalider des fonctionnalités _majeures_ ;
-2. [Une semaine fin juin](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/), à Oulu (Finlande), pour définitivement clore l'ajout de nouvelles fonctionnalités.
+2. [Une semaine fin juin](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/), à Oulu (Finlande), pour définitivement clore l'ajout de nouvelles fonctionnalités (Anecdote : Les membres sont rentrés épuisés, car le soleil se couchait après minuit et le décalage horaire était important pour ceux qui venaient des USA).
 
 ------------------------------------------
 
@@ -425,21 +443,26 @@ Fonctionnalités au niveau de la bibliothèque STL
 
 * Ajout des [versions parallélisées de 69 algorithmes](http://en.cppreference.com/w/cpp/experimental/parallelism) *(Parallelism TS v1)* ; ![Deux cochons en position 69](http://vignette3.wikia.nocookie.net/necyklopedie/images/8/80/Porno_prase.png/revision/latest?cb=20090116191951)
 
+* Ajout des [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math). C'est une longue histoire dont la [première proposition date de 2003](http://open-std.org/JTC1/SC22/WG21/docs/papers/2003/n1422.html) !
+    
+    ```cpp
+    TODO fournir un exemple
+    ```
+
+
 * Ajout de [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem). Enfin le C++ dispose d'une API standardisée pour gérer fichiers et répertoires ! 
     
     ```cpp
     TODO fournir un exemple
     ```
     
-    C'est une longue histoire :
+    C'est aussi une longue histoire :
     
     * 2003 [`boost::filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem) ;
     * 2004 [requête pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html) ;
     * 2005 [première proposition détaillée pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1841.html) ;
     * Il aura fallu une dizaine d'années et trois versions majeures pour permettre au groupe d'étude SW3 _(Study Group 3)_ de rédiger l'ultime spécification technique _(TS)_ [N4100 (le titre est en français dans le document)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) qui correspond au standard [ISO/IEC TS 18822:2015](http://www.iso.org/iso/catalogue_detail.htm?csnumber=63483) ;
     * L'implémentation de `std::experimental::filesystem` sur plusieurs plateformes et compilateurs ([Visual C++ 2012/2013/2015](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/msdn.microsoft.com/en-us/library/hh874694.aspx) et [GCC-5.3](https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dynamic_or_shared.html#manual.intro.using.linkage.experimental)) a été nécessaire pour décider de l'intégration dans la bibliothèque standard.
-
-* Ajout des [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) (c'est aussi une longue histoire) ;
 
 * Ajout du `std::variant` [*(type-safe union for C++17)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0088r2.html) et d'une partie des [*Library Fundamentals TS v1*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) :
     
