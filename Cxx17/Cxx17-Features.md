@@ -193,13 +193,30 @@ Fonctionnalités au niveau du langage C++
     
     Finalement, peu de changements. Par exemple, la fonction [`aligned_alloc()`](http://en.cppreference.com/w/c/memory/aligned_alloc) avait déjà été intégrée avec **C++11**.
 
-* La macro [**`__has_include(<boost/any.hpp>)`**](http://en.cppreference.com/w/cpp/experimental/feature_test#Language_Features#Function_Macros) qui vérifie si l'en-tête `<boost/any.hpp>` est disponible pour inclusion ;
+* La macro [**`__has_include(<windows.h>)`**](http://en.cppreference.com/w/cpp/experimental/feature_test#Language_Features#Function_Macros) vérifie si l'en-tête `<windows.h>` est disponible pour inclusion ;
     
     ```cpp
-    #if __has_include(<boost/any.hpp>)
-    #  include <boost/any.hpp>
+    #if __has_include(<windows.h>)
+    #  include <windows.h>
+       LONGLONG ticks1nano = []() {
+         LARGE_INTEGER freq;
+         QueryPerformanceFrequency(&freq);
+         return freq.QuadPart / 1000'000;
+       }();
+       LONGLONG nanosecondes() {
+         LARGE_INTEGER time;
+         QueryPerformanceCounter(&time);
+         return time.QuadPart/ticks1nano;
+       }
+    #elif __has_include(<time.h>)
+    #  include <time.h>
+       auto nanosecondes() {
+          struct timespec ts;
+          clock_gettime(CLOCK_MONOTONIC,&ts);
+          return 1000'000'000 * ts.tv_sec + ts.tv_nsec;
+       }
     #else
-    #  include <mon_propre_any.hpp>
+    #  error Ne trouve ni <windows.h> ni <time.h>
     #endif
     ```
 
@@ -391,40 +408,48 @@ Fonctionnalités au niveau du langage C++
     ```
 
 
-* Autoriser les évaluations constantes pour tout argument `template` qui n'est pas un type [_(N4198 Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Cela est possible car C++14 a élargit la notion d'expression constante pour les types **pointeur**, **référence** et **pointeur-vers-membre**. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements :
-    
+* Correction des évaluations constantes pour tout argument `template` n'étant pas un type [_(N4198 Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Les types **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
+         
     Type     | C++14  | C++17
     ---------|--------|-------
     Pointeur|`&variable`, tableau, fonction référant un objet statique ou `nullptr` | évaluation d'une adresse constante d'un objet complet statique ou d'une fonction, ou `nullptr`
     Référence|objet ou fonction référant un objet statique| évaluation d'un *glvalue* constant référant un objet complet statique ou d'une fonction
-    Pointeur-vers-membre|`&S::statique` ou `nullptr`|expression constante
+    Pointeur-vers-membre|`&S::statique` ou `nullptr`|toutes expressions constantes
+    Intégral `bool char int` ...|toutes expressions constantes|pareil
+    `enum`|toutes expressions constantes|pareil
+    `nullptr_t`|toutes expressions constantes|pareil
     
     ```cpp
-    // ADRESSE = paramètre template
-    // Ce n'est pas un type
-    // mais une constante
-    template<int* ADRESSE>
-    class Ac
+    // Cette classe permet de tester
+    // les expressions constantes
+    template<int* EXPRESSION_CONSTANTE>
+    class Test
     { };
     
+    // La fonction constexpr getPtr() retourne
+    // un pointeur vers un objet statique
+    // (static storage duration object)
     int entier = 42;
     constexpr int* getPtr()     {return &entier;}
     constexpr int* getNullptr() {return nullptr;}
-    Ac<&entier>      ok_entier;
-    Ac<getPtr()>     ok_Cxx17; //KO C++14
-    Ac<getNullptr()> ok_nullptr;
+    Test<&entier>        ok_entier;
+    Test<getPtr()>       ok_Cxx17; //KO C++14
+    Test<getNullptr()>   ok_nullptr;
     
-    struct S
+    // L'expression &obj.statique est un
+    // pointeur-vers-membre d'un objet statique
+    struct Str
     { int membre; static int statique; };
-    S s;
-    Ac<&s::membre>   ko_adresse_non_statique;
-    Ac<&S::statique> ok_adresse_statique;
-    Ac<&s.statique>  ok_cxx17; //KO C++14
+    Str obj;
+    Test<&Str::membre>   ko_ptr_non_statique;
+    Test<&Str::statique> ok_ptr_statique;
+    Test<&obj.statique>  ok_cxx17; //KO C++14
     
-    int tableau[5];
-    Ac<&tableau[2]> ko_adresse_element;
+    // Le pointeur vers un élément de tableau
+    // statique ne semblent pas être supportés
+    int   tableau[5];
+    Test<&tableau[2]>    ko_adresse_element;
     ```
-
 
 * Constante en virgule flottante exprimée en hexadécimal *(Hexadecimal [float point literals](http://en.cppreference.com/w/cpp/language/floating_literal))*, voir l'exemple `float f = 0xA.Bp3f;` ci-dessous ;
 
@@ -434,33 +459,29 @@ Fonctionnalités au niveau du langage C++
 Donc en C++17 nous pourrons écrire:
 
 ```cpp
-#if __has_include(<boost/array.hpp>)
-#  include <boost/array.hpp>
-   using namespace boost;
-#else
-#  include <array>
-   using namespace std;
-#endif
+#include <array>
 
 struct Truc
 {
-  char  c = 'z';
-  int   i = 9;        //C'est une fraction hexa
-  float f = 0xA.Bp3f; // 0xA.B = 10,6875
-};                    // exposant 2^3 => f=85,5
+  bool  b = false;      
+  float f = 0xA.Bp3f; 
+};       // Fraction hexadécimale
+         // 0xA.B = 10,6875
+         // exposant 2^3 => f=85,5
 
-int main(int argc, [[maybe_unused]]char*argv[])
+int main (int argc, 
+    [[maybe_unused]] char* argv[])
 {
   // Déduction array<int,4>
-  array tableau {1, 2, 3, argc};
+  std::array tableau {1,2,3,argc};
    
   // lambda constexpr
-  auto lambda = [](){ return Truc(); };
+  auto f = [](){ return Truc(); };
 
-  if constexpr (auto [a,b,c]=lambda(); a=='a')
-    return b + tableau[1] * argc;
+  if constexpr (auto [x,y]=f(); x)
+    return y + tableau[1] * argc;
   else
-    return b - tableau[2] * argc;
+    return y - tableau[2] * argc;
 }
 ```
 
