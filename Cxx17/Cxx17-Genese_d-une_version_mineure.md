@@ -7,18 +7,15 @@ C++17 - Partie 1 sur 4 - Genèse d'une version mineure
 =====================================================
 
 
-Authors |Oliver H, olibre, Lucas, palm123, Benoît Sibaud, RyDroid et cracky
+Authors |Oliver H, olibre, Benoît Sibaud, Lucas, palm123, cracky, Martin Peres et RyDroid
 --------|------------------------------
 License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
+Tags    |c++17 et c++
 
 
-
-L'ajout de fonctionnalités au **C++17** a été clôturé. Faisons donc le tour des nouveautés et vérifions ce titre provocateur :-)
-
+Les fonctionnalités de la prochaine version du C++ sont arrêtées. Cette première dépêche, d'une série de quatre dépêches, s'attarde sur la face cachée du C++, et peut intéresser tous les lecteurs LinuxFr.org, pas seulement les développeurs C++ :-)
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
-    
-Cette dépêche est la première d'une série de quatre dépêches sur le C++17.
 
 ----
 
@@ -37,24 +34,20 @@ Cette dépêche est la première d'une série de quatre dépêches sur le C++17.
 
 ----
 
-
-
-
 Série de quatre dépêches C++17
 ==============================
     
 Cette dépêche ainsi que les trois autres sont figées après publication. Par contre, corriger/compléter est possible sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Ainsi la mise en commun des contributions individuelles permet de l'enrichissement mutuel et la réutilisation d'un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia C++17 en français. Merci aussi d'aider à la rédaction des trois autres dépêches.
 
-
 Ce chapitre présente un résumé des quatre dépêches.
 
-Première dépêche - Genèse du C++17
-----------------------------------
+1. Genèse du C++17
+------------------
 
 La spécification C++ n'est pas libre et [son téléchargement coûte 180 €](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029). Alors, les développeurs C++ utilisent un [brouillon _(draft)_ gratuit](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf). Par contre, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) : pas de brevets logiciels ni de propriété intellectuelle. Mais de toutes façons, la plupart des développeurs C++, même expérimentés, n'ont jamais lu le standard. Car ce sont surtout [des livres](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) et plus récemment des [sites](http://fr.cppreference.com/) qui sont utilisés.
 
-Seconde dépêche - Les changements au niveau du langage
-------------------------------------------------------
+2. Les changements au niveau du langage
+---------------------------------------
 
 Nettoyage, correction, évolution, sucre syntaxique :
     
@@ -78,8 +71,14 @@ Par contre, aucune fonctionnalité majeure n'est présente dans C++17 :
 * [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ;
 * [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
 
-Troisième dépêche - Les changements au niveau de la bibliothèque standard
--------------------------------------------------------------------------
+3. Les changements au niveau de la bibliothèque standard
+--------------------------------------------------------
+
+Les changements qui peuvent bousculer notre vie de développeur :
+    
+* La [algorithmes paralélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) (si multitâche performant) ;
+* [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (pour remplacer les `const std::string&`).
+
 
 Les transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) :
                
@@ -91,20 +90,10 @@ Les transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%
 [`optional`](http://www.boost.org/doc/libs/1_61_0/libs/optional) | -> [`optional`](http://en.cppreference.com/w/cpp/utility/optional)
 [`math`](http://www.boost.org/doc/libs/1_61_0/libs/math) | -> [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)
 
-Ce qui peut changer notre vie de développeur C++ :
-    
-* La [algorithmes paralélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) (si multitâche performant) ;
-* [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (pour remplacer les `const std::string&`).
+Par contre, impasse sur des fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf). Nous aurions aussi aimé que le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) intègre plus tôt le C++.
 
-Et pas mal d'autres nouveautés :
-    
-- [`std::string::data()`](http://en.cppreference.com/w/cpp/string/basic_string/data) non-`const` ;
-- ...
-
-Par contre, impasse sur une fonctionnalité majeure très attendue, les [_ranges_](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf). Une autre fonctionnalité majeure absente, le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf). Mais, de toutes façons, cette dernière n'était pas prévue pour C++17.
-
-Quatrième dépêche - Bilan des fonctionnalités C++17 et attentes pour C++20
---------------------------------------------------------------------------
+4. Bilan C++17 et attentes pour C++20
+-------------------------------------
 
 Alors, version mineure ou majeure ?
     
@@ -146,12 +135,12 @@ Mais le plus incroyable est qu'à chaque nouvelle version du standard ISO/IEC 14
 * C++03 [ISO/IEC 14882:2003](http://www.iso.org/iso/fr/catalogue_detail?csnumber=38110) supprimé ;
 * C++11 [ISO/IEC 14882:2011](http://www.iso.org/iso/fr/catalogue_detail?csnumber=50372) supprimé.
     
-C'est vraiment étrange, sachant que la plupart des projets C++ utilisés actuellement sont codées en C++98. Et la plupart des entreprises utilisent encore aujourd'hui quelques versions de compilateur de référence pour l'ensemble des projet qui ne supporte pas ou partiellement le standard C++11. Alors comment faire pour connaître le standard C++ utilisée par le bon vieux compilateur que l'on est obligé d'utiliser ?
+C'est vraiment étrange, sachant que la plupart des projets C++ utilisés actuellement sont codés en C++98. Et la plupart des entreprises utilisent encore aujourd'hui quelques versions de compilateurs de référence pour l'ensemble des projets qui ne supportent pas ou partiellement le standard C++11. Alors comment faire pour connaître le standard C++ utilisé par le bon vieux compilateur que l'on est obligé d'utiliser ?
     
-Yaplus que les brouillons du comité
-===================================
+Il n'y a plus que les brouillons du comité
+==========================================
     
-Les documents de travail du comité de standardisation sont légalement gratuits (toujours pas libre) :
+Les documents de travail du comité de standardisation sont légalement gratuits (toujours pas libres) :
     
 * [open-std.org/jtc1/sc22/wg21](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/)
 * [github.com/cplusplus/draft](https://github.com/cplusplus/draft/tree/master/papers)
@@ -195,27 +184,63 @@ Le C++ est tellement vaste, les développeurs C++ n'en connaissent bien souvent 
      
 Pour inverser la tendance, certains membres du comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (le créateur du C++) souhaitent accélérer l'évolution du langage vers un C++ plus intuitif, plus sûr, et toujours plus performant.
 
-C'est dans ce cadre, que l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) a été lancé. A la fois pour proposer un sous-ensemble du C++ plus sûr, plus simple et sans sacrifier les performances. Mais aussi pour faire pression aux membres du comité pour adopter les idées de la [Guidelines Support Library](https://github.com/Microsoft/GSL) (voir aussi l'[implémentation de Martin Moene](https://github.com/martinmoene/gsl-lite) compatible avec beaucoup plus de compilateurs).
+C'est dans ce cadre, que l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) a été lancée. A la fois pour proposer un sous-ensemble du C++ plus sûr, plus simple et sans sacrifier les performances. Mais aussi pour faire pression aux membres du comité pour adopter les idées de la [Guidelines Support Library](https://github.com/Microsoft/GSL) (voir aussi l'[implémentation de Martin Moene](https://github.com/martinmoene/gsl-lite) compatible avec beaucoup plus de compilateurs).
 
-------------------------------------------------------
+Cycle de publication [triannuel](http://www.universalis.fr/dictionnaire/triannuel/)
+================================
 
-
-Cycle et nommage des versions
------------------------------
-
-Après la version majeure **C++98** (et son correctif **C++03**), un nouveau standard C++ devait être publié dans les années suivantes. Comme sa date de publication n'était pas fixée, cette version a été nommée temporairement **C++0x**. Mais avec l'ajout continuel de nouvelles fonctionnalités, le comité de standardisation n'arrivait pas à stabiliser le standard. Et finalement **C++0x** a été publié en 2011 !
-
+Après la version majeure **C++98** (et son correctif **C++03**), un nouveau standard C++ devait être publié dans les années suivantes. Comme sa date de publication n'était pas fixée, cette version a été nommée temporairement **C++0x**.
+    
+Mais, avec le manque de maturité de certaines fonctionnalité et les requêtes continuelles d'ajout de nouvelles fonctionnalités, le comité de standardisation n'arrivait pas à stabiliser le standard. Et finalement **C++0x** a été publié en 2011 ! Ne perdons pas la face, `0x = 11` est correct mathématiquement avec `x = A` en [hexadécimal](https://fr.wikipedia.org/wiki/Syst%C3%A8me_hexad%C3%A9cimal) :-)
 
 Afin d'éviter tout nouveau glissement, le comité a alors décidé de publier un nouveau standard C++ tous les 3 ans, en figeant les fonctionnalités l'année N-1. Avec un cycle d'une version majeure (**C++11**) suivie d'une version mineure (**C++14**).
 
 
-Bien que ce process de standardisation ISO C++ permet de publier les nouvelles versions à la date prévue, les appellations **C++1y** (pour **C++14**) et **C++1z** (pour **C++17**) perdurent. Par exemple, l'[option de compilation `-std=c++1z`](https://gcc.gnu.org/projects/cxx-status.html) ou le [tag c++1z sur stackoverflow](http://stackoverflow.com/tags/c%2b%2b1z/info).
-
+Malgré des dates de publication figées, les appellations **C++1y** (pour **C++14**) et **C++1z** (pour **C++17**) perdurent. Par exemple, l'[option de compilation `-std=c++1z`](https://gcc.gnu.org/projects/cxx-status.html) ou le [tag c++1z sur stackoverflow](http://stackoverflow.com/tags/c%2b%2b1z/info).
 
 Les membres du comité de standardisation utilisent le terme **C++17** (et non pas C++1z). Soyons confiants, **C++1z** verra bien le jour en 2017 (et non pas en 2018, ni après).
 
 
-Donc en 2016 (année N-1), le comité de standardisation ISO C++ (une centaine de personnes) s'est rencontré deux fois afin de figer le périmètre fonctionnel du **C++17** :
+Deux sommets pour délimiter le périmètre C++17
+==============================================
 
-1. [Une semaine début mars](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), pour valider des fonctionnalités _mineures_ et invalider des fonctionnalités _majeures_ ;
-2. [Une semaine fin juin](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/), à Oulu (Finlande), pour définitivement clore l'ajout de nouvelles fonctionnalités (Anecdote : Les membres sont rentrés épuisés, car le soleil se couchait après minuit et le décalage horaire était important pour ceux qui venaient des USA).
+
+Donc en 2016 (année N-1), afin de figer le périmètre fonctionnel du **C++17**, les membres  du comité de standardisation C++ (une centaine de personnes) se sont réunis deux fois :
+    
+1. [Une semaine début mars](https://isocpp.org/blog/2016/03/trip-report-jax-sutter), à Jacksonville (Floride), pour adopter beaucoup de fonctionnalités, mais aussi pour rejeter plusieurs fonctionnalités majeures très attendues ;
+2. [Une semaine fin juin](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/), à Oulu (Finlande), pour intégrer pas mal d'autres fonctionnalités et ainsi clore l'ajout des fonctionnalités.
+    
+La semaine se déroule sur six jours, du lundi au samedi. Pas de grasse matinée car les premières réunions débutent à 8:30. Ces réunions permettent de débattre et voter l'intégration de chacune des spécifications techniques (*Technical Specification)*. Plusieurs réunions se déroulent en parallèle, et les membres rejoignent les réunions selon leur centre d'intérêt. Après ces réunions *officielles*, les membres se retrouvent pour continuer à échanger ou pour améliorer les spécifications techniques.  
+    
+Mais à Oulu, un phénomène naturel a eu un impact direct sur la productivité : le [soleil se couche après minuit en juin](http://dateandtime.info/fr/citysunrisesunset.php?id=643492&month=6&year=2016) ! Si bien, que la plupart des membres ne se rendaient pas compte de l'heure et ont veillé bien plus tard que d'habitude. En plus du soleil qui *dort* deux heures par nuit, le décalage horaire pour les non-européens a littéralement épuisé les membres qui ont eu besoin de plusieurs jours de repos pour s'en remettre !
+
+Plus de 10 ans pour intégrer les fonctionnalités
+================================================
+    
+**C++11** ayant du faire l'impasse sur plusieurs fonctionnalités _majeures_, celles-ci étaient prévues d'être intégrées dans le standard avec la prochaine version _majeures_, **C++17**. Et effectivement, certaines fonctionnalités sont dans le tuyau depuis plus de dix ans : 
+    
+* les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) depuis [2003](http://open-std.org/JTC1/SC22/WG21/docs/papers/2003/n1422.html) ;
+* [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) depuis [2004](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html).
+
+
+Par contre, d'autres fonctionnalités _majeures_ sont toujours dans le tuyau :
+    
+* la [réflexion statique (à la compilation)](https://fr.wikipedia.org/wiki/R%C3%A9flexion_(informatique)) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1775.pdf) ;
+* les [intervalles *(ranges)*](http://www.boost.org/libs/range/index.html) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1871.html) ;
+* le [réseau](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1838.pdf) (qui a pris le nom définitif [*Networking* fin 2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1925.pdf)) ;
+* la [mémoire transactionnelle](http://en.cppreference.com/w/cpp/language/transactional_memory) dont son objectif de [2012 était d'intégrer **C++17**](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3422.pdf) ...
+    
+Comme quoi, le comité de standardisation prend son temps pour bien s'assurer que chaque fonctionnalité soit vraiment bien pensée et cela peut prendre une dizaine d'années ! L'objectif étant de ne pas dégrader d'avantage la complexité inhérente au C++, avec comme contre partie d'avoir un langage de programmation qui évolue doucement...
+
+La suite...
+===========    
+    
+Les deux prochaines dépêches rentrent enfin dans le vif du sujet.
+    
+Merci de nous donner un coup de main à la rédaction de des prochaines dépêches **C++17**, soit en expliquant les nouvelles fonctionnalités, soit en améliorant l'ébauche en cours de rédaction :-)
+   
+
+Pour nous donner un coup de main :
+    
+* Utiliser l'espace de [rédaction de LinuxFr.org](https://linuxfr.org/redaction) (recommandé) ;
+* Ou bien via le [repo Git du C++FRUG](https://github.com/cpp-frug/materials/tree/master/Cxx17). 
