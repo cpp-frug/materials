@@ -125,8 +125,8 @@ Et en plus, obtenir le standard C++ coûte cher, même le téléchargement d'un 
 * 238 € sur le [site de l'ANSI](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014) (265 $ USA). 
 
 
-Les anciens standars sont officiellement supprimés
-==================================================
+Les anciens standards sont officiellement supprimés
+===================================================
     
 Mais le plus incroyable est qu'à chaque nouvelle version du standard ISO/IEC 14882, la version précédente est supprimée (_withdraw_ en anglais) :
     
