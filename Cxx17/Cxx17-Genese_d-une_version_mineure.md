@@ -20,7 +20,7 @@ Les fonctionnalités de la prochaine version du C++ sont arrêtées. Cette premi
 ----
 
 * [Première rencontre début mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
-[Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
+* [Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
 * [Dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus)
 * [Article Wikipédia C++14](https://fr.wikipedia.org/wiki/C%2B%2B14)
 * [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
@@ -64,7 +64,7 @@ Nettoyage, correction, évolution, sucre syntaxique :
 
 Par contre, aucune fonctionnalité majeure n'est présente dans C++17 :
     
-* [Concepts](http://fr.cppreference.com/w/cpp/concept) ;
+* [Concepts](http://fr.cppreference.com/w/cpp/concept) ;  
 * [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) pour remplacer les `#include <string>` par des `import std.string;`) ;
 * [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ;
 * [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ;
@@ -218,17 +218,21 @@ Plus de 10 ans pour intégrer les fonctionnalités
     
 **C++11** ayant du faire l'impasse sur plusieurs fonctionnalités _majeures_, celles-ci étaient prévues d'être intégrées dans le standard avec la prochaine version _majeure_, **C++17**. Et effectivement, certaines fonctionnalités sont dans le tuyau depuis plus de dix ans : 
     
-* les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) depuis [2003](http://open-std.org/JTC1/SC22/WG21/docs/papers/2003/n1422.html) ;
+* [Fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) depuis [2003](http://open-std.org/JTC1/SC22/WG21/docs/papers/2003/n1422.html) ;
 * [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) depuis [2004](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html).
 
 Par contre, d'autres fonctionnalités _majeures_ sont toujours dans le tuyau :
+  
+
+* [Concepts](http://en.cppreference.com/w/cpp/language/constraints) depuis [2003](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1510.pdf) ;  
+* [Réflexion](https://fr.wikipedia.org/wiki/R%C3%A9flexion_(informatique)) statique (à la compilation) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1775.pdf) ;
+* [Intervalles *(Ranges)*](http://www.boost.org/libs/range/index.html) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1871.html) ;
+* [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4592.pdf) (pour remplacer `#include`) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1736.pdf) ;
+* [Réseau](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1838.pdf) (qui a pris le nom définitif [*Networking* fin 2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1925.pdf)) ;
+* [Mémoire transactionnelle](http://en.cppreference.com/w/cpp/language/transactional_memory) dont son objectif de [2012 était d'intégrer C++17](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3422.pdf) ;
+* ...
     
-* la [réflexion statique (à la compilation)](https://fr.wikipedia.org/wiki/R%C3%A9flexion_(informatique)) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1775.pdf) ;
-* les [intervalles *(ranges)*](http://www.boost.org/libs/range/index.html) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1871.html) ;
-* le [réseau](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1838.pdf) (qui a pris le nom définitif [*Networking* fin 2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1925.pdf)) ;
-* la [mémoire transactionnelle](http://en.cppreference.com/w/cpp/language/transactional_memory) dont son objectif de [2012 était d'intégrer **C++17**](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3422.pdf) ...
-    
-Comme quoi, le comité de standardisation prend son temps pour bien s'assurer que chaque fonctionnalité soit vraiment bien pensée et cela peut prendre une dizaine d'années ! L'objectif étant de ne pas dégrader d'avantage la complexité inhérente au C++, avec comme contre partie d'avoir un langage de programmation qui évolue doucement...
+Comme quoi, le comité de standardisation prend son temps pour bien s'assurer que chaque fonctionnalité soit *parfaite* et cela peut prendre une dizaine d'années ! L'objectif étant de ne pas dégrader d'avantage la complexité inhérente au C++, avec comme contre partie d'avoir un langage de programmation qui évolue doucement...
 
 La suite...
 ===========    
