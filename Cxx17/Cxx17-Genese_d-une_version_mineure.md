@@ -20,7 +20,7 @@ Les fonctionnalités de la prochaine version du C++ sont arrêtées. Cette premi
 ----
 
 * [Première rencontre début mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
-* [Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
+[Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
 * [Dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus)
 * [Article Wikipédia C++14](https://fr.wikipedia.org/wiki/C%2B%2B14)
 * [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
@@ -76,9 +76,8 @@ Par contre, aucune fonctionnalité majeure n'est présente dans C++17 :
 
 Les changements qui peuvent bousculer notre vie de développeur :
     
-* La [algorithmes paralélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) (si multitâche performant) ;
+* La [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) (si multitâche performant) ;
 * [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (pour remplacer les `const std::string&`).
-
 
 Les transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) :
                
@@ -126,7 +125,7 @@ Et en plus, obtenir le standard C++ coûte cher, même le téléchargement d'un 
 * 238 € sur le [site de l'ANSI](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014) (265 $ USA). 
 
 
-Les anciens standard sont officiellement supprimés
+Les anciens standars sont officiellement supprimés
 ==================================================
     
 Mais le plus incroyable est qu'à chaque nouvelle version du standard ISO/IEC 14882, la version précédente est supprimée (_withdraw_ en anglais) :
@@ -163,7 +162,7 @@ C++17 [Draft N4606 2016-07-12](https://github.com/cplusplus/draft/blob/master/pa
         
 Attention, ce dernier lien est celui du brouillon **C++17** le plus récent lors de la rédaction de cette dépêche. Cette version est certainement obsolète quelques mois après la publication de cette dépêche.
      
-Ceux qui ont l'oeuil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publié (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. En anglais, c'est le *first post-publication draft*.
+Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publié (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. En anglais, c'est le *first post-publication draft*.
      
 Il est fréquent que des corrections soient apportées aux standards C++ même quelques années après la date officielle de publications (**TODO** donner un exemple).
 
@@ -191,7 +190,7 @@ Cycle de publication [triannuel](http://www.universalis.fr/dictionnaire/triannue
 
 Après la version majeure **C++98** (et son correctif **C++03**), un nouveau standard C++ devait être publié dans les années suivantes. Comme sa date de publication n'était pas fixée, cette version a été nommée temporairement **C++0x**.
     
-Mais, avec le manque de maturité de certaines fonctionnalité et les requêtes continuelles d'ajout de nouvelles fonctionnalités, le comité de standardisation n'arrivait pas à stabiliser le standard. Et finalement **C++0x** a été publié en 2011 ! Ne perdons pas la face, `0x = 11` est correct mathématiquement avec `x = A` en [hexadécimal](https://fr.wikipedia.org/wiki/Syst%C3%A8me_hexad%C3%A9cimal) :-)
+Mais, avec le manque de maturité de certaines fonctionnalités et les requêtes continuelles d'ajout de nouvelles fonctionnalités, le comité de standardisation n'arrivait pas à stabiliser le standard. Et finalement **C++0x** a été publié en 2011 ! Ne perdons pas la face, `0x = 11` est correct mathématiquement avec `x = A` en [hexadécimal](https://fr.wikipedia.org/wiki/Syst%C3%A8me_hexad%C3%A9cimal) :-)
 
 Afin d'éviter tout nouveau glissement, le comité a alors décidé de publier un nouveau standard C++ tous les 3 ans, en figeant les fonctionnalités l'année N-1. Avec un cycle d'une version majeure (**C++11**) suivie d'une version mineure (**C++14**).
 
@@ -217,11 +216,10 @@ Mais à Oulu, un phénomène naturel a eu un impact direct sur la productivité 
 Plus de 10 ans pour intégrer les fonctionnalités
 ================================================
     
-**C++11** ayant du faire l'impasse sur plusieurs fonctionnalités _majeures_, celles-ci étaient prévues d'être intégrées dans le standard avec la prochaine version _majeures_, **C++17**. Et effectivement, certaines fonctionnalités sont dans le tuyau depuis plus de dix ans : 
+**C++11** ayant du faire l'impasse sur plusieurs fonctionnalités _majeures_, celles-ci étaient prévues d'être intégrées dans le standard avec la prochaine version _majeure_, **C++17**. Et effectivement, certaines fonctionnalités sont dans le tuyau depuis plus de dix ans : 
     
 * les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) depuis [2003](http://open-std.org/JTC1/SC22/WG21/docs/papers/2003/n1422.html) ;
 * [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) depuis [2004](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html).
-
 
 Par contre, d'autres fonctionnalités _majeures_ sont toujours dans le tuyau :
     
@@ -237,7 +235,7 @@ La suite...
     
 Les deux prochaines dépêches rentrent enfin dans le vif du sujet.
     
-Merci de nous donner un coup de main à la rédaction de des prochaines dépêches **C++17**, soit en expliquant les nouvelles fonctionnalités, soit en améliorant l'ébauche en cours de rédaction :-)
+Merci de nous donner un coup de main à la rédaction de ces prochaines dépêches **C++17**, soit en expliquant les nouvelles fonctionnalités, soit en améliorant l'ébauche en cours de rédaction :-)
    
 
 Pour nous donner un coup de main :
