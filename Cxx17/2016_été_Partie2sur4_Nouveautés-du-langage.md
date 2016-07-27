@@ -225,6 +225,8 @@ Corrections
       TODO: Donner des exemples
 
 * Réécriture des paragraphes a propos des [exception et `throw`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4285.html)
+    
+    TODO: Vérifier l'intérêt de ces changements
 
 * La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/experimental/feature_test#Language_Features#Function_Macros) vérifie si l'en-tête `<filesystem>` est disponible pour inclusion ;
     
