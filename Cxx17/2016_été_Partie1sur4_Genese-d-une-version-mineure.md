@@ -94,6 +94,8 @@ Cette dépêche ainsi que les trois suivantes sont figées après publication. A
 4. [Bilan et attentes pour C++20](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie4sur4_Bilan-et-attentes-pour-C%2B%2B20.md).
     
 Avec toutes nos contributions individuelles réunis, nous profiterons d'avantage de nos recherces et nous offrions un contenu libre (CC-BY-SA) et de qualité pour créer, par exemple, un article Wikipédia C++17 en français.
+    
+![Logo C++FRUG représenté par un gros "C++" au centre du cercle de la Francophonie](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
 
 -------------------------------------------------------
 La spécification du standard n'est ni libre ni gratuite
@@ -169,24 +171,25 @@ Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant l
 Rapport d'Anomalie
 ==================
     
-Même après moult relectures par les meilleurs experts C++ au monde, avec toutes les précautions prises par les institutions officielles, les publications des standards C++ contenaient 5000 anomalies ayant fait l'objet d'un [Rapport d'Anomalie _(Defect Report)_](https://isocpp.org/std/submit-issue) !
+Même après moult relectures par les meilleurs experts C++ au monde, avec toutes les précautions prises par les institutions officielles, les publications des standards C++ contenaient 5000 anomalies ayant fait l'objet d'un [rapport d'anomalie _(Defect Report)_](https://isocpp.org/std/submit-issue) !
      
-* Rapports d'Anomalie [actifs au niveau du langage](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html) ;
-* Rapports d'Anomalie [clos au niveau du langage](www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html) ;
-* Rapports d'Anomalie [actifs au niveau de la bibliothèque standard](https://gcc.gnu.org/onlinedocs/libstdc++/ext/lwg-active.html) ;
-* Rapports d'Anomalie [clos au niveau la bibliothèque standard](https://gcc.gnu.org/onlinedocs/libstdc++/ext/lwg-closed.html) ;
+* 2200 rapports d'anomalie au niveau du [langage](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_toc.html) ;
+* 2750 rapports d'anomalie au niveau de la [bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/lwg-toc.html).
     
-Lors des ses réunions, le comité discute des Rapports d'Anomalie et devrait publier quelquefois un Rectificatif Technique _(Technical Corrigendum)_, mais cela n'a jamais été fait ! Par exemple, le comité approuve un [Rectificatif Technique en 2003](http://www.open-std.org/jtc1/sc22/wg21/docs/standards) qui contient pourtant la nouvelle fonctionnalité [*Value  initialization*](http://en.cppreference.com/w/cpp/language/value_initialization#Notes). Et finalement, le comité le publie comme nouvelle version du standard **C++03** :
+Lors des ses réunions, le comité discute des rapports d'anomalie et devrait publier régulièrement des rectificatifs techniques _(Technical Corrigendum)_. Mais le comité n'a jamais publié aucun rectificatif technique à ce jour !
+    
+Par exemple, le comité avait approuvé un [rectificatif technique en 2003](http://www.open-std.org/jtc1/sc22/wg21/docs/standards). Et finalement, le comité publie comme étant une nouvelle version du standard => **C++03** :
     
 > A technical corrigendum was approved in 2003, . and the standard was published again as the ISO/IEC 14882:2003 edition, published 2003-10-16.
-   
-
-Néanmoins, même si le comité ne publie aucun Rectificatif Technique, les Rapports d'Anomalie qu'il approuve sont [pris en compte par les compilateurs](http://clang.llvm.org/cxx_dr_status.html). Et des sites comme cppreference.com indiquent scrupuleusement les changements induits : 
     
-* Quatre Rapports d'Anomalie pour l'[opérateur ternaire `cond ? a : b`](http://en.cppreference.com/w/cpp/language/operator_other#Defect%20reports) ;
-* Trois Rapports d'Anomalie pour les [variables membres](http://en.cppreference.com/w/cpp/language/data_members#Defect_reports) ;
-* Trois Rapports d'Anomalie pour [`return`](http://en.cppreference.com/w/cpp/language/return#Defect_reports) ;
-* Deux Rapports d'Anomalie pour [`throw`](http://en.cppreference.com/w/cpp/language/throw#Defect_reports) ;
+Bon, c'est vrai, à la décharge du comité, ce rectificatif technique de 2003 contenait une nouvelle fonctionnalité : [*Value  initialization*](http://en.cppreference.com/w/cpp/language/value_initialization#Notes). C'était la dernière fois, que le comité avait travaillé sur un rectificatif technique.
+
+Néanmoins, même si le comité ne publie aucun rectificatif technique, les rapports d'anomalie qu'il approuve sont [pris en compte par les compilateurs](http://clang.llvm.org/cxx_dr_status.html). Et des sites comme cppreference.com indiquent scrupuleusement les changements induits : 
+    
+* Quatre rapports d'anomalie pour l'[opérateur ternaire `cond ? a : b`](http://en.cppreference.com/w/cpp/language/operator_other#Defect_reports) ;
+* Trois rapports d'anomalie pour les [variables membres](http://en.cppreference.com/w/cpp/language/data_members#Defect_reports) ;
+* Trois rapports d'anomalie pour [`return`](http://en.cppreference.com/w/cpp/language/return#Defect_reports) ;
+* Deux rapports d'anomalie pour [`throw`](http://en.cppreference.com/w/cpp/language/throw#Defect_reports) ;
 * ...
 
 Un langage extrêmement compliqué qui se simplifie
@@ -252,7 +255,7 @@ Comme quoi, le comité de standardisation prend son temps pour bien s'assurer qu
 La suite...
 ===========    
     
-La dépêche suivante rentre enfin dans le vif du sujet.
+La prochaine dépêche rentre enfin dans le vif du sujet.
     
 Merci de nous donner un coup de main à la rédaction de trois dépêches **C++17** à venir en expliquant les nouvelles fonctionnalités ou en améliorant l'ébauche en cours de rédaction :-)
 
@@ -261,5 +264,3 @@ Pour participer ou lire en avance les prochaines dépêches :
 * Se rendre sur l'espace de [rédaction LinuxFr.org](https://linuxfr.org/redaction) (recommandé pour la rédaction) ;
 * Directement sur le [repo Git *materials*](https://github.com/cpp-frug/materials/tree/master/Cxx17) du C++FRUG (Groupe des utilisateurs C++ francophones).
 
-
-![Logo C++FRUG représenté par un gros "C++" au centre du cercle de la Francophonie](https://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg)
