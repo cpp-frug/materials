@@ -195,13 +195,13 @@ Néanmoins, même si le comité ne publie aucun rectificatif technique, les rapp
 Un langage extrêmement compliqué qui se simplifie
 =================================================
         
-Par rapport à tous les langages utilisés en production, avouons que le C++ est le langage le plus complexe que l'humanité ait pu inventer ! Les développeurs C++ en ont bien conscience. C'est peut-être la raison pour laquelle, par rapport aux autres _meetups_, les conférences sur le C++ ne dénigrent pas les autres langages. Au contraire, nous aimerions un langage plus simple, mais attention qui **"ne sacrifie pas les performances"**.
+Par rapport à tous les langages utilisés en production, avouons que le C++ est peut être le langage le plus complexe que l'humanité ait pu inventer ! Les développeurs C++ en ont bien conscience. C'est peut-être la raison pour laquelle les participants aux _meetups_ se montrent souvent bienveillants à l'égard des autres langages. Les développeurs C++ aimeraient un langage plus simple, à condition qu'il **"ne sacrifie pas les performances"**.
     
-Le C++ est tellement vaste, les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts, sont appelés des juristes du C++ *(C++ lawyers)*.
+Le C++ est tellement vaste que les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts sont appelés des juristes du C++ *(C++ lawyers)*.
      
 Pour inverser la tendance, certains membres du comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (le créateur du C++) souhaitent accélérer l'évolution du langage vers un C++ plus intuitif, plus sûr, et toujours plus performant.
 
-C'est dans ce cadre, que l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) a été lancée. A la fois pour proposer un sous-ensemble du C++ plus sûr, plus simple et sans sacrifier les performances. Mais aussi pour faire pression aux membres du comité pour adopter les idées de la [Guidelines Support Library](https://github.com/Microsoft/GSL) (voir aussi l'[implémentation de Martin Moene](https://github.com/martinmoene/gsl-lite) compatible avec beaucoup plus de compilateurs).
+C'est dans ce cadre que l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) a été lancée. A la fois pour proposer un sous-ensemble du C++ plus sûr, plus simple et sans sacrifier les performances. Mais aussi pour faire pression sur les membres du comité pour adopter les idées de la [Guidelines Support Library](https://github.com/Microsoft/GSL) (voir aussi l'[implémentation de Martin Moene](https://github.com/martinmoene/gsl-lite) compatible avec beaucoup plus de compilateurs).
 
 Cycle de publication [triannuel](http://www.universalis.fr/dictionnaire/triannuel/)
 ================================
