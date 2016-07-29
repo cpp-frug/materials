@@ -58,26 +58,26 @@ Cette seconde dépêche présente beaucoup de changements au niveau du langage. 
 - [Variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf) (après les [variables `template`](http://en.cppreference.com/w/cpp/language/variable_template) du C++14) ;
 - ...
 
-Par contre, des fonctionnalités majeures très attendues comme les [Concepts](http://fr.cppreference.com/w/cpp/concept), les [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf), la [Syntaxe d'appel uniforme](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ou la [Réflexion](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) ne seront pas embarqué dans la publication **C++17**.
+Par contre, des fonctionnalités majeures très attendues comme les [Concepts](http://fr.cppreference.com/w/cpp/concept), les [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf), la [Syntaxe d'appel uniforme](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ou la [Réflexion](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) ne seront pas embarquées dans la publication **C++17**.
 
 3. Nouveautés de la bibliothèque standard
 -----------------------------------------
 
 Cette troisième dépêche nous présente les changements au niveau de la bibliothèque standard. 
     
-Comme par exemple les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) et [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (remplace les `const std::string&`) qui pourraient bousculer notre petite vie de développeur.
+Par exemple, les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) et [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (remplace les `const std::string&`)  pourraient bousculer notre petite vie de développeur.
 
-Mais aussi les composants [`filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`variant`](http://en.cppreference.com/w/cpp/utility/variant), [`any`](http://en.cppreference.com/w/cpp/utility/any), [`optional`](http://en.cppreference.com/w/cpp/utility/optional) et les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) ayant  fait leurs preuves au sein de [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques).
+Mais aussi les composants [`filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`variant`](http://en.cppreference.com/w/cpp/utility/variant), [`any`](http://en.cppreference.com/w/cpp/utility/any), [`optional`](http://en.cppreference.com/w/cpp/utility/optional) et les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math) ayant  fait leurs preuves au sein de [Boost](http://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques).
 
 4. Bilan C++17 et attentes pour C++20
 -------------------------------------
 
 Cette quatrième dépêche mesure le degré de changement : Version mineure ou majeure ?
     
-D'un côté, les améliorations sont nombreuses et appréciables. Mais de l'autre mais aucune fonctionnalité majeure au niveau du langage, et la plupart des fonctionnalités majeures de la bibliothèque standard sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d'anciens compilateurs).
+D'un côté, les améliorations sont nombreuses et appréciables. Mais de l'autre, aucune fonctionnalité majeure n'est intégrée, et la plupart d'entre elles sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d'anciens compilateurs).
 
 
-Mais où sont les [Intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) au le [Réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ?
+Mais où sont les [Intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) et le [Réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ?
     
 Conséquences sur le processus de standardisation ? 
 Qu'attendre de C++20 ?
