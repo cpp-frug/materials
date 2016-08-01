@@ -265,7 +265,7 @@ Implémentation de référence
     
 Le comité ne fournit pas d'implémentation de référence ou de preuve de concept. Mais les membres du comité travaillent en étroite collaboration avec les éditeurs de compilateurs (notamment GCC et LLVM/Clang).
     
-Néanmoins, en 1999, des membres du comité ont quand même créé le projet [Boost.org](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques) afin de proposer et valider des implémentations de fonctionnalités candidates de la bibliothèque standard. Ainsi, dès 2005, la publication du brouillon [C++ TR1](https://en.wikipedia.org/wiki/C%2B%2B_Technical_Report_1) est en lien direct avec les développements fournis par le projet Boost.org.
+Néanmoins, en 1999, des membres du comité ont quand même créé le projet [Boost.org](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) afin de proposer et valider des implémentations de fonctionnalités candidates de la bibliothèque standard. Ainsi, dès 2005, la publication du brouillon [C++ TR1](https://en.wikipedia.org/wiki/C%2B%2B_Technical_Report_1) est en lien direct avec les développements fournis par le projet Boost.org.
     
 D'ailleurs, c'est devenu le parcours *quasi*-obligatoire pour toute nouvelle fonctionnalité de la bibliothèque standard. C'est ce qui est arrivé au Français Joël Falcou quand il a proposé la fonctionnalité [SIMD](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3571.pdf) aux autres membres du comité qui lui ont répondu de commencer par faire ses [preuves dans Boost](http://lists.boost.org/Archives/boost/2014/02/211609.php). Pour en savoir plus sur Boost.SIMD, une [présentation récente](http://www.slideshare.net/SergeyPlatonov/joel-falcou-boostsimd) et [son dépôt Git](https://github.com/NumScale/boost.simd).
 
