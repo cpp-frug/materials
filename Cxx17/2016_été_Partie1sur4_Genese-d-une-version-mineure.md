@@ -155,8 +155,7 @@ Attention, ce dernier lien est celui du brouillon **C++17** le plus récent lors
      
 Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publiée (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. En anglais, c'est le *first post-publication draft*.
 
-![Deux collègues discutent. Les deux sont d'accord pour dire que c'était déjà compliqué. Un collègue annonce que le C++ c'est deux fois plus de pages en 9 ans et conclu que c'est devenu complexe !](http://cpp-frug.github.io/images/Cpp-Complexe.svg)
-
+![Deux collègues discutent : "C++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/images/Cpp-Complexe.svg)
 
 Numérotation des documents
 ==========================
@@ -257,8 +256,7 @@ Par contre, d'autres fonctionnalités _majeures_ sont toujours dans le tuyau :
     
 Comme quoi, le comité de standardisation prend son temps pour bien s'assurer que chaque fonctionnalité soit *parfaite* et cela peut prendre une dizaine d'années ! L'objectif étant de ne pas dégrader d'avantage la complexité inhérente au C++, avec comme contre partie d'avoir un langage de programmation qui évolue doucement...
 
-![Deux chatons déçus du contenu de C++17 "Sniff.. On n'a ni les Concepts ni la Reflexion !"](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Zuyue-OliverH-2016_CC-BY-SA.jpg)
-
+![Deux chatons déçus du contenu de C++17 "Sniff.. On n'a pas les Concepts. Ni la Réflexion."](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
 Implémentation de référence
 ===========================
@@ -268,7 +266,6 @@ Le comité ne fournit pas d'implémentation de référence ou de preuve de conce
 Néanmoins, en 1999, des membres du comité ont quand même créé le projet [Boost.org](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) afin de proposer et valider des implémentations de fonctionnalités candidates de la bibliothèque standard. Ainsi, dès 2005, la publication du brouillon [C++ TR1](https://en.wikipedia.org/wiki/C%2B%2B_Technical_Report_1) est en lien direct avec les développements fournis par le projet Boost.org.
     
 D'ailleurs, c'est devenu le parcours *quasi*-obligatoire pour toute nouvelle fonctionnalité de la bibliothèque standard. C'est ce qui est arrivé au Français Joël Falcou quand il a proposé la fonctionnalité [SIMD](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3571.pdf) aux autres membres du comité qui lui ont répondu de commencer par faire ses [preuves dans Boost](http://lists.boost.org/Archives/boost/2014/02/211609.php). Pour en savoir plus sur Boost.SIMD, une [présentation récente](http://www.slideshare.net/SergeyPlatonov/joel-falcou-boostsimd) et [son dépôt Git](https://github.com/NumScale/boost.simd).
-
 
 La suite...
 ===========    
@@ -300,14 +297,14 @@ Droit d'auteur et licence
 =========================
 
 
-Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Les auteurs sont : Oliver H, olibre, duckie, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid.
 
 Pour les illustrations :
 
 
-* L'[évolution du langage C++](http://cpp-frug.github.io/images/Evolution-Cpp.svg) est une œuvre dérivée d'un dessin dont l'origine n'a pas été identifiée. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) également est de Jae-Zun et le texte final de oliver_h (2016) ;
+* L'[évolution du langage C++](http://cpp-frug.github.io/images/Evolution-Cpp.svg) est une œuvre dérivée d'un dessin sur l'évolution de l'homme dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Jae-Zun et le texte final de oliver_h (2016) ;
 * Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le domaine public (même si ce n'est [pas possible en droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
-* Le dessin du [C++ vissé sur de l'électronique](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/fr/) ;
-* Les [deux collègues qui discutent sur la complexité du C++](http://cpp-frug.github.io/images/Cpp-Complexe.svg) est de `TODO` XXXX sous licence `TODO` XXXX ;
-* L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/images/Cpp-President-2017.svg) est de oliver_h (2016) et sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) ;
-* Les [deux chatons déçus](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Zuyue-OliverH-2016_CC-BY-SA.jpg) ont été dessinés par Zuyue et retouchés par oliver_h et sous  licences [CC BY-SA](https://creativecommons.org/licenses/by-sa/1.0/) (toutes versions).
+* Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/fr/) (2007) ;
+* Les [deux collègues qui discutent sur la sortie du C++17](http://cpp-frug.github.io/images/Cpp-Complexe.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de AKP, et le texte de oliver_h ;
+* L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de oliver_h (2016) ;
+* Les [deux chatons déçus](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés par oliver_h (2016).
