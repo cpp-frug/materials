@@ -87,20 +87,28 @@ Avec toutes nos contributions réunies, nous profiterons d'avantage de nos déco
 [LogoCppFRUG]:        http://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg
 [LogoCppFRUG_sur_WP]: http://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg
 
-La spécification du standard n'est ni libre ni gratuite
-=======================================================
+Le standard n'est pas libre
+===========================
     
-Les mentions de droit d'auteur ne laissent aucun doute, la spécification du standard C++ n'est pas libre. A moins qu'un organisme ISO local donne des permissions de reproduction...
+Les mentions de droit d'auteur ne laissent aucun doute, la spécification du standard C++ n'est pas libre.
     
 > © ISO/IEC 2014 – All rights reserved  
 > COPYRIGHT PROTECTED DOCUMENT  
 > All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
 > Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
     
-Et en plus, obtenir le standard C++ coûte cher. Même pour télécharger un PDF :
+Cette restriction empêche la réutilisation du contenu, comme un paragraphe d'une règle ou un exemple de code. Dans la pratique, l'organisme ISO ne poursuit personne qui recopie une partie du document.
+
+
+Le standard est payant
+======================
+    
+De plus, obtenir le standard C++ coûte cher. Même pour télécharger un PDF :
     
 * 182 € sur le [site de l'ISO](http://www.iso.org/iso/fr/catalogue_detail?csnumber=64029) (198 francs suisses) ;
-* 238 € sur le [site de l'ANSI](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014) (265 $ USA). 
+* 238 € sur le [site de l'ANSI](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014) (265 $ USA).
+    
+(voir aussi d'[autres site vendant le standard](http://stackoverflow.com/a/83763/938111))
 
 Les anciens standards supprimés
 ===============================
@@ -111,9 +119,9 @@ Encore plus incroyable : chaque nouvelle publication du standard révoque/suppri
 * C++03 [ISO/IEC 14882:2003](http://www.iso.org/iso/fr/catalogue_detail?csnumber=38110) supprimé ;
 * C++11 [ISO/IEC 14882:2011](http://www.iso.org/iso/fr/catalogue_detail?csnumber=50372) supprimé.
     
-C'est vraiment étrange, surtout que la plupart des projets C++ utilisés actuellement sont codés en C++03. Et la plupart des entreprises utilisent encore aujourd'hui des versions de compilateurs qui ne supportent pas (ou partiellement) le standard C++11.
+Ce qui est embêtant est le fait que la plupart des projets C++ actuellement utilisés sont codés en C++03. Et la plupart des entreprises utilisent encore aujourd'hui des versions de compilateurs qui ne supportent pas (ou partiellement) le standard C++11.
     
-Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur que l'on est obligé d'utiliser ? Aller les [consulter à l'INRIA](http://opac.inria.fr/search*frf/a?searchtype=Y&searcharg=14882) ?
+Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur que l'on est obligé d'utiliser ? Aller les [consulter à l'INRIA](http://opac.inria.fr/search*frf/a?searchtype=Y&searcharg=14882) ? Par exemple, cet [utilisateur a besoin d'acheter le standard C++03 mais celui-ci n'est plus à la vente](http://programmers.stackexchange.com/questions/190294/about-ansi-c-2003-standard).
 
 Et les brouillons du comité ?
 =============================
@@ -189,31 +197,6 @@ Année| Numéro  | Titre | Révision
 2014 | [`N4214`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4214.pdf) | A Module System for C++ | 2
 2015 | [`N4465`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4465.pdf) | A Module System for C++ | 3
 2016 | [`P0142R0`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) | A Module System for C++ | 4
-
-
-Très bon exemple, avec l'adoption du nouveau nommage depuis septembre 2015 pour les documents de type **P**roposition avec le format **`PxxxxRx`**. La première **R**évision est notée **`R0`**. Le cas des "Modules" est particulier car **`R0`** est la première révision du nouveau nommage, mais la quatrième du document _"A Module System for C++"_. Le nommage **`Nxxxx`** est conservé pour les spécifications techniques _(Technical SPecification TS)_.
-
-
-Ces numéros (souvent obscures) sont très importants car ils sont utilisées comme références rigoureuses aux fonctionnalités C++ :
-    
-* dans les échanges entre membres du comité ;
-* ou même par des [sites web](https://cmake.org/cmake/help/latest/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.html).
-    
-Pour faire le lien entre ces numéros et les spécifications techniques, une astuce est d'utiliser la page [*experimental* sur cppreference.com](http://en.cppreference.com/w/cpp/experimental).
-
-Année| Numéro  | Titre | Révision
------|---------|-------|---
-2004 | [`N1736`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1736.pdf) | Modules in C++ | 1
-2005 | [`N1778`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1778.pdf) | Modules in C++ | 2
-2006 | [`N1964`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1964.pdf) | Modules in C++ | 3
-2006 | [`N2073`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n2073.pdf) | Modules in C++ | 4
-2007 | [`N2316`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2316.pdf) | Modules in C++ | 5
-2012 | [`N3347`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3347.pdf) | Modules in C++ | 6
-2014 | [`N4047`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4047.pdf) | A Module System for C++ | 1
-2014 | [`N4214`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4214.pdf) | A Module System for C++ | 2
-2015 | [`N4465`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4465.pdf) | A Module System for C++ | 3
-2016 | [`P0142R0`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) | A Module System for C++ | 4
-
 
 Très bon exemple, avec l'adoption du nouveau nommage depuis septembre 2015 pour les documents de type **P**roposition avec le format **`PxxxxRx`**. La première **R**évision est notée **`R0`**  (le cas des "Modules" est particulier car **`R0`** est la première révision du nouveau format, mais la quatrième révision des documents _"A Module System for C++"_). Cependant, le nommage **`Nxxxx`** est conservé pour les spécifications techniques _(Technical SPecification TS)_.
 
@@ -373,4 +356,4 @@ Pour les illustrations :
 * Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/fr/) (2007) ;
 * L'[évolution du langage C++](http://cpp-frug.github.io/images/Evolution-Cpp.svg) est une œuvre dérivée d'un dessin sur l'évolution de l'homme dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Jae-Zun et le texte final de oliver_h (2016) ;
 * L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de oliver_h (2016) ;
-* Les [deux chatons déçus](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés par oliver_h (2016).
+* Les [deux chatons déçus](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par oliver_h (2016).
