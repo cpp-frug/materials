@@ -64,24 +64,21 @@ Attention, la [macro **`__cplusplus`**](http://en.cppreference.com/w/cpp/preproc
 
 ```cpp
 #ifdef __cplusplus
-#  if __cplusplus <= 199711 // Bug GCC < 4.7
-#    warning Compilé pour C++99
-#  elif __cplusplus == 201103
-#    warning Compilé pour C++11 (-std=c++0x ?)
-#  elif __cplusplus == 201402 // Défaut GCC-6
-#    warning Compilé pour C++14( -std=c++1y
-#  elif __cplusplus > 201700
-#    warning Compilé pour C++17 (-std=c++1z ?)
-#  else
-#    error Valeur inattendue __cplusplus
-#  endif
+# if __cplusplus <= 199711  //Bug GCC < 4.7
+#  warning Compilé pour C++99
+# elif __cplusplus == 201103
+#  warning Compilé pour C++11 //-std=c++0x
+# elif __cplusplus == 201402 //par défaut GCC6
+#  warning Compilé pour C++14 //-std=c++1y
+# elif __cplusplus > 201700
+#  warning Compilé pour C++17 //-std=c++1z
+# else
+#  error Valeur inattendue de __cplusplus  
+# endif
 #else
 #  warning __cplusplus non défini
 #endif
 ```
-
-
-
 
 Deux alternatives pour vérifier le support des fonctionnalités C++ :
 
