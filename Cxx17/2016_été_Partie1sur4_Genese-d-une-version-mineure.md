@@ -14,7 +14,7 @@ License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 
 Les fonctionnalités de la prochaine version C++ sont connues. Voici une série de quatre dépêches sur C++17. Cette première dépêche s'attarde sur la face cachée du C++ et peut intéresser tous les lecteurs LinuxFr.org, pas seulement les développeurs C++ :-)
 
-![Deux collègues discutent : "C++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/images/Cpp-Complexe.svg)
+![Deux collègues discutent : "C++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/materials/images/Cpp-Complexe.svg)
 
 ----
 
@@ -170,21 +170,23 @@ Attention, ce dernier lien est celui du brouillon **C++17** le plus récent lors
      
 Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publiée (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. En anglais, c'est le *first post-publication draft*.
 
-![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit "Cool ! On va pouvoir coder"](http://cpp-frug.github.io/images/Evolution-Cpp.svg)
-
+![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit "Cool ! On va pouvoir coder"](http://cpp-frug.github.io/materials/images/Evolution-Cpp.svg)
 
 Numérotation des documents
 ==========================
     
-Depuis 1990, le comité numérote ses documents de travail sur 4 chiffres en commençant par le n°[`0000`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1990/WG21%201990/X3J16_90-0000%20WG21.pdf).
+A partir de 1990, le comité numérote ses documents sur 4 chiffres en commençant par le n°[`0000`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1990/WG21%201990/X3J16_90-0000%20WG21.pdf). Ce numéro est incrémenté pour chaque nouveau document, ou nouvelle révision d'un document.
     
-En 1991, la lettre **N** en préfixe des quatre chiffres est adoptée, comme pour [`N0007`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1991/WG21%201991/X3J16_91-0089%20WG21_N0007.pdf). **N** comme _**N**umber_ (Numéro). Par exemple, le document **`N3291`** est le brouillon final du standard juste avant C++11, et le **`N3376`**, celui après la publication officielle.
+En 1991, le préfixe **N** est adoptée, et le premier document à en profiter est le [`N0007`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1991/WG21%201991/X3J16_91-0089%20WG21_N0007.pdf). **N** comme _**N**umber_ (Numéro).
+
+Ces numéros **`xxxx`** peuvent paraître obscures, mais sont très importants car ils sont utilisés comme références rigoureuses aux fonctionnalités C++ :
     
-Donc, à la création d'un nouveau document ou d'une nouvelle révision, le numéro courant est incrémenté.
-    
-Prenons l'exemple de la fonctionnalité des "Modules" : 
+* dans les échanges entre membres du comité ;
+* par de nombreux [sites web](https://cmake.org/cmake/help/latest/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.html).
 
 
+Prenons l'exemple de la proposition d'intégrer les "Modules" au C++ :
+    
 Année| Numéro  | Titre | Révision
 -----|---------|-------|---
 2004 | [`N1736`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1736.pdf) | Modules in C++ | 1
@@ -198,14 +200,12 @@ Année| Numéro  | Titre | Révision
 2015 | [`N4465`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4465.pdf) | A Module System for C++ | 3
 2016 | [`P0142R0`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) | A Module System for C++ | 4
 
-Très bon exemple, avec l'adoption du nouveau nommage depuis septembre 2015 pour les documents de type **P**roposition avec le format **`PxxxxRx`**. La première **R**évision est notée **`R0`**  (le cas des "Modules" est particulier car **`R0`** est la première révision du nouveau format, mais la quatrième révision des documents _"A Module System for C++"_). Cependant, le nommage **`Nxxxx`** est conservé pour les spécifications techniques _(Technical SPecification TS)_.
+Remarquons le changement de nommage pour la révision de 2016. Le nouveau nommage **`PxxxxRx`** a été mis en place en septembre 2015 avec un **P** comme _**P**roposal_ (**P**roposition/**P**rojet). Progressivement, les **`PxxxxRx`** doivent remplacer les **`Nxxxx`**. L'avantage est de conserver le même numéro **`xxxx`** pour toutes les révision du document.
+    
+Comme en C++, on commence par compter la première **R**évision à partir de **`R0`**. L'exemple ci-dessus est un cas particulier : **`R0`** est bien la première révision du nouveau format, mais la quatrième révision des documents _"A Module System for C++"_.
 
-Ces numéros (souvent obscures) sont très importants car ils sont utilisés comme références rigoureuses aux fonctionnalités C++ :
-    
-* dans les échanges entre membres du comité ;
-* ou même par des [sites web](https://cmake.org/cmake/help/latest/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.html).
-    
-Pour faire le lien entre ces numéros et les spécifications techniques, une astuce est d'utiliser la page [*experimental* sur cppreference.com](http://en.cppreference.com/w/cpp/experimental).
+`TODO` Parler des spécifications techniques notées **TS** pour _**T**echnical **S**pecification_...
+Pour faire le lien entre les numéros **`xxxx`** et les spécifications techniques, une astuce est d'utiliser la page [*experimental* sur cppreference.com](http://en.cppreference.com/w/cpp/experimental).
 
 Rapport d'Anomalie
 ==================
@@ -281,8 +281,7 @@ La semaine se déroule sur six jours, du lundi au samedi. Pas de grasse matinée
     
 Mais à Oulu, un phénomène naturel a eu un impact direct sur la productivité : le [soleil se couche après minuit en juin](http://dateandtime.info/fr/citysunrisesunset.php?id=643492&month=6&year=2016) ! Si bien, que la plupart des membres ne se rendaient pas compte de l'heure et ont veillé bien plus tard que d'habitude. En plus du soleil qui *dort* seulement deux heures par nuit, le [décalage horaire _(jetlag)_](https://fr.wikipedia.org/wiki/D%C3%A9calage_horaire_(syndrome)) a achevé les non-européens qui ont eu besoin de plusieurs jours de repos pour s'en remettre !
 
-![Analogie entre les fonctionnalités promises pour C++17 et les promesses des candidats à la présidentielle de 2017 en France](http://cpp-frug.github.io/images/Cpp-President-2017.svg)
-
+![Analogie entre les fonctionnalités promises pour C++17 et les promesses des candidats à la présidentielle de 2017 en France](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg)
 
 Plus de 10 ans pour intégrer les fonctionnalités
 ================================================
@@ -305,7 +304,7 @@ Par contre, d'autres fonctionnalités _majeures_ sont toujours dans le tuyau :
     
 Comme quoi, le comité de standardisation prend son temps pour bien s'assurer que chaque fonctionnalité soit *parfaite* et cela peut prendre une dizaine d'années ! L'objectif étant de ne pas dégrader d'avantage la complexité inhérente au C++, avec comme contre partie d'avoir un langage de programmation qui évolue doucement...
 
-![Deux chatons déçus du contenu de C++17 "Sniff.. On n'a pas les Concepts. Ni la Réflexion."](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
+![Deux chatons déçus du contenu de C++17 "Sniff.. On n'a pas les Concepts. Ni la Réflexion."](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
 Implémentation de référence
 ===========================
@@ -314,7 +313,7 @@ Le comité ne fournit pas d'implémentation de référence ou de preuve de conce
     
 Néanmoins, en 1999, des membres du comité ont quand même créé le projet [Boost.org](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) afin de proposer et valider des implémentations de fonctionnalités candidates de la bibliothèque standard. Ainsi, dès 2005, la publication du brouillon [C++ TR1](https://en.wikipedia.org/wiki/C%2B%2B_Technical_Report_1) est en lien direct avec les développements fournis par le projet Boost.org.
     
-D'ailleurs, c'est devenu le parcours *quasi*-obligatoire pour toute nouvelle fonctionnalité de la bibliothèque standard. C'est ce qui est arrivé au Français Joël Falcou quand il a proposé la fonctionnalité [SIMD](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3571.pdf) aux autres membres du comité qui lui ont répondu de commencer par faire ses [preuves dans Boost](http://lists.boost.org/Archives/boost/2014/02/211609.php). Pour en savoir plus sur Boost.SIMD, une [présentation récente](http://www.slideshare.net/SergeyPlatonov/joel-falcou-boostsimd) et [son dépôt Git](https://github.com/NumScale/boost.simd).
+D'ailleurs, c'est devenu le parcours classique pour les nouveaux composants de la bibliothèque standard. C'est par exemple le cheminement de `std::filesystem`. Et plus récemment, quand le Français [Joël Falcou](http://www.slideshare.net/SergeyPlatonov/joel-falcou-boostsimd) a [proposé](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3571.pdf) la fonctionnalité [SIMD](https://github.com/NumScale/boost.simd), les membres du comité l'ont invité à [intégrer Boost](http://lists.boost.org/Archives/boost/2014/02/211609.php) dans un premier temps. Cela permet également de vérifier de la popularité d'un composant.
 
 La suite...
 ===========    
@@ -351,9 +350,9 @@ Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/D
 Pour les illustrations :
 
 
-* Les [deux collègues qui discutent sur la sortie du C++17](http://cpp-frug.github.io/images/Cpp-Complexe.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de AKP, et le texte de oliver_h ;
+* Les [deux collègues qui discutent sur la sortie du C++17](http://cpp-frug.github.io/materials/images/Cpp-Complexe.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de AKP, et le texte de oliver_h ;
 * Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le domaine public (même si ce n'est [pas possible en droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
 * Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/fr/) (2007) ;
-* L'[évolution du langage C++](http://cpp-frug.github.io/images/Evolution-Cpp.svg) est une œuvre dérivée d'un dessin sur l'évolution de l'homme dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Jae-Zun et le texte final de oliver_h (2016) ;
-* L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de oliver_h (2016) ;
-* Les [deux chatons déçus](http://cpp-frug.github.io/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par oliver_h (2016).
+* L'[évolution du langage C++](http://cpp-frug.github.io/materials/images/Evolution-Cpp.svg) est une œuvre dérivée d'un dessin sur l'évolution de l'homme dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Jae-Zun et le texte final de oliver_h (2016) ;
+* L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de oliver_h (2016) ;
+* Les [deux chatons déçus](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par oliver_h (2016).
