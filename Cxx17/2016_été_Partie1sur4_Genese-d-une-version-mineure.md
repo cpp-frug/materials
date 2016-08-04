@@ -14,7 +14,7 @@ License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 
 Les fonctionnalités de la prochaine version C++ sont connues. Voici une série de quatre dépêches sur C++17. Cette première dépêche s'attarde sur la face cachée du C++ et peut intéresser tous les lecteurs LinuxFr.org, pas seulement les développeurs C++ :-)
 
-![Deux collègues discutent : "C++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/materials/images/Cpp-Complexe.svg)
+![Deux collègues discutent : "C++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/materials/images/Cpp-Complexe-Path.svg)
 
 ----
 
@@ -170,7 +170,7 @@ Attention, ce dernier lien est celui du brouillon **C++17** le plus récent lors
      
 Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publiée (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. En anglais, c'est le *first post-publication draft*.
 
-![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit "Cool ! On va pouvoir coder"](http://cpp-frug.github.io/materials/images/Evolution-Cpp.svg)
+![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit "Cool  On va pouvoir coder"](http://cpp-frug.github.io/materials/images/Cpp-Evolution-Path.svg)
 
 Numérotation des documents
 ==========================
@@ -332,14 +332,15 @@ Mercis
 ======
 
 
-Merci aux nombreux contributeurs sur LinuxFr.org pour avoir traqué toutes les coquilles : Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid. Merci aussi à rewind, David Demelier et à gasche pour leurs pertinents commentaires.
+Merci aux nombreux contributeurs sur LinuxFr.org pour avoir traqué les coquilles : Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid. Merci aussi à rewind, David Demelier et à gasche pour leurs pertinents commentaires.
 
-
+Merci à Klaim pour avoir identifié les tournures/allusion/erreurs qui pourraient agacer/irriter les lecteurs LinuxFr.org.
+    
 Merci à [duckie](https://github.com/duckie) pour [ses]((https://github.com/cpp-frug/materials/pull/1)) [contributions](https://github.com/cpp-frug/materials/pull/3) sur le [repo Git](https://github.com/cpp-frug/materials/tree/master/Cxx17).
     
-Mais surtout, un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche avec des dessins humoristiques (à prendre au second degré).
+Mais surtout, un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche avec des dessins humoristiques (à prendre au second degré) : Ziyue, AKP, Florent B et Jae-Zun. Merci aussi à Dominic Alves pour son dessin sous licence libre. Merci à Benjamin, Imen, Youenn pour m'avoir aidé à trouver un dialogue amusant entre les collègues qui ne savent pas qu'un article sur le C++17 a été publié sur LinuxFr.org.
 
-Pour la prochaine dépêche en cours de préparation, je remercie d'avance mes collègues pour leur remarques constructives : Docteur B qui trouvait des bugs dans mes exemples et Micka qui m'aidait à fournir des exemples *utiles*.
+Merci d'avance de l'aide apportée sur les prochaines dépêches C++17 en cours de préparation : Micka pour ses exemples *utiles* et AMB007 pour les bogues trouvé dans le code C++.
 
 Droit d'auteur et licence
 =========================
@@ -348,11 +349,10 @@ Droit d'auteur et licence
 Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Les auteurs sont : Oliver H, olibre, duckie, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid.
 
 Pour les illustrations :
-
-
-* Les [deux collègues qui discutent sur la sortie du C++17](http://cpp-frug.github.io/materials/images/Cpp-Complexe.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de AKP, et le texte de oliver_h ;
+    
+* Les [deux collègues qui discutent sur la sortie du C++17](http://cpp-frug.github.io/materials/images/Cpp-Complexe.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de AKP, et le texte de Oliver H. (2016) ;
 * Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le domaine public (même si ce n'est [pas possible en droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
 * Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/fr/) (2007) ;
-* L'[évolution du langage C++](http://cpp-frug.github.io/materials/images/Evolution-Cpp.svg) est une œuvre dérivée d'un dessin sur l'évolution de l'homme dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Jae-Zun et le texte final de oliver_h (2016) ;
-* L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de oliver_h (2016) ;
-* Les [deux chatons déçus](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par oliver_h (2016).
+* L'[évolution du langage C++](http://cpp-frug.github.io/materials/images/Evolution-Cpp.svg) est inspirée d'une œuvre dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Florent B. d'après une première ébauche de Jae-Zun (2016) ;
+* L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Oliver H. (2016) ;
+* Les [deux chatons déçus](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par Oliver H. (2016).
