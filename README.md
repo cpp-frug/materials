@@ -1,12 +1,17 @@
-Partage de contenus entre communautés C++ francophones
-------------------------------------------------------
+Partage de contenus C++ francophones
+------------------------------------
 
-Ce dépôt Git permet la rédaction collaborative de contenus pouvant être réutilisés par les différentes communautés C++ francophones (Paris, Montpellier, Marseille...).
+Ce dépôt Git permet de partager tout type d'information concernant le C++.
 
-L'idée est de :
+Critères :
+- Permettre la réutilisation (licence libre, CC-BY-SA, copyleft...) 
+- Des fichier peu volumineux (éviter de partager une vidéo de 2Go, à moins que quelqu'un édite ce fichier pour expliquer comment gérer les fichiers volumineux avec GitHub...)
+- Les images sont les bienvenus, de préférence au format SVG si c'est du dessin (clipart)
+- Les documents textes de préférence au format Markdown (on accepte quand même les fichier tex, mais si on pouvait les convertir en Markdown avec un CSS associé se serait cool)
+- en langue française de préférence (les autres langues ne sont pas interdites, mais comment dire... c'est pour la communauté C++ francophone)
 
-1. Rédiger ici des contenus au format Markdown.  
-2. Réutiliser le contenu sous license CC-BY-SA pour 
+1. Déposer ou Rédiger ici des contenus sous licence libre.  
+2. Réutiliser le contenu pour 
     * des présentation (Meetup) ;
     * des dépêches ;
     * de la formation ;
