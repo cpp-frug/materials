@@ -69,7 +69,7 @@ Oliver H  | Dessin, Textes, Numérisation, Vectorisation | CC-BY-SA-3.0
 Analogie entre les fonctionnalités promises pour C++17
 et les promesses des candidats à la présidentielle de 2017 en France.
 
-![C++17 Président](images/Cpp-President-2017.svg)
+![C++17 Président](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg)
 
 Chantons déçus C++17
 --------------------
