@@ -24,3 +24,16 @@ Trois façons pour contribuer :
 2. Demandant les droits en écriture via la page des [*"issues"*](issues) (expliquer ses motivations) ;
 3. En remontant des erreurs/incohérences/ambiguités/... toujours sur la page des [*"issues"*](issues) (expliquer ses motivations).
  
+Contenus
+--------
+
+Liste des contenus disponible, merci de lire les sections `TODO` afin d'identier un coup de main qui vous ferait plaisir de donner :
+
+* [Images et dessins](images/README.md) ;
+* [Quatre dépêches C++17](Cxx17/README.md).
+
+Licence
+-------
+
+- Se repporter à chaque document.
+- Souvent CC-BY-SA
