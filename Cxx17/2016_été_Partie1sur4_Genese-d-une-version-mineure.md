@@ -12,48 +12,52 @@ Authors |Oliver H, olibre, duckie, Benoît Sibaud, cracky, Lucas, palm123, Adrie
 License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 
 
-Les fonctionnalités de la prochaine version C++ sont connues. Voici une série de quatre dépêches sur C++17. Cette première dépêche s'attarde sur la face cachée du C++ et peut intéresser tous les lecteurs LinuxFr.org, pas seulement les développeurs C++ :-)
+La prochaine version C++ est en cours de finalisation. Pour vos vacances d'été, voici une série de quatre dépêches sur C++17. Cette première dépêche nous amène dans les coulisses du C++, et donc peut intéresser tous les lecteurs LinuxFr.org. Les développeurs C++ devront attendre (ou participer à) la prochaine dépêche pour rentrer dans le vif du sujet.
 
 ![Deux collègues discutent : "C++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/materials/images/Cpp-Complexe-Path.svg)
 
 ----
 
-* [Première rencontre début mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
-* [Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
-* [Dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus)
-* [Article Wikipédia C++14](https://fr.wikipedia.org/wiki/C%2B%2B14)
+* [Journal de rewind "C++17 est sur les rails"](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
+* [Contenu Markdown de cette première dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie1sur4_Genese-d-une-version-mineure.md)
+* [Contenu Markdown de la seconde dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md)
+* [Contenu Markdown de la troisième dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie3sur4_Nouveaut%C3%A9s-de-la-biblioth%C3%A8que-standard.md)
+* [Contenu Markdown de la quatrième dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie4sur4_Bilan-et-attentes-pour-C%2B%2B20.md)
 * [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
-* [Journal de rewind "C++17 est sur les rails" a propos de la première réunion](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
-* [Dépêche LinuxFr "Codeurs, Traducteurs, CppReference a besoin de vous" (2012)](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
-* [Contenu Markdown de cette dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
-* [Première rencontre début mars 2016 très détaillée par botondballo](https://botondballo.wordpress.com/2016/03/21/trip-report-c-standards-meeting-in-jacksonville-february-2016/)
-* [Résumé de la seconde rencontre fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz)
+* [Article Wikipédia C++14](https://fr.wikipedia.org/wiki/C%2B%2B14)
+* [Mars 2016 - Rencontre du comité C++ - Intégration des fonctionnalités C++17 - par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
+* [Mars 2016 - Bilan des premières fonctionnalités C++17 - par botondballo](https://botondballo.wordpress.com/2016/03/21/trip-report-c-standards-meeting-in-jacksonville-february-2016/)
+* [Juin 2016 - Rencontre du comité C++ - Clôture de l'ajout de fonctionnalités C++17 - par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
 * [Liste très complète des nouveautés C++17 sur StackOverflow](http://stackoverflow.com/a/38060437/938111)
 * [Liste des nouveautés C++17 sur Meeting C++](https://meetingcpp.com/index.php/br/items/final-features-of-c17.html)
+* [Site officiel du comité de standardisation du C++ - Page expliquant le fonctionnement du comité](https://isocpp.org/std/)
+* [Dépôt Git officiel du standard C++ en cours de rédaction](https://github.com/cplusplus/draft/)
+* [CppReference, wiki libre (CC-BY-SA-3.0 et GFDL) pour la documentation C et C++ ](http://fr.cppreference.com/w/Accueil)
+* [Dépêche "Codeurs, Traducteurs, CppReference a besoin de vous" par nazcafan (2012)](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
 
 ----
 
 Série de dépêches C++17
 =======================
     
-Chère lectrice, cher lecteur LinuxFr.org. Tes collègues sont partis en vacances, et tu cherches à t'occuper ? Ou alors, tu es en vacances et les informations logicielles te manquent déjà ? Et bien, voici quatre dépêches pour être en avance technologique dès la rentrée. Ce premier chapitre donne un aperçu des quatre dépêches consacrées aux évolutions apportées par la mouture **C++17**.
+Chère lectrice, cher lecteur LinuxFr.org. Tes collègues sont partis en vacances, et tu cherches à t'occuper ? Ou alors, tu es en vacances et l'actualité informatique te manque déjà ? Et bien, voici quatre dépêches pour être en avance technologique dès la rentrée. Ce premier chapitre donne un aperçu des quatre dépêches consacrées aux évolutions apportées par la mouture **C++17**.
 
 1. Genèse du C++17
 ------------------
 
-Cette [première dépêche](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie1sur4_Genese-d-une-version-mineure.md) nous amène dans les coulisses du standard C++ : un standard non-libre et [payant](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029), un [brouillon](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) _(draft)_ qui sert de référence, un standard C++ pourtant [ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) (pas de brevet), des développeurs C++ (même expérimentés) n'ayant jamais lu le standard, des [livres](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) et [sites web](http://fr.cppreference.com/) utilisés comme référence, des fonctionnalités en discussion depuis plus de 12 ans...
+Cette [première dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie1sur4_Genese-d-une-version-mineure.md) *dévoile la face cachée* du standard C++ : un standard non-libre et [payant](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029), un [brouillon](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) _(draft)_ qui sert de référence, un standard C++ [ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) (pas de brevet), des développeurs C++ (même expérimentés) n'ayant jamais lu le standard, des [livres](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) et [sites web](http://fr.cppreference.com/) utilisés comme référence, des fonctionnalités en discussion depuis plus de 12 ans...
 
 2. Nouveautés du langage
 ------------------------
 
-La [seconde dépêche](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md) présentera les changements : [déduction des arguments `template`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) `std::array a{1,2,3};`, [déstructuration `auto [x, y] = f();`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) équivalent à `char x; int y; std::tie(x,y)=f();`, [`namespace aa::bb`](http://en.cppreference.com/w/cpp/language/namespace) équivalent à `namespace aa{ namespace bb`, [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) (sélectionne du code à la compilation), Lambda `constexpr`, capture `*this`, [`if(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme `for(init;cond;inc)`, [variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf)...
+La [seconde dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md) présentera les changements : [déduction des arguments `template`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) `std::array a{1,2,3};`, [déstructuration `auto [x, y] = f();`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) équivalent à `char x; int y; std::tie(x,y)=f();`, [`namespace aa::bb`](http://en.cppreference.com/w/cpp/language/namespace) équivalent à `namespace aa{ namespace bb`, [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) (sélectionne du code à la compilation), Lambda `constexpr`, capture `*this`, [`if(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme `for(init;cond;inc)`, [variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf)...
 
 Snif, les fonctionnalités majeures très attendues comme les [Concepts](http://fr.cppreference.com/w/cpp/concept), les [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf), la [Syntaxe d'appel uniforme](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ou la [Réflexion](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) restent dans les cartons.
 
 3. Nouveautés de la bibliothèque standard
 -----------------------------------------
 
-La [troisième dépêche](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie3sur4_Nouveaut%C3%A9s-de-la-biblioth%C3%A8que-standard.md) présentera les changements au niveau de la bibliothèque standard. Avec les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) et le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) qui pourraient bousculer notre petite vie de développeur. Mais aussi les composants [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) ayant fait leurs preuves au sein de [Boost](http://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)). Tout comme les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math). Et bien plus...
+La [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie3sur4_Nouveaut%C3%A9s-de-la-biblioth%C3%A8que-standard.md) présentera les changements au niveau de la bibliothèque standard. Avec les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) et le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) qui pourraient bousculer notre petite vie de développeur. Mais aussi les composants [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) ayant fait leurs preuves au sein de [Boost](http://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)). Tout comme les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math). Et bien plus...
     
 Snif, les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) et le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ne sont pas intégrés.
 
@@ -69,15 +73,14 @@ Version mineure ou majeure ? D'un côté, les améliorations sont nombreuses et 
 Partage
 =======
     
-Ces dépêches sont figées après publication sur LinuxFr.org. Afin de continuer à améliorer ce contenu libre, n'hésite à pas à nous rejoindre sur le repo [Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17) :
+Ces dépêches sont figées après publication sur LinuxFr.org. Afin de continuer à améliorer ce contenu libre, n'hésite à pas à nous rejoindre sur le repo [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17) :
     
-1. [Genèse d'une version mineure](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie1sur4_Genese-d-une-version-mineure.md) ;
-2. [Nouveautés du langage](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md) ;
-3. [Nouveautés de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie3sur4_Nouveaut%C3%A9s-de-la-biblioth%C3%A8que-standard.md) ;
-4. [Bilan et attentes pour C++20](https://github.com/cpp-frug/materials/blob/master/Cxx17/2016_%C3%A9t%C3%A9_Partie4sur4_Bilan-et-attentes-pour-C%2B%2B20.md).
+1. [Genèse d'une version mineure](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie1sur4_Genese-d-une-version-mineure.md) ;
+2. [Nouveautés du langage](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md) ;
+3. [Nouveautés de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie3sur4_Nouveaut%C3%A9s-de-la-biblioth%C3%A8que-standard.md) ;
+4. [Bilan et attentes pour C++20](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie4sur4_Bilan-et-attentes-pour-C%2B%2B20.md).
     
 Avec toutes nos contributions réunies, nous profiterons d'avantage de nos découvertes individuelles et nous offrirons un contenu CC-BY-SA de qualité pour créer, par exemple, un article Wikipédia C++17 en français.
-
 
 [![Logo C++FRUG représenté par un gros "C++" au centre du cercle de la Francophonie][logoCppFRUG]][logoCppFRUG_WP]
     
@@ -172,6 +175,17 @@ Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant l
 
 ![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit "Cool  On va pouvoir coder"](http://cpp-frug.github.io/materials/images/Cpp-Evolution-Path.svg)
 
+Technical Specification (TS)
+============================
+    
+Les spécifications techniques notées **TS** pour _**T**echnical **S**pecification_ sont les documents de travail les plus importants du comité de standardisation. Ces documents sont la base de discussion des évolutions du standard.
+    
+Généralement, les spécifications techniques sont composés de deux parties :
+    
+* La première partie donne les motivation du changement (l'avantage d'avoir telle fonctionnalité dans le C++ avec des exemples de code) ;
+* La seconde partie liste toutes les modifications à appliquer au standard C++ en cours de rédaction (au _"draft"_).
+
+
 Numérotation des documents
 ==========================
     
@@ -185,7 +199,10 @@ Ces numéros **`xxxx`** peuvent paraître obscures, mais sont très importants c
 * par de nombreux [sites web](https://cmake.org/cmake/help/latest/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.html).
 
 
-Prenons l'exemple de la proposition d'intégrer les "Modules" au C++ :
+Pour faire le lien entre les numéros **`xxxx`** et les principales spécifications techniques _(TS)_, une astuce est d'utiliser la page [*experimental* sur cppreference.com](http://en.cppreference.com/w/cpp/experimental).
+
+
+Voici, en exemple, l'historique des TS a propos des "Modules" :
     
 Année| Numéro  | Titre | Révision
 -----|---------|-------|---
@@ -200,12 +217,9 @@ Année| Numéro  | Titre | Révision
 2015 | [`N4465`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4465.pdf) | A Module System for C++ | 3
 2016 | [`P0142R0`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) | A Module System for C++ | 4
 
-Remarquons le changement de nommage pour la révision de 2016. Le nouveau nommage **`PxxxxRx`** a été mis en place en septembre 2015 avec un **P** comme _**P**roposal_ (**P**roposition/**P**rojet). Progressivement, les **`PxxxxRx`** doivent remplacer les **`Nxxxx`**. L'avantage est de conserver le même numéro **`xxxx`** pour toutes les révision du document.
+Remarquons le changement de nommage pour la révision de 2016. Le nouveau nommage **`PxxxxRx`** a été mis en place en septembre 2015 avec un **P** comme _**P**roposal_ (**P**roposition). Progressivement, les **`PxxxxRx`** doivent remplacer les **`Nxxxx`**. L'avantage est de conserver le même numéro **`xxxx`** pour toutes les révision du document.
     
 Comme en C++, on commence par compter la première **R**évision à partir de **`R0`**. L'exemple ci-dessus est un cas particulier : **`R0`** est bien la première révision du nouveau format, mais la quatrième révision des documents _"A Module System for C++"_.
-
-`TODO` Parler des spécifications techniques notées **TS** pour _**T**echnical **S**pecification_...
-Pour faire le lien entre les numéros **`xxxx`** et les spécifications techniques, une astuce est d'utiliser la page [*experimental* sur cppreference.com](http://en.cppreference.com/w/cpp/experimental).
 
 Rapport d'Anomalie
 ==================
@@ -355,4 +369,5 @@ Pour les illustrations :
 * Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/fr/) (2007) ;
 * L'[évolution du langage C++](http://cpp-frug.github.io/materials/images/Evolution-Cpp.svg) est inspirée d'une œuvre dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Florent B. d'après une première ébauche de Jae-Zun (2016) ;
 * L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Oliver H. (2016) ;
-* Les [deux chatons déçus](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par Oliver H. (2016).
+* Les [deux chatons déçus](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par Oliver H. (2016) ;
+* La police de caractères utilisée dans ces illustrations est la [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) maintenue par [Theppitak Karoonboonyanan](https://github.com/thep) sous licence [GPL-2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL).
