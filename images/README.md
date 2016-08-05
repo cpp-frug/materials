@@ -1,5 +1,10 @@
 Ce répertoire contient des images sous licence libre a propos du C++
 
+TODO
+----
+
+* Remplacer le fond transparent par un fond blanc avec une opacité d'environ 15% afin que le texte noir soit visible sur fond noir.
+
 C++ Complexe
 ------------
 
