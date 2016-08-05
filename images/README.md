@@ -30,9 +30,9 @@ Deux versions :
 1. L'originale avec les balises `<text>` et donc dépent si la police Purisa est installée sur la machine ;
 2. Celle avec les texts remplacé par des chemins `<path>` donc on ne peut plus éditer les textes.
 
-![Version originale avec les balises <text>](images/Cpp-Complexe-Path.svg)
+![Version originale avec les balises <text>](http://cpp-frug.github.io/materials/images/Cpp-Complexe-Path.svg)
 
-![Version insensible à la présence des polices de caractères](images/Cpp-Complexe-Path.svg)
+![Version insensible à la présence des polices de caractères](http://cpp-frug.github.io/materials/images/Cpp-Complexe-Path.svg)
 
 Évolution du langage C++
 ------------------------
@@ -55,9 +55,9 @@ Deux versions :
 1. L'originale avec les balises `<text>` et donc dépent si la police Purisa est installée sur la machine ;
 2. Celle avec les texts remplacé par des chemins `<path>` donc on ne peut plus éditer les textes.
 
-![Version originale avec les balises <text>](images/Cpp-Evolution-Original.svg)
+![Version originale avec les balises <text>](http://cpp-frug.github.io/materials/images/Cpp-Evolution-Original.svg)
 
-![Version insensible à la présence des polices de caractères](images/Cpp-Evolution-Path.svg)
+![Version insensible à la présence des polices de caractères](http://cpp-frug.github.io/materials/images/Cpp-Evolution-Path.svg)
 
 C++17 Président
 ---------------
@@ -85,6 +85,6 @@ Deux chatons déçus du contenu de C++17 discutent :
 - Sniff.. On n'a pas les Concepts
 - Ni la Réflexion
  
-![Chatons tristes C++17](images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
+![Chatons tristes C++17](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
 	
