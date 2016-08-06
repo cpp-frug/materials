@@ -58,7 +58,7 @@
       <cc:Work
          rdf:about="">
         <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
         <cc:attributionName
            rdf:resource="AKP" />
         <dc:format>image/svg+xml</dc:format>
