@@ -3,7 +3,7 @@ Ce répertoire contient des images sous licence libre a propos du C++
 TODO
 ----
 
-* Remplacer le fond transparent par un fond blanc avec une opacité d'environ 15% afin que le texte noir soit visible sur fond noir.
+* Trouver/Expliquer comment réduire la taille des fichiers SVG. 
 
 C++ Complexe
 ------------
@@ -13,6 +13,7 @@ Auteur    | Contribution                                         | License
 Oliver H  | Idée, Ébauche                                        | CC-BY-SA-3.0
 AKP       | Dessin à la main                                     | CC-BY-SA-3.0
 Oliver H  | Numérisation, Vectorisation, Améliorations et Textes | CC-BY-SA-3.0
+[Dave](http://www.clker.com/profile-50312.html) | [Note repositionnable jaune](http://www.clker.com/clipart-top2.html) (post-it) | [CC0 Public Domain](https://pixabay.com/fr/post-it-m%C3%A9mo-rappel-note-jaune-296384/)
 
 Deux collègues discutent :
     
