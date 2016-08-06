@@ -53,8 +53,7 @@
          id="stop3168" />
     </linearGradient>
   </defs>
-  <metadata
-     id="metadata4">
+  <metadata>
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -65,10 +64,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title>Deux collègues heureux de la sortie de C++17 mais qui ne sont pas au courant des dépêches C++17 sur LinuxFr.org afin de cerner les nouvelles fonctionnalités.</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <title>Deux collègues heureux de la sortie de C++17 mais qui ne sont pas au courant des dépêches C++17 sur LinuxFr.org afin de cerner les nouvelles fonctionnalités.</title>
+  <rect
+     style="opacity:0.24;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     height="592.33569"
+     width="1876.4258"
+     x="0"
+     y="0" />
   <g
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50px;line-height:125%;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      id="text9">

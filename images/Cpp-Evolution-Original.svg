@@ -32,9 +32,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.78560086"
-     inkscape:cx="523.16644"
-     inkscape:cy="303.31713"
+     inkscape:zoom="0.5555037"
+     inkscape:cx="560.48602"
+     inkscape:cy="197.57139"
      inkscape:window-x="1745"
      inkscape:window-y="212"
      inkscape:window-maximized="1"
@@ -151,8 +151,13 @@
        x2="725.10938"
        y2="229.92419" />
   </defs>
-  <title
-     id="title3518">Évolution du langage C++</title>
+  <title>Évolution du langage C++</title>
+  <rect
+     style="opacity:0.24;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     height="523.55676"
+     width="1326.3733"
+     x="0"
+     y="0" />
   <g
      id="g6875"
      transform="translate(0.01565078,5.7327515)">

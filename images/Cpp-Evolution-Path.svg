@@ -9,7 +9,6 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="1326.0197"
    height="523.81677"
-   id="svg3516"
    version="1.1">
   <metadata
      id="metadata3552">
@@ -88,6 +87,12 @@
   </defs>
   <title
      id="title3518">Évolution du langage C++</title>
+  <rect
+     style="opacity:0.24;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     width="1326.0197"
+     height="523.81677"
+     x="0"
+     y="0" />
   <path
      id="path3448"
      d="m 1053.0886,421.54035 c -3.2529,-4.52575 -5.0087,-0.43051 -4.7212,8.27857 1.4247,0.58975 26.4981,14.30682 36.6406,14.93965 11.6989,1.82106 22.6239,-0.0192 30.004,-5.99823 2.7028,-2.83924 4.1344,-5.64304 5.4864,-10.84672 1.2443,-5.58725 1.7569,-6.22622 -2.9656,-4.0729 -7.2151,3.98683 -16.841,8.79179 -24.2406,9.94049 -14.2924,1.72058 -30.9683,-3.59724 -40.2036,-12.24086 z"
