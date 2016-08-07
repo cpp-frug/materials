@@ -40,7 +40,7 @@ La prochaine version C++ est en cours de finalisation. Pour vos vacances d'été
 Série de dépêches C++17
 =======================
     
-Chère lectrice, cher lecteur LinuxFr.org. Tes collègues sont partis en vacances, et tu cherches à t'occuper ? Ou alors, tu es en vacances et l'actualité informatique te manque déjà ? Et bien, voici quatre dépêches pour être en avance technologique dès la rentrée. Ce premier chapitre donne un aperçu des quatre dépêches consacrées aux évolutions apportées par la mouture **C++17**.
+Chère lectrice, cher lecteur LinuxFr.org. Tes collègues sont partis en vacances, et tu cherches à t'occuper ? Ou alors, tu es en vacances et l'actualité informatique te manque déjà ? Et bien, voici la première dépêche C++ de l'été, qui sera suivie par trois autres dépêches consacrées aux évolutions apportées par la mouture **C++17**, afin d'être en avance technologique dès la rentrée. Ici, dans ce premier chapitre, tu trouveras un aperçu des quatre dépêches.
 
 1. Genèse du C++17
 ------------------
@@ -50,9 +50,9 @@ Cette [première dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/
 2. Nouveautés du langage
 ------------------------
 
-La [seconde dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md) présentera les changements : [déduction des arguments `template`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) `std::array a{1,2,3};`, [déstructuration `auto [x, y] = f();`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) équivalent à `char x; int y; std::tie(x,y)=f();`, [`namespace aa::bb`](http://en.cppreference.com/w/cpp/language/namespace) équivalent à `namespace aa{ namespace bb`, [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) (sélectionne du code à la compilation), Lambda `constexpr`, capture `*this`, [`if(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme `for(init;cond;inc)`, [variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf)...
+La [seconde dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md) présentera les changements du langage : [déduction des arguments `template`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) `std::array a{1,2,3};`, [décomposition `auto [x, y] = f();`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) équivalent à `char x; int y; std::tie(x,y)=f();`, [`namespace aa::bb`](http://en.cppreference.com/w/cpp/language/namespace) équivalent à `namespace aa{ namespace bb`, [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) (sélectionne du code à la compilation), Lambda `constexpr`, capture `*this`, [`if(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme `for(init;cond;inc)`, [variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf)...
 
-Snif, les fonctionnalités majeures très attendues comme les [Concepts](http://fr.cppreference.com/w/cpp/concept), les [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf), la [Syntaxe d'appel uniforme](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ou la [Réflexion](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) restent dans les cartons.
+Snif, les fonctionnalités majeures très attendues comme les [Concepts](http://fr.cppreference.com/w/cpp/concept), les [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf), la [Syntaxe d'appel uniforme](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ou la [Réflexion](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) restent dans le tuyaux.
 
 3. Nouveautés de la bibliothèque standard
 -----------------------------------------
@@ -73,14 +73,16 @@ Version mineure ou majeure ? D'un côté, les améliorations sont nombreuses et 
 Partage
 =======
     
-Ces dépêches sont figées après publication sur LinuxFr.org. Afin de continuer à améliorer ce contenu libre, n'hésite à pas à nous rejoindre sur le repo [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17) :
+Chère lectrice, cher lecteur LinuxFr.org. Tu souhaites nous donner un coup de main pour les dépêches suivantes en cours de rédaction ? Merci de [créer un compte LinuxFr.org](https://linuxfr.org/compte/inscription) et de rejoindre l'[espace de rédaction collaborative](https://linuxfr.org/redaction).
+     
+Après publication, les dépêches sont figées sur LinuxFr.org. Alors, pour continuer à améliorer ce contenu libre (fôtes, manques, tournures, franglais, maladresses...), n'hésite à pas à  aller sur le dépôt [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17). C'est là aussi que tu trouveras les versions de ces dépêches les plus à jour :
     
 1. [Genèse d'une version mineure](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie1sur4_Genese-d-une-version-mineure.md) ;
 2. [Nouveautés du langage](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie2sur4_Nouveaut%C3%A9s-du-langage.md) ;
 3. [Nouveautés de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie3sur4_Nouveaut%C3%A9s-de-la-biblioth%C3%A8que-standard.md) ;
 4. [Bilan et attentes pour C++20](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17/2016_%C3%A9t%C3%A9_Partie4sur4_Bilan-et-attentes-pour-C%2B%2B20.md).
     
-Avec toutes nos contributions réunies, nous profiterons d'avantage de nos découvertes individuelles et nous offrirons un contenu CC-BY-SA de qualité pour créer, par exemple, un article Wikipédia C++17 en français.
+Avec toutes nos contributions réunies, nous profiterons d'avantage de nos découvertes individuelles et nous offrirons un contenu CC-BY-SA de qualité pour créer, par exemple, un article Wikipédia C++17 en français :-)
 
 [![Logo C++FRUG représenté par un gros "C++" au centre du cercle de la Francophonie][logoCppFRUG]][logoCppFRUG_WP]
     
@@ -93,20 +95,19 @@ Avec toutes nos contributions réunies, nous profiterons d'avantage de nos déco
 Le standard n'est pas libre
 ===========================
     
-Les mentions de droit d'auteur ne laissent aucun doute, la spécification du standard C++ n'est pas libre.
+La mention de droit d'auteur ne laisse aucun doute, la spécification du standard C++ ne permet pas sa réutilisation :
     
 > © ISO/IEC 2014 – All rights reserved  
 > COPYRIGHT PROTECTED DOCUMENT  
 > All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
 > Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
     
-Cette restriction empêche la réutilisation du contenu, comme un paragraphe d'une règle ou un exemple de code. Dans la pratique, l'organisme ISO ne poursuit personne qui recopie une partie du document.
-
+L'organisme ISO empêche juridiquement la reproduction du contenu du standard, comme un paragraphe d'une règle ou un exemple de code. Heureusement, dans la pratique, l'organisme ISO ne poursuit personne qui [publie des extraits](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard) du document.
 
 Le standard est payant
 ======================
     
-De plus, obtenir le standard C++ coûte cher. Même pour télécharger un PDF :
+De plus, obtenir le standard C++ coûte cher. Même la version PDF téléchargée :
     
 * 182 € sur le [site de l'ISO](http://www.iso.org/iso/fr/catalogue_detail?csnumber=64029) (198 francs suisses) ;
 * 238 € sur le [site de l'ANSI](http://webstore.ansi.org/RecordDetail.aspx?sku=ISO%2fIEC+14882%3a2014) (265 $ USA).
@@ -129,23 +130,23 @@ Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur q
 Et les brouillons du comité ?
 =============================
         
-Les documents en cours de rédaction _(draft)_ du comité de standardisation sont gratuitement accessibles (mais toujours pas libres) :
+Les documents en cours de rédaction _(draft)_ du comité de standardisation sont gratuitement accessibles :
     
 * [open-std.org/jtc1/sc22/wg21](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/)
 * [github.com/cplusplus/draft](https://github.com/cplusplus/draft/tree/master/papers)
        
 Quand le comité de standardisation C++ valide un brouillon (nouvelle version C++), ce brouillon bénéficie [de dernières corrections](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3338.html). Puis, le comité le fournit à l'ISO qui change la mise en forme pour en faire une version officielle.
     
-Mais que fait une dépêche qui prône un langage non libre sur un site comme LinuxFr.org ? Chère lectrice, cher lecteur de LinuxFr.org, doit on poser un ultimatum à l'ISO et interdire les dépêches C++ tant que l'on n'a pas le droit de copier-coller un bout de code du standard ?
+Mais que fait une dépêche qui prône un langage non libre sur un site comme LinuxFr.org ? Chère lectrice, cher lecteur de LinuxFr.org, Devrait on poser un ultimatum à l'ISO et interdire les dépêches C++ tant que l'on n'a pas le droit de copier-coller un bout de code du standard ?
 
 Un standard ouvert tout de même !
 =================================
     
-Néanmoins, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement. Ce qui n'est pas le cas des langages comme Java ou C# (troll).
+Néanmoins, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement. Ce qui n'est pas le cas des langages comme [Java](http://www.lemonde.fr/technologies/article/2014/05/10/brevets-la-bataille-entre-oracle-et-google-sur-java-relancee_4414517_651865.html) ou [C#](https://digitalcitizen.info/2014/11/12/while-open-source-leads-to-patent-traps-free-software-warns-and-liberates/) (troll).
     
 De même, le nom **"C++"** n'est pas une marque, ni aucun type de propriété intellectuelle. À la différence de la marque [**JavaScript®**](https://developer.mozilla.org/fr/docs/Web/JavaScript/A_propos#Ressources_JavaScript) déposée par Oracle, ou des marques non déposées [**Rust™**](https://www.mozilla.org/en-US/foundation/trademarks/list/), [**Go™**](https://www.google.fr/intl/fr/permissions/trademark/trademark-list.html) (et une [autre **Go™**](https://www.thoughtworks.com/news/innova-using-thoughtworks-studios-go)).
     
-Et même si C++ n'est pas encore aussi ouvert que peut l'être Rust™, de nombreux membres du comité améliorent constamment la façon de travailler pour plus de transparence, plus de proximité avec les utilisateurs C++, comme pour le [compte GitHub du comité](https://github.com/cplusplus). Cependant, l'organisme ISO et les institutions locales (AFNIC, AFNOR...) sont conservatrices.
+Et même si C++ n'est pas encore aussi ouvert que peut l'être Rust™, de nombreux membres du comité améliorent constamment la façon de travailler pour plus de transparence, plus de proximité avec les utilisateurs C++, comme pour le [compte GitHub du comité](https://github.com/cplusplus).
 
 [![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0][CppVisImg]][CppVisWeb]
     
@@ -221,7 +222,7 @@ Remarquons le changement de nommage pour la révision de 2016. Le nouveau nommag
     
 Comme en C++, on commence par compter la première **R**évision à partir de **`R0`**. L'exemple ci-dessus est un cas particulier : **`R0`** est bien la première révision du nouveau format, mais la quatrième révision des documents _"A Module System for C++"_.
 
-Rapport d'Anomalie
+Defect Report (DR)
 ==================
     
 Même après moult relectures par les meilleurs experts C++ au monde, avec toutes les précautions prises par les institutions officielles, les publications des standards C++ contenaient 5000 anomalies ayant fait l'objet, chacune, d'un [rapport d'anomalie _(Defect Report)_](https://isocpp.org/std/submit-issue) !
@@ -251,13 +252,13 @@ Pour terminer, notons aussi que des rapports d'anomalie approuvés lors d'une r�
     
 Alors, chère lectrice, cher lecteur LinuxFr.org, es-tu étonné(e) par ce fonctionnement. Connais-tu d'autre façons de maintenir un tel document ? Comment cela se passe dans d'autres langages de programmation ? As-tu des idées d'amélioration ?
 
-Un langage extrêmement compliqué qui se simplifie
-=================================================
-        
+Un langage compliqué qui se simplifie
+=====================================
+    
 Par rapport à tous les langages utilisés en production, avouons que le C++ est peut être le langage le plus complexe que l'humanité ait pu inventer ! Les développeurs C++ en ont bien conscience. C'est peut-être la raison pour laquelle les participants aux _meetups_ se montrent souvent bienveillants à l'égard des autres langages. Les développeurs C++ aimeraient un langage plus simple, à condition de **"ne pas sacrifier la sacro-sainte performance"**.
     
-Le C++ est tellement vaste et semé de subtilités que les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts sont appelés des juristes du C++ *(C++ lawyers)*.
-     
+Le C++ est tellement vaste et semé de subtilités que les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts sont appelés des juristes du C++, ou plus généralement *"language lawers"* en anglais.
+    
 Pour inverser la tendance, certains membres du comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (le créateur du C++) souhaitent accélérer l'évolution du langage vers un C++ plus intuitif, plus sûr, et toujours plus performant.
 
 Un process de standardisation qui s'ouvre d'avantage
@@ -295,7 +296,7 @@ La semaine se déroule sur six jours, du lundi au samedi. Pas de grasse matinée
     
 Mais à Oulu, un phénomène naturel a eu un impact direct sur la productivité : le [soleil se couche après minuit en juin](http://dateandtime.info/fr/citysunrisesunset.php?id=643492&month=6&year=2016) ! Si bien, que la plupart des membres ne se rendaient pas compte de l'heure et ont veillé bien plus tard que d'habitude. En plus du soleil qui *dort* seulement deux heures par nuit, le [décalage horaire _(jetlag)_](https://fr.wikipedia.org/wiki/D%C3%A9calage_horaire_(syndrome)) a achevé les non-européens qui ont eu besoin de plusieurs jours de repos pour s'en remettre !
 
-![Analogie entre les fonctionnalités promises pour C++17 et les promesses des candidats à la présidentielle de 2017 en France](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg)
+![Deux chatons déçus du contenu de C++17 "Sniff.. On n'a pas les Concepts. Ni la Réflexion."](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
 Plus de 10 ans pour intégrer les fonctionnalités
 ================================================
@@ -318,7 +319,7 @@ Par contre, d'autres fonctionnalités _majeures_ sont toujours dans le tuyau :
     
 Comme quoi, le comité de standardisation prend son temps pour bien s'assurer que chaque fonctionnalité soit *parfaite* et cela peut prendre une dizaine d'années ! L'objectif étant de ne pas dégrader d'avantage la complexité inhérente au C++, avec comme contre partie d'avoir un langage de programmation qui évolue doucement...
 
-![Deux chatons déçus du contenu de C++17 "Sniff.. On n'a pas les Concepts. Ni la Réflexion."](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
+![Analogie entre les fonctionnalités promises pour C++17 et les promesses des candidats à la présidentielle de 2017 en France](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg)
 
 Implémentation de référence
 ===========================
@@ -332,15 +333,12 @@ D'ailleurs, c'est devenu le parcours classique pour les nouveaux composants de l
 La suite...
 ===========    
     
-La prochaine dépêche rentre enfin dans le vif du sujet.
+La prochaine dépêche va nous permettre d'entrer enfin dans le vif du sujet **C++17**.
     
-Merci de nous donner un coup de main à la rédaction des trois dépêches **C++17** à venir en expliquant les nouvelles fonctionnalités ou en améliorant l'ébauche en cours de rédaction :-)
-
-Pour participer ou lire en avance les prochaines dépêches :
+Merci de nous donner un coup de main à la rédaction des prochaines dépêches **C++17**. Pour participer ou lire en avance les prochaines dépêches :
     
 * Se rendre sur l'espace de [rédaction LinuxFr.org](https://linuxfr.org/redaction) (recommandé pour la rédaction) ;
-* Directement sur le [repo Git *materials*](https://github.com/cpp-frug/materials/tree/master/Cxx17) du C++FRUG (Groupe des utilisateurs C++ francophones).
-
+* Directement sur le [dépôt Git *materials*](https://github.com/cpp-frug/materials/tree/gh-pages/Cxx17) du C++FRUG (Groupe des utilisateurs C++ francophones).
 
 Mercis
 ======
@@ -348,11 +346,11 @@ Mercis
 
 Merci aux nombreux contributeurs sur LinuxFr.org pour avoir traqué les coquilles : Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid. Merci aussi à rewind, David Demelier et à gasche pour leurs pertinents commentaires.
 
-Merci à Klaim pour avoir identifié les tournures/allusion/erreurs qui pourraient agacer/irriter les lecteurs LinuxFr.org.
+Merci à Klaim pour avoir identifié des tournures/allusions/erreurs qui pourraient agacer/irriter des lecteurs LinuxFr.org.
     
-Merci à [duckie](https://github.com/duckie) pour [ses]((https://github.com/cpp-frug/materials/pull/1)) [contributions](https://github.com/cpp-frug/materials/pull/3) sur le [repo Git](https://github.com/cpp-frug/materials/tree/master/Cxx17).
+Merci à [duckie](https://github.com/duckie) pour [ses]((https://github.com/cpp-frug/materials/pull/1)) [contributions](https://github.com/cpp-frug/materials/pull/3) sur le [dépôt Git](https://github.com/cpp-frug/materials/tree/gh-pages/Cxx17).
     
-Mais surtout, un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche avec des dessins humoristiques (à prendre au second degré) : Ziyue, AKP, Florent B et Jae-Zun. Merci aussi à Dominic Alves pour son dessin sous licence libre. Merci à Benjamin, Imen, Youenn pour m'avoir aidé à trouver un dialogue amusant entre les collègues qui ne savent pas qu'un article sur le C++17 a été publié sur LinuxFr.org.
+Mais surtout, un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche avec des dessins humoristiques (à prendre au second degré) : Ziyue, AKP, Florent B, et Jae-Zun. Merci aussi à Dominic Alves pour son [dessin C++](https://www.flickr.com/photos/dominicspics/785982209) sous licence libre. Merci à Benjamin, Imen et Youenn pour m'avoir aidé à trouver un dialogue amusant entre les collègues qui ne savent pas que LinuxFr.org parle de C++17.
 
 Merci d'avance de l'aide apportée sur les prochaines dépêches C++17 en cours de préparation : Micka pour ses exemples *utiles* et AMB007 pour les bogues trouvé dans le code C++.
 
@@ -364,10 +362,10 @@ Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/D
 
 Pour les illustrations :
     
-* Les [deux collègues qui discutent sur la sortie du C++17](http://cpp-frug.github.io/materials/images/Cpp-Complexe.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de AKP, et le texte de Oliver H. (2016) ;
-* Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le domaine public (même si ce n'est [pas possible en droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
-* Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/fr/) (2007) ;
-* L'[évolution du langage C++](http://cpp-frug.github.io/materials/images/Evolution-Cpp.svg) est inspirée d'une œuvre dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Florent B. d'après une première ébauche de Jae-Zun (2016) ;
-* L'analogie entre la [présidentielle 2017 et C++17](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) est de Oliver H. (2016) ;
-* Les [deux chatons déçus](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par Oliver H. (2016) ;
-* La police de caractères utilisée dans ces illustrations est la [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) maintenue par [Theppitak Karoonboonyanan](https://github.com/thep) sous licence [GPL-2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL).
+* Les [deux collègues qui discutent sur la sortie du C++17](https://github.com/cpp-frug/materials/blob/gh-pages/images/Cpp-Complexe-Original.svg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de AKP, et le texte de Oliver H. (2016). La [note repositionnable jaune](http://www.clker.com/clipart-top2.html) (post-it tout à droite du [comic strip](https://fr.wikipedia.org/wiki/Comic_strip)) sous licence [CC0](https://pixabay.com/fr/post-it-m%C3%A9mo-rappel-note-jaune-296384/) est de [Dave](http://www.clker.com/profile-50312.html) (2010) ;
+* Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le [domaine public](https://fr.wikipedia.org/wiki/Domaine_public) (même si ce n'est [pas possible en droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
+* Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.fr) (2007) ;
+* L'[évolution du langage C++](https://github.com/cpp-frug/materials/blob/gh-pages/images/Evolution-Cpp.svg) est inspirée d'une œuvre dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de Florent B. d'après une première ébauche de Jae-Zun (2016) ;
+* Les [deux chatons déçus](https://github.com/cpp-frug/materials/blob/gh-pages/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par Oliver H. (2016) ;
+* L'analogie entre la [présidentielle 2017 et C++17](https://github.com/cpp-frug/materials/blob/gh-pages/images/Cpp-President-2017.svg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de Oliver H. (2016) ;
+* La police de caractères utilisée par trois des illustrations est la [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) maintenue par [Theppitak Karoonboonyanan](https://github.com/thep) sous licence [GPL-2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL).
