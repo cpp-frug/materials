@@ -1,1 +1,0 @@
-2016_n4_C++17_Nouveautés-de-la-bibliothèque.md
