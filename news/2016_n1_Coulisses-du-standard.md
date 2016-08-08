@@ -6,7 +6,7 @@ Les coulisses du standard C++
 =============================
 
 
-Authors |Oliver H, olibre, duckie, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid
+Authors |Oliver H, olibre, duckie, Klaim, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid
 --------|------------------------------
 License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 
@@ -200,10 +200,9 @@ Généralement, les spécifications techniques sont composés de deux parties :
 Numérotation des documents
 ==========================
     
-A partir de 1990, le comité numérote ses documents sur 4 chiffres en commençant par le n°[`0000`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1990/WG21%201990/X3J16_90-0000%20WG21.pdf). Ce numéro est incrémenté pour chaque nouveau document, ou nouvelle révision d'un document.
+A partir de 1990, le comité numérote ses documents officiels sur 4 chiffres en commençant par le n°[`0000`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1990/WG21%201990/X3J16_90-0000%20WG21.pdf). Ce numéro est incrémenté pour chaque nouveau document, ou nouvelle révision d'un document.
     
 En 1991, le préfixe **N** est adoptée, et le premier document à en profiter est le [`N0007`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1991/WG21%201991/X3J16_91-0089%20WG21_N0007.pdf). **N** comme _**N**umber_ (Numéro).
-
 
 Ces numéros **`xxxx`** peuvent paraître obscures, mais sont très importants car ils sont utilisés comme références rigoureuses aux fonctionnalités C++ :
     
@@ -212,8 +211,7 @@ Ces numéros **`xxxx`** peuvent paraître obscures, mais sont très importants c
 
 
 
-Pour faire le lien entre les numéros **`xxxx`** et les principales spécifications techniques _(TS)_, une astuce est d'utiliser la page [*experimental* sur cppreference.com](http://en.cppreference.com/w/cpp/experimental).
-
+Pour faire le lien entre principales spécifications techniques _(TS)_ et leur numéro **`xxxx`** de la révision la plus récente, une astuce est d'utiliser la page [*experimental* sur cppreference.com](http://en.cppreference.com/w/cpp/experimental).
 
 
 Voici, en exemple, l'historique des TS a propos des "Modules" :
@@ -274,10 +272,9 @@ Un langage compliqué qui se simplifie
     
 Par rapport à tous les langages utilisés en production, avouons que le C++ est peut être le langage le plus complexe que l'humanité ait pu inventer ! Les développeurs C++ en ont bien conscience. C'est peut-être la raison pour laquelle les participants aux _meetups_ se montrent souvent bienveillants à l'égard des autres langages. Les développeurs C++ aimeraient un langage plus simple, à condition de **"ne pas sacrifier la sacro-sainte performance"**.
     
-Le C++ est tellement vaste et semé de subtilités que les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts sont appelés des juristes du C++, ou plus généralement *"language lawers"* en anglais.
+Le C++ est tellement vaste et semé de subtilités que les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts sont appelés des juristes du C++, ou plus généralement *"language lawyers"* en anglais.
     
 Pour inverser la tendance, certains membres du comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (le créateur du C++) souhaitent accélérer l'évolution du langage vers un C++ plus intuitif, plus sûr, et toujours plus performant.
-
 
 Un process de standardisation qui s'ouvre d'avantage
 ====================================================
@@ -351,7 +348,7 @@ Droit d'auteur et licence
 
 
 
-Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Les auteurs sont : Oliver H, olibre, duckie, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid.
+Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Les auteurs sont : Oliver H, olibre, duckie, Klaim, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid.
 
 
 Pour les illustrations :
