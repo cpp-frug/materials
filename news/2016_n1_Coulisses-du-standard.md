@@ -16,16 +16,16 @@ La prochaine version C++ est en cours de rédaction afin de sortir une nouvelle 
 
 ----
 
-[Contenu Markdown de cette dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n1_Coulisses-du-standard.md)
-[Contenu Markdown de la deuxième dépêche : C++17 - Genèse d'une version mineure](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n2_Cpp17_Genese-d-une-version-mineure.md)
-[Contenu Markdown de la troisième dépêche : C++17 - Nouveautés au niveau du langage](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md)
-[Contenu Markdown de la quatrième dépêche : C++17 - Nouveautés au niveau de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)
-[Contenu Markdown de la cinquième dépêche : Bilan C++17 et attentes C++20](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.m)
-[Article Wikipédia C++](https://fr.wikipedia.org/wiki/C%2B%2B)
-[Site officiel du comité de standardisation du C++ - Page expliquant le fonctionnement du comité](https://isocpp.org/std/)
-[Dépôt Git officiel du standard C++ en cours de rédaction](https://github.com/cplusplus/draft/)
-[CppReference, wiki libre (CC-BY-SA-3.0 et GFDL) pour la documentation C et C++](http://fr.cppreference.com/w/Accueil)
-[Dépêche 2012 par nazcafan : Codeurs, Traducteurs, CppReference a besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
+* [Contenu Markdown de cette dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n1_Coulisses-du-standard.md)
+* [Contenu Markdown de la deuxième dépêche : C++17 - Genèse d'une version mineure](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n2_Cpp17_Genese-d-une-version-mineure.md)
+* [Contenu Markdown de la troisième dépêche : C++17 - Nouveautés au niveau du langage](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md)
+* [Contenu Markdown de la quatrième dépêche : C++17 - Nouveautés au niveau de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)
+* [Contenu Markdown de la cinquième dépêche : Bilan C++17 et attentes C++20](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.m)
+* [Article Wikipédia C++](https://fr.wikipedia.org/wiki/C%2B%2B)
+* [Site officiel du comité de standardisation du C++ - Page expliquant le fonctionnement du comité](https://isocpp.org/std/)
+* [Dépôt Git officiel du standard C++ en cours de rédaction](https://github.com/cplusplus/draft/)
+* [CppReference, wiki libre (CC-BY-SA-3.0 et GFDL) pour la documentation C et C++](http://fr.cppreference.com/w/Accueil)
+* [Dépêche 2012 par nazcafan : Codeurs, Traducteurs, CppReference a besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
 
 ----
 
@@ -60,16 +60,13 @@ Mais d'abord, commençons par un petit résumé de chacune de ces dépêches :
     La [quatrième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) présentera les changements au niveau de la bibliothèque standard. Avec les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) et le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) qui pourraient bousculer notre petite vie de développeur. Mais aussi les composants [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) ayant fait leurs preuves au sein de [Boost](http://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)). Tout comme les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math). Et bien plus...
     
     Snif, les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) et le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ne sont pas intégrés.
-
-
+    
 5. Bilan C++17 et attentes pour C++20
     
-    Version mineure ou majeure ? D'un côté, les améliorations sont nombreuses et appréciables. Mais de l'autre, aucune fonctionnalité majeure n'est intégrée, exceptées celles qui sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d'anciens compilateurs). 
-        
-    * Conséquences sur le processus de standardisation ? 
-    * Qu'attendre de C++20 ?
-    * Comment s'impliquer ?
-
+    Version mineure ou majeure ? D'un côté, les améliorations sont nombreuses et appréciables. Mais de l'autre, aucune fonctionnalité majeure n'est intégrée, exceptées celles qui sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d'anciens compilateurs).
+      * Conséquences sur le processus de standardisation ? 
+      * Qu'attendre de C++20 ?
+      * Comment s'impliquer ?
 
 Partage
 =======
@@ -93,8 +90,26 @@ Avec toutes nos contributions réunies, nous profiterons d'avantage de nos déco
 
 
 
-Le standard n'est pas libre
-===========================
+Création du comité de standardisation C++
+=========================================
+    
+Dans la seconde moitié des années 80, le [usenet](https://fr.wikipedia.org/wiki/Usenet) **comp.lang.c++** bouillonne, les premiers compilateurs C++ commencent à diverger, et les développeurs ont du mal à produire du C++ portable....
+    
+* Avril 1989, le groupe de travail SC22/WG14 souhaite une standardisation du C++ ;
+* Juillet 1989, Dmitry Lenkov explique la [création d'un groupe de travail C++ officiel](http://open-std.org/JTC1/SC22/WG21/docs/papers/1989/X3_89-738R%20Programming%20Language%20C++%20Proposal.pdf) et d'y inclure d'office Bjarne Stroustrup ;
+* Février 1990, première réunion du comité [ANSI](https://fr.wikipedia.org/wiki/American_National_Standards_Institute) C++ ;
+* 1992, création du comité international [SC22/WG21](http://www.open-std.org/jtc1/sc22/wg21/) au sein de l'[Organisation internationale de normalisation](https://fr.wikipedia.org/wiki/Organisation_internationale_de_normalisation).
+
+Les membres du comité de standardisation
+========================================
+    
+Une centaine de [membres](https://isocpp.org/wiki/faq/wg21) actifs se rencontrent deux fois par an dans le cadre de la standardisation du C++. Et ils se revoient aussi lors des grands événements du C++ ([CppCon](http://cppcon.org/), [C++Now](http://cppnow.org/), [Meeting C++](https://meetingcpp.com/)...).
+   
+
+Ces membres représentent une dizaine de nationalités et sont membres du groupe de travail C++ de la représentation ISO de leur pays. En France, c'est l'[AFNOR](http://norminfo.afnor.org/structure/commid=119670). Aux Etats-Unis, c'est l'ANSI.
+
+La reproduction du standard non autorisée
+=========================================
     
 La mention de droit d'auteur ne laisse aucun doute, la spécification du standard C++ ne permet pas sa réutilisation :
     
@@ -103,8 +118,11 @@ La mention de droit d'auteur ne laisse aucun doute, la spécification du standar
 > All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
 > Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
     
-L'organisme ISO empêche juridiquement la reproduction du contenu du standard, comme un paragraphe d'une règle ou un exemple de code. Heureusement, dans la pratique, l'organisme ISO ne poursuit personne qui [publie des extraits](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard) du document.
-
+L'organisme ISO empêche juridiquement la reproduction d'une partie du standard (un paragraphe ou un code C++ d'exemple). Des sites qui respectent à la lettre le droit d'auteur comme Wikipédia ne peuvent contenir la reproduction même partielle du standard C++. D'autres sites comme [stackoverflow sont plus arrangeant](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard).
+    
+Java est [également](https://docs.oracle.com/javase/specs/jls/se8/html/jls-0-front.html) [protégée](http://docs.oracle.com/javase/8/docs/api/) contre la reproduction. De même pour [C#](https://github.com/KvanTTT/CSharp-Minifier/blob/master/CSharp%20Language%20Specification.docx).
+    
+Par contre, les [documentation officielles de Rust](https://doc.rust-lang.org/) sont sous licence Apache 2.0 ou licence MIT. La [spécification de Go](https://golang.org/ref/spec) est sous licence CC-BY-3.0. Et celle de Python sous [licence PSF (Python Software Foundation)](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release).
 
 Le standard est payant
 ======================
@@ -128,7 +146,12 @@ Encore plus incroyable : chaque nouvelle publication du standard révoque/suppri
     
 Ce qui est embêtant est le fait que la plupart des projets C++ actuellement utilisés sont codés en C++03. Et la plupart des entreprises utilisent encore aujourd'hui des versions de compilateurs qui ne supportent pas (ou partiellement) le standard C++11.
     
-Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur que l'on est obligé d'utiliser ? Aller les [consulter à l'INRIA](http://opac.inria.fr/search*frf/a?searchtype=Y&searcharg=14882) ? Par exemple, cet [utilisateur a besoin d'acheter le standard C++03 mais celui-ci n'est plus à la vente](http://programmers.stackexchange.com/questions/190294/about-ansi-c-2003-standard).
+Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur que l'on est obligé d'utiliser ? Aller les [consulter à l'INRIA](http://opac.inria.fr/search*frf/a?searchtype=Y&searcharg=14882) ? Par exemple, cet [utilisateur a besoin d'acheter le standard C++03 mais n'est plus à la vente](http://programmers.stackexchange.com/questions/190294/about-ansi-c-2003-standard).
+
+[![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0][CppVisImg]][CppVisWeb]
+    
+[CppVisImg]: http://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg
+[CppVisWeb]: http://www.flickr.com/photos/dominicspics/785982209
 
 
 Et les brouillons du comité ?
@@ -140,26 +163,15 @@ Les documents en cours de rédaction _(draft)_ du comité de standardisation son
 * [github.com/cplusplus/draft](https://github.com/cplusplus/draft/tree/master/papers)
        
 Quand le comité de standardisation C++ valide un brouillon (nouvelle version C++), ce brouillon bénéficie [de dernières corrections](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3338.html). Puis, le comité le fournit à l'ISO qui change la mise en forme pour en faire une version officielle.
-    
-Mais que fait une dépêche qui prône un langage non libre sur un site comme LinuxFr.org ? Chère lectrice, cher lecteur de LinuxFr.org, Devrait on poser un ultimatum à l'ISO et interdire les dépêches C++ tant que l'on n'a pas le droit de copier-coller un bout de code du standard ?
 
-
-Un standard ouvert tout de même !
-=================================
+Un standard ouvert
+==================
     
-Néanmoins, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement. Ce qui n'est pas le cas des langages comme [Java](http://www.lemonde.fr/technologies/article/2014/05/10/brevets-la-bataille-entre-oracle-et-google-sur-java-relancee_4414517_651865.html) ou [C#](https://digitalcitizen.info/2014/11/12/while-open-source-leads-to-patent-traps-free-software-warns-and-liberates/) (troll).
+Néanmoins, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement. Ne cherchons pas à faire de comparaison avec [Java](http://www.lemonde.fr/technologies/article/2014/05/10/brevets-la-bataille-entre-oracle-et-google-sur-java-relancee_4414517_651865.html) ni [C#](https://digitalcitizen.info/2014/11/12/while-open-source-leads-to-patent-traps-free-software-warns-and-liberates/).
     
 De même, le nom **"C++"** n'est pas une marque, ni aucun type de propriété intellectuelle. À la différence de la marque [**JavaScript®**](https://developer.mozilla.org/fr/docs/Web/JavaScript/A_propos#Ressources_JavaScript) déposée par Oracle, ou des marques non déposées [**Rust™**](https://www.mozilla.org/en-US/foundation/trademarks/list/), [**Go™**](https://www.google.fr/intl/fr/permissions/trademark/trademark-list.html) (et une [autre **Go™**](https://www.thoughtworks.com/news/innova-using-thoughtworks-studios-go)).
     
 Et même si C++ n'est pas encore aussi ouvert que peut l'être Rust™, de nombreux membres du comité améliorent constamment la façon de travailler pour plus de transparence, plus de proximité avec les utilisateurs C++, comme pour le [compte GitHub du comité](https://github.com/cplusplus).
-
-
-[![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0][CppVisImg]][CppVisWeb]
-    
-[CppVisImg]: http://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg
-[CppVisWeb]: http://www.flickr.com/photos/dominicspics/785982209
-
-
 
 Les versions C++
 ================
@@ -333,12 +345,11 @@ Mercis
 Merci aux nombreux contributeurs sur LinuxFr.org pour avoir traqué les coquilles : Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid. Merci aussi à rewind, David Demelier et à gasche pour leurs pertinents commentaires.
 
 
-Merci à Klaim pour avoir identifié des tournures/allusions/erreurs qui pourraient agacer/irriter des lecteurs LinuxFr.org.
+Merci à Klaim et Édouard pour avoir identifié des tournures/allusions/erreurs qui pourraient agacer/irriter des lecteurs LinuxFr.org.
     
 Merci à [duckie](https://github.com/duckie) pour [ses]((https://github.com/cpp-frug/materials/pull/1)) [contributions](https://github.com/cpp-frug/materials/pull/3) sur le [dépôt Git](https://github.com/cpp-frug/materials/tree/gh-pages/Cxx17).
     
-Mais surtout, un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche avec des dessins humoristiques (à prendre au second degré) : Ziyue, AKP, Florent B, et Jae-Zun. Merci aussi à Dominic Alves pour son [dessin C++](https://www.flickr.com/photos/dominicspics/785982209) sous licence libre. Merci à Benjamin, Imen et Youenn pour m'avoir aidé à trouver un dialogue amusant entre les collègues qui ne savent pas que LinuxFr.org parle de C++17.
-
+Mais surtout, un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche avec des dessins humoristiques (à prendre au second degré) : Ziyue, AKP, Florent B, et Jae-Zun. Merci aussi à Dominic Alves pour son [dessin C++](https://www.flickr.com/photos/dominicspics/785982209) sous licence libre.
 
 Merci d'avance de l'aide apportée sur les prochaines dépêches C++17 en cours de préparation : Micka pour ses exemples *utiles* et AMB007 pour les bogues trouvé dans le code C++.
 
@@ -348,7 +359,7 @@ Droit d'auteur et licence
 
 
 
-Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Les auteurs sont : Oliver H, olibre, duckie, Klaim, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid.
+Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Les auteurs sont : Oliver H, olibre, duckie, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid.
 
 
 Pour les illustrations :
