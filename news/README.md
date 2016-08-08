@@ -1,4 +1,4 @@
-Ce répertoire présente les dépêches C++
+Ce répertoire contient les dépêches C++
 
 1. [Les coulisses du standard C++](cou2016_n1_Coulisses-du-standard.md)
 2. [C++17 - Genèse d'une version mineure](2016_n2_C++17_Genese-d-une-version-mineure.md)
