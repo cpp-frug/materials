@@ -1,9 +1,9 @@
 Ce répertoire contient les dépêches C++
 
 1. [Les coulisses du standard C++](2016_n1_Coulisses-du-standard.md)
-2. [C++17 - Genèse d'une version mineure](2016_n2_C++17_Genese-d-une-version-mineure.md)
-3. [C++17 - Nouveautés au niveau du langage](2016_n3_C++17_Nouveautes-du-langage.md)
-4. [C++17 - Nouveautés au niveau de la bibliothèque standard](2016_n4_C++17_Nouveautés-de-la-bibliothèque.md)
+2. [C++17 - Genèse d'une version mineure](2016_n2_Cpp17_Genese-d-une-version-mineure.md)
+3. [C++17 - Nouveautés au niveau du langage](2016_n3_Cpp17_Nouveautes-du-langage.md)
+4. [C++17 - Nouveautés au niveau de la bibliothèque standard](2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)
 5. [Bilan C++17 et attentes pour C++20](2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md)
 
 Pour contribuer
