@@ -12,7 +12,8 @@ License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 
 
 
-La prochaine version C++ est en cours de rédaction afin de sortir une nouvelle version pour 2017. Profitons en pour rédiger une série de nouvelles sur le C++ afin de bien préparer la rentrée. Cette première dépêche nous amène dans les coulisses du C++, et donc peut intéresser tous les lecteurs LinuxFr.org. Les développeurs C++ sont invités à donner un coup de main à la rédaction/illustration des prochaines dépêches C++.
+
+Le standard C++ est en ébullition afin de sortir la prochaine version pour 2017. Profitons en pour faire le point avec une série d'articles sur le C++. Cette première dépêche nous dévoile la face cachée du C++, et donc peut intéresser tous les lecteurs LinuxFr.org. Les développeurs C++ peuvent aider à relire/rédiger les dépêches C++ suivantes qui sont plus techniques :-)
 
 ----
 
@@ -41,38 +42,31 @@ Chère lectrice, cher lecteur LinuxFr.org. Tes collègues sont partis en vacance
 Mais d'abord, commençons par un petit résumé de chacune de ces dépêches :
 
 
-1. Les coulisses du C++
+1. **Les coulisses du C++**
     
-    Cette [première dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n1_Les-coulisses-du-standard.md) *dévoile la face cachée* du standard C++ : un standard non-libre et [payant](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029), un [brouillon](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) _(draft)_ qui sert de référence, un standard C++ [ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) (pas de brevet), des développeurs C++ (même expérimentés) n'ayant jamais lu le standard, des [livres](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) et [sites web](http://fr.cppreference.com/) utilisés comme référence, des fonctionnalités en discussion depuis plus de 12 ans...
+    Cette [première dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n1_Les-coulisses-du-standard.md) présente un standard C++ non-libre, [payant](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029), [ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), délaissé au profit de son [brouillon](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) _(draft)_, peu lu par les développeurs C++ car destiné aux éditeurs des compilateurs/STL, performant, évoluant lentement...
     
-2. Genèse du C++17
+2. **Genèse du C++17**
     
     La [deuxième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n2_Cpp17_Genese-d-une-version-mineure.md) reviendra sur les dernières réunions du comité de standardisation.
     
-3. Nouveautés du langage
+3. **Nouveautés du langage**
     
-    La [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n3_Cpp17_Nouveautes-du-langage.md) présentera les changements du langage : [déduction des arguments `template`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) `std::array a{1,2,3};`, [décomposition `auto [x, y] = f();`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) équivalent à `char x; int y; std::tie(x,y)=f();`, [`namespace aa::bb`](http://en.cppreference.com/w/cpp/language/namespace) équivalent à `namespace aa{ namespace bb`, [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) (sélectionne du code à la compilation), Lambda `constexpr`, capture `*this`, [`if(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme `for(init;cond;inc)`, [variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf)...
+    La [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n3_Cpp17_Nouveautes-du-langage.md) présentera des changements du langage très intéressants : [déduction des arguments `template`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) `std::array a{1,2,3};`, [décomposition `auto [x, y] = f();`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) équivalent à `char x; int y; std::tie(x,y)=f();`, [`namespace aa::bb`](http://en.cppreference.com/w/cpp/language/namespace) équivalent à `namespace aa{ namespace bb`, [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) (sélectionne du code à la compilation), Lambda `constexpr`, capture `*this`, [`if(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme `for(init;cond;inc)`, [variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf)... Mais il faudra encore attendre C++20 (?) pour les [Concepts](http://fr.cppreference.com/w/cpp/concept), les [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf), la [Syntaxe d'appel uniforme](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal), la [Réflexion](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html)...
     
-    Snif, les fonctionnalités majeures très attendues comme les [Concepts](http://fr.cppreference.com/w/cpp/concept), les [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf), la [Syntaxe d'appel uniforme](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ou la [Réflexion](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) restent dans le tuyaux.
+4. **Nouveautés de la bibliothèque standard**
     
-4. Nouveautés de la bibliothèque standard
+    La [quatrième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) présentera les changements au niveau de la bibliothèque standard qui pourraient bousculer notre petite vie de développeur : [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms), [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view), [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional), les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)... Mais les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf), le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf)... seront intégrés pour C++20 (?).
     
-    La [quatrième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) présentera les changements au niveau de la bibliothèque standard. Avec les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) et le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) qui pourraient bousculer notre petite vie de développeur. Mais aussi les composants [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) ayant fait leurs preuves au sein de [Boost](http://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)). Tout comme les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math). Et bien plus...
+5. **Bilan C++17 et attentes pour C++20**
     
-    Snif, les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) et le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ne sont pas intégrés.
-    
-5. Bilan C++17 et attentes pour C++20
-    
-    Version mineure ou majeure ? D'un côté, les améliorations sont nombreuses et appréciables. Mais de l'autre, aucune fonctionnalité majeure n'est intégrée, exceptées celles qui sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d'anciens compilateurs).
-      * Conséquences sur le processus de standardisation ? 
-      * Qu'attendre de C++20 ?
-      * Comment s'impliquer ?
+    Version mineure ou majeure ? D'un côté, les améliorations sont nombreuses et appréciables. Mais de l'autre, aucune fonctionnalité majeure n'est intégrée, exceptées celles qui sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d'anciens compilateurs). Conséquences sur le processus de standardisation ? Qu'attendre de C++20 ? Comment s'impliquer ?
 
 Partage
 =======
     
-Chère lectrice, cher lecteur LinuxFr.org. Tu souhaites nous donner un coup de main pour les dépêches suivantes en cours de rédaction ? Merci de [créer un compte LinuxFr.org](https://linuxfr.org/compte/inscription) et de rejoindre l'[espace de rédaction collaborative](https://linuxfr.org/redaction).
-     
+Chère lectrice, cher lecteur LinuxFr.org. Tu souhaites nous donner un coup de main pour les dépêches suivantes ? Rejoins-nous dans l'[espace de rédaction collaborative sur LinuxFr.org](https://linuxfr.org/redaction). Un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder.
+    
 Après publication, les dépêches sont figées sur LinuxFr.org. Alors, pour continuer à améliorer ce contenu libre (fôtes, manques, tournures, franglais, maladresses...), n'hésite à pas à  aller sur le dépôt [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/Cxx17). C'est là aussi que tu trouveras les versions de ces dépêches les plus à jour :
     
 1. [Les coulisses du standard C++](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n1_Coulisses-du-standard.md) ;
@@ -90,39 +84,57 @@ Avec toutes nos contributions réunies, nous profiterons d'avantage de nos déco
 
 
 
+Naissance d'un nouveau langage
+==============================
+    
+A la fin des années 70, dans la cadre de sa thèse en Angleterre, le Danois Bjarne Stroustrup [étudiait](http://www.stroustrup.com/hopl2.pdf) le [paradigme de la programmation objet](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet) (avec le langage [Simula](https://fr.wikipedia.org/wiki/Simula)). En 1979, aux [Laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell) (États-Unis), Bjarne propose de rajouter ce paradigme objet au langage C qu'il appela *"C with Classes"*.
+    
+Durant les années 80, les nouvelles fonctionnalités qui sont progressivement intégrées au tout nouveau C++ provoque un schisme entre les fans du C classique et les enthousiastes du C++.
+   
+
+En 1991, un nouveau paradigme, la [programmation générique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9ricit%C3%A9) (`template`) est ajouté. Ainsi que les [exceptions](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_gestion_d%27exceptions). 
+    
+En 1994, Erwin Unruh présente au comité C++ un [code source qui permet de calculer les nombres premiers à la compilation](http://www.erwin-unruh.de/primorig.html). Pour une partie des membres du comité, c'était une curiosité. Tandis que les autres membres se grattaient la tête et prirent conscience que l'on venait de découvrir par hasard que le système de `template` du C++ permettait le paradigme de la [métaprogrammation](https://fr.wikipedia.org/wiki/M%C3%A9taprogrammation) !
+
+
 Création du comité de standardisation C++
 =========================================
     
-Dans la seconde moitié des années 80, le [usenet](https://fr.wikipedia.org/wiki/Usenet) **comp.lang.c++** bouillonne, les premiers compilateurs C++ commencent à diverger, et les développeurs ont du mal à produire du C++ portable....
+Dans la seconde moitié des années 80, le [usenet](https://fr.wikipedia.org/wiki/Usenet) **comp.lang.c++** bouillonne, les premiers compilateurs C++ commencent à diverger, les développeurs ont du mal à écrire du C++ portable, et dix ans après la création de *"C with Classes"* des événements majeurs se produisent :
     
-* Avril 1989, le groupe de travail SC22/WG14 souhaite une standardisation du C++ ;
+* Avril 1989, le groupe de travail [SC22/WG14](http://www.open-std.org/jtc1/sc22/wg14/) (standardisation du C) souhaite une standardisation du C++ ;
 * Juillet 1989, Dmitry Lenkov explique la [création d'un groupe de travail C++ officiel](http://open-std.org/JTC1/SC22/WG21/docs/papers/1989/X3_89-738R%20Programming%20Language%20C++%20Proposal.pdf) et d'y inclure d'office Bjarne Stroustrup ;
 * Février 1990, première réunion du comité [ANSI](https://fr.wikipedia.org/wiki/American_National_Standards_Institute) C++ ;
-* 1992, création du comité international [SC22/WG21](http://www.open-std.org/jtc1/sc22/wg21/) au sein de l'[Organisation internationale de normalisation](https://fr.wikipedia.org/wiki/Organisation_internationale_de_normalisation).
+* Juin 1991, la réunion du comité ANSI C++ réunit de très nombreux participants non-USA et la décision est prise de travailler conjointement avec le groupe de travail [SC22/WG21](http://www.open-std.org/jtc1/sc22/wg21/) de l'[Organisation internationale de normalisation](https://fr.wikipedia.org/wiki/Organisation_internationale_de_normalisation).
 
 Les membres du comité de standardisation
 ========================================
     
 Une centaine de [membres](https://isocpp.org/wiki/faq/wg21) actifs se rencontrent deux fois par an dans le cadre de la standardisation du C++. Et ils se revoient aussi lors des grands événements du C++ ([CppCon](http://cppcon.org/), [C++Now](http://cppnow.org/), [Meeting C++](https://meetingcpp.com/)...).
-   
 
-Ces membres représentent une dizaine de nationalités et sont membres du groupe de travail C++ de la représentation ISO de leur pays. En France, c'est l'[AFNOR](http://norminfo.afnor.org/structure/commid=119670). Aux Etats-Unis, c'est l'ANSI.
-
-La reproduction du standard non autorisée
-=========================================
+Ces membres représentent une dizaine de nationalités et sont membres du groupe de travail C++ de la représentation ISO de leur pays. En France, c'est le [**Comité de Normalisation Cpp**](http://norminfo.afnor.org/structure/commid=119670) de l'AFNOR. Aux Etats-Unis, c'est géré par l'ANSI.
     
-La mention de droit d'auteur ne laisse aucun doute, la spécification du standard C++ ne permet pas sa réutilisation :
+Dans l'intérêt des utilisateurs du C++, les membres du comité [accordent au comité et à l'ISO une licence](https://isocpp.org/home/terms-of-use) *mondiale, non exclusive, irrévocable, permettant l'octroi d'une sous-licence transférable pour l'affichage du contenu, la reproduction, l'adaptation, la distribution, la création de travaux dérivés à des fins commerciales ou non commerciales*. En 2012, cette règle a notamment été rappelée à IBM, Intel et  Oracle (voir [N3423 §2.4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3423.pdf)).
+
+Le standard ne peut être reproduit
+==================================
+    
+Comme la plupart des documents publiés par l'ISO, la mention de droit d'auteur indique que la reproduction n'est pas autorisée :
     
 > © ISO/IEC 2014 – All rights reserved  
 > COPYRIGHT PROTECTED DOCUMENT  
 > All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
 > Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
     
-L'organisme ISO empêche juridiquement la reproduction d'une partie du standard (un paragraphe ou un code C++ d'exemple). Des sites qui respectent à la lettre le droit d'auteur comme Wikipédia ne peuvent contenir la reproduction même partielle du standard C++. D'autres sites comme [stackoverflow sont plus arrangeant](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard).
+Cette position est également celle pour les autres langages gérés par l'ISO (Fortran, C...). Mais aussi pour [Java](https://docs.oracle.com/javase/specs/jls/se8/html/jls-0-front.html), [C#](https://github.com/KvanTTT/CSharp-Minifier/blob/master/CSharp%20Language%20Specification.docx) et de nombreux autres langages.
     
-Java est [également](https://docs.oracle.com/javase/specs/jls/se8/html/jls-0-front.html) [protégée](http://docs.oracle.com/javase/8/docs/api/) contre la reproduction. De même pour [C#](https://github.com/KvanTTT/CSharp-Minifier/blob/master/CSharp%20Language%20Specification.docx).
+Dans la pratique, cela ne gène pas les développeurs de ces langages. Ce type de mention empêche juridiquement la reproduction du standard (même un paragraphe ou un code d'exemple). Des sites qui respectent à la lettre le droit d'auteur comme Wikipédia refusent de contenir la reproduction même partielle d'un tel document. D'autres sites comme [stackoverflow sont plus pragmatiques](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard).
     
-Par contre, les [documentation officielles de Rust](https://doc.rust-lang.org/) sont sous licence Apache 2.0 ou licence MIT. La [spécification de Go](https://golang.org/ref/spec) est sous licence CC-BY-3.0. Et celle de Python sous [licence PSF (Python Software Foundation)](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release).
+Notons que d'autres langages de programmation ont des spécifications libres :
+    
+* les [documentation officielles de Rust](https://doc.rust-lang.org/) sont est sous licence Apache 2.0 ou licence MIT ;
+* la [spécification de Go](https://golang.org/ref/spec) est sous licence CC-BY-3.0 ;
+* celle de Python... c'est un peu plus compliqué, simplifions en mentionnant juste la [licence PSF (Python Software Foundation)](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release).
 
 Le standard est payant
 ======================
@@ -154,7 +166,7 @@ Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur q
 [CppVisWeb]: http://www.flickr.com/photos/dominicspics/785982209
 
 
-Et les brouillons du comité ?
+Ouf, les brouillons du comité
 =============================
         
 Les documents en cours de rédaction _(draft)_ du comité de standardisation sont gratuitement accessibles :
@@ -164,14 +176,28 @@ Les documents en cours de rédaction _(draft)_ du comité de standardisation son
        
 Quand le comité de standardisation C++ valide un brouillon (nouvelle version C++), ce brouillon bénéficie [de dernières corrections](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3338.html). Puis, le comité le fournit à l'ISO qui change la mise en forme pour en faire une version officielle.
 
+Documentations C++ de référence 
+===============================
+    
+Le standard C++ (officiel ou brouillon) ne sont pas simples à lire. Ces documents utilisent une terminologie très spécifique une spécification très rigoureuse. En fait, ces documents sont surtout utiles aux développeurs des compilateurs et à ceux qui implémentent des bibliothèques standards (`std::`).
+    
+Les utilisateurs du C++ (langage et bibliothèque standard) utilisent historiquement des livres (souvent ceux écrits par Bjarne Stroustrup et Scott Meyers) et plus récemment des sites web :
+    
+* [fr.cppreference.com](http://fr.cppreference.com) en Français sous double licences CC-BY-SA-3.0 et GFDL (disponible en différentes langues sont la [version en Anglais](http://en.cppreference.com) est la plus à jour) ;
+* [cplusplus.com](http://cplusplus.com/) seulement en Anglais et n'autorisant pas la reproduction (pas de licence libre) ;
+* ... liste à compléter dans les commentaires.
+
 Un standard ouvert
 ==================
     
-Néanmoins, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement. Ne cherchons pas à faire de comparaison avec [Java](http://www.lemonde.fr/technologies/article/2014/05/10/brevets-la-bataille-entre-oracle-et-google-sur-java-relancee_4414517_651865.html) ni [C#](https://digitalcitizen.info/2014/11/12/while-open-source-leads-to-patent-traps-free-software-warns-and-liberates/).
+> **Note des auteurs de cette dépêche :** *Nous avons un profil plutôt technique (développeurs) et non pas juriste. Ce chapitre contient peut-être des erreurs importantes, mais nous avons tenté de rédiger ce qui nous semble correct... Nous n'avons pas pris le risque de nous aventurer à comparer C++ avec [Java](http://www.lemonde.fr/technologies/article/2014/05/10/brevets-la-bataille-entre-oracle-et-google-sur-java-relancee_4414517_651865.html), [C#](https://digitalcitizen.info/2014/11/12/while-open-source-leads-to-patent-traps-free-software-warns-and-liberates/)... Celles et ceux qui connaissent bien le sujet, merci de nous éclairer dans les commentaires. :-)*
+ 
+
+Le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement.
     
 De même, le nom **"C++"** n'est pas une marque, ni aucun type de propriété intellectuelle. À la différence de la marque [**JavaScript®**](https://developer.mozilla.org/fr/docs/Web/JavaScript/A_propos#Ressources_JavaScript) déposée par Oracle, ou des marques non déposées [**Rust™**](https://www.mozilla.org/en-US/foundation/trademarks/list/), [**Go™**](https://www.google.fr/intl/fr/permissions/trademark/trademark-list.html) (et une [autre **Go™**](https://www.thoughtworks.com/news/innova-using-thoughtworks-studios-go)).
     
-Et même si C++ n'est pas encore aussi ouvert que peut l'être Rust™, de nombreux membres du comité améliorent constamment la façon de travailler pour plus de transparence, plus de proximité avec les utilisateurs C++, comme pour le [compte GitHub du comité](https://github.com/cplusplus).
+Et même si C++ n'est pas encore aussi ouvert que peut l'être Rust™, de nombreux membres du comité améliorent constamment la façon de travailler pour plus de transparence, plus de proximité avec les utilisateurs C++, comme l'utilisation d'un [compte GitHub](https://github.com/cplusplus).
 
 Les versions C++
 ================
@@ -284,7 +310,7 @@ Un langage compliqué qui se simplifie
     
 Par rapport à tous les langages utilisés en production, avouons que le C++ est peut être le langage le plus complexe que l'humanité ait pu inventer ! Les développeurs C++ en ont bien conscience. C'est peut-être la raison pour laquelle les participants aux _meetups_ se montrent souvent bienveillants à l'égard des autres langages. Les développeurs C++ aimeraient un langage plus simple, à condition de **"ne pas sacrifier la sacro-sainte performance"**.
     
-Le C++ est tellement vaste et semé de subtilités que les développeurs C++ n'en connaissent bien souvent qu'une petite portion (10%). Ceux qui connaissent vraiment le C++ sur le bout des doigts sont appelés des juristes du C++, ou plus généralement *"language lawyers"* en anglais.
+Le C++ est tellement vaste et semé de subtilités que les développeurs C++ n'en connaissent bien souvent qu'une petite portion. Ainsi, lors d'un entretien de Bjarne Stroustrup, un des experts C++ les plus actifs du comité, celui-ci avait indiqué qu'il ne connaissait que 60% du standard. Ceux qui connaissent vraiment le C++ sur le bout des doigts sont appelés des juristes du C++, ou plus généralement *"language lawyers"* en anglais (ils ne sont pas forcément de bons développeurs).
     
 Pour inverser la tendance, certains membres du comité de standardisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (le créateur du C++) souhaitent accélérer l'évolution du langage vers un C++ plus intuitif, plus sûr, et toujours plus performant.
 
@@ -337,34 +363,16 @@ Merci de nous donner un coup de main à la rédaction des prochaines dépêches 
 * Directement sur le [dépôt Git *materials*](https://github.com/cpp-frug/materials/tree/gh-pages/Cxx17) du C++FRUG (Groupe des utilisateurs C++ francophones).
 
 
-Mercis
-======
-
-
-
-Merci aux nombreux contributeurs sur LinuxFr.org pour avoir traqué les coquilles : Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid. Merci aussi à rewind, David Demelier et à gasche pour leurs pertinents commentaires.
-
-
-Merci à Klaim et Édouard pour avoir identifié des tournures/allusions/erreurs qui pourraient agacer/irriter des lecteurs LinuxFr.org.
+Droit d'auteur, remerciements et licences
+=========================================
     
-Merci à [duckie](https://github.com/duckie) pour [ses]((https://github.com/cpp-frug/materials/pull/1)) [contributions](https://github.com/cpp-frug/materials/pull/3) sur le [dépôt Git](https://github.com/cpp-frug/materials/tree/gh-pages/Cxx17).
+Le texte de la dépêche est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Merci aux nombreux auteurs sur le [dépôt Git](https://github.com/cpp-frug/materials/graphs/contributors) et sur LinuxFr.org : [olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [Benoît Sibaud](https://linuxfr.org/users/oumph), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf) et [RyDroid](https://linuxfr.org/users/rydroid). Merci aussi à [Klaim](https://github.com/klaim), [Édouard A](https://github.com/edouarda), [rewind](https://linuxfr.org/users/rewind), [David Demelier](https://linuxfr.org/users/markand), [gasche](https://linuxfr.org/users/bluestorm), [freem](https://linuxfr.org/users/freem) et [®om](https://linuxfr.org/users/rom1v) pour leurs commentaires pertinents.
     
-Mais surtout, un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche avec des dessins humoristiques (à prendre au second degré) : Ziyue, AKP, Florent B, et Jae-Zun. Merci aussi à Dominic Alves pour son [dessin C++](https://www.flickr.com/photos/dominicspics/785982209) sous licence libre.
-
-Merci d'avance de l'aide apportée sur les prochaines dépêches C++17 en cours de préparation : Micka pour ses exemples *utiles* et AMB007 pour les bogues trouvé dans le code C++.
-
-
-Droit d'auteur et licence
-=========================
-
-
-
-Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Les auteurs sont : Oliver H, olibre, duckie, Benoît Sibaud, cracky, Lucas, palm123, Adrien Dorsaz, Martin Peres et RyDroid.
-
-
-Pour les illustrations :
+Aussi un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche (et les dépêches suivantes) avec des dessins humoristiques sous licence libre : Ziyue, AKP, Florent B, et Jae-Zun. Merci aussi à Dominic Alves pour son [dessin C++](https://www.flickr.com/photos/dominicspics/785982209) sous licence libre. Merci à [Theppitak Karoonboonyanan](https://github.com/thep) pour maintenir la police de caractères [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd).
     
-* Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le [domaine public](https://fr.wikipedia.org/wiki/Domaine_public) (même si ce n'est [pas possible en droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
+* Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le [domaine public](https://fr.wikipedia.org/wiki/Domaine_public) (même si ce n'est théoriquement [pas possible en droit d'auteur français](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
 * Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.fr) (2007) ;
 * L'[évolution du langage C++](https://github.com/cpp-frug/materials/blob/gh-pages/images/Cpp-Evolution-Original.svg) est inspirée d'une œuvre dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de Florent B. d'après une première ébauche de Jae-Zun (2016) ;
 * La police de caractères utilisée par l'illustration sur l'évolution du C++ est la [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) maintenue par [Theppitak Karoonboonyanan](https://github.com/thep) sous licence [GPL-2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL).
+    
+Merci d'avance de l'aide apportée sur les prochaines dépêches C++17 en cours de préparation : Micka pour ses exemples *utiles* et AMB007 pour les bogues trouvés dans les codes C++ d'exemple.
