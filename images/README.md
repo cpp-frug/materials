@@ -1,10 +1,5 @@
 Ce répertoire contient des images sous licence libre a propos du C++
 
-TODO
-----
-
-* Trouver/Expliquer comment réduire la taille des fichiers SVG. 
-
 C++ Complexe
 ------------
 
