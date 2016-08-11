@@ -27,10 +27,13 @@ Trois façons pour contribuer :
 Contenus
 --------
 
-Liste des contenus disponible, merci de lire les sections `TODO` afin d'identier un coup de main qui vous ferait plaisir de donner :
-
 * [Images et dessins](images/README.md) ;
 * [Les dépêches C++](news/README.md).
+
+TODO
+----
+
+* Les différentes tâches sont gérées sur la page [Issues](https://github.com/cpp-frug/materials/issues).
 
 Licence
 -------
