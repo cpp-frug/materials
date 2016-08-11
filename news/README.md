@@ -31,12 +31,14 @@ Créer alors un compte GitHub.
 * Prendre des initiatives
 * Se respecter mutuellement
 
+Ce qui est apprécié
+-------------------
 
-`TODO`
-------
-
-* Remplacer les termes franglais par du vrai Français véritable ;
-* Dès que la dépêche est publiée, lire les commentaires sur LinuxFr.org afin de corriger ce qui peut aggacer/irriter les lecteurs ;
+* Etre concis ([TL;DR](https://fr.wiktionary.org/wiki/tl;dr))
+* Réaliser des tâches à partir de la pages des [Issues](https://github.com/cpp-frug/materials/issues)
 * Proposer des illustrations pour les prochaines dépêches dans le répertoire [images](https://github.com/cpp-frug/materials/tree/gh-pages/images) ;
-* Améliorer le logo [C++ Francophonie](https://github.com/cpp-frug/cpp-frug.github.io/blob/master/images/Cpp-Francophonie.svg) avec un **C** plus gros et plus éloigné de l'anneau multicolore, et un cercle blanc semi-transparant en arrière plan afin que le **C++** soit visible quand l'utilisateur utilise un fond noir ;
-* Utiliser [flatdoc](https://github.com/rstacruz/flatdoc) et [reveal.js](https://github.com/hakimel/reveal.js) - s'inspirer de [Louis Dionne CppNow 2016](https://github.com/ldionne/cppnow-2016-metaprogramming-for-dummies) et des [exemples](http://kottans.org/js-slides/) de [Kottans](https://github.com/Kottans/js-slides).
+* Positiver les dépêches ;
+* Identifier les aspects qui pourraient irriter/aggacer certains lecteurs ;
+* Utiliser les vrais mots en Français (délaisser le Franglais) ;
+* Vérifier les fôtes (passer Gramalac) ;
+* Dès que la dépêche est publiée, lire les commentaires, rester calme/poli/respectueux.
