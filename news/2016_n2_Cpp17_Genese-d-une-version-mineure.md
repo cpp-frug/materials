@@ -14,7 +14,7 @@ License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 
 La prochaine version C++ est en cours de finalisation. Pour vos vacances d'été, voici une série de quatre dépêches sur C++17. Cette première dépêche nous amène dans les coulisses du C++, et donc peut intéresser tous les lecteurs LinuxFr.org. Les développeurs C++ devront attendre (ou participer à) la prochaine dépêche pour rentrer dans le vif du sujet.
 
-![Deux collègues discutent : "C++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/materials/images/Cpp-Complexe-Path.svg)
+![Deux collègues discutent : "c++ est enfin sorti", "Trop top", "Va falloir se palucher les 1700 pages du nouveau standard", "Gloups". Une note repositionnable sur le dessin indique : "Il y en a qui ne connaissent pas encore LinuxFr.org"](http://cpp-frug.github.io/materials/images/cpp-complexe-path.svg)
 
 ----
 
@@ -174,7 +174,7 @@ Attention, ce dernier lien est celui du brouillon **C++17** le plus récent lors
      
 Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publiée (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. En anglais, c'est le *first post-publication draft*.
 
-![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit "Cool  On va pouvoir coder"](http://cpp-frug.github.io/materials/images/Cpp-Evolution-Path.svg)
+![Analogie entre chaque version c++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version c++17 et ce dernier homme moderne dit "cool  On va pouvoir coder"](http://cpp-frug.github.io/materials/images/cpp-evolution-path.svg)
 
 Technical Specification (TS)
 ============================
@@ -296,7 +296,7 @@ La semaine se déroule sur six jours, du lundi au samedi. Pas de grasse matinée
     
 Mais à Oulu, un phénomène naturel a eu un impact direct sur la productivité : le [soleil se couche après minuit en juin](http://dateandtime.info/fr/citysunrisesunset.php?id=643492&month=6&year=2016) ! Si bien, que la plupart des membres ne se rendaient pas compte de l'heure et ont veillé bien plus tard que d'habitude. En plus du soleil qui *dort* seulement deux heures par nuit, le [décalage horaire _(jetlag)_](https://fr.wikipedia.org/wiki/D%C3%A9calage_horaire_(syndrome)) a achevé les non-européens qui ont eu besoin de plusieurs jours de repos pour s'en remettre !
 
-![Deux chatons déçus du contenu de C++17 "Sniff.. On n'a pas les Concepts. Ni la Réflexion."](http://cpp-frug.github.io/materials/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
+![Deux chatons déçus du contenu de c++17 "Sniff.. On n'a pas les concepts. Ni la Réflexion."](http://cpp-frug.github.io/materials/images/cpp-chatons-tristes_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
 Plus de 10 ans pour intégrer les fonctionnalités
 ================================================
@@ -319,7 +319,7 @@ Par contre, d'autres fonctionnalités _majeures_ sont toujours dans le tuyau :
     
 Comme quoi, le comité de standardisation prend son temps pour bien s'assurer que chaque fonctionnalité soit *parfaite* et cela peut prendre une dizaine d'années ! L'objectif étant de ne pas dégrader d'avantage la complexité inhérente au C++, avec comme contre partie d'avoir un langage de programmation qui évolue doucement...
 
-![Analogie entre les fonctionnalités promises pour C++17 et les promesses des candidats à la présidentielle de 2017 en France](http://cpp-frug.github.io/materials/images/Cpp-President-2017.svg)
+![Analogie entre les fonctionnalités promises pour c++17 et les promesses des candidats à la présidentielle de 2017 en France](http://cpp-frug.github.io/materials/images/cpp-president-2017.svg)
 
 Implémentation de référence
 ===========================
@@ -362,10 +362,10 @@ Le texte est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/D
 
 Pour les illustrations :
     
-* Les [deux collègues qui discutent sur la sortie du C++17](https://github.com/cpp-frug/materials/blob/gh-pages/images/Cpp-Complexe-Original.svg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de AKP, et le texte de Oliver H. (2016). La [note repositionnable jaune](http://www.clker.com/clipart-top2.html) (post-it tout à droite du [comic strip](https://fr.wikipedia.org/wiki/Comic_strip)) sous licence [CC0](https://pixabay.com/fr/post-it-m%C3%A9mo-rappel-note-jaune-296384/) est de [Dave](http://www.clker.com/profile-50312.html) (2010) ;
+* Les [deux collègues qui discutent sur la sortie du c++17](https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-complexe-original.svg) sous licence [cc BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de AKp, et le texte de Oliver H. (2016). La [note repositionnable jaune](http://www.clker.com/clipart-top2.html) (post-it tout à droite du [comic strip](https://fr.wikipedia.org/wiki/comic_strip)) sous licence [cc0](https://pixabay.com/fr/post-it-m%c3%A9mo-rappel-note-jaune-296384/) est de [Dave](http://www.clker.com/profile-50312.html) (2010) ;
 * Le logo C++ Francophonie [(disponible sur commons.wikimedia.org)](https://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg) est dans le [domaine public](https://fr.wikipedia.org/wiki/Domaine_public) (même si ce n'est [pas possible en droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)) ;
 * Le dessin du [C++ vissé sur de l'électronique](https://www.flickr.com/photos/dominicspics/785982209) est de Dominic Alves sous licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.fr) (2007) ;
-* L'[évolution du langage C++](https://github.com/cpp-frug/materials/blob/gh-pages/images/Evolution-Cpp.svg) est inspirée d'une œuvre dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de Florent B. d'après une première ébauche de Jae-Zun (2016) ;
-* Les [deux chatons déçus](https://github.com/cpp-frug/materials/blob/gh-pages/images/chatons-tristes-Cpp17_Copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMP) par Oliver H. (2016) ;
-* L'analogie entre la [présidentielle 2017 et C++17](https://github.com/cpp-frug/materials/blob/gh-pages/images/Cpp-President-2017.svg) sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de Oliver H. (2016) ;
+* L'[évolution du langage c++](https://github.com/cpp-frug/materials/blob/gh-pages/images/evolution-cpp.svg) est inspirée d'une œuvre dont les droits de réutilisation n'ont pas été identifiés. La réalisation sous licence [cc BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de Florent B. d'après une première ébauche de Jae-Zun (2016) ;
+* Les [deux chatons déçus](https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-chatons-tristes_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg) sous licence [cc BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) ont été dessinés au crayon par Ziyue et retouchés (avec GIMp) par Oliver H. (2016) ;
+* L'analogie entre la [présidentielle 2017 et c++17](https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-president-2017.svg) sous licence [cc BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) est de Oliver H. (2016) ;
 * La police de caractères utilisée par trois des illustrations est la [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) maintenue par [Theppitak Karoonboonyanan](https://github.com/thep) sous licence [GPL-2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL).
