@@ -11,7 +11,7 @@ qu'elles soient majeurs ou mineures.
 
 Et toi, cher lecteur/chère lectrice de LinuxFr.org, es-tu un peu déçu(e) du périmètre fonctionnel C++17 ?
 Penses-tu que toutes ces nouvelles fonctionnalités ne font que compliquer inutilement le langage le plus complexe que l'humanité ait inventé ?
-Ou au contraire, es-tu persuadé(e) que grâce à ces évolutions, le C++ va progresser dans le classement du _TIOBE Index_ et écarter des prétendants comme ~~[D](https://fr.wikipedia.org/wiki/D_(langage)),~~ [Rust](https://fr.wikipedia.org/wiki/Rust_(langage)) ou [Pony](http://www.ponylang.org/) ?
+Ou au contraire, es-tu persuadé(e) que grâce à ces évolutions, le C++ va progresser dans le classement du _TIOBE Index_ et écarter des prétendants comme ~~[D](https://fr.wikipedia.org/wiki/D_(langage)),~~ [Dart](https://fr.wikipedia.org/wiki/Dart_(langage_informatique)), [Nim](https://fr.wikipedia.org/wiki/Nim_(langage)), [Rust](https://fr.wikipedia.org/wiki/Rust_(langage)) ou [Pony](http://www.ponylang.org/) ?
 
 ![Indice TIOBE de popularité des langages de programmation, la courbe en vert clair représente l'inexorable descente du C++ qui reste quand même en troisième place derrière Java et C, mais devant Python et C#](http://cdn.edureka.co/blog/wp-content/uploads/2016/06/TIOBE-index-2016.png)
 
