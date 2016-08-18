@@ -3,22 +3,22 @@ Ce répertoire contient des images sous licence libre a propos du C++
 C++ Complexe
 ------------
 
-Auteur    | Contribution                                         | License
-----------|------------------------------------------------------|----------
-Oliver H  | Idée, Ébauche                                        | CC-BY-SA-3.0
-AKP       | Dessin à la main                                     | CC-BY-SA-3.0
-Oliver H  | Numérisation, Vectorisation, Améliorations et Textes | CC-BY-SA-3.0
+Auteur    | Contribution      | License
+----------|-------------------|----------
+Oliver H  | Idée, Ébauche     | CC-BY-SA-3.0
+AKP       | Dessin à la main  | CC-BY-SA-3.0
+Oliver H  | Numérisation, Vectorisation (potrace), Améliorations (inkscape) et Textes | CC-BY-SA-3.0
 [Dave](http://www.clker.com/profile-50312.html) | [Note repositionnable jaune](http://www.clker.com/clipart-top2.html) (post-it) | [CC0 Public Domain](https://pixabay.com/fr/post-it-m%C3%A9mo-rappel-note-jaune-296384/)
 
 Deux collègues discutent :
-    
+
 - C++ est enfin sorti
 - Trop top
 - Va falloir se palucher les 1700 pages du nouveau standard
 - Gloups
 
-Une note repositionnable, posée à la fin du dessin, indique :  
-_"Il y en a qui ne connaissent pas encore LinuxFr.org"_  
+Une note repositionnable, posée à la fin du dessin, indique :
+_"Il y en a qui ne connaissent pas encore LinuxFr.org"_
 (LinuxFr.org pourrait être remplacé par cppfrug.org...)
 
 Deux versions :
@@ -33,14 +33,14 @@ Deux versions :
 Évolution du langage C++
 ------------------------
 
-Auteur    | Contribution                                         | License
-----------|------------------------------------------------------|----------
-Jae-Zun   | Prototypage                                          | CC-BY-SA-3.0
-Florent B | Dessin à la main                                     | CC-BY-SA-3.0
-Oliver H  | Numérisation, Vectorisation, Améliorations et Textes | CC-BY-SA-3.0
+Auteur    | Contribution      | License
+----------|-------------------|----------
+Jae-Zun   | Prototypage       | CC-BY-SA-3.0
+Florent B | Dessin à la main  | CC-BY-SA-3.0
+Oliver H  | Numérisation, Vectorisation (potrace), Améliorations (inkscape) et Textes | CC-BY-SA-3.0
 
 Analogie entre chaque version C++ et l'évolution de l'homme.
-Le singe est associé à "C with Classes", puis "C++2.0" et "C++98" 
+Le singe est associé à "C with Classes", puis "C++2.0" et "C++98"
 pour des ancetres plus proches de homo sapiens qui se redressent de plus en plus.
 Après homo sapiens (C++03), les descendaants se courbent de plus en plus (C++11, C++14)
 pour se retrouver devant un ordinateur (C++17).
@@ -58,29 +58,39 @@ Deux versions :
 C++17 Président
 ---------------
 
-Auteur    | Contribution                                | License
-----------|---------------------------------------------|----------
-Oliver H  | Dessin, Textes, Numérisation, Vectorisation | CC-BY-SA-3.0
+Auteur    | Contribution                                          | License
+----------|-------------------------------------------------------|----------
+Oliver H  | Dessin, Textes, Numérisation, Vectorisation (potrace) | CC-BY-SA-3.0
 
 Analogie entre les fonctionnalités promises pour C++17
 et les promesses des candidats à la présidentielle de 2017 en France.
 
-![c++17 président](http://cpp-frug.github.io/materials/images/cpp-President-2017.svg)
+![C++17 président](http://cpp-frug.github.io/materials/images/cpp-president-2017.svg)
 
 Chantons déçus C++17
 --------------------
 
-Auteur    | Contribution                                         | License
-----------|------------------------------------------------------|----------
-Guss      | Inspiration d'un chaton triste Concept & Réflexion   | 
-Ziyue     | Dessin à la main                                     | CC-BY-SA-3.0
-Oliver H  | Numérisation, Vectorisation, Améliorations et Textes | CC-BY-SA-3.0
+Auteur    | Contribution                                                        | License
+----------|---------------------------------------------------------------------|----------
+Guss      | Inspiration d'un chaton triste Concept & Réflexion                  |
+Ziyue     | Dessin à la main (crayon)                                           | CC-BY-SA-3.0
+Oliver H  | Numérisation, Améliorations (GIMP), Vectorisation (G'MIC) et Textes | CC-BY-SA-3.0
 
 Deux chatons déçus du contenu de C++17 discutent :
 
 - Sniff.. On n'a pas les Concepts
 - Ni la Réflexion
- 
-![chatons tristes c++17](http://cpp-frug.github.io/materials/images/cpp-chatons-tristes_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
-	
+![Chatons tristes C++17](http://cpp-frug.github.io/materials/images/cpp-chatons-tristes_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
+
+C++17 sauve une écolière
+------------------------
+
+Auteur    | Contribution                                                        | License
+----------|---------------------------------------------------------------------|----------
+Ziyue     | Dessin à la main (crayon)                                           | CC-BY-SA-3.0
+Oliver H  | Numérisation, Améliorations (GIMP), Vectorisation (G'MIC) et Textes | CC-BY-SA-3.0
+
+Une maîtresse effarée que son élève ait rédigé sa punition en C++17 avec une boucle qui écrit 100 fois _"Je ne dois pas jeter d'avion en papier en calsse"_.
+
+![C++17 à l'école primaire](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
