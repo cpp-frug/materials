@@ -2,52 +2,57 @@
 |-------------------------------------------------------------------------
 
 
-C++17 - Partie 2 sur 4 - Nouveautés au niveau du langage
-========================================================
+Nouveautés C++17 au niveau du langage
+=====================================
 
-
-Authors |Oliver H, olibre, Benoît Sibaud, Lucas, palm123, cracky, Martin Peres et RyDroid
+Auteurs |Oliver H, olibre, Benoît Sibaud, Lucas, palm123, cracky, Martin Peres et RyDroid
 --------|------------------------------
 License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 
+L'ajout des fonctionnalités au **C++17** a été clôturé. Cette troisième dépêche se concentre sur les changements au niveau du langage C++. Faisons donc le tour des nouveautés :-)
+    
+![C++17 à l'école primaire](https://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
-Les fonctionnalités de la prochaine version **C++17** sont arrêtées. Cette seconde dépêche, d'une série de quatre dépêches, se concentre sur les changements au niveau du langage C++. C'est une dépêche très technique avec de nombreux exemples de code.
+----
+
+* [La précédente dépêche "C++17, Genèse d'une version mineure"](https://linuxfr.org/redaction/news/c-17-genese-d-une-version-mineure)
+* [Contenu markdown de cette dépêche sur le dépôt C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md)
+* [Journal "C++17 est sur les rails" par rewind a propos de la réunion du comité en mars 2016](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
+* [Réunion du comité en mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
+* [Réunion du comité en juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
+* [Réunion du comité en mars 2016 détaillée par botondballo](https://botondballo.wordpress.com/2016/03/21/trip-report-c-standards-meeting-in-jacksonville-february-2016/)
+* [Liste très complète des nouveautés C++17 sur StackOverflow.com](http://stackoverflow.com/a/38060437/938111)
+* [Liste des nouveautés C++17 sur Meeting C++](https://meetingcpp.com/index.php/br/items/final-features)
+* [Dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus))
+* [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
+
+----
+
+Par manque de temps, cette dépêche ne détaille pas toutes les fonctionnalités (et contient peut-être quelques erreurs). Comme cette dépêche LinuxFr.org restera figée après publication, nous proposons de continuer à l'enrichir sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Ainsi nous partagerons nos recherches individuelles et nous fournirons un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia en français, des *"Meetups"*...
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
 
-Par manque de temps (ou d'aide à la rédaction), cette dépêche ne détaille pas toutes les fonctionnalités (et contient peut-être quelques erreurs). Comme cette dépêche LinuxFr.org restera figée après publication, nous vous proposons de continuer à l'enrichir sur [un dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Cela nous permettra de partager nos recherches individuelles et de permettre la réutilisation d'un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia en français, des *"Meetups"*...
 
-----
-
-* [Première rencontre début mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
-* [Seconde rencontre fin juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
-* [Dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus)
-* [Article Wikipédia C++14](https://fr.wikipedia.org/wiki/C%2B%2B14)
-* [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
-* [Journal de rewind "C++17 est sur les rails" a propos de la première réunion](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
-* [Dépêche LinuxFr "Codeurs, Traducteurs, CppReference a besoin de vous" (2012)](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
-* [Contenu Markdown de cette dépêche sur le dépôt Git du C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md)
-* [Première rencontre début mars 2016 très détaillée par botondballo](https://botondballo.wordpress.com/2016/03/21/trip-report-c-standards-meeting-in-jacksonville-february-2016/)
-* [Résumé de la seconde rencontre fin juin 2016](https://www.reddit.com/r/cpp/comments/4pmlpz)
-* [Liste très complète des nouveautés C++17 sur StackOverflow](http://stackoverflow.com/a/38060437/938111)
-* [Liste des nouveautés C++17 sur Meeting C++](https://meetingcpp.com/index.php/br/items/final-features-of-c17.html)
-
-----
-
-Série de quatre dépêches C++17
-==============================
+Série de dépêches C++
+=====================
     
-Cette dépêche LinuxFr.org est figée après publication. Par contre, la corriger, la  compléter est possible sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Ainsi la mise en commun des contributions individuelles permet de l'enrichissement mutuel et la réutilisation d'un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia C++17 en français. Merci aussi d'aider à la rédaction des trois autres dépêches.
+Cette dépêche LinuxFr.org est figée après publication. Par contre, la corriger, la  compléter est possible sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Ainsi la mise en commun des contributions individuelles permet de l'enrichissement mutuel et la réutilisation d'un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia C++17 en français.
     
-Ce chapitre présente un résumé des quatre dépêches.
+Résumé des dépêches pour les décideurs pressés :
 
-1. Genèse du C++17
-------------------
+1. Les coulisses du C++
+-----------------------
     
 La spécification C++ n'est pas libre et [son téléchargement coûte 180 €](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029). Alors, les développeurs C++ utilisent un [brouillon _(draft)_ gratuit](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf). Par contre, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) : pas de brevets logiciels ni de propriété intellectuelle. Mais de toutes façons, la plupart des développeurs C++, même expérimentés, n'ont jamais lu le standard. Car ce sont surtout [des livres](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) et plus récemment des [sites](http://fr.cppreference.com/) qui sont utilisés.
 
-2. Les changements au niveau du langage
----------------------------------------
+
+2. Genèse du C++17
+------------------
+    
+Les deux réunions du comité de standardisation C++ pour définir le périmètre fonctionnel du prochain C++17.
+
+3. Changements C++17 au niveau du langage
+-----------------------------------------
     
 Nettoyage, correction, évolution, sucre syntaxique :
     
@@ -71,6 +76,7 @@ Par contre, aucune fonctionnalité majeure n'est présente dans C++17 :
 * [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ;
 * [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
 
+
 3. Les changements au niveau de la bibliothèque standard
 --------------------------------------------------------
     
@@ -91,6 +97,7 @@ Les transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%
     
 Par contre, impasse sur des fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf). Nous aurions aussi aimé que le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) intègre plus tôt le C++.
 
+
 4. Bilan C++17 et attentes pour C++20
 -------------------------------------
     
@@ -99,15 +106,15 @@ Alors, version mineure ou majeure ?
 * Les améliorations sont appréciables, mais aucune fonctionnalité majeure au niveau du langage  ;
 * Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs.
 
+
 Partager
---------
+========
     
 La version la plus à jour de cette dépêche peut se trouver sur [ce dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Et pour aller encore plus loin, participons à l'amélioration de ce contenu CC-BY-SA en y ajoutant nos découvertes individuelles C++17 afin d'en faire profiter le plus grand nombre :-)
 
-------------------------------------------
-
 Compatibilité avec le langage **C**
 ===================================
+
 
 **C++17** est maintenant [basé sur **C11** au lieu de **C99**](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r2.html) + **C Unicode TR**.
     
@@ -118,10 +125,13 @@ Donc, **C++17** se base sur une partie du **C11**. Par exemple, la gestion du mu
 Finalement, peu de changements. Par exemple, la fonction [`aligned_alloc()`](http://en.cppreference.com/w/c/memory/aligned_alloc) avait déjà été intégrée avec **C++11**.
 
 
+
 Suppression
 ===========
 
+
 * Mot clé [`register`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html#6.10) reservé pour utilisation ultérieure ;
+
 
 * [`bool b; ++b;`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) ;
     
@@ -129,11 +139,13 @@ Suppression
     TODO Approfondir
     ```
 
+
 * [ios aliases](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0004r1.html).
     
     ```cpp
     TODO Expliquer l'intérêt, Fournir des exemples.
     ```
+
 
 * [Suppression](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)
   des [digraphes et trigraphes](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#Removal_of_trigraphs).
@@ -146,21 +158,26 @@ Suppression
      
     La dépréciation des digraphes/trigraphes avait été prévue en 2009 pour C++11. Mais certains membres comme IBM et Bloomberg étaient réticents. Finalement, c'est la suppression pure et simple qui a été votée par les membres pour C++17 (sans passer par la dépréciation). IBM a même tenté une dernière [tentative pour conserver les digraphes/trigraphes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4210.pdf) ;
 
+
 Corrections
 ===========
+
 
 * [Conversion des tableaux de pointeurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)
     
       TODO: Approfondir
 
+
 * [Héritage des constructeurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) ;
     
       TODO: Approfondir
+
 
 * Les boucles `for` *"each"* supportent des conteneurs ayant des
   [`begin()` et `end()` retournant des types différents mais comparables](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
   Cette correction est nécessaire à l'implémentation des [Intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf).
   Cela permet également de supporter d'avantage de [valeurs sentinelles](https://fr.wikipedia.org/wiki/Valeur_sentinelle) ;
+
 
 * [Spécification de l'ordre d'évaluation des paramètres des fonctions dans les expressions idiomatiques du C++](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r2.pdf)
     
@@ -169,6 +186,7 @@ Corrections
             Inconvénient = le compilateur a moins de possibilités d'optimisation.
    *  Not including function arguments, but function argument evaluation interleaving now banned
    *  Makes a bunch of broken code work mostly, and makes `.then` on future work.
+
 
 
 * `noexcept` rejoint les [types systèmes](http://en.cppreference.com/w/cpp/language/type)
@@ -196,16 +214,20 @@ Corrections
     f(g1, g2);             // Erreur C++17
     ```
  
+
 * Les [variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf)
   (après les [variables `template`](http://en.cppreference.com/w/cpp/language/variable_template) du C++14)
   avec un comportement similaire aux fonctions `inline`.
   
+
       TODO: Est-ce que la variable va être dupliquée dans chaque unité de compilation ?
+
 
 
 * [Allocation mémoire dynamique des données *"over-aligned"*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0035r3.html) ;
     
       TODO: Comprendre
+
 
 * [Garantie](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0135r0.html) de [court-circuitage du constructeur par copie](https://en.wikipedia.org/wiki/Copy_elision) ;
      
@@ -215,18 +237,22 @@ Corrections
     * Not in all cases, but distingushes syntax where you are "just creating something" that was called elision, from "genuine elision".
 
 
+
 * [Forward progress guarantees (FPG)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0296r1.html)
   (voir aussi [FPGs for parallel algorithms](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0299r0.html)) ;
     
       TODO: Comprendre... Est-ce que cela veut dire "the implementation may not stall threads forever" ?
 
+
 * Constantes [`u8'U', u8'T', u8'F', u8'8'`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html) ;
     
       TODO: Donner des exemples
 
+
 * Réécriture des paragraphes a propos des [exception et `throw`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4285.html)
     
     TODO: Vérifier l'intérêt de ces changements
+
 
 * La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/experimental/feature_test#Language_Features#Function_Macros) vérifie si l'en-tête `<filesystem>` est disponible pour inclusion ;
     
@@ -266,6 +292,7 @@ Corrections
     #  error Ne trouve ni <windows.h> ni <time.h>
     #endif
     ```
+
 
 * Correction des évaluations constantes pour tout argument `template` n'étant pas un type [_(Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Les types **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
          
@@ -315,14 +342,18 @@ Corrections
 Sucre syntaxique
 ================
 
+
 * **[`namespace`](http://en.cppreference.com/w/cpp/language/namespace) [`aa::bb { }`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4230.html)**
   correspond àest l'équivalent de **`namespace aa { namespace bb { } }`** ;
 
+
 * [`static_assert(expression);`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf) avec un seul paramètre,  le second paramètre `std::string message` ;
+
 
 * [Constante en virgule flottante](http://en.cppreference.com/w/cpp/language/floating_literal)
   exprimée en hexadécimal [*(Hexadecimal float point literals)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html) ;
   
+
     ```cpp
     // Fraction hexadécimale
     float f = 0xA.Bp3f;
@@ -332,6 +363,7 @@ Sucre syntaxique
     static_assert( f == 85.5f);
     ```
 
+
 * Déstructuration du retour de fonction [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) comme `std::tie` mais avec `auto`. S'applique aux `std::tuple`, tabeau comme `std::array` et aux structures plates (donc à `std::pair`).
     
     ```cpp
@@ -339,6 +371,7 @@ Sucre syntaxique
     Structure fonction();
     auto [ x, y ] = fonction();
     ```
+
 
 * [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html)
   comme pour `for(init;cond;inc)`.
@@ -362,6 +395,7 @@ Sucre syntaxique
            inserted)
       return iterateur;
     ```
+
 
 * [`if constexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html), initialement [`constexpr_if`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0128r0.html), et encore avant c'était `static_if`. Cette fonctionnalité très attendue va simplifier beaucoup de code générique :
     
@@ -393,13 +427,16 @@ Sucre syntaxique
     }
     ```
 
+
 * [Déduction des arguments `template` par les constructeurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) comme le font déjà les fonctions `template` ;
+
 
     ```cpp
     array<int,3>   classique{1,2,3};
     decltype(auto) aide = make_array(1,2,3);
     array          deduction{1,2,3};
     ```
+
 
 
 * [`template<auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html)
@@ -442,14 +479,17 @@ Sucre syntaxique
     }
     ```
 
+
 * [`template<template<class...>typename foo> struct bar {}`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
     
     TODO: Approfondir
 
 
+
 * [( Folding + ... + expressions ) ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)
     
     TODO: Approfondir
+
 
 * [`auto x{8};` est de type `int`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
     
@@ -457,19 +497,13 @@ Sucre syntaxique
 
 
 
-
-
-
-
-
-
-
-
 [Lambda](http://en.cppreference.com/w/cpp/language/lambda)
 ========
 
+
 * [`constexpr` par défaut](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4487.pdf)
   si répond aux critères `constexpr` ;
+
 
 * Possibilité de [capturer `*this`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
   Tout le contenu de l'objet `*this` est copié au lieu du pointeur `this`.
@@ -478,17 +512,21 @@ Sucre syntaxique
   entre fils d'éxécution [*(value semantics)*](https://en.wikipedia.org/wiki/Value_semantics) ;
 
 
+
 Attributs
 =========
+
 
 * Possibilité d'appliquer des [`[[attributs]]` aux `namespace`s et `enum { erator[[s]] }`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html) ;
     
     TODO: à vérifier
 
 
+
 Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes)
 [`[[fallthrough]]`, `[[nodiscard]]` et `[[maybe_unused]]`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf)
 (qui complètent les `[[noreturn]]`, `[[carries_dependency]]` et `[[deprecated]]`) :
+
 
 - **`[[fallthrough]]`** indique au compilateur (ou à l'outil d'analyse de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
       
@@ -517,6 +555,7 @@ Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/a
       }
       ```
 
+
 - **`[[nodiscard]]`** indique que la valeur de retour d'une fonction ne doit pas être ignorée. Ce fonctionnent était déjà implémenté par l'extension GNU `__attribute__((warn_unused_result))`.
       
       ```cpp
@@ -542,6 +581,7 @@ Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/a
            // Le compilateur peut avertir que
       }    // le code de retour est ignorée
       ```
+
 
 - **`[[maybe_unused]]`** [(qui devait s'appeler `[[unused]]`)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) indique quand une variable peut ne pas être utilisée et permet donc de supprimer des avertissements _(warning)_ inutiles. Cet attribut peut s'appliquer aux fonctions, aux paramètres de fonctions et aux variables.
       
@@ -577,7 +617,9 @@ Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/a
       [Mozilla propose aussi `DebugOnly<T>`](https://developer.mozilla.org/docs/Mozilla/Debugging/DebugOnly%3CT%3E) (plus élégant qu'une macro).
 
 
+
 Donc en C++17 nous pourrons écrire:
+
 
 ```cpp
 #include <array>
@@ -603,6 +645,8 @@ int main (int argc,
     return y - tableau[2] * argc;
 }
 ```
+
+
 
 Alors, cher lecteur/chère lectrice de LinuxFr.org ?
 Séduit(e) ? Conquis(e) ?
