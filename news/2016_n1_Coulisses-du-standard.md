@@ -6,9 +6,13 @@ Les coulisses du standard C++
 =============================
 
 
-Authors |[olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [M5oul](https://linuxfr.org/users/m5oul), [Anthony Jaguenaud](https://linuxfr.org/users/capello) et [Benoît Sibaud](https://linuxfr.org/users/oumph)
+Auteurs |[olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [ZeroHeure](https://linuxfr.org/users/andrianarivony), [Benoît Sibaud](https://linuxfr.org/users/oumph), [tankey](https://linuxfr.org/users/tankey), [M5oul](https://linuxfr.org/users/m5oul) et [Anthony Jaguenaud](https://linuxfr.org/users/capello)
 --------|------------------------------
-License |[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
+License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
+URL     | https://linuxfr.org/news/les-coulisses-du-standard-cpp
+Date    | 2016-08-08T09:10:16+02:00 (publication sur LinuxFr.org)
+Tags    | c++, c++14 et c++17
+
 
 Le C++ a bientôt la quarantaine, et pourtant très actif en ce moment avec la finalisation de la prochaine version C++17. Profitons en pour faire le point avec une série d'articles sur le C++. Cette première dépêche nous dévoile la face cachée du C++, et donc peut intéresser tous les lecteurs LinuxFr.org :-)
 
@@ -77,7 +81,7 @@ Avec toutes nos contributions réunies, nous profiterons d'avantage de nos déco
 Naissance d'un nouveau langage
 ==============================
     
-A la fin des années 70, dans la cadre de sa thèse en Angleterre, le Danois Bjarne Stroustrup [étudiait](http://www.stroustrup.com/hopl2.pdf) le [paradigme de la programmation objet](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet) (avec le langage [Simula](https://fr.wikipedia.org/wiki/Simula)). En 1979, aux [Laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell) (États-Unis), Bjarne propose de rajouter ce paradigme objet au langage C qu'il appela *"C with Classes"*.
+À la fin des années 70, dans la cadre de sa thèse en Angleterre, le Danois Bjarne Stroustrup [étudiait](http://www.stroustrup.com/hopl2.pdf) le [paradigme de la programmation objet](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet) (avec le langage [Simula](https://fr.wikipedia.org/wiki/Simula)). En 1979, aux [Laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell) (États-Unis), Bjarne propose de rajouter ce paradigme objet au langage C qu'il appela *"C with Classes"*.
     
 Durant les années 80, les nouvelles fonctionnalités qui sont progressivement intégrées au tout nouveau C++ provoque un schisme entre les fans du C classique et les enthousiastes du C++.
    
@@ -162,13 +166,13 @@ Comme la plupart des documents publiés par l'ISO, la mention de droit d'auteur 
 > All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.
 > Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.
     
-Cette position est également celle pour les autres langages gérés par l'ISO (Fortran, C...). Mais aussi pour [Java](https://docs.oracle.com/javase/specs/jls/se8/html/jls-0-front.html), [C#](https://github.com/KvanTTT/CSharp-Minifier/blob/master/CSharp%20Language%20Specification.docx) et de nombreux autres langages.
+Cette position est la même pour les autres langages gérés par l'ISO (Fortran, C...). Mais aussi pour [Java](https://docs.oracle.com/javase/specs/jls/se8/html/jls-0-front.html), [C#](https://github.com/KvanTTT/CSharp-Minifier/blob/master/CSharp%20Language%20Specification.docx) et de nombreux autres.
     
 Dans la pratique, cela ne gène pas les développeurs de ces langages. Ce type de mention empêche juridiquement la reproduction du standard (même un paragraphe ou un code d'exemple). Des sites qui respectent à la lettre le droit d'auteur comme Wikipédia refusent de contenir la reproduction même partielle d'un tel document. D'autres sites comme [stackoverflow sont plus pragmatiques](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard).
     
 Notons que d'autres langages de programmation ont des spécifications libres :
     
-* les [documentation officielles de Rust](https://doc.rust-lang.org/) sont est sous licence Apache 2.0 ou licence MIT ;
+* les [documentations officielles de Rust](https://doc.rust-lang.org/) sont sous licence Apache 2.0 ou licence MIT ;
 * la [spécification de Go](https://golang.org/ref/spec) est sous licence CC-BY-3.0 ;
 * celle de Python... c'est un peu plus compliqué, simplifions en mentionnant juste la [licence PSF (Python Software Foundation)](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release).
 
@@ -194,9 +198,9 @@ Encore plus incroyable : chaque nouvelle publication du standard révoque/suppri
 * C++03 [ISO/IEC 14882:2003](http://www.iso.org/iso/fr/catalogue_detail?csnumber=38110) supprimé ;
 * C++11 [ISO/IEC 14882:2011](http://www.iso.org/iso/fr/catalogue_detail?csnumber=50372) supprimé.
     
-Ce qui est embêtant est le fait que la plupart des projets C++ actuellement utilisés sont codés en C++03. Et la plupart des entreprises utilisent encore aujourd'hui des versions de compilateurs qui ne supportent pas (ou partiellement) le standard C++11.
+L'embêtant est que la plupart des projets C++ actuellement utilisés sont codés en C++03. Et la plupart des entreprises utilisent encore aujourd'hui des versions de compilateurs qui ne supportent pas (ou partiellement) le standard C++11.
     
-Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur que l'on est obligé d'utiliser ? Aller les [consulter à l'INRIA](http://opac.inria.fr/search*frf/a?searchtype=Y&searcharg=14882) ? Par exemple, cet [utilisateur a besoin d'acheter le standard C++03 mais n'est plus à la vente](http://programmers.stackexchange.com/questions/190294/about-ansi-c-2003-standard).
+Alors comment s'informer du standard C++ utilisé par le bon vieux compilateur que l'on est obligé d'utiliser ? Aller les [consulter à l'INRIA](http://opac.inria.fr/search*frf/a?searchtype=Y&searcharg=14882) ? Par exemple, cet [utilisateur a besoin d'acheter le standard C++03 qui n'est plus à la vente](http://programmers.stackexchange.com/questions/190294/about-ansi-c-2003-standard).
 
 Ouf, les brouillons du comité
 =============================
@@ -211,27 +215,30 @@ Quand le comité de normalisation C++ valide un brouillon (nouvelle version C++)
 Documentations C++ de référence 
 ===============================
     
-Le standard C++ (officiel ou brouillon) ne sont pas simples à lire. Ces documents utilisent une terminologie très spécifique une spécification très rigoureuse. En fait, ces documents sont surtout utiles aux développeurs des compilateurs et à ceux qui implémentent des bibliothèques standards (`std::`).
+Les standards C++ (officiels ou brouillons) ne sont pas simples à lire. Ces documents utilisent une terminologie très spécifique pour une spécification très rigoureuse. En fait, ces documents sont surtout utiles aux développeurs des compilateurs et à ceux qui implémentent des bibliothèques standards (`std::`).
     
 Les utilisateurs du C++ (langage et bibliothèque standard) utilisent historiquement des livres (souvent ceux écrits par Bjarne Stroustrup et Scott Meyers) et plus récemment des sites web :
     
-* [fr.cppreference.com](http://fr.cppreference.com) en Français sous double licences CC-BY-SA-3.0 et GFDL (disponible en différentes langues sont la [version en Anglais](http://en.cppreference.com) est la plus à jour) ;
-* [cplusplus.com](http://cplusplus.com/) seulement en Anglais et n'autorisant pas la reproduction (pas de licence libre) ;
-* ... liste à compléter dans les commentaires.
+* [fr.cppreference.com](http://fr.cppreference.com) en français sous double licence CC-BY-SA-3.0 et GFDL (disponible en différentes langues, la [version en anglais](http://en.cppreference.com) est la plus à jour) ;
+* [cplusplus.com](http://cplusplus.com/) seulement en anglais et n'autorisant pas la reproduction (pas de licence libre) ;
+* … liste à compléter dans les commentaires.
     
-![livre "The C++ Programming Language"](https://isocpp.org/files/img/tcpl4e.png)![livre "A Tour of C++"](https://isocpp.org/files/img/tour.jpg)![livre "The C++ Programming Language (Special 3rd Edition)"](http://www.pdfdrive.net/assets/thumbs/069/069cb03b9970368939ef71f49534cc4b-s.jpg)![logo cppreference.com](http://cppcon.org/wp-content/uploads/2014/08/community-cppreference.png)
+![livre "The C++ Programming Language"](https://isocpp.org/files/img/tcpl4e.png) 
+![livre "A Tour of C++"](https://isocpp.org/files/img/tour.jpg) 
+![livre "The C++ Programming Language (Special 3rd Edition)"](http://www.pdfdrive.net/assets/thumbs/069/069cb03b9970368939ef71f49534cc4b-s.jpg)
+ ![logo cppreference.com](http://cppcon.org/wp-content/uploads/2014/08/community-cppreference.png)
 
 Un standard ouvert
 ==================
     
-> **Note des auteurs de cette dépêche :** *Nous avons un profil plutôt technique (développeurs) et non pas juriste. Ce chapitre contient peut-être des erreurs importantes, mais nous avons tenté de rédiger ce qui nous semble correct... Nous n'avons pas pris le risque de nous aventurer à comparer C++ avec [Java](http://www.lemonde.fr/technologies/article/2014/05/10/brevets-la-bataille-entre-oracle-et-google-sur-java-relancee_4414517_651865.html), [C#](https://digitalcitizen.info/2014/11/12/while-open-source-leads-to-patent-traps-free-software-warns-and-liberates/)... Celles et ceux qui connaissent bien le sujet, merci de nous éclairer dans les commentaires. :-)*
+**Note des auteurs de cette dépêche :** *Nous avons un profil plutôt technique (développeurs) et non pas juriste. Ce chapitre contient peut-être des erreurs importantes, mais nous avons tenté de rédiger ce qui nous semble correct... Nous n'avons pas pris le risque de nous aventurer à comparer C++ avec [Java](http://www.lemonde.fr/technologies/article/2014/05/10/brevets-la-bataille-entre-oracle-et-google-sur-java-relancee_4414517_651865.html), [C#](https://digitalcitizen.info/2014/11/12/while-open-source-leads-to-patent-traps-free-software-warns-and-liberates/)... Celles et ceux qui connaissent bien le sujet, merci de nous éclairer dans les commentaires. :-)*
  
 
 Le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert), sans brevet logiciel, sans propriété intellectuelle. C'est à dire que le langage et sa bibliothèque standard (API) peuvent être implémentés librement.
     
 De même, le nom **"C++"** n'est pas une marque, ni aucun type de propriété intellectuelle. À la différence de la marque [**JavaScript®**](https://developer.mozilla.org/fr/docs/Web/JavaScript/A_propos#Ressources_JavaScript) déposée par Oracle, ou des marques non déposées [**Rust™**](https://www.mozilla.org/en-US/foundation/trademarks/list/), [**Go™**](https://www.google.fr/intl/fr/permissions/trademark/trademark-list.html) (et une [autre **Go™**](https://www.thoughtworks.com/news/innova-using-thoughtworks-studios-go)).
     
-Et même si C++ n'est pas encore aussi ouvert que peut l'être Rust™, de nombreux membres du comité améliorent constamment la façon de travailler pour plus de transparence, plus de proximité avec les utilisateurs C++, comme l'utilisation d'un [compte GitHub](https://github.com/cplusplus).
+Et même si C++ n'est pas encore aussi ouvert que peut l'être Rust™, de nombreux membres du comité améliorent constamment la façon de travailler pour plus de transparence et plus de proximité avec les utilisateurs C++, comme l'utilisation d'un [compte GitHub](https://github.com/cplusplus).
 
 Les versions C++
 ================
@@ -251,16 +258,9 @@ C++17 [Draft N4606 2016-07-12](https://github.com/cplusplus/draft/blob/master/pa
         
 Attention, ce dernier lien est celui du brouillon **C++17** le plus récent lors de la rédaction de cette dépêche. Cette version sera certainement obsolète quelques mois après la publication de cette dépêche.
      
-Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publiée (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. En anglais, c'est le *first post-publication draft*.
+Ceux qui ont l'œil aiguisé remarqueront que le brouillon N3376 représentant la version C++11 a été publiée (2012-02-28) après la norme officielle 14882:2011 (2011-09-01). Ce N3376 correspond en fait à des corrections éditoriales mineures apportées au brouillon [N3291](http://www.joshuaburkholder.com/documents/n3291.pdf) fourni à l'ISO. C'est le prmier brouillon de post-publication, le _first post-publication draft_ en anglais.
 
-![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit "Cool  On va pouvoir coder"](http://cpp-frug.github.io/materials/images/Cpp-Evolution-Path.svg)
-
-
-[![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0][CppVisImg]][CppVisWeb]
-    
-[CppVisImg]: http://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg
-[CppVisWeb]: http://www.flickr.com/photos/dominicspics/785982209
-
+![Analogie entre chaque version C++ et l'évolution depuis le singe jusqu'à homo sapiens puis homo sapiens se courbe de plus en plus pour se retrouver devant un ordinateur qui correspond à la version C++17 et ce dernier homme moderne dit Cool  On va pouvoir coder](http://cpp-frug.github.io/materials/images/cpp-evolution-path.svg)
 
 Technical Specification (TS)
 ============================
@@ -272,10 +272,16 @@ Généralement, les spécifications techniques sont composés de deux parties :
 * La première partie donne les motivation du changement (l'avantage d'avoir telle fonctionnalité dans le C++ avec des exemples de code) ;
 * La seconde partie liste toutes les modifications à appliquer au standard C++ en cours de rédaction (au _"draft"_).
 
+
+[![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0][CppVisImg]][CppVisWeb]
+    
+[CppVisImg]: http://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg
+[CppVisWeb]: http://www.flickr.com/photos/dominicspics/785982209
+
 Numérotation des documents
 ==========================
     
-A partir de 1990, le comité numérote ses documents officiels sur 4 chiffres en commençant par le n°[`0000`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1990/WG21%201990/X3J16_90-0000%20WG21.pdf). Ce numéro est incrémenté pour chaque nouveau document, ou nouvelle révision d'un document.
+À partir de 1990, le comité numérote ses documents officiels sur 4 chiffres en commençant par le n°[`0000`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1990/WG21%201990/X3J16_90-0000%20WG21.pdf). Ce numéro est incrémenté pour chaque nouveau document ou nouvelle révision d'un document.
     
 En 1991, le préfixe **N** est adoptée, et le premier document à en profiter est le [`N0007`](http://open-std.org/JTC1/SC22/WG21/docs/papers/1991/WG21%201991/X3J16_91-0089%20WG21_N0007.pdf). **N** comme _**N**umber_ (Numéro).
 
@@ -318,14 +324,13 @@ Même après moult relectures par les meilleurs experts C++ au monde, avec toute
 * 2200 rapports d'anomalie au niveau du [langage](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_toc.html) ;
 * 2750 rapports d'anomalie au niveau de la [bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/lwg-toc.html).
     
-Lors des ses réunions, le comité discute des rapports d'anomalie et devrait publier régulièrement des rectificatifs techniques _(Technical Corrigendum)_. Mais le comité n'a jamais publié aucun rectificatif technique à ce jour !
+Lors de ses réunions, le comité discute des rapports d'anomalie et devrait publier régulièrement des rectificatifs techniques _(Technical Corrigendum)_. Mais le comité n'a jamais publié aucun rectificatif technique à ce jour !
     
 Par exemple, le comité avait approuvé un [rectificatif technique en 2003](http://www.open-std.org/jtc1/sc22/wg21/docs/standards). Et finalement, le comité publie comme étant une nouvelle version du standard => **C++03** :
     
 > A technical corrigendum was approved in 2003, . and the standard was published again as the ISO/IEC 14882:2003 edition, published 2003-10-16.
     
 Bon, c'est vrai, à la décharge du comité, ce rectificatif technique de 2003 contenait une nouvelle fonctionnalité : [*Value  initialization*](http://en.cppreference.com/w/cpp/language/value_initialization#Notes). C'était la dernière fois, que le comité avait travaillé sur un rectificatif technique.
-
 
 Néanmoins, même si le comité ne publie aucun rectificatif technique, les rapports d'anomalie approuvés doivent être [pris en compte par les compilateurs](http://clang.llvm.org/cxx_dr_status.html). Des sites comme cppreference.com listent les changements induits par ces rapports d'anomalie : 
     
@@ -335,12 +340,11 @@ Néanmoins, même si le comité ne publie aucun rectificatif technique, les rapp
 * Deux rapports d'anomalie pour [`throw`](http://en.cppreference.com/w/cpp/language/throw#Defect_reports) ;
 * ...
     
-Donc, les versions officielles du C++ deviennent vite obsolètes après leur publication car ces documents sont figés et ne bénéficient pas des corrections apportées par les rapports d'anomalie. Par conséquence, celui qui achète une version officielle du standard C++, devrait aussi suivre tous les rapports d'anomalie approuvés par le comité...
+Les versions officielles du C++ deviennent donc vite obsolètes après leur publication car ces documents sont figés et ne bénéficient pas des corrections apportées par les rapports d'anomalie. Par conséquence, celui qui achète une version officielle du standard C++, devrait aussi suivre tous les rapports d'anomalie approuvés par le comité...
     
-Pour terminer, notons aussi que des rapports d'anomalie approuvés lors d'une réunion du comité, se retrouvent ne plus être approuvés lors de la réunion suivante.
+Pour terminer, notons aussi que des rapports d'anomalie approuvés lors d'une réunion du comité se retrouvent ne plus être approuvés lors de la réunion suivante.
     
-Alors, chère lectrice, cher lecteur LinuxFr.org, es-tu étonné(e) par ce fonctionnement. Connais-tu d'autre façons de maintenir un tel document ? Comment cela se passe dans d'autres langages de programmation ? As-tu des idées d'amélioration ?
-
+Alors, chère lectrice, cher lecteur LinuxFr.org, es-tu étonné(e) par ce fonctionnement. Connais-tu d'autres façons de maintenir un tel document ? Comment cela se passe dans d'autres langages de programmation ? As-tu des idées d'amélioration ?
 
 Un langage compliqué qui se simplifie
 =====================================
@@ -353,7 +357,7 @@ Le C++ est tellement vaste et semé de subtilités que les développeurs C++ n'e
     
 Pour inverser la tendance, certains membres du comité de normalisation, comme [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (le créateur du C++) souhaitent accélérer l'évolution du langage vers un C++ plus intuitif, plus sûr, et toujours plus performant.
 
-Un process de normalisation qui s'ouvre d'avantage
+Un processus de normalisation qui s'ouvre d'avantage
 ==================================================
     
 C'est dans ce cadre que l'initiative [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) (Recommandations C++) a été lancée. A la fois pour proposer un sous-ensemble du C++ plus sûr, plus simple et sans sacrifier les performances. Mais aussi pour faire pression sur les membres du comité pour adopter les idées de la *Guidelines Support Library* (Bibliothèque de support des recommandations) [activement implémentée sur le dépôt Git de Microsoft](https://github.com/Microsoft/GSL), mais aussi sur le [dépôt Git de Martin Moene](https://github.com/martinmoene/gsl-lite) qui est compatible avec beaucoup plus de compilateurs.
@@ -405,7 +409,7 @@ Merci de nous donner un coup de main à la rédaction des prochaines dépêches 
 Droit d'auteur, remerciements et licences
 =========================================
     
-Le texte de cette dépêche est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Merci aux nombreux auteurs sur le [dépôt Git](https://github.com/cpp-frug/materials/graphs/contributors) et sur LinuxFr.org : [olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [M5oul](https://linuxfr.org/users/m5oul), [Anthony Jaguenaud](https://linuxfr.org/users/capello) et [Benoît Sibaud](https://linuxfr.org/users/oumph). Merci aussi à [Klaim](https://github.com/klaim), [Édouard A](https://github.com/edouarda), [rewind](https://linuxfr.org/users/rewind), [David Demelier](https://linuxfr.org/users/markand), [gasche](https://linuxfr.org/users/bluestorm), [freem](https://linuxfr.org/users/freem) et [®om](https://linuxfr.org/users/rom1v) pour leurs commentaires pertinents.
+Le texte de cette dépêche est protégé par ~~le [droit d'auteur](https://fr.wikipedia.org/wiki/Droit_d%27auteur#Droit_d.E2.80.99auteur_traditionnel_vs._licences_de_libre_diffusion)~~ la [gauche d'auteur](https://fr.wikipedia.org/wiki/Gauche_d'auteur) et réutilisable sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr). Merci aux nombreux auteurs sur le [dépôt Git](https://github.com/cpp-frug/materials/graphs/contributors) et sur LinuxFr.org : [olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [ZeroHeure](https://linuxfr.org/users/andrianarivony), [Benoît Sibaud](https://linuxfr.org/users/oumph), [tankey](https://linuxfr.org/users/tankey), [M5oul](https://linuxfr.org/users/m5oul) et [Anthony Jaguenaud](https://linuxfr.org/users/capello). Merci aussi à [Klaim](https://github.com/klaim), [Édouard A](https://github.com/edouarda), [rewind](https://linuxfr.org/users/rewind), [David Demelier](https://linuxfr.org/users/markand), [gasche](https://linuxfr.org/users/bluestorm), [freem](https://linuxfr.org/users/freem) et [®om](https://linuxfr.org/users/rom1v) pour leurs commentaires pertinents.
     
     
 Aussi un immense merci à mes collègues développeurs, qui à défaut de m'aider à la rédaction, ont illustré cette dépêche (et les dépêches suivantes) avec des dessins humoristiques sous licence libre : Ziyue, AKP, Florent B, et Jae-Zun. Merci aussi à Dominic Alves pour son [dessin C++](https://www.flickr.com/photos/dominicspics/785982209) sous licence libre. Merci à [Theppitak Karoonboonyanan](https://github.com/thep) pour maintenir la police de caractères [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd).
