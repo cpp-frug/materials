@@ -311,7 +311,7 @@ Année| Numéro  | Titre | Révision
 2016 | [`P0142R0`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) | A Module System for C++ | 4
 
 
-Remarquons le changement de nommage pour la révision de 2016. Le nouveau nommage **`PxxxxRx`** a été mis en place en septembre 2015 avec un **P** comme _**P**roposal_ (**P**roposition). Progressivement, les **`PxxxxRx`** doivent remplacer les **`Nxxxx`**. L'avantage est de conserver le même numéro **`xxxx`** pour toutes les révision du document.
+Remarquons le changement de nommage pour la révision de 2016. Le nouveau nommage **`PxxxxRx`** a été mis en place en septembre 2015. Le **P** signifie en anglais _**P**aper_. Progressivement, les **`PxxxxRx`** doivent remplacer les **`Nxxxx`**. L'avantage est de conserver le même numéro **`xxxx`** pour toutes les révision du document.
     
 Comme en C++, on commence par compter la première **R**évision à partir de **`R0`**. L'exemple ci-dessus est un cas particulier : **`R0`** est bien la première révision du nouveau format, mais la quatrième révision des documents _"A Module System for C++"_.
 
