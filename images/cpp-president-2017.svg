@@ -2,55 +2,40 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="1704pt" height="416pt" viewBox="0 0 1704 416"
+ width="1704" height="416" viewBox="0 0 1704 416"
  preserveAspectRatio="xMidYMid meet">
   <title>Analogie entre les promesse pour C++17 et la présidentielle 2017 en France</title>
-  <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <rdf:RDF xmlns:cc="http://creativecommons.org/ns#"
-             xmlns:dc="http://purl.org/dc/elements/1.1/">
-      <cc:Work
-         rdf:about="">
+  <metadata    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:RDF   xmlns:cc="http://creativecommons.org/ns#">
+      <cc:Work xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-president-2017.svg" >
         <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title>Analogie entre les promesse pour C++17 et la présidentielle 2017 en France</dc:title>
         <dc:creator>
           <cc:Agent>
             <dc:title>Oliver H</dc:title>
           </cc:Agent>
         </dc:creator>
-        <dc:rights>
-          <cc:Agent>
-            <dc:title />
-          </cc:Agent>
-        </dc:rights>
         <dc:language>fr</dc:language>
         <dc:date>2016</dc:date>
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+        <cc:license  rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
       </cc:Work>
-      <cc:License
-         rdf:about="http://creativecommons.org/licenses/by/3.0/">
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Reproduction" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Distribution" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Notice" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Attribution" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      <cc:License    rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits  rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits  rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits  rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
       </cc:License>
     </rdf:RDF>
   </metadata>
   <rect
-     style="opacity:0.24;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     width="1704pt" height="416pt"
+     style="opacity:0.24;fill:#fff;stroke:none"
+     width="1704" height="416"
      x="0"
      y="0"/>
-<g transform="translate(0.000000,416.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+<!-- transform="translate(0.000000,416.000000) scale(0.100000,-0.100000)"-->
+<g fill="#000" stroke="none" transform="translate(0,416) scale(0.1,-0.1)">
 <path d="M3085 4113 c-34 -35 -74 -113 -113 -223 -48 -136 -51 -142 -82 -135
 -18 4 -31 0 -43 -13 -9 -10 -60 -99 -113 -198 -170 -318 -293 -481 -453 -603
 -143 -109 -241 -139 -241 -75 0 13 18 65 41 116 80 184 98 234 114 327 23 136
