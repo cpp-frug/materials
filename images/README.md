@@ -72,9 +72,9 @@ Deux versions :
 C++17 Président
 ---------------
 
-Auteur    | Contribution                                          | License
-----------|-------------------------------------------------------|----------
-Oliver H  | Dessin, Textes, Numérisation, Vectorisation (potrace) | CC-BY-SA-3.0
+Auteur    | Contribution                                | License
+----------|---------------------------------------------|----------
+Oliver H  | Dessin, textes, numérisation, vectorisation | CC-BY-SA-3.0
 
 Analogie entre les fonctionnalités promises pour C++17
 et les promesses des candidats à la présidentielle de 2017 en France.
@@ -89,11 +89,11 @@ La réalisation de cette image s'est basée principalement sur deux logiciels :
 Chantons déçus C++17
 --------------------
 
-Auteur    | Contribution                                                        | License
-----------|---------------------------------------------------------------------|----------
-Guss      | Inspiration d'un chaton triste Concept & Réflexion                  |
-Ziyue     | Dessin à la main (crayon)                                           | CC-BY-SA-3.0
-Oliver H  | Numérisation, Améliorations (GIMP), Vectorisation (G'MIC) et Textes | CC-BY-SA-3.0
+Auteur    | Contribution                                   | License
+----------|------------------------------------------------|----------
+Guss      | Idée d'un chaton triste *Concept & Réflexion*  |
+Ziyue     | Dessin à la main (crayon)                      | CC-BY-SA-3.0
+Oliver H  | Numérisation, changements importants et textes | CC-BY-SA-3.0
 
 Deux chatons déçus du contenu de C++17 discutent :
 
@@ -110,10 +110,10 @@ La réalisation de cette image s'est basée principalement sur deux logiciels :
 C++17 sauve une écolière
 ------------------------
 
-Auteur    | Contribution                                                        | License
-----------|---------------------------------------------------------------------|----------
-Ziyue     | Dessin à la main (crayon)                                           | CC-BY-SA-3.0
-Oliver H  | Numérisation, Améliorations (GIMP), Vectorisation (G'MIC) et Textes | CC-BY-SA-3.0
+Auteur    | Contribution                                   | License
+----------|------------------------------------------------|----------
+Ziyue     | Dessin à la main (crayon)                      | CC-BY-SA-3.0
+Oliver H  | Numérisation, changements importants et textes | CC-BY-SA-3.0
 
 Une maîtresse est atterrée que son élève ait rédigé sa punition en C++ avec une boucle qui écrit 100 fois _"Je ne dois pas jeter d'avion en papier en classe"_. 
 A teacher is appalled her student has written her punishment in C++ using a loop writing 100 times _"I do not throw paper plane in class"_ in French.
