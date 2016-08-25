@@ -123,19 +123,20 @@ La réalisation de cette image s'est basée principalement sur deux logiciels :
 - GIMP ;
 - G'MIC (Vector painting) .
 
-Le fichier *source* au format XCF est disponible sur commons.wikimedia.org :
+Le fichier *source* au format XCF pèse 104 Mo (8466 × 4505 pixels) :  
 https://commons.wikimedia.org/wiki/File:Cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.xcf
 
-Six images ont été générées = trois code sources possibles en deux format (JPEG et WebP) :
+Six images générées = deux format (JPEG et WebP) et trois codes C++ écrits sur le tableau :
 
 * en utilisant ``int i=0`` (C++98) ;
 * en utilisant ``auto i{0}`` (C++17) ;
-* en utilisant ``std::fill_n()``.
+* en utilisant ``std::fill_n()`` (idée de [devnewton](https://linuxfr.org/nodes/109739/comments/1670072)).
 
+----------------
 
-![JPEG "int i=0"      ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_int.jpg)
-![WebP "int i=0"      ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_int.webp)
-![JPEG "auto i{0}"    ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
-![WebP "auto i{0}"    ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.webp)
-![JPEG "std::fill_n()"](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_fill.jpg)
-![WebP "std::fill_n()"](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_fill.webp)
+1. ![JPEG "int i=0"      ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
+2. ![WebP "int i=0"      ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.webp)
+3. ![JPEG "auto i{0}"    ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_auto.jpg)
+4. ![WebP "auto i{0}"    ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_auto.webp)
+5. ![JPEG "std::fill_n()"](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_fill.jpg)
+6. ![WebP "std::fill_n()"](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_fill.webp)
