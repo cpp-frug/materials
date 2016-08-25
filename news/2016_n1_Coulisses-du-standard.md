@@ -25,7 +25,7 @@ Le C++ a bientôt la quarantaine et pourtant très actif en ce moment avec la fi
 * [Contenu Markdown de la deuxième dépêche : C++17 — Genèse d’une version mineure](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n2_Cpp17_Genese-d-une-version-mineure.md)
 * [Contenu Markdown de la troisième dépêche : C++17 — Nouveautés au niveau du langage](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md)
 * [Contenu Markdown de la quatrième dépêche : C++17 — Nouveautés au niveau de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)
-* [Contenu Markdown de la cinquième dépêche : Bilan C++17 et attentes C++20](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.m)
+* [Contenu Markdown de la cinquième dépêche : Bilan C++17 et attentes C++20](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md)
 * [Article Wikipédia C++](https://fr.wikipedia.org/wiki/C%2B%2B)
 * [Site officiel du comité de normalisation du C++ — Page expliquant le fonctionnement du comité](https://isocpp.org/std/)
 * [Dépôt Git officiel du standard C++ en cours de rédaction](https://github.com/cplusplus/draft/)
