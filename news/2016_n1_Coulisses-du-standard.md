@@ -53,7 +53,7 @@ Résumé des dépêches :
     
 4. La quatrième dépêche, [_Nouveautés C++17 de la bibliothèque standard_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-08_n4_Cpp17_Nouveautes-de-la-bibliotheque.md), présentera les changements au niveau de la bibliothèque standard qui pourraient bousculer notre petite vie de développeur : [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms), [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view), [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional), les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)… Mais, les [intervalles (_ranges_)](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf), le [réseau (_networking_)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) seront intégrés pour une version ultérieure.
     
-5. [_Bilan C++17 et attentes pour C++20_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md). Version mineure ou majeure ? D’un côté, les améliorations sont nombreuses et appréciables. Mais de l’autre, aucune fonctionnalité majeure n’est intégrée, exceptées celles qui sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d’anciens compilateurs). Conséquences sur le processus de normalisation ? Qu’attendre de C++20 ? Intérêt du C++ aujourd’hui ? Et les langages alternatifs ? Comment s’impliquer ?
+5. [_Bilan C++17 et attentes pour C++20_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md). Version mineure ou majeure ? D’un côté, les améliorations sont nombreuses et appréciables. Mais de l’autre, aucune fonctionnalité majeure n’est intégrée, exceptées celles qui sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) (donc déjà supportées par un large panel d’anciens compilateurs). Conséquences sur le processus de normalisation ? Qu’attendre de C++20 ? Intérêt du C++ aujourd’hui ? Et les langages alternatifs ? Comment s’impliquer ?
     
 6. … d’autres dépêches à venir. :-)
 
@@ -313,7 +313,7 @@ Comme en C++, on commence par compter la première **R**évision à partir de **
 Defect Report (DR)
 ==================
     
-Même après moult relectures par les meilleurs experts C++ au monde, avec toutes les précautions prises par les institutions officielles, les publications des standards C++ contenaient 5 000 anomalies ayant fait l’objet, chacune, d’un [rapport d’anomalie (_Defect Report_)](https://isocpp.org/std/submit-issue) !
+Même après moult relectures par les meilleurs experts C++ au monde, avec toutes les précautions prises par les institutions officielles, les publications des standards C++ contenaient 5 000 anomalies ayant fait l’objet, chacune, d’un [rapport d’anomalie (_Defect Report_)](https://isocpp.org/std/submit-issue) !
      
 * 2 200 rapports d’anomalie au niveau du [langage](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_toc.html) ;
 * 2 750 rapports d’anomalie au niveau de la [bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/lwg-toc.html).
