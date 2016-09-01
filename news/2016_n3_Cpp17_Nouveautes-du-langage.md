@@ -60,12 +60,11 @@ Nettoyage, correction, évolution, sucre syntaxique :
 * [Déstructuration du retour de fonction](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) `char x; int y; std::tie(x,y) = fonction();` ~~> `auto [ x, y ] = fonction();` ;
 * [`template<auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html) pour éviter la redondance `decltype(variable)` dans `MaClasse<decltype(variable),variable>` ;
 * [`namespace` imbriqué](http://en.cppreference.com/w/cpp/language/namespace) `namespace aaa { namespace bbb { ... } }` --> `namespace aaa::bbb { ... }` ;
-* [`if constrexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ;
+* [`if constexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ;
 * Lambda `constexpr` et pouvant capturer `*this` ;
 * [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) pour faire un peu comme `for(init;cond;inc)` ;
 * [Variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf) (après les [variables `template`](http://en.cppreference.com/w/cpp/language/variable_template) du C++14) ;
 * ...
-
 
 Par contre, aucune fonctionnalité majeure n'est présente dans C++17 :
     
@@ -343,40 +342,39 @@ Sucre syntaxique
 ================
 
 
-* **[`namespace`](http://en.cppreference.com/w/cpp/language/namespace) [`aa::bb { }`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4230.html)**
-  correspond àest l'équivalent de **`namespace aa { namespace bb { } }`** ;
+* **[`namespace`](http://en.cppreference.com/w/cpp/language/namespace) [`aa::bb { }`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4230.html)** correspond à **`namespace aa { namespace bb { } }`** ;
 
+* [`static_assert(condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf) avec un seul paramètre. Avant, seule la fonction [`static_assert(condition, message)`](http://fr.cppreference.com/w/cpp/language/static_assert) était disponible avec le second paramètre `message` obligatoire ;
 
-* [`static_assert(expression);`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf) avec un seul paramètre,  le second paramètre `std::string message` ;
-
-
-* [Constante en virgule flottante](http://en.cppreference.com/w/cpp/language/floating_literal)
-  exprimée en hexadécimal [*(Hexadecimal float point literals)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html) ;
-  
-
-    ```cpp
-    // Fraction hexadécimale
-    float f = 0xA.Bp3f;
-    // 0xA.B = 10,6875
-    // exposant 2^3 = 8 
-    // 10,6875^8 => f = 85,5
-    static_assert( f == 85.5f);
-    ```
-
-
-* Déstructuration du retour de fonction [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) comme `std::tie` mais avec `auto`. S'applique aux `std::tuple`, tabeau comme `std::array` et aux structures plates (donc à `std::pair`).
+* [Constante en virgule flottante](http://en.cppreference.com/w/cpp/language/floating_literal) exprimée en hexadécimal [*(Hexadecimal float point literals)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html) ;
     
     ```cpp
-    struct Structure { int a; double b; };
-    Structure fonction();
-    auto [ x, y ] = fonction();
+    // Fraction hexadécimale
+    float v = 0xA.Bp3f;
+    static_assert(v == 85.5f);
+    // 0xA   = 10
+    // 0xB   = 11
+    // 0x.B  = 11/16 = 0,6875
+    // 0xA.B = 10,6875
+    // p3 = 2^3 = 8
+    // v = 10,6875*8 = 85,5
+    // 'f' final = type 'float'
+    
+    double w = 0x.8p8;
+    static_assert(w == 128.0);
     ```
 
+* Déstructuration du retour de fonction [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) comme `std::tie` mais avec `auto`. S'applique aux `std::tuple`, aux tableaux (comme `std::array`) et aux structures plates (comme `std::pair`).
+    
+    ```cpp
+    struct S { int a; double b; };
+    S fonction() { return S{5,6}; }
+    auto [ x, y ] = fonction();
+    assert( x == 5 );
+    ```
 
-* [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html)
-  comme pour `for(init;cond;inc)`.
-  Cette fonctionnalité devrait également étendre **`if(MaClasse v = truc())`**
-  en **`if(MaClasse v = truc(); v)`** dans certains cas... (`TODO: à vérifier`)
+* [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme pour `for(init;cond;inc)`.
+  L'expression **`if(MonType v = truc())`** peut être remplacée par **`if(MonType v = truc(); v)`**.
     
     ```cpp
     // Version verbeuse
@@ -395,7 +393,6 @@ Sucre syntaxique
            inserted)
       return iterateur;
     ```
-
 
 * [`if constexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html), initialement [`constexpr_if`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0128r0.html), et encore avant c'était `static_if`. Cette fonctionnalité très attendue va simplifier beaucoup de code générique :
     
@@ -428,16 +425,16 @@ Sucre syntaxique
     ```
 
 
-* [Déduction des arguments `template` par les constructeurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) comme le font déjà les fonctions `template` ;
-
-
+* [Déduction des arguments `template` par le constructeur](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) comme le font déjà les fonctions `template` ;
+    
     ```cpp
-    array<int,3>   classique{1,2,3};
-    decltype(auto) aide = make_array(1,2,3);
-    array          deduction{1,2,3};
+    using std;
+    array<int,3> avantCpp17{4,5,6};
+    array        avecCpp17 {4,5,6};
+    
+    // Avec fonction d'aide template
+    decltype(auto) a = make_array(4,5,6);
     ```
-
-
 
 * [`template<auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html)
   permet de remplacer `MaClasse<decltype(entier),entier>`
