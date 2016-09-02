@@ -350,8 +350,8 @@ Sucre syntaxique
     
     ```cpp
     // Fraction hexadécimale
-    float v = 0xA.Bp3f;
-    static_assert(v == 85.5f);
+    float v = 0xa.bp3f;
+    assert(v == 85.5f);
     // 0xA   = 10
     // 0xB   = 11
     // 0x.B  = 11/16 = 0,6875
@@ -360,8 +360,9 @@ Sucre syntaxique
     // v = 10,6875*8 = 85,5
     // 'f' final = type 'float'
     
-    double w = 0x.8p8;
-    static_assert(w == 128.0);
+    double w = 0xC0DE2017.1CAFEp-1;
+    assert(w == 1617891339.55602931976318359375);
+    // (3235782679 + 117502/1048575) / 2
     ```
 
 * Déstructuration du retour de fonction [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) comme `std::tie` mais avec `auto`. S'applique aux `std::tuple`, aux tableaux (comme `std::array`) et aux structures plates (comme `std::pair`).
