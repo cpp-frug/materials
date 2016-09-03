@@ -93,14 +93,14 @@ Auteur    | Contribution           | License
 ----------|------------------------|----------
 Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
 [thep](https://github.com/thep) | Police de caractères [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) | [GPL v2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL)
-[H. Harendal](https://plus.google.com/118235370450570590297) ([ADF](http://arkandis.tuxfamily.org/)) | Police de caractères [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) inspirée de *Gill Sans* | GPL v2 (avec exception)
+[H. Harendal](https://plus.google.com/118235370450570590297) ([ADF](http://arkandis.tuxfamily.org/)) | Police de caractères [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) inspirée de *Gill Sans* | GPL v2 (avec exception)
 
-Bjarne Stroustrup publie la première version des Concepts.
+En 2003, Bjarne Stroustrup propose la première version des Concepts.
 Ce "comic strip" imagine alors Bjarne demander
-l'intégration des Concepts pour chacune des versions de C++ :
+l'intégration des Concepts pour chacune des versions de C++ :
 C++03, C++11, C++14, C++17... et à chaque fois les Concepts ne sont pas intégrés.
-Sur la dernière vignette, les Concepts sont enfins intégrés (de très nombreuses décénies plus tard).
-Sur cette vignette est dessinée une pierre tombale avec une voix qui sort "Ce n'est pas trop tôt !".
+Sur la dernière vignette, les Concepts sont enfins intégrés (de très nombreuses décennies plus tard).
+Sur cette vignette est dessinée une pierre tombale avec une voix qui sort "Ce n'est pas trop tôt !".
 
 La réalisation de cette image s'est basée sur quatre logiciels :
 
@@ -111,7 +111,7 @@ La réalisation de cette image s'est basée sur quatre logiciels :
 Deux versions :
 
 1. L'originale avec les balises `<text>` et donc dépent si les polices Purisa est installée sur la machine ;
-2. Celle avec les texts remplacé par des chemins `<path>` donc on ne peut plus éditer les textes.
+2. Celle avec les balises `<text>` remplacées par des chemins `<path>` donc on ne peut plus éditer les textes.
 
 ![C++ Concepts et Bjarne (version originale avec les balises text)](http://cpp-frug.github.io/materials/images/cpp-concepts-bjarne-original.svg)
 
