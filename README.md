@@ -7,12 +7,14 @@ Ce dépôt Git permet de partager tout type d'information concernant le C++ et l
 * [Les dépêches C++](news/README.md) ;
 * Merci de proposer d'autres types de contenus...
 
+
 Comment contribuer ?
 --------------------
 
 1. Cloner ce dépôt et pousser vos contributions *(pull request)* ;
 2. Devenir membre de ce dépôt Git (demander les droits en écriture via la page des [*"issues"*](https://github.com/cpp-frug/materials/issues) en expliquant ses motivations) ;
 3. Utiliser les outils de GitHub pour annoter des fichiers, des commits ou en utilisant la fonctionnalité des [*"issues"*](https://github.com/cpp-frug/materials/issues).
+
 
 Quel types de contenu ?
 -----------------------
@@ -22,6 +24,23 @@ Quel types de contenu ?
 - Les `git clone` n'appréciant pas les fichier trop volumineux, merci de ne pas ajouter une vidéo de 2Go par exemple (à moins que cela ne pose pas de problème technique et donc merci d'expliquer comment gérer les fichiers volumineux avec GitHub...) ;
 - Les documents textes de préférence au format Markdown (on accepte quand même les fichier tex, mais si on pouvait les convertir en Markdown avec un CSS associé se serait cool) ;
 - En langue française de préférence (les autres langues ne sont pas interdites, mais le C++FRUG essaye de promouvoir les contenus les plus appropriés pour la communauté C++ francophone)
+
+
+Réduire les fichiers SVG
+------------------------
+
+Les logiciels d'édition d'image SVG (inkscape) ajoutent des nombreuses balises et autres attrubut SVG dans les fichiers. Le script `scour` permet de nettoyer et réduire les fichiers SVG. Le code source est disponible sur GitHub : https://github.com/scour-project/scour
+
+### Installation
+
+    sudo apt install python-pip
+    sudo pip install scour
+
+### Utilisation
+
+    scour gros.svg resultat.svg --create-groups --enable-viewboxing --strip-xml-space --enable-id-stripping --shorten-ids --protect-ids-noninkscape --error-on-flowtext 
+
+Le détail des options est disponible avec `scour --help`.
 
 
 Licence
@@ -39,6 +58,7 @@ Quelques idées de réutilisations du contenu de ce dépôt Git :
     * de la formation ;
     * des articles Wikipédia ;
     * des articles sur son blog...
+ 
  
 Liste des tâches
 ----------------
