@@ -3,9 +3,11 @@
 <!-- Cleaned Inkscape's tags by hand -->
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     version="1.0"
+     version="1.1"
      width="4400" height="1080" viewBox="0 40 4400 1080" preserveAspectRatio="xMidYMid meet"
      fill="none" stroke="#000" style="stroke-width:2">
+
+<rect id="fond_blanc_semi-transparent" x="0" y="40" width="4400" height="1080" fill="#fff" stroke="#fff" style="opacity:0.4"/>
 
 <title>Bjarne Stroustrup s'impatiente pour l'intégration des Concepts au standard C++</title>
 
@@ -32,8 +34,6 @@
     </cc:License>
   </rdf:RDF>
 </metadata>
-
-<rect style="opacity:0.24;fill:#ffe" width="4480" height="1080" x="0" y="0"/>
 
 <g id="texte" fill="#000" stroke="none">
   <g id="2003">
