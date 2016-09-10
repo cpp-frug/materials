@@ -1,157 +1,143 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <!-- Cleaned Inkscape's tags by hand -->
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     version="1.1"
-     width="4400" height="1080" viewBox="0 40 4400 1080" preserveAspectRatio="xMidYMid meet"
-     fill="none" stroke="#000" style="stroke-width:2">
-
-<rect id="fond_blanc_semi-transparent" x="0" y="40" width="4400" height="1080" fill="#fff" stroke="#fff" style="opacity:0.4"/>
-
-<title>Bjarne Stroustrup s'impatiente pour l'intégration des Concepts au standard C++</title>
-
-<metadata    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:RDF   xmlns:cc="http://creativecommons.org/ns#">
-    <cc:Work xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-concepts-bjarne-original.svg">
-      <dc:format>image/svg+xml</dc:format>
-      <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-      <dc:creator>
-        <cc:Agent>
-          <dc:title>Oliver H</dc:title>
-        </cc:Agent>
-      </dc:creator>
-      <dc:language>fr</dc:language>
-      <dc:date>2016</dc:date>
-      <cc:license  rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-    </cc:Work>
-    <cc:License    rdf:about="http://creativecommons.org/licenses/by/3.0/">
-      <cc:permits  rdf:resource="http://creativecommons.org/ns#Reproduction"/>
-      <cc:permits  rdf:resource="http://creativecommons.org/ns#Distribution"/>
-      <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
-      <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
-      <cc:permits  rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
-    </cc:License>
+<svg width="4400" height="1080" fill="none" stroke="#000" stroke-width="2" version="1.1" viewBox="0 40 4400 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect id="fond_blanc_semi-transparent" y="40" width="4400" height="1080" fill="#fff" opacity=".4" stroke="#fff"/>
+ <title>Bjarne Stroustrup s'impatiente pour l'intégration des Concepts au standard C++</title>
+ <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#">
+   <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-concepts-bjarne-original.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Oliver H</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:language>fr</dc:language>
+    <dc:date>2016</dc:date>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
   </rdf:RDF>
-</metadata>
-
-<g id="texte" fill="#000" stroke="#fff" style="font-weight:bold">
-<text id="2003" style="font-size:80px;font-family:'Gillius ADF No2'">
-  <tspan x="0" y="100">2003 : Bjarne Stroustrup</tspan>
-  <tspan x="0" y="170">présente les Concepts au</tspan>
-  <tspan x="0" y="240">comité C++</tspan>
-</text>
-<text id="Cpp03" style="font-size:70px;font-family:Purisa;letter-spacing:-5px;word-spacing:-25px">
-  <tspan x="30" y="932">Quoi ! Pas pour C++03 ?</tspan>
-  <tspan x="30" y="999">Okey, ce n'est qu'une</tspan>
-  <tspan x="30" y="1066">version mineure…</tspan>
-</text>
-<text id="2011"  style="font-size:80px;font-family:'Gillius ADF No2';text-anchor:middle" x="1355" y="100">2011</text>
-<text id="Cpp11" style="font-size:70px;font-family:Purisa;letter-spacing:-5px;word-spacing:-25px">
-  <tspan x="990" y="932">Quoi ! Pas pour C++11 ?</tspan>
-  <tspan x="990" y="999">Bon Okey, on arrête</tspan>
-  <tspan x="990" y="1066">de repousser C++0x…</tspan>
-</text>
-<text id="2014"  style="font-size:80px;font-family:'Gillius ADF No2';text-anchor:middle" x="2297" y="100">2014</text>
-<text id="Cpp14" style="font-size:70px;font-family:Purisa;letter-spacing:-5px;word-spacing:-25px">
-  <tspan x="1920" y="932">Quoi ! Pas pour C++14 ?</tspan>
-  <tspan x="1920" y="999">Bon Okey, c'est juste</tspan>
-  <tspan x="1920" y="1066">une version mineure…</tspan>
-</text>
-<text id="2017"  style="font-size:80px;font-family:'Gillius ADF No2';text-anchor:middle" x="3230" y="100">2017</text>
-<text id="Cpp17" style="font-size:70px;font-family:Purisa;letter-spacing:-5px;word-spacing:-25px">
-  <tspan x="2840" y="932">Quoi ! Pas pour C++17 ?</tspan>
-  <tspan x="2845" y="999">Okey, mais on arrête</tspan>
-  <tspan x="2840" y="1066">les versions mineures…</tspan>
-</text>
-<text id="2099" style="font-size:80px;font-family:'Gillius ADF No2'">
-  <tspan x="3670" y="100">De très nombreuses</tspan>
-  <tspan x="3670" y="170">décennies plus tard,</tspan>
-  <tspan x="3670" y="240">les Concepts sont</tspan>
-  <tspan x="3670" y="310">enfin intégrés</tspan>
-  <tspan x="3670" y="380">au standard</tspan>
-</text>
-<text id="Cpp99" style="font-size:70px;font-family:Purisa;letter-spacing:-5px;word-spacing:-25px">
-  <tspan x="3700" y="999">C'est pas trop tôt !</tspan>
-</text>
-</g>
-
-<use id="tete2003" xlink:href="#tete2011" transform="translate(-936,0)"/>
-<g transform="translate(-411,-217)">
-  <g id="cheuveux2003" style="stroke-width:2">
-    <path d="m 729,513 c -41,8 -77,31 -93,67"/>
-    <path d="m 764,488 c -21,-2 -70,6 -82,18"/>
-    <path d="m 685,569 c -40,17 -66,47 -75,87"/>
-    <path d="m 649,649 c -21,62 -40,94 -94,135"/>
-    <path d="m 636,711 c -15,63 -40,98 -88,130"/>
-    <path d="M 677,579 C 639,625 615,692 566,719"/>
-    <path d="m 661,614 c -28,44 -48,94 -97,133"/>
+ </metadata>
+ <g id="texte" fill="#000" font-weight="bold" stroke="#fff">
+  <text font-family="'Gillius ADF No2'" font-size="80px">
+   <tspan x="0" y="100">2003 : Bjarne Stroustrup</tspan>
+   <tspan x="0" y="170">présente les Concepts au</tspan>
+   <tspan x="0" y="240">comité C++</tspan>
+  </text>
+  <text font-family="Purisa" font-size="70px" letter-spacing="-5px" word-spacing="-25px">
+   <tspan x="30" y="932">Quoi ! Pas pour C++03 ?</tspan>
+   <tspan x="30" y="999">Okey, ce n'est qu'une</tspan>
+   <tspan x="30" y="1066">version mineure…</tspan>
+  </text>
+  <text x="1355" y="100" font-family="'Gillius ADF No2'" font-size="80px" text-anchor="middle">2011</text>
+  <text font-family="Purisa" font-size="70px" letter-spacing="-5px" word-spacing="-25px">
+   <tspan x="990" y="932">Quoi ! Pas pour C++11 ?</tspan>
+   <tspan x="990" y="999">Bon Okey, on arrête</tspan>
+   <tspan x="990" y="1066">de repousser C++0x…</tspan>
+  </text>
+  <text x="2297" y="100" font-family="'Gillius ADF No2'" font-size="80px" text-anchor="middle">2014</text>
+  <text font-family="Purisa" font-size="70px" letter-spacing="-5px" word-spacing="-25px">
+   <tspan x="1920" y="932">Quoi ! Pas pour C++14 ?</tspan>
+   <tspan x="1920" y="999">Bon Okey, c'est juste</tspan>
+   <tspan x="1920" y="1066">une version mineure…</tspan>
+  </text>
+  <text x="3230" y="100" font-family="'Gillius ADF No2'" font-size="80px" text-anchor="middle">2017</text>
+  <text font-family="Purisa" font-size="70px" letter-spacing="-5px" word-spacing="-25px">
+   <tspan x="2840" y="932">Quoi ! Pas pour C++17 ?</tspan>
+   <tspan x="2845" y="999">Okey, mais on arrête</tspan>
+   <tspan x="2840" y="1066">les versions mineures…</tspan>
+  </text>
+  <text font-family="'Gillius ADF No2'" font-size="80px">
+   <tspan x="3670" y="100">De très nombreuses</tspan>
+   <tspan x="3670" y="170">décennies plus tard,</tspan>
+   <tspan x="3670" y="240">les Concepts sont</tspan>
+   <tspan x="3670" y="310">enfin intégrés</tspan>
+   <tspan x="3670" y="380">au standard</tspan>
+  </text>
+  <text font-family="Purisa" font-size="70px" letter-spacing="-5px" word-spacing="-25px">
+   <tspan x="3700" y="999">C'est pas trop tôt !</tspan>
+  </text>
+ </g>
+ <use transform="translate(-936)" xlink:href="#c"/>
+ <g transform="translate(-411,-217)">
+  <g id="g" stroke-width="2">
+   <path d="m729 513c-41 8-77 31-93 67"/>
+   <path d="m764 488c-21-2-70 6-82 18"/>
+   <path d="m685 569c-40 17-66 47-75 87"/>
+   <path d="m649 649c-21 62-40 94-94 135"/>
+   <path d="m636 711c-15 63-40 98-88 130"/>
+   <path d="m677 579c-38 46-62 113-111 140"/>
+   <path d="m661 614c-28 44-48 94-97 133"/>
   </g>
-  <use xlink:href="#cheuveux2003" transform="matrix(-1,0,0,1,1660,0)"/>
-</g>
-<g id="yeux_2003" transform="translate(114,229)">
+  <use transform="matrix(-1,0,0,1,1660,0)" xlink:href="#g"/>
+ </g>
+ <g transform="translate(114,229)">
   <circle cx="217" cy="291" r="13"/>
   <circle cx="393" cy="291" r="13"/>
-</g>
-<path id="bouche_2003" d="m 369,693 c 10,15 10,17 20,22 10,5 20,8 30,8 10,0 20,-3 30,-8 10,-5 20,-13 20,-22 l -100,0 z"/>
-
-<g id="tete2011" transform="translate(-473,-217)">
-  <use xlink:href="#tete2014" transform="translate(-471,217)"/>
-  <g id="cheuveux2011">
-    <path d="m 1630,750 c -20,54 -40,92 -90,120"/>
-    <path d="m 1640,664 c -20,64 -50,106 -100,150"/>
-    <path d="m 1668,592 c -30,40 -50,104 -100,136"/>
-    <path d="m 1740,503 c -40,2 -60,8 -90,40"/>
+ </g>
+ <path id="h" d="m369 693c10 15 10 17 20 22s20 8 30 8 20-3 30-8 20-13 20-22h-100z"/>
+ <g id="c" transform="translate(-473,-217)">
+  <use transform="translate(-471,217)" xlink:href="#b"/>
+  <g id="f">
+   <path d="m1630 750c-20 54-40 92-90 120"/>
+   <path d="m1640 664c-20 64-50 106-100 150"/>
+   <path d="m1668 592c-30 40-50 104-100 136"/>
+   <path d="m1740 503c-40 2-60 8-90 40"/>
   </g>
-  <use xlink:href="#cheuveux2011" transform="matrix(-1,0,0,1,3660,0)"/>
-</g>
-<g id="yeux_2011" transform="translate(53,232)">
+  <use transform="matrix(-1,0,0,1,3660,0)" xlink:href="#f"/>
+ </g>
+ <g transform="translate(53,232)">
   <circle cx="1200" cy="280" r="16"/>
   <circle cx="1400" cy="280" r="16"/>
-</g>
-<ellipse id="bouche_2011" cx="1355" cy="708" rx="36" ry="28"/>
-
-<g id="tete2014" transform="translate(-524,-207)">
-  <use xlink:href="#tete2017" transform="translate(-407,207)"/>
-  <g id="cheuveux2014">
-    <path d="m 2700,522 c 0,0 -40,-7 -60,46 -10,52 -20,65 -80,132"/>
-    <path d="m 2620,762 c -20,54 -40,92 -90,120"/>
+ </g>
+ <ellipse cx="1355" cy="708" rx="36" ry="28"/>
+ <g id="b" transform="translate(-524,-207)">
+  <use transform="translate(-407,207)" xlink:href="#a"/>
+  <g id="e">
+   <path d="m2700 522s-40-7-60 46c-10 52-20 65-80 132"/>
+   <path d="m2620 762c-20 54-40 92-90 120"/>
   </g>
-  <use transform="matrix(-1,0,0,1,5640,0)" id="use4384" xlink:href="#cheuveux2014"/>
-</g>
-<rect id="bouche_2014" transform="matrix(0.967,-0.254,0.285,0.958,0,0)" x="2845" y="1515" height="19" width="108"/>
-<g id="yeux_sceptiques" transform="translate(-740,233)">
-  <path id="oeuil_sceptique" d="m 3850,278 c 20,-6 50,2 60,18 -10,9 -40,-1 -60,-18 z"/>
-  <use xlink:href="#oeuil_sceptique" transform="matrix(-1,0,0,1,7940,0)"/>
-</g>
-
-<g id="tete2017" transform="translate(-280,-217)">
-  <ellipse id="crane" style="stroke-width:7" ry="300" rx="200" cy="771" cx="3510"/>
-  <g style="stroke-width:4" transform="translate(3230,441)">
-    <path d="m 114,257 c 17,-47 89,-49 123,-30 51,32 -16,116 -60,114 -34,2 -72,-42 -63,-84 z"/>
-    <g transform="matrix(-1,0,0,1,559,0)">
-      <path d="m 114,257 c 17,-47 89,-49 123,-30 51,32 -16,116 -60,114 -34,2 -72,-42 -63,-84 z"/>
-    </g>
-    <path d="m 221,220 116,1"/>
-    <path d="m 254,248 50,0"/>
+  <use transform="matrix(-1,0,0,1,5640,0)" xlink:href="#e"/>
+ </g>
+ <rect transform="matrix(.967 -.254 .285 .958 0 0)" x="2845" y="1515" width="108" height="19"/>
+ <g id="yeux_sceptiques" transform="translate(-740,233)">
+  <path id="oeuil_sceptique" d="m3850 278c20-6 50 2 60 18-10 9-40-1-60-18z"/>
+  <use transform="matrix(-1,0,0,1,7940,0)" xlink:href="#oeuil_sceptique"/>
+ </g>
+ <g id="a" transform="translate(-280,-217)">
+  <ellipse id="crane" cx="3510" cy="771" rx="200" ry="300" stroke-width="7"/>
+  <g transform="translate(3230,441)" stroke-width="4">
+   <path d="m114 257c17-47 89-49 123-30 51 32-16 116-60 114-34 2-72-42-63-84z"/>
+   <g transform="matrix(-1,0,0,1,559,0)">
+    <path d="m114 257c17-47 89-49 123-30 51 32-16 116-60 114-34 2-72-42-63-84z"/>
+   </g>
+   <path d="m221 220 116 1"/>
+   <path d="m254 248h50"/>
   </g>
   <g id="narines">
-    <circle cx="3490" cy="825" r="5"/>
-    <circle cx="3530" cy="825" r="5"/>
+   <circle cx="3490" cy="825" r="5"/>
+   <circle cx="3530" cy="825" r="5"/>
   </g>
-  <g id="cheuveux2017">
-    <path d="m 3340,611 c -20,63 -50,109 -100,150"/>
-    <path d="m 3320,681 c -20,58 -40,103 -90,140"/>
-    <path d="m 3310,741 c -20,51 -40,94 -90,120"/>
+  <g id="d">
+   <path d="m3340 611c-20 63-50 109-100 150"/>
+   <path d="m3320 681c-20 58-40 103-90 140"/>
+   <path d="m3310 741c-20 51-40 94-90 120"/>
   </g>
-  <use xlink:href="#cheuveux2017" transform="matrix(-1,0,0,1,7020,0)"/>
-</g>
-<g id="yeux_2017" transform="translate(-302,223)">
-  <path id="oeuil_colere" d="m 2490,293 c 20,-13 50,-14 60,0 -10,12 -40,12 -60,0 z"/>
-  <use xlink:href="#oeuil_colere" transform="matrix(-1,0,0,1,5200,0)"/>
-</g>
-<use xlink:href="#bouche_2003" transform="matrix(1,0,0,-1,1880,1430)"/>
-
-<path id="RIP" d="m 4190,600 0,-49 c 0,-60 20,-147 90,-147 60,0 90,107 90,177 l 0,60 z m 0,0 -420,177 190,50 410,-186 z" style="stroke-width:6px;stroke-linejoin:round"/>
-
+  <use transform="matrix(-1,0,0,1,7020,0)" xlink:href="#d"/>
+ </g>
+ <g transform="translate(-302,223)">
+  <path id="oeuil_colere" d="m2490 293c20-13 50-14 60 0-10 12-40 12-60 0z"/>
+  <use transform="matrix(-1,0,0,1,5200,0)" xlink:href="#oeuil_colere"/>
+ </g>
+ <use transform="matrix(1,0,0,-1,1880,1430)" xlink:href="#h"/>
+ <path id="RIP" d="m4190 600v-49c0-60 20-147 90-147 60 0 90 107 90 177v60zl-420 177 190 50 410-186z" stroke-linejoin="round" stroke-width="6px"/>
 </svg>
