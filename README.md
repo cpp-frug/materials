@@ -26,8 +26,8 @@ Quel types de contenu ?
 - En langue française de préférence (les autres langues ne sont pas interdites, mais le C++FRUG essaye de promouvoir les contenus les plus appropriés pour la communauté C++ francophone)
 
 
-Réduire les fichiers SVG
-------------------------
+Les fichiers SVG
+----------------
 
 Les logiciels d'édition d'image SVG (inkscape) ajoutent des nombreuses balises et autres attrubut SVG dans les fichiers. Le script `scour` permet de nettoyer et réduire les fichiers SVG. Le code source est disponible sur GitHub : https://github.com/scour-project/scour
 
@@ -42,6 +42,10 @@ Les logiciels d'édition d'image SVG (inkscape) ajoutent des nombreuses balises 
 
 Le détail des options est disponible avec `scour --help`.
 
+### Pas de SVG compressé
+
+Utiliser des fichiers au format texte (et non pas binaire) est plus simple (édition en ligne des fichiers, diff de deux versions...). Donc, de préférence des fichiers SVG non compressés.
+
 
 Licence
 -------
@@ -53,11 +57,11 @@ Se référer au document en question pour connaître la licence précise (souven
 
 Quelques idées de réutilisations du contenu de ce dépôt Git :
 
-    * des présentation (Meetup) ;
-    * des dépêches ;
-    * de la formation ;
-    * des articles Wikipédia ;
-    * des articles sur son blog...
+* des présentation (Meetup) ;
+* des dépêches ;
+* de la formation ;
+* des articles Wikipédia ;
+* des articles sur son blog...
  
  
 Liste des tâches
