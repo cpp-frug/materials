@@ -92,26 +92,26 @@ Bjarne impatient pour les Concepts
 Auteur    | Contribution           | License
 ----------|------------------------|----------
 Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
-[thep](https://github.com/thep) | Police de caractères [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) | [GPL v2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL)
-[H. Harendal](https://plus.google.com/118235370450570590297) ([ADF](http://arkandis.tuxfamily.org/)) | Police de caractères [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) inspirée de [Gill Sans](https://fr.wikipedia.org/wiki/Gill_Sans) | GPL v2 (avec exception)
+[thep](https://github.com/thep) | Police de caractères [H. Harendal](https://plus.google.com/118235370450570590297) ([ADF](http://arkandis.tuxfamily.org/)) | Police [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) inspirée de [Gill Sans](https://fr.wikipedia.org/wiki/Gill_Sans) | GPL v2 (avec exception)
+[Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) | [GPL v2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL)
 
 En 2003, Bjarne Stroustrup propose la première version des Concepts.
 Ce "comic strip" imagine alors Bjarne demander
 l'intégration des Concepts pour chacune des versions de C++ :
 C++03, C++11, C++14, C++17... et à chaque fois les Concepts ne sont pas intégrés.
 Sur la dernière vignette, les Concepts sont enfins intégrés (de très nombreuses décennies plus tard).
-Sur cette vignette est dessinée une pierre tombale avec une voix qui sort "Ce n'est pas trop tôt !".
+Sur cette dernière vignette est dessinée une pierre tombale avec une voix qui sort "Ce n'est pas trop tôt !".
 
 La réalisation de cette image s'est basée sur quatre logiciels :
 
 - inkscape (pour le dessin vectoriel initial) ;
-- geany (pour les améliorations manuelles dans le XML générés par Inkscape) ;
-- gimp & potrace (conversion des textes en path).
+- geany (pour les améliorations manuelles dans le XML générés par inkscape) ;
+- gimp & potrace (tentative de conversion des textes en path au lieu d'utiliser inkscape).
 
 Deux versions :
 
-1. L'originale avec les balises `<text>` et donc dépent si les polices Purisa est installée sur la machine ;
-2. Celle avec les balises `<text>` remplacées par des chemins `<path>` donc on ne peut plus éditer les textes.
+1. L'originale avec les balises `<text>` nécessite l'installation des polices de caractères Purisa et Gillius, ainsi que le support des attributs `letter-spacing` et `word-spacing` ([firefox ne le supporte pas](https://bugzilla.mozilla.org/show_bug.cgi?id=371787), du moins pas en 2016) ;
+2. Celle avec les balises `<text>` remplacées par des chemins `<path>` (10 foix plus volumineuse, mais les `<path>` de mêmes caractères ne sont pas réutilisés). 
 
 ![C++ Concepts et Bjarne (version originale avec les balises text)](http://cpp-frug.github.io/materials/images/cpp-concepts-bjarne-original.svg)
 
