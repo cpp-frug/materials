@@ -20,16 +20,16 @@ Quel types de contenu ?
 -----------------------
 
 - Permettre la réutilisation (utiliser une licence libre, CC-BY-SA, copyleft...) ;
-- Les images sont les bienvenus, de préférence au format SVG si c'est du dessin (clipart) ;
-- Les `git clone` n'appréciant pas les fichier trop volumineux, merci de ne pas ajouter une vidéo de 2Go par exemple (à moins que cela ne pose pas de problème technique et donc merci d'expliquer comment gérer les fichiers volumineux avec GitHub...) ;
-- Les documents textes de préférence au format Markdown (on accepte quand même les fichier tex, mais si on pouvait les convertir en Markdown avec un CSS associé se serait cool) ;
-- En langue française de préférence (les autres langues ne sont pas interdites, mais le C++FRUG essaye de promouvoir les contenus les plus appropriés pour la communauté C++ francophone)
+- Les documents textes de préférence au format Markdown (les fichier `.tex .rst .ascidoc .pdf ...` sont acceptés, mais il est également possible de les convertir en Markdown avec `pandoc` par exemple et de fornir un CSS si besoin) ;
+- En langue française de préférence (les autres langues ne sont pas interdites, mais C++FRUG essaye de promouvoir la communauté C++ francophone) ;
+- Les images sont les bienvenus, de préférence au format SVG si c'est du dessin (clipart), sinon au format JPEG (et WebP) ;
+- Les `git clone` n'appréciant pas les fichier trop volumineux, merci de ne pas ajouter une vidéo de 2Go par exemple (à moins que cela ne pose pas de problème technique et donc merci d'expliquer comment gérer les fichiers volumineux avec GitHub...).
 
 
 Les fichiers SVG
 ----------------
 
-Les logiciels d'édition d'image SVG (inkscape) ajoutent des nombreuses balises et autres attrubut SVG dans les fichiers. Le script `scour` permet de nettoyer et réduire les fichiers SVG. Le code source est disponible sur GitHub : https://github.com/scour-project/scour
+Les logiciels d'édition d'image SVG (e.g. inkscape) produisent des fichiers SVG verbeux dont de nombreuses balises et attrubuts ne sont pas nécessaires à l'affichage. Le script `scour` permet de nettoyer et réduire les fichiers SVG (https://github.com/scour-project/scour).
 
 ### Installation
 
@@ -44,8 +44,44 @@ Le détail des options est disponible avec `scour --help`.
 
 ### Pas de SVG compressé
 
-Utiliser des fichiers au format texte (et non pas binaire) est plus simple (édition en ligne des fichiers, diff de deux versions...). Donc, de préférence des fichiers SVG non compressés.
+La compression `gzip` d'un fichier SVG peut se faire de deux façons : (1) entre le serveur web et le navigateur ; (2) directement dans le dépôt Git (avec par exemple la commande `gzip --keep --no-name --best image.svg ; mv image.svg.gz image.svgz`). Nous déconseillons cette seconde façon pour plusieurs raisons :
 
+1. Les navigateurs Firefox et Chrome/Chromium ne supportent pas le format SVGZ ;
+2. Git compresse déjà très bien les fichiers textes (contrairement aux fichiers binaires) - SVG étant un fichier texte XML ;
+3. Le format texte permet d'avantage de possibilités (édition des fichiers via l'interface web, diff de deux versions...) ;
+4. Les fichiers SVG contiennent des `<metadata>` pouvant contenir les information de droit d'auteur et licence d'utilisation et sont plus faciles à lire en mode non compressé.
+
+### Copyright et licence
+
+Utiliser la balise `<metadata>` pour indiquer le copyright et la licence :
+
+```xml
+ <title>Bjarne Stroustrup s'impatiente pour l'intégration des Concepts au standard C++</title>
+ <metadata  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:RDF  xmlns:cc="http://creativecommons.org/ns#">
+   <cc:Work xmlns:dc="http://purl.org/dc/elements/1.1/"
+    rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-concepts-bjarne-original.svg">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Oliver H</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:language>fr</dc:language>
+    <dc:date>2016</dc:date>
+    <cc:license  rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+   </cc:Work>
+   <cc:License   rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <cc:permits  rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits  rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits  rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+```
 
 Licence
 -------
