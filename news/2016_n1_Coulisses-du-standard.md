@@ -274,11 +274,6 @@ Généralement, les spécifications techniques sont composées de deux parties�
 * la première partie donne les motivation du changement (l’avantage d’avoir telle fonctionnalité dans le C++ avec des exemples de code) ;
 * la seconde partie liste toutes les modifications à appliquer au standard C++ en cours de rédaction (au _draft_).
 
-[![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0][CppVisImg]][CppVisWeb]
-    
-[CppVisImg]: http://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg
-[CppVisWeb]: http://www.flickr.com/photos/dominicspics/785982209
-
 Numérotation des documents
 ==========================
     
@@ -311,6 +306,11 @@ Année| Numéro  | Titre | Révision
 Remarquons le changement de nommage pour la révision de 2016. Le nouveau nommage **`PxxxxRx`** a été mis en place en septembre 2015. Le **P** signifie en anglais _**P**aper_. Progressivement, les **`PxxxxRx`** doivent remplacer les **`Nxxxx`**. L’avantage est de conserver le même numéro **`xxxx`** pour toutes les révisions du document.
     
 Comme en C++, on commence par compter la première **R**évision à partir de **`R0`**. L’exemple ci‐dessus est un cas particulier : **`R0`** est bien la première révision du nouveau format, mais la quatrième révision des documents _A Module System for C++_.
+
+[![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0][CppVisImg]][CppVisWeb]
+    
+[CppVisImg]: http://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg
+[CppVisWeb]: http://www.flickr.com/photos/dominicspics/785982209
 
 Defect Report (DR)
 ==================
