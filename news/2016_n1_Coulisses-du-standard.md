@@ -171,7 +171,16 @@ Comme la plupart des documents publiés par l’ISO, la mention de droit d’aut
     
 Cette position est la même pour les autres langages gérés par l’ISO (Fortran, C…). Mais aussi pour [Java](https://docs.oracle.com/javase/specs/jls/se8/html/jls-0-front.html), [C#](https://github.com/KvanTTT/CSharp-Minifier/blob/master/CSharp%20Language%20Specification.docx) et de nombreux autres.
     
-Dans la pratique, cela ne gène pas les développeurs de ces langages. Ce type de mention empêche juridiquement la reproduction du standard (même un paragraphe ou un code d’exemple). Des sites qui respectent à la lettre le droit d’auteur, comme Wikipédia, refusent de contenir la reproduction même partielle d’un tel document. D’autres sites, comme _stackoverflow_, sont [plus pragmatiques](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard).
+Dans la pratique, cela ne gène pas les développeurs de ces langages. Ce type de mention empêche juridiquement la reproduction du standard (même un paragraphe ou un code d’exemple). Des sites qui respectent à la lettre le droit d’auteur, comme Wikipédia, refusent de contenir la reproduction même partielle d’un tel document.
+    
+D’autres sites, comme _stackoverflow_, sont [plus pragmatiques](http://stackoverflow.com/questions/2693199/do-destructors-have-names-according-to-the-standard). Ces sites se basent sur le *Fair use* dans la jurisprudence des États-Unis, dont voici un extrait de l'[article Wikipédia](https://fr.wikipedia.org/wiki/Fair_use#Port.C3.A9e_du_copyright) :
+    
+> *Le fait de se servir d'un texte existant sous copyright comme matériel de base apportant des éléments factuels n'est pas interdit. Il faut simplement remettre les informations en forme, et surtout compléter.*
+>    
+> - *Dès lors que l'article d'origine ne représente plus une part significative de l'œuvre, et que l'œuvre ne représente plus une part significative de l'article, il n'y a plus de lien évident de copyright (on tombe rapidement dans la zone des « citations », licites).*
+> - *Par ailleurs, les informations de type « scientifique » sont dans le domaine public, ou couvertes par des brevets, ou par des secrets professionnels, mais pas par le « copyright ».*
+>    
+> *Les faits peuvent donc être librement copiés, dès lors que l'assemblage de faits (qui, en tant qu'assemblage, peut constituer une œuvre) n'est pas servilement transposé.*
     
 Notons que d’autres langages de programmation ont des spécifications libres :
     
