@@ -8,11 +8,11 @@ Les coulisses du standard C++
 
 Auteurs |[olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [Davy Defaud](https://linuxfr.org/users/davy78), [ZeroHeure](https://linuxfr.org/users/andrianarivony), [Benoît Sibaud](https://linuxfr.org/users/oumph), [tankey](https://linuxfr.org/users/tankey), [M5oul](https://linuxfr.org/users/m5oul) et [Anthony Jaguenaud](https://linuxfr.org/users/capello)
 --------|------------------------------
-License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
+Licence | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/les-coulisses-du-standard-cpp
 Date    | 2016-08-08T09:10:16+02:00 (publication sur LinuxFr.org)
 Tags    | c++, c++14 et c++17
-Score   | 84
+Score   | 100
 
 
 Le C++ a bientôt la quarantaine et pourtant très actif en ce moment avec la finalisation de la prochaine version C++17. Profitons‐en pour faire le point avec une série d’articles sur le C++. Cette première dépêche nous dévoile la face cachée du C++, et donc peut intéresser tous les lecteurs _LinuxFr.org_. :-)
@@ -31,7 +31,7 @@ Le C++ a bientôt la quarantaine et pourtant très actif en ce moment avec la fi
 * [Dépôt Git officiel du standard C++ en cours de rédaction](https://github.com/cplusplus/draft/)
 * [CppReference, wiki libre (CC-BY SA 3.0 et GFDL) pour la documentation C et C++](http://fr.cppreference.com/w/Accueil)
 * [Dépêche 2012 par nazcafan : Codeurs, traducteurs, CppReference a besoin de vous](https://linuxfr.org/news/codeurs-traducteurs-cppreference-a-besoin-de-vous)
-* [Journal 2016 par serge_sans_paille : [C++14 ] Expressions template pour les nuls](https://linuxfr.org/users/serge_ss_paille/journaux/c-14-expressions-template-pour-les-nuls)
+* [Journal 2016 par serge_sans_paille : [C++14] Expressions template pour les nuls](https://linuxfr.org/users/serge_ss_paille/journaux/c-14-expressions-template-pour-les-nuls)
 
 ----
 
@@ -85,7 +85,9 @@ Naissance d’un nouveau langage
     
 Durant les années 80, les nouvelles fonctionnalités qui sont progressivement intégrées au tout nouveau C++ provoque un schisme entre les fans du C classique et les enthousiastes du C++.
 
-![Bjarne Stroustrup](https://upload.wikimedia.org/wikipedia/commons/d/da/BjarneStroustrup.jpg)
+| Bjarne Stroustrup dans les années 90
+|----------------------------------------
+| [![Bjarne Stroustrup](https://upload.wikimedia.org/wikipedia/commons/d/da/BjarneStroustrup.jpg)](https://commons.wikimedia.org/wiki/File:BjarneStroustrup.jpg)
 
 Création du comité de normalisation C++
 =======================================
