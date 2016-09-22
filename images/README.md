@@ -92,8 +92,8 @@ Bjarne impatient pour les Concepts
 Auteur    | Contribution           | License
 ----------|------------------------|----------
 Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
-[thep](https://github.com/thep) | Police de caractères [H. Harendal](https://plus.google.com/118235370450570590297) ([ADF](http://arkandis.tuxfamily.org/)) | Police [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) inspirée de [Gill Sans](https://fr.wikipedia.org/wiki/Gill_Sans) | GPL v2 (avec exception)
-[Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) | [GPL v2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL)
+[H. Harendal](https://plus.google.com/118235370450570590297) ([ADF](http://arkandis.tuxfamily.org/)) | Police [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) inspirée de [Gill Sans](https://fr.wikipedia.org/wiki/Gill_Sans) | GPL v2 (avec exception)
+[thep](https://github.com/thep) | Police de caractères [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) | [GPL v2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL)
 
 En 2003, Bjarne Stroustrup propose la première version des Concepts.
 Ce "comic strip" imagine alors Bjarne demander
