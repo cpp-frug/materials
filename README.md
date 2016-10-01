@@ -19,11 +19,11 @@ Comment contribuer ?
 Quel types de contenu ?
 -----------------------
 
-- Permettre la réutilisation (utiliser une licence libre, CC-BY-SA, copyleft...) ;
-- Les documents textes de préférence au format Markdown (les fichier `.tex .rst .ascidoc .pdf ...` sont acceptés, mais il est également possible de les convertir en Markdown avec `pandoc` par exemple et de fornir un CSS si besoin) ;
+- Les documents textes de préférence au format Markdown (`.md`). Bien sûr les autres formats `.tex .rst .ascidoc .pdf ...` sont acceptés. Nous pourrons toujours proposer une alternative en Markdown en utilisant un convertisseur comme `pandoc`. ;
 - En langue française de préférence (les autres langues ne sont pas interdites, mais C++FRUG essaye de promouvoir la communauté C++ francophone) ;
-- Les images sont les bienvenus, de préférence au format SVG si c'est du dessin (clipart), sinon au format JPEG (et WebP) ;
-- Les `git clone` n'appréciant pas les fichier trop volumineux, merci de ne pas ajouter une vidéo de 2Go par exemple (à moins que cela ne pose pas de problème technique et donc merci d'expliquer comment gérer les fichiers volumineux avec GitHub...).
+- Les images sont les bienvenues, de préférence au format SVG si c'est du dessin (clipart), sinon au format JPEG (et WebP) ;
+- Les `git clone` n'appréciant pas les fichier trop volumineux, merci de ne pas ajouter une vidéo de 2Go par exemple (à moins que cela ne pose pas de problème technique et donc merci d'expliquer comment gérer les fichiers volumineux avec GitHub...) ;
+- Permettre la réutilisation (utiliser une licence libre, CC-BY-SA, copyleft...).
 
 
 Les fichiers SVG
@@ -90,6 +90,10 @@ Ce présent fichier Markdown est sous licence [CC BY-SA 4.0](http://creativecomm
 
 Les différents documents présents dans ce dépôt Git sont également sous licence libre.  
 Se référer au document en question pour connaître la licence précise (souvent CC-BY-SA).
+
+
+Réutilisation
+-------------
 
 Quelques idées de réutilisations du contenu de ce dépôt Git :
 
