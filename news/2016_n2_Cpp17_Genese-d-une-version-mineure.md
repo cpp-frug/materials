@@ -1,12 +1,5 @@
-
-| Pour contribuer à ce document, merci de lire le [`README.md`](README.md)
-|-------------------------------------------------------------------------
-
 C++17 - Genèse d'une version mineure
 ====================================
-
-
-
 
 --------|------------------------------
 Auteurs |[olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [Davy Defaud](https://linuxfr.org/users/davy78), [ZeroHeure](https://linuxfr.org/users/andrianarivony), [Benoît Sibaud](https://linuxfr.org/users/oumph), [tankey](https://linuxfr.org/users/tankey), [Storm](https://linuxfr.org/users/storm--2), [M5oul](https://linuxfr.org/users/m5oul) et [Anthony Jaguenaud](https://linuxfr.org/users/capello)
@@ -43,12 +36,9 @@ La série de dépêches C++ continue. Cette seconde dépêche nous amène dans l
 
 ----
 
-[LogoCppFRUG]:        http://upload.wikimedia.org/wikipedia/commons/9/91/Cpp-Francophonie.svg
-[LogoCppFRUG_sur_WP]: http://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg
 
 Dépêches C++
 ============
-
 
 Cette dépêche est la deuxième d’une série de cinq dépêches sur le C++. La première dépêche [*Les coulisses du standard C++*](https://linuxfr.org/news/les-coulisses-du-standard-cpp) a été publiée fin août dernier.
 
@@ -70,7 +60,6 @@ Cette dépêche est la deuxième d’une série de cinq dépêches sur le C++. L
 [logoCppFRUG_WP]: http://commons.wikimedia.org/wiki/File:Cpp-Francophonie.svg
 
 
-
 Partage
 =======
     
@@ -85,6 +74,7 @@ Après publication, les dépêches sont ﬁgées sur _LinuxFr.org_. Alors, pour 
 5. [_Bilan et attentes pour C++20_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md).
     
 Avec toutes nos contributions réunies, nous proﬁterons davantage de nos découvertes individuelles et nous oﬀrirons un contenu CC BY-SA de qualité pour créer, par exemple, des supports de formation _(Meetups)_, des articles sur d’autres blogs… Par contre, pour le moment nous ne pouvons pas encore en faire proﬁter Wikipédia : notre dépêche étant en CC BY-SA version 4.0 et Wikipédia encore sur la [version précédente](https://fr.wikipedia.org/wiki/Wikipédia:Citation_et_réutilisation_du_contenu_de_Wikipédia) :-/
+
 
 Deux sommets pour délimiter le périmètre C++17
 ==============================================
@@ -102,15 +92,16 @@ Mais à Oulu, un phénomène naturel a eu un impact direct sur la productivité�
 
 **Voici à quoi ressemble le soleil à une heure du matin au mois de juin** (ici c'est à Tromsø à 600 km de Oulu) [![Le soleil n'est pas encore couché à une heure du matin dans la ville de Tromsø à 600 km de Oulu](https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Gr%C3%B8nnegata_Troms%C3%B8.jpg/1024px-Gr%C3%B8nnegata_Troms%C3%B8.jpg)](https://commons.wikimedia.org/wiki/File:Gr%C3%B8nnegata_Troms%C3%B8.jpg)
 
+
 Des racines C++17 très profondes
 ================================
-
-
+    
 Les membres du comité de standardisation C++ n’avaient pas pu intégrer toutes les fonctionnalités qu’ils souhaitaient dans **C++11** car cela aurait retardé d’autant plus la publication de cette version (déjà que la publication était prévue avant 2010…). Les membres avaient donc décidé d’intégrer les fonctionnalités _mineures_ dans **C++14** et de continuer à mûrir les fonctionnalités _majeures_ pour **C++17**.
 
 Par conséquent, **C++17** n’a pas commencé à être construit au lendemain de la publication de **C++14**, mais bien avant : certaines parties datent du début des années 2000 !
 
 ![Analogie entre les fonctionnalités promises pour C++17 et les promesses des candidats à la présidentielle de 2017 en France](http://cpp-frug.github.io/materials/images/cpp-president-2017.svg)
+
 
 Plus de 10 ans pour intégrer les fonctionnalités
 ================================================
@@ -121,8 +112,7 @@ Effectivement, certaines fonctionnalités sont dans le tuyau depuis plus de dix 
 * [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) depuis [2004](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html).
 
 Par contre, d’autres fonctionnalités _majeures_ sont toujours dans le tuyau :
-
-
+    
 * [Concepts](http://en.cppreference.com/w/cpp/language/constraints) depuis [2003](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1510.pdf) ;
 * [Réflexion](https://fr.wikipedia.org/wiki/R%C3%A9flexion_%28informatique%29) statique (à la compilation) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1775.pdf) ;
 * [Intervalles *(Ranges)*](http://www.boost.org/libs/range/index.html) depuis [2005](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1871.html) ;
@@ -137,28 +127,29 @@ Comme quoi, le comité de standardisation prend son temps pour bien s’assurer 
 
 Mais pourquoi autant de temps ?
 ===============================
+    
 Avant de répondre à cette question, voici un petit exercice. Il faut trouver la correction pour que le code C++ suivant compile :
-
+    
 ```cpp
 struct MaClasse
 {
-    template <class T>
-    void f() { }
+  template <class T>
+  void f() { }
 };
 
 template <class T>
 void maFonction (T& t)
 {
-    t.f<int>(); //expected primary-expression before 'int'
+  t.f<int>();
+  //  ^~~ expected primary-expression before 'int'
 }
 
 int main()
 {
-    MaClasse maclasse;
-    maFonction(maclasse);
+  MaClasse maclasse;
+  maFonction(maclasse);
 }
 ```
-
 
 Quelques compilateurs en ligne pour tester tes idées :
     
@@ -178,7 +169,7 @@ Le message d'erreur du compilateur GCC :
     $ g++ enigme.cpp
     enigme.cpp: In function ‘void maFonction(T&)’:
     enigme.cpp:10:12: error: expected primary-expression before ‘int’
-         t.f<int>(); //error: expected primary-expression before 'int'
+         t.f<int>();
              ^~~
     enigme.cpp:10:12: error: expected ‘;’ before ‘int’
     
@@ -191,7 +182,7 @@ Allez, deux indices : Primo, c’est du vieux **C++98** (ne cherchez pas midi �
     
     $ clang++ enigme.cpp                                                    
     enigme.cpp:10:7: error: use 'template' keyword to treat 'f' as a dependent template name
-        t.f<int>(); //error: expected primary-expression before 'int'
+        t.f<int>();
           ^
           template
     
@@ -210,30 +201,29 @@ Il manquait juste le mot clef `template` à un endroit un peu inattendu :
 ```cpp
 struct MaClasse
 {
-    template <class T>
-    void f() { }
+  template <class T>
+  void f() { }
 };
 
 template <class T>
 void maFonction (T& t)
 {
-    t.   template   f<int>();   // Oh le piège !
+  t.  template  f<int>();
+  // Oh le piège !
 }
 
 int main()
 {
-    MaClasse maclasse;
-    maFonction(maclasse);
+  MaClasse maclasse;
+  maFonction(maclasse);
 }
 ```
 
 Cette syntaxe permet de dire au compilateur que `T::f()` est `template` quelque soit le type `T` (plus précisément, ici en absence du mot clef `typename`, le compilateur sait que c’est un appel à une [fonction `template`](http://fr.cppreference.com/w/cpp/language/function_template)). En eﬀet, sans le mot clef `template` dans `maFonction()`, le compilateur ne peut pas être sûr que `T::f()` soit une fonction `template`. Le compilateur pourrait seulement s’en douter et le vériﬁer lors de l’instanciation de `maFonction<MaClasse>()`…
 
-
 Avouons que ce n’est pas très joli joli, non ?
 
 Ceux qui ont décidé de cette syntaxe doivent s’en mordre les doigts.
-
 
 Mais revenons en à notre question, **Mais pourquoi autant de temps ?**
 L’hypothèse est que ce type de décisions du passé a traumatisé les membres du comité de normalisation du C++ : *« ne recommençons pas les mêmes erreurs, ne nous précipitons pas, prenons le temps de bien mûrir les nouvelles fonctionnalités… »*
@@ -256,6 +246,7 @@ Donc, **C++1z** est utilisé par les sceptiques pour désigner la version qui su
     
 Les membres du comité de normalisation utilisent le terme **C++17** (et non pas _C++1z_). Soyons confiants, **C++1z** verra bien le jour en 2017 (et non pas en 2018, ni après).
 
+
 La suite…
 =========
     
@@ -265,6 +256,7 @@ Merci de nous donner un coup de main à la rédaction des prochaines dépêches 
     
 * se rendre sur l’espace de [rédaction _LinuxFr.org_](https://linuxfr.org/redaction) ;
 * ou sur le [dépôt Git *materials*](https://github.com/cpp-frug/materials/tree/gh-pages/Cxx17) du C++FRUG (Groupe des Utilisateurs C++ FRancophones).
+
 
 Droit d’auteur, licences, remerciements
 =======================================
@@ -289,6 +281,5 @@ Et merci à ceux qui permettent de réutiliser leur travail :
 * L’image [*"C++ sur un fond de type Matrix"*](http://webblaster48.deviantart.com/art/CODE-C-114384381) a été réalisée par [Marek Dekys (anciennement webblaster48)](http://marek-dekys.deviantart.com/) et publiée sous licence [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/) en 2009 ;
 * La police de caractères [Purisa](https://github.com/tlwg/fonts-tlwg/commits/master/tlwg/Purisa.sfd) utilisée par deux des illustrations est maintenue par [Theppitak Karoonboonyanan](https://github.com/thep) sous licence [GPL-2](https://github.com/tlwg/fonts-tlwg/blob/master/GPL) ;
 * La police de caractères [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) utilisée par la dernière illustration est de [H. Harendal](https://plus.google.com/118235370450570590297) [(Arkandis Digital Foundry)](http://arkandis.tuxfamily.org/) sous licence GPL v2 avec une exception permettant d’inclure la police de caractères dans un document sans que ce document doive lui aussi être sous licence compatible GPL.
-
     
 Merci d’avance de l’aide apportée sur les prochaines dépêches C++17 en cours de préparation : Micka pour ses exemples *utiles* et AMB007 pour les bogues trouvés dans les codes C++ d’exemple.
