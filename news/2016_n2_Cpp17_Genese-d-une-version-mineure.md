@@ -1,8 +1,8 @@
 C++17 - Genèse d'une version mineure
 ====================================
 
---------|------------------------------
 Auteurs |[olibre](https://github.com/olibre), [duckie](https://github.com/duckie), [rom1v](https://github.com/rom1v), [Oliver H](https://linuxfr.org/users/oliver_h), [cracky](https://linuxfr.org/users/cracky), [Lucas](https://linuxfr.org/users/george), [palm123](https://linuxfr.org/users/palm123), [Adrien Dorsaz](https://linuxfr.org/users/trim), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [Davy Defaud](https://linuxfr.org/users/davy78), [ZeroHeure](https://linuxfr.org/users/andrianarivony), [Benoît Sibaud](https://linuxfr.org/users/oumph), [tankey](https://linuxfr.org/users/tankey), [Storm](https://linuxfr.org/users/storm--2), [M5oul](https://linuxfr.org/users/m5oul) et [Anthony Jaguenaud](https://linuxfr.org/users/capello)
+--------|------------------------------
 Licence | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/c-17-genese-d-une-version-mineure
 Date    | 2016-06-27T00:11:42+02:00 (création de la dépêche sur LinuxFr.org)
