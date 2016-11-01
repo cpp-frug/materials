@@ -1,11 +1,10 @@
 | Pour contribuer à ce document, merci de lire le [`README.md`](README.md)
 |-------------------------------------------------------------------------
 
-
 Nouveautés C++17 au niveau du langage
 =====================================
 
-Auteurs | Oliver H, olibre, Benoît Sibaud, Lucas, cracky, Martin Peres, RyDroid, Adrien Jeser, gorbal, Storm, palm123, khivapia et Segfault
+Auteurs | Oliver H, olibre, Adrien Jeser, Benoît Sibaud, Lucas, cracky, Martin Peres, RyDroid, Adrien Jeser, gorbal, Storm, palm123, khivapia et Segfault
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/nouveautes-c-17-au-niveau-du-langage
@@ -38,96 +37,82 @@ L'ajout des fonctionnalités au **C++17** a été clôturé. Cette troisième d�
 Série de dépêches C++
 =====================
     
-Cette dépêche LinuxFr.org est figée après publication. Par contre, la corriger, la  compléter est possible sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/master/Cxx17/Cxx17-Features.md). Ainsi la mise en commun des contributions individuelles permet de l'enrichissement mutuel et la réutilisation d'un contenu libre (CC-BY-SA) pour créer, par exemple, un article Wikipédia C++17 en français.
+Cette dépêche *LinuxFr.org* fait partie d'un série de dépêches disponibles également sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md).
     
-Résumé des dépêches pour les décideurs pressés :
+Résumé de chacune des dépêches :
 
-1. Les coulisses du C++
------------------------
+1. Les coulisses
+----------------
     
-La spécification C++ n'est pas libre et [son téléchargement coûte 180 €](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64029). Alors, les développeurs C++ utilisent un [brouillon _(draft)_ gratuit](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf). Par contre, le C++ est bien un [standard ouvert](https://fr.wikipedia.org/wiki/Format_ouvert) : pas de brevets logiciels ni de propriété intellectuelle. Mais de toutes façons, la plupart des développeurs C++, même expérimentés, n'ont jamais lu le standard. Car ce sont surtout [des livres](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) et plus récemment des [sites](http://fr.cppreference.com/) qui sont utilisés.
-
+La première dépêche, [*Les coulisses du standard C++*](https://linuxfr.org/news/les-coulisses-du-standard-cpp) est très longue mais passionnante. Elle présente la naissance du langage, le comité de normalisation, les brouillons du standard, la procédure de normalisation, le spécifications technique (*TS*), les correctifs (*DR*) publiés en parallèle... bref, des aspects souvent méconnus des développeurs C++.
 
 2. Genèse du C++17
 ------------------
     
-Les deux réunions du comité de standardisation C++ pour définir le périmètre fonctionnel du prochain C++17.
+La seconde dépêche, [*C++17, Genèse d’une version mineure*](https://linuxfr.org/news/c-17-genese-d-une-version-mineure) dresse le périmètre fonctionnel du prochain C++ en rappelant les deux [réunions du comité de standardisation C++](http://www.open-std.org/jtc1/sc22/wg21/docs/meetings) de 2016 et la longue évolution de ce langage de programmation. 
 
 3. Changements C++17 au niveau du langage
 -----------------------------------------
     
-Nettoyage, correction, évolution, sucre syntaxique :
-    
-* [Déduction des arguments `template` lors de la déclaration](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) pour ne pas avoir besoin des fonctions d'aide `make_*()` ;
-* [Déstructuration du retour de fonction](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) `char x; int y; std::tie(x,y) = fonction();` ~~> `auto [ x, y ] = fonction();` ;
-* [`template<auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html) pour éviter la redondance `decltype(variable)` dans `MaClasse<decltype(variable),variable>` ;
-* [`namespace` imbriqué](http://en.cppreference.com/w/cpp/language/namespace) `namespace aaa { namespace bbb { ... } }` --> `namespace aaa::bbb { ... }` ;
-* [`if constexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html) pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ;
-* Lambda `constexpr` et pouvant capturer `*this` ;
-* [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) pour faire un peu comme `for(init;cond;inc)` ;
-* [Variables `inline`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf) (après les [variables `template`](http://en.cppreference.com/w/cpp/language/variable_template) du C++14) ;
-* ...
+Cette troisième dépêche [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) concernant la base du langage C++17 : Déduction des arguments `template` du constructeur comme `std::array a{1,2,3}` ; Déstructuration du retour de fonction comme `auto [x,y]=fonction();` au lieu de `char x; int y; std::tie(x,y)=fonction();` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué comme `namespace aaa::bbb { ... }` au lieu de `namespace aaa { namespace bbb { ... } }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
 
-Par contre, aucune fonctionnalité majeure n'est présente dans C++17 :
-    
-* [Concepts](http://fr.cppreference.com/w/cpp/concept) ;  
-* [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) pour remplacer les `#include <string>` par des `import std.string;`) ;
-* [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ;
-* [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ;
-* [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ;
-* [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
+Par contre, les fonctionnalités majeures en cours d'élaboration ne sont pas encore suffisamment matures pour être publiées avec C++17 : [Concepts](http://fr.cppreference.com/w/cpp/concept) ; [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) qui propose des `import std.string;` en alternative des `#include <string>` ; [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ; [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ; [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ; [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
 
-
-3. Les changements au niveau de la bibliothèque standard
+4. Les changements au niveau de la bibliothèque standard
 --------------------------------------------------------
     
-Les changements qui peuvent bousculer notre vie de développeur :
+Quelques détails de la quatrième dépêche :
     
-* Les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) (si multitâche performant).
-* [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (pour utiliser les méthodes de std::string sur des const char* sans faire de ré-allocation inutile).
-    
-Les transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) :
+* Les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms) (si multitâche performant) ;
+* [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) (pour utiliser les méthodes de std::string sur des const char* sans faire de ré-allocation inutile) ;
+* Les transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) :
                
 `boost::*` | `std::*`
 -----------|---------
-[`filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem) | -> [`filesystem`](http://en.cppreference.com/w/cpp/filesystem)
-[`variant`](http://www.boost.org/doc/libs/1_61_0/libs/variant) | -> [`variant`](http://en.cppreference.com/w/cpp/utility/variant)
-[`any`](http://www.boost.org/doc/libs/1_61_0/libs/any) | -> [`any`](http://en.cppreference.com/w/cpp/utility/any)
-[`optional`](http://www.boost.org/doc/libs/1_61_0/libs/optional) | -> [`optional`](http://en.cppreference.com/w/cpp/utility/optional)
-[`math`](http://www.boost.org/doc/libs/1_61_0/libs/math) | -> [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)
+[`boost::filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem) | -> [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem)
+[`boost::variant`](http://www.boost.org/doc/libs/1_61_0/libs/variant) | -> [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant)
+[`boost::any`](http://www.boost.org/doc/libs/1_61_0/libs/any) | -> [`std::any`](http://en.cppreference.com/w/cpp/utility/any)
+[`boost::optional`](http://www.boost.org/doc/libs/1_61_0/libs/optional) | -> [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional)
+[`boost::math`](http://www.boost.org/doc/libs/1_61_0/libs/math) | -> [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)
     
-Par contre, impasse sur des fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf). Nous aurions aussi aimé que le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) intègre plus tôt le C++.
+Par contre, les fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ou le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) seront publiées pour une autre version du C++.
 
-4. Bilan C++17 et attentes pour C++20
+5. Bilan C++17 et attentes pour C++20
 -------------------------------------
     
 Alors, version mineure ou majeure ?
     
 * Les améliorations sont appréciables, mais aucune fonctionnalité majeure au niveau du langage.
-* Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs.
+* Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs (ce qui n'est pas le cas de C++17).
+    
+Que penser du C++, des alternatives ?
+Et la suite pour le C++ ?
 
 Partager
 ========
     
-Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites donner un coup de main pour les dépêches suivantes ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction). Un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder.
+Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites donner un coup de main pour les dépêches suivantes ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction). Un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder.
     
 De nombreux lecteurs *LinuxFr.org* ont beaucoup contribué à cette dépêche pour détailler au mieux l’ensemble des nouvelles fonctionnalités. Malgré les ambiguïtés/erreurs/fôtes/maladresses résiduelles, cette dépêche restera figée sur le site *LinuxFr.org*.
     
-Par contre, tu peux continuer à enrichir ce contenu sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news). C’est donc sur ce dépôt [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news) que tu trouveras les versions de ces dépêches les plus à jour :
+Par contre, tu peux continuer à enrichir ce contenu sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news). C’est donc sur ce dépôt [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news) que tu trouveras les versions de ces dépêches les plus à jour :
     
-1. [_Les coulisses du standard C++_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n1_Coulisses-du-standard.md) ;
-2. [_Genèse d’une version mineure_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n2_Cpp17_Genese-d-une-version-mineure.md) ;
-3. [_Nouveautés du langage_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) ;
-4. [_Nouveautés de la bibliothèque standard_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) ;
+1. [_Les coulisses du standard C++_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n1_Coulisses-du-standard.md) ;
+2. [_Genèse d’une version mineure_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n2_Cpp17_Genese-d-une-version-mineure.md) ;
+3. [_Nouveautés du langage_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) ;
+4. [_Nouveautés de la bibliothèque standard_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) ;
 5. [_Bilan et attentes pour C++20_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md).
     
-Avec toutes nos contributions réunies, nous proﬁterons davantage de nos découvertes individuelles et nous offrirons un contenu CC BY-SA de qualité pour créer, par exemple, des supports de formation _(Meetups)_, des publications sur d’autres blogs, des ~~articles Wikipédia~~ Ah zut, pas pour le moment : notre dépêche utilise la version 4 de la licence CC BY-SA et Wikipédia la [version précédente](https://fr.wikipedia.org/wiki/Wikipédia:Citation_et_réutilisation_du_contenu_de_Wikipédia) :-/
+Avec toutes nos contributions réunies, nous proﬁterons davantage de nos découvertes individuelles et nous offrirons un contenu CC BY-SA de qualité pour créer, par exemple, des supports de formation _(Meetups)_, des publications sur d’autres blogs, des articles Wikipédia dès que [Wikipédia passera de la licence CC-BY-SA-3.0 à la CC-BY-SA-4.0](https://meta.wikimedia.org/wiki/Terms_of_use/Creative_Commons_4.0) (le contenu de cette dépêche utilise la version la CC-BY-SA-4.0).
 
 Compatibilité avec le langage **C**
 ===================================
 
 
-**C++17** est maintenant [basé sur **C11** au lieu de **C99**](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r2.html) + **C Unicode TR**.
+[[P0063]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html) C++17 se réfère à C11 au lieu de C99
+-----------------------------------------
+    
+**C++17** est maintenant [basé sur **C11** au lieu de **C99**](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html) + **C Unicode TR**.
     
 Ajout des en-têtes (_headers_) `<stdalign.h>` et `<uchar.h>`. On ignore les en-têtes **C11** `<stdatomic.h>`, `<threads.h>` et `<stdnoreturn.h>`. [Dépréciation](https://fr.wikipedia.org/wiki/D%C3%A9pr%C3%A9ciation_(informatique)) des en-têtes `<ccomplex>`, `<ctgmath>`, `<cstdalign>`, `<cstdbool>`, `<complex.h>`, `<stdalign.h>`, `<stdbool.h>` et `<tgmath.h>`.
     
@@ -139,7 +124,7 @@ Suppression
 ===========
 
 
-[[P0001R1]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) Mot clé `register`
+[[P0001]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) Mot clé `register`
 ---------------------------------------------------------------------------------------------------------
 
 Pour rappel en C, le mot-clé `register` indique que la variable devrait être stockée dans un registre du processeur. On gagne en performance par rapport à ceux qui sont en mémoire, mais à plusieurs contraintes. 
@@ -164,14 +149,13 @@ int main(int argc, char *argv[]) {
 
 Son utilisation est déconseillée en C++11, plutôt que retirée à l’époque, car il ne rentrait pas en conflit avec une réaffectation, contrairement à `auto`. L’une des raisons énoncées pour la conservation est la compatibilité avec le C, en particulier avec les arguments des fonctions. Pourtant, son usage n’est pas pertinent en C++. Il est redondant avec d’autres fonctionnalités et les restrictions de `register` ne peuvent être transcrites en C++. Plutôt que d’essayer de résoudre les différences avec le C, il devient un mot-clé réservé pour un usage futur.
 
-[[P0002R1]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) Incrémentation sur un booléen
------------------------------
-
+[[P0002]](https://wg21.link/p0002) Incrémentation sur un booléen
+----------------------------------------------------------------
 
 Dans les temps anciens du C, le type booléen n’excitait pas. Les entiers — int — les remplaçaient. Zéro pour faux et les autres valeurs pour vrai. Le passage du C au C++ avait nécessité de garder une comptabilité avec le vieux code. Ne pouvant implémenter correctement la décrémentation, car produisant un comportement indéfini quand il est supérieur à 1. Il a été décidé de rendre illégale l’incrémentation d’un booléen, déjà dépréciée en C++98.
 
-[[P0004R1]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0004r1.html)  Alias de iostreams
-------------------
+[[P0004]](https://wg21.link/p0004) Alias de `iostreams`
+------------------------------------------------------
 
 Obsolète en C++98, les alias de iostreams sont proscrits, pour simplifier la norme. Ils sont avantageusement remplacés par les masques de bits `os_base::iostate`, `ios_base::openmode`, … Les changements à apporter aux codes existants sont minimes.
 
@@ -197,8 +181,8 @@ Obsolète en C++98, les alias de iostreams sont proscrits, pour simplifier la no
 
 
 
-[[N4086]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html) Digraphes et trigraphes
------------------------
+[[N4086]](https://wg21.link/n4086) Suppression des trigraphes
+-------------------------------------------------------------
 
 Certaines entreprises maintiennent du très vieux code C/C++ contenant des [digraphes et trigraphes](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#Removal_of_trigraphs). Ces digraphes/trigraphes peuvent être remplacés par les caractères correspondant avec un script. Mais ces entreprises préfèrent que les compilateurs conservent cette complexité et que les développeurs aient des surprises quand ils utilisent certains caractères.
 
@@ -229,10 +213,10 @@ Corrections
 ===========
 
 
-[[N4261]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html) Conversion des tableaux de pointeurs
----------------------------------------------------------------------------------------------------------- 
+[[N4261]](https://wg21.link/n4261) Conversion des tableaux de pointeurs
+----------------------------------------------------------------------- 
 
-Le brouillon N4261 complète la section 4.4 (conversion de qualification) sur la conversion d’un tableau de pointeurs constants/volatiles vers un autre type similaire.
+Le *TS* N4261 complète la section 4.4 (conversion de qualification) sur la conversion d’un tableau de pointeurs constants/volatiles vers un autre type similaire.
 
 ```cpp
 double *tableau_2d[2][3];
@@ -244,9 +228,10 @@ const double  * const (*tableau_2d_ptr3)[3] = tableau_2d_ptr2; // Légal en C++1
 ```
 
 
-[[P0136R1]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) Héritage des constructeurs
---------------------------------------------------------------------------------------------------
- Certaines règles d’héritage des constructeurs via `using` ont été modifiées dans un soucis de cohérence et de simplification. Concrètement, plusieurs cas d’héritages précédemment interdits sont maintenant autorisés.
+[[P0136]](https://wg21.link/p0136) Héritage des constructeurs
+-------------------------------------------------------------
+    
+Certaines règles d’héritage des constructeurs via `using` ont été modifiées dans un soucis de cohérence et de simplification. Concrètement, plusieurs cas d’héritages précédemment interdits sont maintenant autorisés.
 
 SFINAE sur les constructeurs hérités fonctionne de manière fiable :
 
@@ -323,8 +308,8 @@ C c(0); // était ambigu, maintenant accepté
 c.f(0); // accepté (pas de changements)
 ```
 
-[[P0145R2]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r2.pdf) Évaluation stricte des expressions
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[[P0145]](https://wg21.link/p0145) Évaluation stricte des expressions
+---------------------------------------------------------------------
 
 Héritées du C, les sous-expressions sont indéfiniment séquencées. Ce choix amène à des comportements incertains, notamment lorsqu’on utilise le même objet.
 
@@ -373,85 +358,81 @@ Cette absence de spécification est dommageable avec les pratiques courantes, co
 
 
 
-Dans l’exemple ci-dessus, l’assertion peut — selon le compilateur — échouer. Les expressions annotées alphabétiquement sont dites séquencées, dans l’ordre suivant : A, B, C, D.
+Dans l’exemple ci-dessus, l’assertion peut — selon le compilateur — échouer. Les expressions annotées alphabétiquement sont dites séquencées, dans l’ordre suivant : A, B, C, D.
 
-TODO : À continuer
-
-* Les boucles `for` *"each"* supportent des conteneurs ayant des
-  [`begin()` et `end()` retournant des types différents mais comparables](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
-  Cette correction est nécessaire à l'implémentation des [Intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf).
-  Cela permet également de supporter d'avantage de [valeurs sentinelles](https://fr.wikipedia.org/wiki/Valeur_sentinelle) ;
-
-
-
-* `noexcept` rejoint les [types systèmes](http://en.cppreference.com/w/cpp/language/type) afin de pouvoir distinguer les types de [pointeur de fonction](http://en.cppreference.com/w/cpp/language/pointer#Pointers_to_functions) `noexcept` des autres.
-  Ainsi [C++17 peut interdir la conversion de pointeurs de fonction `throw(quelqchose)` vers ceux de fonctions `noexcept`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html), mais l'inverse est toujours possible. Le code suivant est valide en **C++14**, mais ne compile plus avec *C++17** :
+[[P0184]](https://wg21.link/p0184) Généralisation  des boucles pour gérer les *Intervalles (Ranges)*
+-----------------------------------------------------
     
-    ```cpp
-    void (*p)() throw(int);
-    void (**pp)() noexcept = &p; //Erreur C++17
+Cette petite *TS* permet aux boucles `for` *"each"* de gérer des conteneurs ayant des [`begin()` et `end()` retournant des types différents mais comparables](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
     
-    struct S
-    {
-      typedef void (*p)();
-      operator p();
-    };
-    void (*q)() noexcept = S(); //Erreur C++17
-    
-    template<class T>
-    void f(T*, T*) {}
-    void g1() noexcept {}
-    void g2()          {}
-    f(g1, g2);             // Erreur C++17
-    ```
- 
+Cette correction est nécessaire à l'implémentation des [Intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf). Cela permet également de supporter d'avantage de [valeurs sentinelles](https://fr.wikipedia.org/wiki/Valeur_sentinelle).
 
-[[N4424]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf) Variables `inline`
--------------------------------------------------------------------------------------------------
+[[P0012]](https://wg21.link/p0012) Intégrer les spécifications d'exception dans le type système
+-----------------------------------------------------------------------------------------------
+    
+`noexcept` devient un [type système](http://en.cppreference.com/w/cpp/language/type) afin de pouvoir distinguer les types de [pointeur de fonction](http://en.cppreference.com/w/cpp/language/pointer#Pointers_to_functions) `noexcept` des autres.
+    
+Ainsi [C++17 peut interdire la conversion de pointeurs de fonction `throw(quelqchose)` vers ceux de fonctions `noexcept`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html), mais l'inverse est toujours possible. Le code suivant est valide en **C++14**, mais ne compile plus avec **C++17** :
+    
+```cpp
+void (*p)() throw(int);
+void (**pp)() noexcept = &p; //Erreur C++17
+
+struct S
+{
+  typedef void (*p)();
+  operator p();
+};
+void (*q)() noexcept = S(); //Erreur C++17
+
+template<class T>
+void f(T*, T*) {}
+void g1() noexcept {}
+void g2()          {}
+f(g1, g2);                 //Erreur C++17
+```
+
+[[P0386]](http://wg21.link/p0386) Variables `inline`
+----------------------------------------------------
 
 Les variables `inline` — comme les fonctions `inline` — peuvent être définies dans plusieurs unités de traduction (_translation units_). Son utilisation suggère au compilateur de substituer l'appel à la variable par son contenu. Elles sont adéquates pour remplacer les macros non-triviales. Plus subtil, on peut contourner la règle de la définition unique (_One Definition Rule_).
 
 ```cpp
-
 struct A
 {
-    static int variable_inline;
+  // Déclaration de la variable inline
+  static int v;
 };
-
-inline int A::variable_inline = 0; // On peut maintenant appeler A::variable_inline
-
-/* Ou plus simplement */
-struct A
+    
+// Définition de la variable inline
+inline int A::v = 0;
+    
+// Ou plus simplement
+struct B
 {
-    static inline int variable_inline = 0; 
+  static inline int v = 0; 
 };
-
-// Les constexpr de variables sont implicitement inline
-const int constexpr celerite_lumiere = 299'792'458;
-
-
-
+    
+// Les variables constexpr sont implicitement inline
+constexpr const int celerite_lumiere = 299'792'458;
 ```
 
-
-
-[À titre informatif](https://framagit.org/Cpp17/variable_inline), voici un exemple des différences d'instructions — x86_64 — avec et sans variable `inline`.
-
+Par curiosité, [générons le code assembleur](https://framagit.org/Cpp17/variable_inline) x86_64 de l'exemple ci-dessus [avec](https://framagit.org/Cpp17/variable_inline/blob/master/avec_inline.cc) et [sans variable `inline`](https://framagit.org/Cpp17/variable_inline/blob/master/sans_inline.cc). Le compilateur `clang++ -S --std=c++1z -O0` optimise davantage le code avec variable `inline` en supprimant les lignes suivantes :
+    
 ```nasm
--	.type	_ZN1A27variable_inline_sans_inlineE,@object # @_ZN1A27variable_inline_sans_inlineE
--	.section	.rodata,"a",@progbits
--	.globl	_ZN1A27variable_inline_sans_inlineE
--	.p2align	2
--_ZN1A27variable_inline_sans_inlineE:
--	.long	42                      # 0x2a
--	.size	_ZN1A27variable_inline_sans_inlineE, 4
+	.type	_ZN1A27variable_inline_sans_inlineE,@object
+	.section	.rodata,"a",@progbits
+	.globl	_ZN1A27variable_inline_sans_inlineE
+	.p2align	2
+_ZN1A27variable_inline_sans_inlineE:
+	.long	42
+	.size	_ZN1A27variable_inline_sans_inlineE, 4
 ```
 
-[[P0035R3]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0035r3.html) Allocation mémoire dynamique des données
---------------------------------------------------------------------------------------------------------------------------
+[[P0035]](http://wg21.link/p0035) Allocation mémoire dynamique des données
+--------------------------------------------------------------------------
 
-
-"over-aligned"* C++11 a permis de préciser l’alignement mémoire d'une structure avec le mot clef `alignas`
+C++11 a permis de préciser l’alignement mémoire d'une structure avec le mot clef `alignas`
     
 ```cpp
 class alignas(16) maclasse{
@@ -479,132 +460,184 @@ Avec C++17 des surcharges des opérateurs `new` et `delete` permettent de préci
 
 Si `std::align_val_t(alignof(maclasse))` est supérieur à `__STDCPP_DEFAULT_NEW_ALIGNMENT__`, c'est la nouvelle surcharge de `new` qui sera utilisée.
 
-* [Garantie](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0135r0.html) de [court-circuitage du constructeur par copie](https://en.wikipedia.org/wiki/Copy_elision) ;
-     
-      TODO: Identifier la partie du TS qui a été acceptée
-    *  r1 accepted, not r0
-    * Finally!
-    * Not in all cases, but distingushes syntax where you are "just creating something" that was called elision, from "genuine elision".
+[[P0135]](http://wg21.link/p0135) Court-circuitage du constructeur par copie
+------------------------------------------------------
+
+C++17 garantie le [court-circuitage du constructeur par copie](https://en.wikipedia.org/wiki/Copy_elision). Mais pas dans tous les cas : ce *TS* distingue le cas général *"elision"* du cas spécifique *"genuine elision"*.
 
 
-
-* [Forward progress guarantees (FPG)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0296r1.html)
-  (voir aussi [FPGs for parallel algorithms](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0299r0.html)) ;
-    
-      TODO: Comprendre... Est-ce que cela veut dire "the implementation may not stall threads forever" ?
-
-
-* [`Littéraux de caractère UTF-8`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html) ;
-    
 ```cpp
+int n = 0; // compte le nombre d'appel au constructeur par copie
 
-const char une_chaine_de_caractere_utf8 = u8'U';
-const char une_chaine_de_caractere_utf16 = u8'学'; // Erreur
+struct A
+{
+  explicit A(int) {}
+  A(const A&) { ++n; }
+};
 
+int main()
+{
+  A a = A( A( A( A(42) ) ) );
+  return n; // toujours 0 avec C++17
+}           // pas de garantie avant C++17
 ```
 
-* Réécriture des paragraphes a propos des [exception et `throw`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4285.html)
+[[P0296]](https://wg21.link/p0296) Forward progress guarantees (FPG) et [[P0299]](https://wg21.link/p0299) FPGs for parallel algorithms
+---------------------
     
-    TODO: Vérifier l'intérêt de ces changements
-
-
-* La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/experimental/feature_test#Language_Features#Function_Macros) vérifie si l'en-tête `<filesystem>` est disponible pour inclusion ;
+C'est a propos du verrouillage des fils d’exécution *(thread lock)* et des [situation de compétition](https://fr.wikipedia.org/wiki/Situation_de_comp%C3%A9tition) *(race condition)*.
     
-    ```cpp
-    #if    __has_include(<filesystem>)
-    #  include <filesystem>
-    #elif  __has_include(<experimental/filesystem>)
-    #  include <experimental/filesystem>
-    #elif __has_include(<boost/filesystem.hpp>)
-    #  include <boost/filesystem.hpp>
-    #else
-    #  error Ne trouve aucune en-tête filesystem
-    #endif
-    ```
+    TODO    À compléter...
+
+[[N4267]](https://wg21.link/n4267) Littéraux de caractère UTF-8 `u8`
     
-    ```cpp
-    #if __has_include(<windows.h>)
-    #  include <windows.h>
-       LONGLONG ticks1nano = []() {
-         LARGE_INTEGER freq;
-         QueryPerformanceFrequency(&freq);
-         return freq.QuadPart / 1000'000;
-       }();
-       LONGLONG nanosecondes() {
-         LARGE_INTEGER time;
-         QueryPerformanceCounter(&time);
-         return time.QuadPart/ticks1nano;
-       }
-    #elif __has_include(<time.h>)
-    #  include <time.h>
-       auto nanosecondes() {
-          struct timespec ts;
-          clock_gettime(CLOCK_MONOTONIC,&ts);
-          return 1000'000'000 * ts.tv_sec + ts.tv_nsec;
-       }
-    #else
-    #  error Ne trouve ni <windows.h> ni <time.h>
-    #endif
-    ```
+```cpp
+// Déjà disponible avant C++17
+const char     narrow =  'a';
+const char16_t ucs2   = u'é';
+const char32_t ucs4   = U'ï';
+const wchar_t  wide   = L'ô';
+    
+// Avec C++17
+const char     utf8   = u8'ù';
+const char     utf16  = u8'学'; // Erreur
+```
+
+[[N4285]](https://wg21.link/n4285) Réécriture de paragraphes concernant les exceptions
+--------------------------------------------------------------------------------------
+    
+Quand un paragraphe n'est clair, il est judicieux de le réécrire.
+
+[[P0061]](https://wg21.link/p0061) `__has_include` pour C++17
+-------------------------------------------------------------
+    
+La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/preprocessor/include) vérifie si l'en-tête `<filesystem>` est disponible pour inclusion ;
+    
+```cpp
+#if    __has_include(<filesystem>)
+#  include <filesystem>
+#elif  __has_include(<experimental/filesystem>)
+#  include <experimental/filesystem>
+#elif __has_include(<boost/filesystem.hpp>)
+#  include <boost/filesystem.hpp>
+#else
+#  error Ne trouve aucune en-tête filesystem
+#endif
+```
 
 
-* Correction des évaluations constantes pour tout argument `template` n'étant pas un type [_(Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Les types **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
+    
+Allons plus loin avec un autre exemple :
+     
+```cpp
+#if __has_include(<windows.h>)
+#  include <windows.h>
+   LONGLONG ticks1nano = []() {
+     LARGE_INTEGER freq;
+     QueryPerformanceFrequency(&freq);
+     return freq.QuadPart / 1000'000;
+   }();
+   LONGLONG nanosecondes() {
+     LARGE_INTEGER time;
+     QueryPerformanceCounter(&time);
+     return time.QuadPart/ticks1nano;
+   }
+#elif __has_include(<time.h>)
+#  include <time.h>
+   auto nanosecondes() {
+      struct timespec ts;
+      clock_gettime(CLOCK_MONOTONIC,&ts);
+      return 1000'000'000 * ts.tv_sec + ts.tv_nsec;
+   }
+#else
+#  error Ne trouve ni <windows.h> ni <time.h>
+#endif
+```
+
+[[n4268]](https://wg21.link/n4268) Évaluation constante pour les arguments `template` n'étant pas un type
+---------------------------------------------------------------------------
+    
+Correction des évaluations constantes pour tout argument `template` n'étant pas un type [_(Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Les types **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
          
-    Type     | C++14  | C++17
-    ---------|--------|-------
-    Pointeur|`&variable`, tableau, fonction référant un objet statique ou `nullptr` | évaluation d'une adresse constante d'un objet complet statique ou d'une fonction, ou `nullptr`
-    Référence|objet ou fonction référant un objet statique| évaluation d'un *glvalue* constant référant un objet complet statique ou d'une fonction
-    Pointeur-vers-membre|`&S::statique` ou `nullptr`|toutes expressions constantes
-    Intégral `bool char int` ...|toutes expressions constantes|pareil
-    `enum`|toutes expressions constantes|pareil
-    `nullptr_t`|toutes expressions constantes|pareil
+Type     | C++14  | C++17
+---------|--------|-------
+Pointeur|`&variable`, tableau, fonction référant un objet statique ou `nullptr` | évaluation d'une adresse constante d'un objet complet statique ou d'une fonction, ou `nullptr`
+Référence|objet ou fonction référant un objet statique| évaluation d'un *glvalue* constant référant un objet complet statique ou d'une fonction
+Pointeur-vers-membre|`&S::statique` ou `nullptr`|toutes expressions constantes
+Intégral `bool char int` ...|toutes expressions constantes|pareil
+`enum`|toutes expressions constantes|pareil
+`nullptr_t`|toutes expressions constantes|pareil
     
-    ```cpp
-    // Cette classe permet de tester
-    // les expressions constantes
-    template<int* EXPRESSION_CONSTANTE>
-    class Test
-    { };
+```cpp
+// Cette classe permet de tester
+// les expressions constantes
+template<int* EXPRESSION_CONSTANTE>
+class Test
+{ };
     
-    // La fonction constexpr getPtr() retourne
-    // un pointeur vers un objet statique
-    // (static storage duration object)
-    int entier = 42;
-    constexpr int* getPtr()     {return &entier;}
-    constexpr int* getNullptr() {return nullptr;}
-    Test<&entier>        ok_entier;
-    Test<getPtr()>       ok_Cxx17; //KO C++14
-    Test<getNullptr()>   ok_nullptr;
+// La fonction constexpr getPtr() retourne
+// un pointeur vers un objet statique
+// (static storage duration object)
+int entier = 42;
+constexpr int* getPtr()     {return &entier;}
+constexpr int* getNullptr() {return nullptr;}
+Test<&entier>        ok_entier;
+Test<getPtr()>       ok_Cxx17; //KO C++14
+Test<getNullptr()>   ok_nullptr;
     
-    // L'expression &obj.statique est un
-    // pointeur-vers-membre d'un objet statique
-    struct Str
-    { int membre; static int statique; };
-    Str obj;
-    Test<&Str::membre>   ko_ptr_non_statique;
-    Test<&Str::statique> ok_ptr_statique;
-    Test<&obj.statique>  ok_cxx17; //KO C++14
+// L'expression &obj.statique est un
+// pointeur-vers-membre d'un objet statique
+struct Str
+{ int membre; static int statique; };
+Str obj;
+Test<&Str::membre>   ko_ptr_non_statique;
+Test<&Str::statique> ok_ptr_statique;
+Test<&obj.statique>  ok_cxx17; //KO C++14
     
-    // Le pointeur vers un élément de tableau
-    // statique ne semblent pas être supportés
-    int   tableau[5];
-    Test<&tableau[2]>    ko_adresse_element;
-    ```
-
-
+// Le pointeur vers un élément de tableau
+// statique ne semblent pas être supportés
+int   tableau[5];
+Test<&tableau[2]>    ko_adresse_element;
+```
 
 Sucre syntaxique
 ================
 
 
-* **[`namespace`](http://en.cppreference.com/w/cpp/language/namespace) [`aa::bb { }`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4230.html)** correspond à **`namespace aa { namespace bb { } }`** ;
-
-* [`static_assert(condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf) avec un seul paramètre. Avant, seule la fonction [`static_assert(condition, message)`](http://fr.cppreference.com/w/cpp/language/static_assert) était disponible avec le second paramètre `message` obligatoire ;
-
-Constante virgule flottante en hexadécimal
-------------------------------------------
+[[N4230]](https://wg21.link/n4230) `namespace` imbriqué
+-------------------------------------------------------
     
-Le [TS P0245 *Hexadecimal floating literals*](http://wg21.link/p0245) amendé à la réunion de Jacksonville en février 2016 permet d'exprimer les [virgule flottante (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d'avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d'autres langages : C99, Java 5 (2004)...
+Le **[`namespace`](http://en.cppreference.com/w/cpp/language/namespace) **`aa::bb { }`** correspond à **`namespace aa { namespace bb { } }`**.
+    
+```cpp
+// Avant C++17
+namespace aa {
+namespace bb { 
+}
+}
+
+// Avec C++17
+namespace aa::bb {
+}
+```
+
+[[N3928]](https://wg21.link/n3928) Extension du `static_assert()`
+-----------------------------------------------------------------
+    
+C++17 permet d'écrire `static_assert(condition)` avec un seul paramètre. Avant, seule la fonction [`static_assert(condition, message)`](http://fr.cppreference.com/w/cpp/language/static_assert) était disponible avec le second paramètre `message` obligatoire.
+    
+```cpp
+// avant C++17 il était courant de ne pas fournir un message vide
+static_assert(sizeof(int) == 4, "");
+
+// avec C++17
+static_assert(sizeof(int) == 4);
+```
+
+[[P0245]]((http://wg21.link/p0245)) Constante hexadécimale pour la virgule flottante 
+------------------------------------------------------------------------------------
+    
+La réunion de Jacksonville en février 2016 a amendé ce *TS* qui permet d'exprimer les [virgule flottante (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d'avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d'autres langages : C99, Java 5 (2004)...
     
 La représentation hexadécimale a l'avantage d'être celle du registre (mémoire binaire). Attention à la notation décimale des virgules flottantes. Par exemple, `0.1f` ne vaut pas exactement `0.1` mais `0.10000000149...`. Un petit exemple :
     
@@ -817,16 +850,26 @@ std::cout << d;
     ```
 
 
-* [Déduction des arguments `template` par le constructeur](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html) comme le font déjà les fonctions `template` ;
+[[P0091]](https://wg21.link/p0091) Déduction des arguments `template` du constructeur
+-------------------------------------------------------------------------------------
     
-    ```cpp
-    using std;
-    array<int,3> avantCpp17{4,5,6};
-    array        avecCpp17 {4,5,6};
+Le compilateur déduit les paramètres `template` du constructeur de classe `template`, un peu comme les fonctions `template`. Cela devient encore plus simple que les fonctions d'aide `make_***()`.
     
-    // Avec fonction d'aide template
-    decltype(auto) a = make_array(4,5,6);
-    ```
+```cpp
+using std;
+array<int,3> avantCpp17{4,5,6};
+array        avecCpp17 {4,5,6};
+    
+// Avant C++17 : les fonctions d'aide
+decltype(auto) a = make_array(4,5,6);
+    
+pair p(42, 3.14); // Avant  pair<int, double> p(42, 3.14);
+tuple t(1, 2, 3); // Avant  auto t = make_tuple(1, 2, 3);
+```
+
+
+    
+Toutes les fonctions d'aide ne vont pas être remplaçables car certains cas peut être ambigus.
 
 * [`template<auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html)
   permet de remplacer `MaClasse<decltype(entier),entier>`
@@ -1037,6 +1080,6 @@ int main (int argc,
 
 
 
-Alors, chères lectrices et chers lecteurs de *LinuxFr.org* ?
-Séduits ? Conquis ? Impatients de coder en C++17 ?
-La tentation est grande d’épater ses collègues avec du code qu’ils ne comprennent plus… non ?
+Alors, chères lectrices et chers lecteurs de *LinuxFr.org* ?
+Séduits ? Conquis ? Impatients de coder en C++17 ?
+La tentation est grande d’épater ses collègues avec du code qu’ils ne comprennent plus… non ?
