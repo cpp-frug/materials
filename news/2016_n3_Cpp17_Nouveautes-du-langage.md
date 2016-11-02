@@ -54,7 +54,7 @@ La seconde dépêche, [*C++17, Genèse d’une version mineure*](https://linuxfr
 3. Changements C++17 au niveau du langage
 -----------------------------------------
     
-Cette troisième dépêche [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) concernant la base du langage C++17 : Déduction des arguments `template` du constructeur comme `std::array a{1,2,3}` ; Déstructuration du retour de fonction comme `auto [x,y]=fonction();` au lieu de `char x; int y; std::tie(x,y)=fonction();` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué comme `namespace aaa::bbb { ... }` au lieu de `namespace aaa { namespace bbb { ... } }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
+Cette troisième dépêche [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) du cœur du C++17 : Déduction des arguments `template` du constructeur `std::array a{1,2,3}` ; Décomposition du retour de fonction `auto [x,y]=fonction()` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué `namespace aaa::bbb { ... }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
 
 Par contre, les fonctionnalités majeures en cours d'élaboration ne sont pas encore suffisamment matures pour être publiées avec C++17 : [Concepts](http://fr.cppreference.com/w/cpp/concept) ; [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) qui propose des `import std.string;` en alternative des `#include <string>` ; [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ; [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ; [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ; [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
 
@@ -80,28 +80,29 @@ Par contre, les fonctionnalités majeures très attendues, comme les [intervalle
 5. Bilan C++17 et attentes pour C++20
 -------------------------------------
     
-Alors, version mineure ou majeure ?
+Alors, version mineure ou majeure ? Les améliorations sont appréciables, mais aucune fonctionnalité majeure au niveau du langage. Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs (ce qui n'est pas le cas de C++17). Et C++20 ?
+
+
+6. Faut-il continuer d'apprendre le C++ ?
+-----------------------------------------
     
-* Les améliorations sont appréciables, mais aucune fonctionnalité majeure au niveau du langage.
-* Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs (ce qui n'est pas le cas de C++17).
-    
-Que penser du C++, des alternatives ?
-Et la suite pour le C++ ?
+Cette [sixième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md) compare le C++ aux alternatives et permet de mieux situer l'intérêt du C++ dans le monde sans cesse mouvant de l'informatique.
 
 Partager
 ========
     
-Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites donner un coup de main pour les dépêches suivantes ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction). Un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder.
+Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites donner un coup de main pour les dépêches suivantes ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction) (un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder).
     
-De nombreux lecteurs *LinuxFr.org* ont beaucoup contribué à cette dépêche pour détailler au mieux l’ensemble des nouvelles fonctionnalités. Malgré les ambiguïtés/erreurs/fôtes/maladresses résiduelles, cette dépêche restera figée sur le site *LinuxFr.org*.
+Quelques lecteurs *LinuxFr.org* ont beaucoup contribué à cette dépêche pour détailler au mieux les nouvelles fonctionnalités. Malgré les manques, ambiguïtés et fôtes, cette dépêche restera figée sur le site *LinuxFr.org*.
     
-Par contre, tu peux continuer à enrichir ce contenu sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news). C’est donc sur ce dépôt [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news) que tu trouveras les versions de ces dépêches les plus à jour :
+Par contre, tu peux continuer à enrichir ce contenu sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news). C’est donc sur ce dépôt [Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news) que tu trouveras les versions les plus à jour :
     
-1. [_Les coulisses du standard C++_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n1_Coulisses-du-standard.md) ;
-2. [_Genèse d’une version mineure_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n2_Cpp17_Genese-d-une-version-mineure.md) ;
-3. [_Nouveautés du langage_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) ;
-4. [_Nouveautés de la bibliothèque standard_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) ;
-5. [_Bilan et attentes pour C++20_](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md).
+1. [Les coulisses du standard C++](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n1_Coulisses-du-standard.md) ;
+2. [Genèse d’une version mineure](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n2_Cpp17_Genese-d-une-version-mineure.md) ;
+3. [Nouveautés du langage](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) ;
+4. [Nouveautés de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) ;
+5. [Bilan et attentes pour C++20](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) ;
+6. [Faut-il continuer d'apprendre le C++ ?](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md)
     
 Avec toutes nos contributions réunies, nous proﬁterons davantage de nos découvertes individuelles et nous offrirons un contenu CC BY-SA de qualité pour créer, par exemple, des supports de formation _(Meetups)_, des publications sur d’autres blogs, des articles Wikipédia dès que [Wikipédia passera de la licence CC-BY-SA-3.0 à la CC-BY-SA-4.0](https://meta.wikimedia.org/wiki/Terms_of_use/Creative_Commons_4.0) (le contenu de cette dépêche utilise la version la CC-BY-SA-4.0).
 
@@ -212,6 +213,28 @@ int main(int argc, char *argv[]) {
 Corrections
 ===========
 
+
+[[N4266]](https://wg21.link/n4266) Attributs pour `namespace` et `enum`
+----------------------------------------------------------------------
+    
+Cette *TS* est un correctif de 2014 (un oubli du C++14) qui permet d'appliquer des `[[attributs]]` aux `namespace` et `enum`.
+    
+```cpp
+[[maybe_unused]]
+namespace debug
+{
+enum Couleurs {
+  Rouge,
+  Vert,
+  Web [[deprecated("Ce n'est pas une couleur")]],
+  Bleu
+};
+}
+```
+
+
+    
+L'attribut `[[maybe_unused]]` est une nouveauté du C++17 et est expliqué tout en bas de cette dépêche.
 
 [[N4261]](https://wg21.link/n4261) Conversion des tableaux de pointeurs
 ----------------------------------------------------------------------- 
@@ -489,7 +512,8 @@ C'est a propos du verrouillage des fils d’exécution *(thread lock)* et des [s
     
     TODO    À compléter...
 
-[[N4267]](https://wg21.link/n4267) Littéraux de caractère UTF-8 `u8`
+[[N4267]](https://wg21.link/n4267) Caractère constant UTF-8 `u8`
+---------------------------------------------------------------
     
 ```cpp
 // Déjà disponible avant C++17
@@ -554,7 +578,7 @@ Allons plus loin avec un autre exemple :
 #endif
 ```
 
-[[n4268]](https://wg21.link/n4268) Évaluation constante pour les arguments `template` n'étant pas un type
+[[N4268]](https://wg21.link/n4268) Évaluation constante pour les arguments `template` n'étant pas un type
 ---------------------------------------------------------------------------
     
 Correction des évaluations constantes pour tout argument `template` n'étant pas un type [_(Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Les types **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
@@ -607,7 +631,7 @@ Sucre syntaxique
 [[N4230]](https://wg21.link/n4230) `namespace` imbriqué
 -------------------------------------------------------
     
-Le **[`namespace`](http://en.cppreference.com/w/cpp/language/namespace) **`aa::bb { }`** correspond à **`namespace aa { namespace bb { } }`**.
+Le **[`namespace`](http://en.cppreference.com/w/cpp/language/namespace) `aa::bb { }`** correspond à **`namespace aa { namespace bb { } }`**.
     
 ```cpp
 // Avant C++17
@@ -789,66 +813,113 @@ std::istringstream("0xA.Bp-1") >> std::hexfloat >> d;
 std::cout << d;
 ```
 
-* Déstructuration du retour de fonction [*(Structured bindings)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r2.html) comme `std::tie` mais avec `auto`. S'applique aux `std::tuple`, aux tableaux (comme `std::array`) et aux structures plates (comme `std::pair`).
+[[P0217]](https://wg21.link/p0217) Attaches structurées *(Structured bindings)*
+------------------------------------------------------------------------------
     
-    ```cpp
-    struct S { int a; double b; };
-    S fonction() { return S{5,6}; }
-    auto [ x, y ] = fonction();
-    assert( x == 5 );
-    ```
+La **décomposition du retour de fonction** est limitée aux `std::tuple`, aux tableaux (comme `std::array`) et aux structures plates (comme `std::pair`).
+    
+```cpp
+struct A
+{
+  int  a;
+  bool b;
+  char c;
+};
 
-* [`if(init;condition)` et `switch(init;condition)`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r0.html) comme pour `for(init;cond;inc)`.
-  L'expression **`if(MonType v = truc())`** peut être remplacée par **`if(MonType v = truc(); v)`**.
-    
-    ```cpp
-    // Version verbeuse
-    { // <-- bloc nécessaire pour limiter
-      // la portée des variables locales 
-      const auto paire = map.insert({k,v});
-      auto iterateur   = paire.first;
-      bool inserted    = paire.second;
-      if (inserted)
-        return iterateur;
-    }
-    
-    // Version C++17
-    if (const auto [iterateur, inserted]
-           = map.insert({key,value}); 
-           inserted)
-      return iterateur;
-    ```
+A foo() {
+  return A{42, true, 'c'};
+}
 
-* [`if constexpr`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0128r1.html), initialement [`constexpr_if`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0128r0.html), et encore avant c'était `static_if`. Cette fonctionnalité très attendue va simplifier beaucoup de code générique :
-    
-    ```cpp
-    //__Trois définitions avant C++17__
-    void fonction()
-    { std::cout << std::endl; }
-    
-    template <class T>
-    void fonction (const T& t)
-    { std::cout << t; }
-    
-    template <class T, class... R>
-    void fonction (const T& t, const R&... r)
-    {
-      fonction(t);    // Gère un argument
-      fonction(r...); // Gère le reste
-    }                 // (peut être vide)
-    
-    //__Une seule définition grâce à C++17__
-    template <class T, class... R>
-    void fonction (const T& t, const R&... r)
-    {
-      std::cout << t;    // Gère un argument
-      if constexpr (sizeof...(r))
-        fonction(r...);  // Gère le reste
-      else
-        std::cout << std::endl;
-    }
-    ```
+auto [ x, y ] = foo();
+// Attention, non testé...
 
+assert(x == 42);
+assert(y == true);
+static_assert(std::is_same_v<decltype(x),decltype(A::a)>);
+static_assert(std::is_same_v<decltype(y),decltype(A::b)>);
+```
+
+
+
+Quand la fonction retourne un `std::tuple` (comme le `std::pair`) il était déjà possible d'utiliser `std::tie`. Mais la décomposition est plus commode (sauf pour le `std::ignore`).
+    
+```cpp
+#include <set>
+#include <tuple>
+
+int main()
+{
+  std::set<int> entiers;
+ 
+  // Avant C++17
+  std::set<int>::iterator iter;
+  bool inserted; 
+  std::tie(iter, inserted) = entiers.insert(42);
+  
+  // Avec C++17
+  auto [ it, is_inserted ] = entiers.insert(42);
+}
+```
+
+[[P0305]](https://wg21.link/p0305) Instruction de sélection avec initialiseur
+-----------------------------------------------------------------------------
+    
+Ajout du `init;` dans `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)`. L'expression **`if(MonType v = truc())`** peut être remplacée par **`if(MonType v = truc(); v)`**.
+    
+```cpp
+// Version verbeuse
+{
+  auto paire = map.insert({k,v});
+  auto it       = paire.first;
+  bool inserted = paire.second;
+  if (inserted)
+  {
+    foo(it);
+    return iterateur;
+  }
+}   // <- bloc pour limiter la portée des variables
+
+// Version C++17
+if (auto [it, inserted] = map.insert({k,v}); inserted)
+{
+  foo(it);
+  return iterateur;
+}
+```
+
+
+[[P0292]](https://wg21.link/p0292) `if constexpr`
+------------------------------------------------
+    
+À [l'origine (fin 2011)](https://wg21.link/n3322), c'était `static_if`. Puis renommé en [`constexpr_if`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0128r0.html). Et détaché en deux mots `constexpr if`. Finalement, les deux mots sont inversés `if constexpr`. Cette fonctionnalité va simplifier beaucoup de code générique :
+    
+```cpp
+// Trois définitions nécessaires avant C++17
+void fonction()
+{ std::cout << std::endl; }
+    
+template <class T>
+void fonction (const T& t)
+{ std::cout << t; }
+    
+template <class T, class... R>
+void fonction (const T& t, const R&... r)
+{
+  fonction(t);    // Gère un argument
+  fonction(r...); // Gère le reste
+}
+    
+// Une seule définition grâce à C++17
+template <class T, class... R>
+void fonction (const T& t, const R&... r)
+{
+  std::cout << t;    // Gère un argument
+  if constexpr (sizeof...(r))
+    fonction(r...);  // Gère le reste
+  else
+    std::cout << std::endl;
+}
+```
 
 [[P0091]](https://wg21.link/p0091) Déduction des arguments `template` du constructeur
 -------------------------------------------------------------------------------------
@@ -949,109 +1020,119 @@ Attributs
 =========
 
 
-* Possibilité d'appliquer des [`[[attributs]]` aux `namespace`s et `enum { erator[[s]] }`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html) ;
+Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes) qui complètent les `[[noreturn]]`, `[[carries_dependency]]` et `[[deprecated]]`. Initialement dans une seule TS : [P0068](https://wg21.link/p0068).
     
-    TODO: à vérifier
+* `[[fallthrough]]`,
+* `[[nodiscard]]` et
+* `[[maybe_unused]]`.
 
-
-
-Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes)
-[`[[fallthrough]]`, `[[nodiscard]]` et `[[maybe_unused]]`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf)
-(qui complètent les `[[noreturn]]`, `[[carries_dependency]]` et `[[deprecated]]`) :
-
-
-- **`[[fallthrough]]`** indique au compilateur (ou à l'outil d'analyse de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
+[[P0188]](https://wg21.link/p0188) Attribut `[[fallthrough]]`
+------------------------------------------------------------
+    
+L'attribut **`[[fallthrough]]`** indique au compilateur (ou à l'outil d'analyse statique de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
       
-      ```cpp
-      switch (valeur)
-      {
-        case 1:
-          std::cout <<" valeur 1";
-          break;
-        case 2:
-          std::cout <<" valeur 2";
-          [[fallthrough]]; // pas de break
-                       // => continue avec
-        case 3:        // le case suivant
-          std::cout <<" valeur 2 ou 3";
-          break;
-        case 4:
-          std::cout <<" valeur 4";
-              // ici le break manque
-              // (un oubli du dév. ?)
-              // => Le compilateur peut
-              // afficher un avertissement
-        default:
-          std::cout <<" valeur différente"
-                      " de 1, 2, 3, 4";
-      }
-      ```
+```cpp
+switch (valeur)
+{
+case 1:
+  std::cout <<" valeur 1";
+  break;
+case 2:
+  std::cout <<" valeur 2";
+  [[fallthrough]]; // pas de break
+                   // => continue avec
+case 3:            // le case suivant
+  std::cout <<" valeur 2 ou 3";
+  break;
+case 4:
+  std::cout <<" valeur 4";
+         // ici le break manque
+         // (un oubli du dév. ?)
+         // => Le compilateur avertit
+default:
+  std::cout <<" valeur différente"
+              " de 1, 2, 3, 4";
+}
+```
+
+[[P0189]](https://wg21.link/p0189) Attribut `[[nodiscard]]`
+-----------------------------------------------------------
+    
+L'attribut **`[[nodiscard]]`** indique que la valeur de retour d'une fonction ne doit pas être ignorée. Ce fonctionnent était déjà implémenté par l'extension GNU `__attribute__((warn_unused_result))`.
+    
+```cpp
+// Ancienne version de affiche_division()
+// avec une faille : la division par zéro 
+//void affiche_division (int a)
+//{ std::cout << (42/a); }
+    
+// Nouvelle version
+// Le code de retour doit être
+// pris en compte par l'appelant
+[[nodiscard]]
+bool affiche_division (int a)
+{
+  if (a == 0)
+    return false; // échec
+    
+  std::cout << (42/a);
+  return true;    // succès
+}
+      
+// Mais main() n'a pas été mise à jour !
+int main (int argc, char *argv[])
+{
+  affiche_division(argc-1);
+  // Le compilateur avertit que
+} // le code de retour est ignorée
+```
+
+[[P0212]](https://wg21.link/p0212) Attribut `[[maybe_unused]]`
+--------------------------------------------------------------
+    
+**`[[maybe_unused]]`** [(qui devait s'appeler `[[unused]]`)](https://wg21.link/p0068) permet de supprimer des avertissements _(warning)_ quand une variable, une fonction ou un paramètre de fonction n'est pas utilisé. Notons que la spécification C++ traite de plus en plus des avertissements _(warning)_, auparavant seules les erreurs des compilateurs était traitées.
+    
+```cpp
+[[maybe_unused]]
+void affiche_division(int a)
+{ std::cout << (42/a); }
+    
+int main (int argc, [[maybe_unused]] char *argv[])
+{
+  [[maybe_unused]]
+  bool test = argc % 2;
+  assert(test); // assert() désactivé en
+}               // mode Release (-DNDEBUG)
+    
+// Avant C++17, pour éviter les warnings :
+#ifdef DOXYGEN_PARSING
+#  define DOC_ONLY(x) x
+#else
+#  define DOC_ONLY(x)
+#endif
+    
+#ifdef NDEBUG
+#  define DEBUG_ONLY(x)    // Release
+#else
+#  define DEBUG_ONLY(x) x  // Debug
+#endif
+    
+int main (int argc, char** DOC_ONLY(argv))
+{
+  DEBUG_ONLY(bool impaire = argc % 2);
+  assert(impaire);
+}
+```
 
 
-- **`[[nodiscard]]`** indique que la valeur de retour d'une fonction ne doit pas être ignorée. Ce fonctionnent était déjà implémenté par l'extension GNU `__attribute__((warn_unused_result))`.
-      
-      ```cpp
-      // Ancienne version de affiche_division()
-      // avec une possible division par zéro 
-      // void affiche_division (int a)
-      // { std::cout << (42/a); }
-      
-      // Nouvelle version
-      [[nodiscard]] int affiche_division (int a)
-      {                  // ce code d'erreur
-          if (a == 0)    // doit être récupérée
-              return -1; // par l'appelant
-          
-          std::cout << (42/a);
-          return 0;      // pas de problème
-      }
-      
-      // Mais main() n'a pas été mise à jour !
-      int main (int argc, char *argv[])
-      {
-           affiche_division(argc-1);
-           // Le compilateur peut avertir que
-      }    // le code de retour est ignorée
-      ```
+    
+[Mozilla propose aussi `DebugOnly<T>`](https://developer.mozilla.org/docs/Mozilla/Debugging/DebugOnly%3CT%3E) (plus élégant qu'une macro).
+
+Exemple final
+=============
 
 
-- **`[[maybe_unused]]`** [(qui devait s'appeler `[[unused]]`)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) indique quand une variable peut ne pas être utilisée et permet donc de supprimer des avertissements _(warning)_ inutiles. Cet attribut peut s'appliquer aux fonctions, aux paramètres de fonctions et aux variables.
-      
-      ```cpp
-      [[maybe_unused]] void affiche_division(int a)
-      { std::cout << (42/a); }
-      
-      int main (int argc, [[maybe_unused]] char *argv[])
-      {
-           [[maybe_unused]] bool test = argc % 2;
-           assert(test); // assert() est généralement désactivé 
-      }                  // en mode Release (-DNDEBUG)
-      
-      // Avant, des macros permettaient d'éviter les warnings
-      #ifdef DOXYGEN_PARSING
-      #  define DOC_ONLY(x) x
-      #else
-      #  define DOC_ONLY(x)
-      #endif
-      
-      #ifdef NDEBUG
-      #  define DEBUG_ONLY(x)        // Release
-      #else
-      #  define DEBUG_ONLY(x) x      // Debug
-      #endif
-      
-      int main (int argc, char** DOC_ONLY(argv))
-      {
-           DEBUG_ONLY(bool impaire = argc % 2);
-           assert(impaire);
-      }
-      ```
-      [Mozilla propose aussi `DebugOnly<T>`](https://developer.mozilla.org/docs/Mozilla/Debugging/DebugOnly%3CT%3E) (plus élégant qu'une macro).
-
-
-
-Donc en C++17 nous pourrons écrire:
-
+Donc en C++17 nous pourrons écrire :
 
 ```cpp
 #include <array>
@@ -1083,3 +1164,27 @@ int main (int argc,
 Alors, chères lectrices et chers lecteurs de *LinuxFr.org* ?
 Séduits ? Conquis ? Impatients de coder en C++17 ?
 La tentation est grande d’épater ses collègues avec du code qu’ils ne comprennent plus… non ?
+
+
+Concours
+========
+    
+Proposer dans les commentaires un code source utilisant le maximum des nouveautés du C++17 et pouvant faire croire aux développeurs ne lisant pas *LinuxFr.org* que ce n'est pas du C++.
+    
+Les vainqueurs recevront un autocollant gratuit sur le stand *LinuxFr.org* du [Paris Open Source Summit](http://www.opensourcesummit.paris/) les 16 et 17 novembre. L'auteur de la dépêche peut aussi les envoyer par courrier ~~électronique~~ postal ;-)
+
+
+Commentaires
+============
+    
+La précédente dépêche a été inondée de 227 commentaires de *TrollFr*. C'est bien dommage. Le système de commentaires ne fait qu'attiser nos divergences. Et ne permet malheureusement pas de consolider nos points de vue.
+    
+Cette fois-ci, évitons d'entretenir les *TrollFr*. Ce n'est pas respectueux, ni des auteurs de la dépêche, ni des autres lectrices et lecteurs qui perdent leur temps à lire des arguments qui se répètent et à lire des propos méprisants.
+    
+Si vous voulez vraiment consacrer des heures à rédiger des arguments sur *LinuxFr.org*, alors prenez l'initiative de créer une dépêche collaborative du style *"Faut-il débuter un logiciel prévu en C++ ?"* ou *"Est-il pertinent d'apprendre le C++ aujourd'hui ?"*. Et surtout inviter les auteurs des commentaires à s'exprimer sur cette dépêche. Au moins, il en sortira une construction concise utile à tous. Merci.
+
+
+La suite
+========
+    
+Nous venons de découvrir les nombreuses évolutions au niveau du langage, le cœur du C++. La dépêche suivante nous emmènera au niveau de la bibliothèque standard. À suivre...
