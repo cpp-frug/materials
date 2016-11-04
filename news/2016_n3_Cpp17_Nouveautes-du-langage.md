@@ -1,8 +1,8 @@
 | Pour contribuer à ce document, merci de lire le [`README.md`](README.md)
 |-------------------------------------------------------------------------
 
-Nouveautés C++17 au niveau du langage
-=====================================
+Les nouveautés au cœur du C++17
+================================
 
 Auteurs | Oliver H, olibre, Adrien Jeser, Benoît Sibaud, Lucas, cracky, Martin Peres, RyDroid, Adrien Jeser, gorbal, Storm, palm123, khivapia et Segfault
 --------|------------------------------
@@ -18,7 +18,7 @@ L'ajout des fonctionnalités au **C++17** a été clôturé. Cette troisième d�
 
 ----
 
-* [La précédente dépêche "C++17, Genèse d'une version mineure"](https://linuxfr.org/redaction/news/c-17-genese-d-une-version-mineure)
+* [La précédente dépêche "C++17, Genèse d'une version mineure"](https://linuxfr.org/news/c-17-genese-d-une-version-mineure)
 * [Contenu markdown de cette dépêche sur le dépôt C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md)
 * [Journal "C++17 est sur les rails" par rewind a propos de la réunion du comité en mars 2016](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
 * [Réunion du comité en mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
@@ -58,8 +58,8 @@ Cette troisième dépêche [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9cry
 
 Par contre, les fonctionnalités majeures en cours d'élaboration ne sont pas encore suffisamment matures pour être publiées avec C++17 : [Concepts](http://fr.cppreference.com/w/cpp/concept) ; [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) qui propose des `import std.string;` en alternative des `#include <string>` ; [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ; [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ; [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ; [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
 
-4. Les changements au niveau de la bibliothèque standard
---------------------------------------------------------
+4. Changements C++17 au niveau de la bibliothèque standard
+----------------------------------------------------------
     
 Quelques détails de la quatrième dépêche :
     
@@ -128,7 +128,7 @@ Suppression
 [[P0001]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) Mot clé `register`
 ---------------------------------------------------------------------------------------------------------
 
-Pour rappel en C, le mot-clé `register` indique que la variable devrait être stockée dans un registre du processeur. On gagne en performance par rapport à ceux qui sont en mémoire, mais à plusieurs contraintes. 
+Pour rappel en C, le mot-clé `register` indique que la variable devrait être stockée dans un registre du processeur. On gagne en performance par rapport à ceux qui sont en mémoire, mais au prix de plusieurs contraintes. 
 
 ```cpp
 
@@ -153,7 +153,7 @@ Son utilisation est déconseillée en C++11, plutôt que retirée à l’époque
 [[P0002]](https://wg21.link/p0002) Incrémentation sur un booléen
 ----------------------------------------------------------------
 
-Dans les temps anciens du C, le type booléen n’excitait pas. Les entiers — int — les remplaçaient. Zéro pour faux et les autres valeurs pour vrai. Le passage du C au C++ avait nécessité de garder une comptabilité avec le vieux code. Ne pouvant implémenter correctement la décrémentation, car produisant un comportement indéfini quand il est supérieur à 1. Il a été décidé de rendre illégale l’incrémentation d’un booléen, déjà dépréciée en C++98.
+Dans les temps anciens du C, le type booléen n’existait pas. Les entiers — int — les remplaçaient. Zéro pour faux et les autres valeurs pour vrai. Le passage du C au C++ avait nécessité de garder une comptabilité avec le vieux code. Ne pouvant implémenter correctement la décrémentation, car produisant un comportement indéfini quand il est supérieur à 1. Il a été décidé de rendre illégale l’incrémentation d’un booléen, déjà dépréciée en C++98.
 
 [[P0004]](https://wg21.link/p0004) Alias de `iostreams`
 ------------------------------------------------------
@@ -624,9 +624,97 @@ int   tableau[5];
 Test<&tableau[2]>    ko_adresse_element;
 ```
 
+[[N4051]](https://wg21.link/n4051) Autoriser `typename` pour les paramètres `template template`
+-----------------------------------------------------------------------------------------------
+    
+Avant C++17, seule la classe `Cpp98` était conforme au standard.
+    
+```cpp
+template<template<typename> class    T> class Cpp98;
+template<template<typename> typename T> class Cpp17;
+``` 
+    
+Mais à quoi cela sert les paramètres `template template` ?  
+Cela sert, par [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'%23include+%3Cvector%3E%0A%23include+%3Clist%3E%0A%0Atemplate%3C+template+%3Ctypename,+typename%3E+typename+Container%0A++++++++,+typename+T%0A++++++++,+typename+Allocator+%3E%0Aauto+convert_to_vector(const+Container%3CT,+Allocator%3E%26+container)%0A%7B%0A+++std::vector%3CT,+Allocator%3E+v%3B%0A+++v.reserve(container.size())%3B%0A+++for+(const+auto%26+e+:+container)++v.push_back(e)%3B%0A+++return+v%3B%0A%7D%0A%0Aint+main()%0A%7B%0A++std::list%3Cint%3E+s%7B3,1,7,4%7D%3B%0A++auto+v+%3D+convert_to_vector(s)%3B%0A%7D'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4), à obtenir les paramètres `template` d'un conteneur :
+    
+```cpp
+template< template <typename, typename> typename Container
+        , typename T
+        , typename Allocator >
+auto convert_to_vector (const Container<T, Allocator>& container)
+{
+   std::vector<T, Allocator> v;
+   v.reserve(container.size());
+   for (const auto& e : container)  v.push_back(e);
+   return v;
+}
+``` 
+    
+Pour entretenir le cerveau, une version avec des variadiques  :
+    
+```cpp
+template< template<typename,typename...> typename ContainerOut
+        , template<typename,typename...> typename ContainerIn
+        , typename T
+        , typename... Args >
+auto convert (const ContainerIn<T,Args...>& in)
+{
+   ContainerOut<T, Args...> out;
+   for (const auto& e : in)  out.insert(e);
+   return out;
+}
+``` 
+    
+Pour la petite histoire, à l'origine des `template`, le mot clef `typename` n’existait pas. Tout était `class` !
+    
+```cpp
+template <class T>
+class A {};
+``` 
+    
+Puis le mot-clef `typename` a été ajouté pour distinguer les types des paramètres `template`.
+    
+```cpp
+template <class T>
+class A
+{
+    typename T::type v;
+};
+``` 
+    
+Et progressivement, le mot-clef `typename` a remplacé `class`.
+    
+```cpp
+template <typename T>
+class A
+{
+    typename T::type v;
+};
+``` 
+    
+Alors que le nom originel du C++ était ***C with `class`***, nous pourrions dire que le C++17 est le ***C++ without `class`***, c'est à dire, sans plus avoir besoin du mot-clef `class`. En effet, `class` est maintenant remplaçable soit par `typename`, soit par `struct` moyennant quelques changements :
+    
+```cpp
+// Avec class
+template <class T, template <class> C>
+class A : T
+{
+    typename C<T>::type v;
+};
+
+// Sans class
+template <typename T, template <typename> C>
+struct A : private T
+{
+private:
+    typename C<T>::type v;
+};
+```
+
+
+
 Sucre syntaxique
 ================
-
 
 [[N4230]](https://wg21.link/n4230) `namespace` imbriqué
 -------------------------------------------------------
@@ -651,15 +739,19 @@ namespace aa::bb {
 C++17 permet d'écrire `static_assert(condition)` avec un seul paramètre. Avant, seule la fonction [`static_assert(condition, message)`](http://fr.cppreference.com/w/cpp/language/static_assert) était disponible avec le second paramètre `message` obligatoire.
     
 ```cpp
-// avant C++17 il était courant de ne pas fournir un message vide
+// avant C++17 il était courant de fournir un message vide
 static_assert(sizeof(int) == 4, "");
 
 // avec C++17
 static_assert(sizeof(int) == 4);
 ```
 
-[[P0245]]((http://wg21.link/p0245)) Constante hexadécimale pour la virgule flottante 
-------------------------------------------------------------------------------------
+
+    
+Pour l’anecdote, cette fonctionnalité aurait bien pu s'appeler `constexpr_assert()` car `constexpr` exprime que c'est évalué lors de la compilation, ce qui est plus précis que `static` pour `constexpr_assert()`. La fonctionnalité `static_if` s'est bien fait renommée `constexpr_if` (voir plus bas dans la dépêche).
+
+[[P0245]](http://wg21.link/p0245) Constante hexadécimale pour la virgule flottante 
+----------------------------------------------------------------------------------
     
 La réunion de Jacksonville en février 2016 a amendé ce *TS* qui permet d'exprimer les [virgule flottante (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d'avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d'autres langages : C99, Java 5 (2004)...
     
@@ -727,7 +819,7 @@ assert(w == 1617891339.55602931976318359375);
 
 
     
-Chère lectrice, cher lecteur *LinuxFr.org*, as-tu d'autres idées de jeux de mots avec cette notation hexadécimale ? Alors défoule toi dans les commentaires ;-)
+Chère lectrice, cher lecteur *LinuxFr.org*, as-tu d'autres idées de jeux de mots avec cette notation hexadécimale ? Alors défoule toi dans les commentaires ;-) Les plus beaux jeux de mots seront récompensés par des petits cadeaux *(goodies)* sur le stand *LinuxFr.org* au salon [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) les 16 et 17 novembre 2016. Possibilité de les envoyer par courrier ~~électronique~~ postal ;-)
     
 Remarquons le `p` à la fin. Celui-ci représente l'exposant binaire et il est suivi par un entier décimal (et non pas hexadécimal). Cet exposant binaire est obligatoire pour plusieurs raisons :
     
@@ -924,81 +1016,111 @@ void fonction (const T& t, const R&... r)
 [[P0091]](https://wg21.link/p0091) Déduction des arguments `template` du constructeur
 -------------------------------------------------------------------------------------
     
-Le compilateur déduit les paramètres `template` du constructeur de classe `template`, un peu comme les fonctions `template`. Cela devient encore plus simple que les fonctions d'aide `make_***()`.
+Le compilateur peut [déduire les arguments `template` des fonctions](http://en.cppreference.com/w/cpp/language/template_argument_deduction). [Exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'template+%3Cclass+T%3E%0AT+foo(T+v)+%7B+return+v%2B%2B%3B+%7D%0A++++%0Aint+main()%0A%7B%0A++auto+v+%3D+foo(0)%3B%0A++return+v%3B%0A%7D%0A'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Weverything+-Wno-c%2B%2B98-compat+-Os'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4):
     
 ```cpp
-using std;
-array<int,3> avantCpp17{4,5,6};
-array        avecCpp17 {4,5,6};
+template <class T>
+T foo(T v) { return v++; }
     
-// Avant C++17 : les fonctions d'aide
-decltype(auto) a = make_array(4,5,6);
+// Déduit que le type T est int
+auto v = foo(0);
+```
+
+L'idée est d'étendre cette déduction aux classes, via les arguments des constructeurs. Attention, les compilateurs [GCC-7 et Clang-3.9 ne compilent pas (encore?) le code source ci-dessous](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'%23include+%3Carray%3E%0A%23include+%3Ctuple%3E%0A%23include+%3Cexperimental/array%3E%0A%0Adecltype(auto)+a+%3D+std::experimental::make_array(1,2,3)%3B%0A++++%0Astd::array%3Cint,3%3E+avant%7B1,2,3%7D%3B+//+Avant+C%2B%2B17%0Astd::array++++++++avec+%7B1,2,3%7D%3B+//+Avec++C%2B%2B17%0A++++%0Astd::pair%3Cint,char%3E+p_avant(4,!'L!')%3B%0Astd::pair+++++++++++p_avec+(4,!'L!')%3B%0A++++%0Aauto+++++++t_avant+%3D+std::make_tuple(%22voiture%22,4,!'L!')%3B%0Astd::tuple+t_avec(%22voiture%22,4,!'L!')%3B'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g7snapshot,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z'),l:'5',n:'0',o:'%231+with+x86-64+gcc+7+(snapshot)',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4). Ce code est peut-être erroné...
     
-pair p(42, 3.14); // Avant  pair<int, double> p(42, 3.14);
-tuple t(1, 2, 3); // Avant  auto t = make_tuple(1, 2, 3);
+```cpp
+// Avec les fonctions d'aide
+auto a = std::make_array(1,2,3);
+    
+// Avant C++17 et Avec C++17
+std::array<int,3> avant{1,2,3};
+std::array avec{1,2,3};
+    
+std::pair<int,char> p_avant(4,'L');
+std::pair p_avec(4,'L');
+    
+auto t_avant = std::make_tuple("voiture",4,'L');
+std::tuple t_avec("voiture",4,'L');
 ```
 
 
     
-Toutes les fonctions d'aide ne vont pas être remplaçables car certains cas peut être ambigus.
+Pas mal de fonctions d'aide `make_***()` risquent de devenir inutiles...
 
-* [`template<auto>`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r1.html)
-  permet de remplacer `MaClasse<decltype(entier),entier>`
-  par un élégant `MaClasse<entier>` dans cet exemple :
+[[P0127]](https://wg21.link/p0127) Déclaration des paramètres `template` avec `auto` sauf pour les types
+-----------------------------------------------
+
+
+Le `template<auto>` permet de remplacer `MaClasse<decltype(entier),entier>` par un élégant `MaClasse<entier>`. Allez, un exemple avant et après C++17 :
     
-    ```cpp
-    // Avant C++17
-    template <typename T, T Constante>
-    class MaClasse
-    {
-        T maFonction() const {
-            T x = Constante;
-            return ++x;
-        }
-    };
+```cpp
+// Avant C++17
+template <typename T, T Constante>
+class MaClasse
+{
+  T bar() const {
+    T x = Constante;
+    return ++x;
+  }
+};
     
-    int main()
-    {
-        int entier = 42;
-        MaClasse<decltype(entier),entier> mon_instance;
-        return mon_instance.maFonction();
-    }
+int main()
+{
+  int entier = 42;
+  MaClasse<decltype(entier), entier> foo;
+  return foo.bar();
+}
     
-    // Grâce à C++17
-    template <auto Constante>
-    class MaClasse
-    {
-        auto maFonction() const {
-            auto x = Constante;
-            return ++x;
-        }
-    };
+// Avec C++17
+template <auto Constante>
+class MaClasse
+{
+  auto bar() const {
+    auto x = Constante;
+    return ++x;
+  }
+};
     
-    int main()
-    {
-        int entier = 42;
-        MaClasse<entier> mon_instance;
-        return mon_instance.maFonction();
-    }
-    ```
+int main()
+{
+  int entier = 42;
+  MaClasse<entier> foo;
+  return foo.bar();
+}
+```
 
 
-* [`template<template<class...>typename foo> struct bar {}`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
     
-    TODO: Approfondir
-
-
-
-* [( Folding + ... + expressions ) ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)
-    
-    TODO: Approfondir
-
+Mais à quoi cela sert les paramètres `template template` ?  
+Cela sert, par [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'%23include+%3Cvector%3E%0A%23include+%3Clist%3E%0A%0Atemplate%3C+template+%3Ctypename,+typename%3E+typename+Container%0A++++++++,+typename+T%0A++++++++,+typename+Allocator+%3E%0Aauto+convert_to_vector(const+Container%3CT,+Allocator%3E%26+container)%0A%7B%0A+++std::vector%3CT,+Allocator%3E+v%3B%0A+++v.reserve(container.size())%3B%0A+++for+(const+auto%26+e+:+container)++v.push_back(e)%3B%0A+++return+v%3B%0A%7D%0A%0Aint+main()%0A%7B%0A++std::list%3Cint%3E+s%7B3,1,7,4%7D%3B%0A++auto+v+%3D+convert_to_vector(s)%3B%0A%7D'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4), à obtenir les paramètres `template` d'un conteneur :
+   
 
 * [`auto x{8};` est de type `int`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
     
     TODO: Approfondir
 
 
+
+[[N4295]](https://wg21.link/n4295) Expression dépliable
+-------------------------------------------------------
+    
+Les fonctions et classes variadiques peuvent réaliser des expressions dépliables, [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'template%3Ctypename+...Types%3E%0Aauto+somme+(Types...+valeurs)%0A%7B+return+(valeurs+%2B+...)%3B+%7D%0A%0Atemplate%3Cbool+...Valeurs%3E%0Aauto+un_seul()%0A%7B+return+(...+%7C%7C+Valeurs)%3B+%7D%0A%0Aint+main()%0A%7B%0A++if+(un_seul%3Cfalse,true,false%3E())%0A++++return+somme(1,2,3,4)%3B%0A%7D%0A'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Weverything+-Wno-c%2B%2B98-compat+-Os'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) :
+    
+```cpp
+template<typename ...Types>
+auto somme (Types... valeurs)
+{ return (valeurs + ...); }
+
+template<bool ...Valeurs>
+auto un_seul()
+{ return (... || Valeurs); }
+
+int main()
+{
+  if (un_seul<false,true,false>())
+    return somme(1,2,3,4);
+}
+```
 
 [Lambda](http://en.cppreference.com/w/cpp/language/lambda)
 ========
@@ -1018,18 +1140,35 @@ Toutes les fonctions d'aide ne vont pas être remplaçables car certains cas peu
 
 Attributs
 =========
-
-
-Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes) qui complètent les `[[noreturn]]`, `[[carries_dependency]]` et `[[deprecated]]`. Initialement dans une seule TS : [P0068](https://wg21.link/p0068).
     
-* `[[fallthrough]]`,
-* `[[nodiscard]]` et
-* `[[maybe_unused]]`.
+Trois nouveaux [attributs standards](http://en.cppreference.com/w/cpp/language/attributes#Standard_attributes) : `[[fallthrough]]`, `[[nodiscard]]` et `[[maybe_unused]]`. Initialement, ces trois nouveaux attributs étaient portés par un seul *TS*, le [P0068](https://wg21.link/p0068). Ces attributs complètent les `[[noreturn]]`, `[[carries_dependency]]` et `[[deprecated]]` introduits par C++11 et C++14.
 
 [[P0188]](https://wg21.link/p0188) Attribut `[[fallthrough]]`
 ------------------------------------------------------------
     
-L'attribut **`[[fallthrough]]`** indique au compilateur (ou à l'outil d'analyse statique de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite ainsi d'avoir des avertissements _(warnings)_ inutiles.
+Le terme anglais *fall through* désigne le fait de *passer à travers* (*entre les mailles du filet*, *tomber à l'eau*...). Cette expression était déjà utilisée comme convention pour signifier l'[intention de continuer avec le prochain `case` dans un `switch`](https://github.com/search?l=C&q=fall+through&type=Code) (c'est à dire de ne pas terminer le `case` avec un `break`).
+    
+```cpp
+switch (valeur)
+{
+case 1:
+  std::cout <<" valeur 1";
+  break;
+    
+case 2:  // fall through
+case 3:
+  std::cout <<" valeur 2 ou 3";
+  break;
+    
+default:
+  std::cout <<" valeur différente"
+              " de 1, 2, 3, 4";
+}
+```
+
+
+    
+Donc, comme son nom l'indique, l'attribut **`[[fallthrough]]`** indique au compilateur (ou à l'outil d'analyse statique de code) que c'est normal qu'il n'y ait pas de `break;` à la fin d'un `case`, on continue bien avec le `case` suivant. Cela évite des avertissements _(warnings)_ inutiles.
       
 ```cpp
 switch (valeur)
@@ -1037,21 +1176,23 @@ switch (valeur)
 case 1:
   std::cout <<" valeur 1";
   break;
-case 2:
-  std::cout <<" valeur 2";
-  [[fallthrough]]; // pas de break
-                   // => continue avec
-case 3:            // le case suivant
+    
+case 2:            // Pas de break
+  [[fallthrough]]; // => Continue avec
+                   // le case suivant
+case 3:
   std::cout <<" valeur 2 ou 3";
   break;
+    
 case 4:
   std::cout <<" valeur 4";
-         // ici le break manque
-         // (un oubli du dév. ?)
-         // => Le compilateur avertit
+  // Ici pas de break ni de [[fallthrough]]
+  // Un oubli du développeur ?
+  // => Le compilateur avertit
+    
 default:
   std::cout <<" valeur différente"
-              " de 1, 2, 3, 4";
+              " de 1, 2, 3 et 4";
 }
 ```
 
@@ -1171,18 +1312,21 @@ Concours
     
 Proposer dans les commentaires un code source utilisant le maximum des nouveautés du C++17 et pouvant faire croire aux développeurs ne lisant pas *LinuxFr.org* que ce n'est pas du C++.
     
-Les vainqueurs recevront un autocollant gratuit sur le stand *LinuxFr.org* du [Paris Open Source Summit](http://www.opensourcesummit.paris/) les 16 et 17 novembre. L'auteur de la dépêche peut aussi les envoyer par courrier ~~électronique~~ postal ;-)
-
+Les vainqueurs recevront des petits cadeaux (goodies, autocollant...) sur le stand *LinuxFr.org* du [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) les 16 et 17 novembre. Possibilité de les envoyer par courrier ~~électronique~~ postal ;-)
 
 Commentaires
 ============
     
-La précédente dépêche a été inondée de 227 commentaires de *TrollFr*. C'est bien dommage. Le système de commentaires ne fait qu'attiser nos divergences. Et ne permet malheureusement pas de consolider nos points de vue.
+La précédente dépêche a été inondée de [227 commentaires](https://linuxfr.org/news/c-17-genese-d-une-version-mineure#droit-dauteur-licences-remerciements) de [trolls](https://fr.wikipedia.org/wiki/Troll_%28Internet%29) avec bien souvent des propos blessants. Ce *TrollFr* est dix fois plus volumineux que la dépêche ! Le système de commentaires ne fait qu'attiser nos divergences. Et ne permet malheureusement pas de consolider nos points de vue. C'est bien dommage.
     
-Cette fois-ci, évitons d'entretenir les *TrollFr*. Ce n'est pas respectueux, ni des auteurs de la dépêche, ni des autres lectrices et lecteurs qui perdent leur temps à lire des arguments qui se répètent et à lire des propos méprisants.
+Cette fois-ci, évitons d'entretenir les *TrollFr*. Ce ni respectueux pour les auteurs de la dépêche, ni pour les autres lectrices et lecteurs qui perdent leur temps à lire des arguments qui se répètent et à lire des propos méprisants.
     
-Si vous voulez vraiment consacrer des heures à rédiger des arguments sur *LinuxFr.org*, alors prenez l'initiative de créer une dépêche collaborative du style *"Faut-il débuter un logiciel prévu en C++ ?"* ou *"Est-il pertinent d'apprendre le C++ aujourd'hui ?"*. Et surtout inviter les auteurs des commentaires à s'exprimer sur cette dépêche. Au moins, il en sortira une construction concise utile à tous. Merci.
+Quand on pense à toute cette énergie dépensée et ces heures consacrées à rédiger des contre-arguments, on se dit qu'il aurait mieux valu créer une dépêche collaborative du style *"Faut-il débuter un logiciel prévu en C++ ?"* ou *"Est-il pertinent d'apprendre le C++ aujourd'hui ?"*. Et d'inviter les protagonistes à venir s'exprimer. Au moins, il en serait sortit des arguments pour et contre bien structurés et concis, utiles à tous.
+    
+N'hésitons pas à avoir ce réflexe, bien que c'est plus tentant de nourrir un Troll !
 
+[![Panneau Troll barré](https://upload.wikimedia.org/wikipedia/commons/e/ea/DoNotFeedTroll.svg)](https://commons.wikimedia.org/wiki/File:DoNotFeedTroll.svg) | [![Panneau Please Do Not Feed the Trolls](https://upload.wikimedia.org/wikipedia/commons/1/19/Trolls.jpg)](https://commons.wikimedia.org/wiki/File:Trolls.jpg)
+----|----
 
 La suite
 ========
