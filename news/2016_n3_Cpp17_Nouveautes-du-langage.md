@@ -2,14 +2,14 @@
 |-------------------------------------------------------------------------
 
 Les nouveautés au cœur du C++17
-================================
+===============================
 
-Auteurs | Oliver H, olibre, Adrien Jeser, Benoît Sibaud, Lucas, cracky, Martin Peres, RyDroid, Adrien Jeser, gorbal, Storm, palm123, khivapia et Segfault
+Auteurs | Oliver H, olibre, Adrien Jeser, gorbal, Storm, palm123, eggman, khivapia, Segfault, Benoît Sibaud, Lucas, cracky, Martin Peres et RyDroid.
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
-URL     | https://linuxfr.org/news/nouveautes-c-17-au-niveau-du-langage
+URL     | https://linuxfr.org/news/nouveautes-au-coeur-du-c-17
 Date    | 2016-07-22T00:53:12+02:00
-Tags    | cpp, c++17 et c++
+Tags    | c++17, c++ et cpp
 Score   |   0
 
 L'ajout des fonctionnalités au **C++17** a été clôturé. Cette troisième dépêche se concentre sur les changements au niveau du langage C++. Faisons donc le tour des nouveautés :-)
@@ -125,90 +125,111 @@ Suppression
 ===========
 
 
-[[P0001]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) Mot clé `register`
----------------------------------------------------------------------------------------------------------
-
-Pour rappel en C, le mot-clé `register` indique que la variable devrait être stockée dans un registre du processeur. On gagne en performance par rapport à ceux qui sont en mémoire, mais au prix de plusieurs contraintes. 
-
-```cpp
-
-register int f = 0;  // Interdit sur les variables globales
-
-int main(int argc, char *argv[]) {
-    register int c = 0;  // Les variables register n'existe plus en C++17
-
-    // Erreur puisque une variable register n'a pas d'adresse
-    int *pointeur_vers_c = &c;
-
-    register int tableau[1];  // Comportement indéfini
-
-    return 0;
-}
-
-```
-
-
-Son utilisation est déconseillée en C++11, plutôt que retirée à l’époque, car il ne rentrait pas en conflit avec une réaffectation, contrairement à `auto`. L’une des raisons énoncées pour la conservation est la compatibilité avec le C, en particulier avec les arguments des fonctions. Pourtant, son usage n’est pas pertinent en C++. Il est redondant avec d’autres fonctionnalités et les restrictions de `register` ne peuvent être transcrites en C++. Plutôt que d’essayer de résoudre les différences avec le C, il devient un mot-clé réservé pour un usage futur.
-
-[[P0002]](https://wg21.link/p0002) Incrémentation sur un booléen
-----------------------------------------------------------------
-
-Dans les temps anciens du C, le type booléen n’existait pas. Les entiers — int — les remplaçaient. Zéro pour faux et les autres valeurs pour vrai. Le passage du C au C++ avait nécessité de garder une comptabilité avec le vieux code. Ne pouvant implémenter correctement la décrémentation, car produisant un comportement indéfini quand il est supérieur à 1. Il a été décidé de rendre illégale l’incrémentation d’un booléen, déjà dépréciée en C++98.
-
-[[P0004]](https://wg21.link/p0004) Alias de `iostreams`
-------------------------------------------------------
-
-Obsolète en C++98, les alias de iostreams sont proscrits, pour simplifier la norme. Ils sont avantageusement remplacés par les masques de bits `os_base::iostate`, `ios_base::openmode`, … Les changements à apporter aux codes existants sont minimes.
-
-```cpp
-    std::ofstream mon_fichier;
-
-    /* Légale avant C++17 */
-    std::ios_base::open_mode mode = std::ios::out | std::ios::app;
-    un_fichier.open("exemple.txt", mode);
-
-    std::ios_base::io_state etat = std::ios_base::goodbit;
-    un_fichier.clear(etat);
-
-    /* Devrait être */
-    std::ios_base::openmode mode = std::ios::out | std::ios::app;
-    un_fichier.open("exemple.txt", mode);
-
-    std::ios_base::iostate etat = std::ios_base::goodbit;
-    un_fichier.clear(etat);
-
-```
-
-
-
-
 [[N4086]](https://wg21.link/n4086) Suppression des trigraphes
 -------------------------------------------------------------
-
-Certaines entreprises maintiennent du très vieux code C/C++ contenant des [digraphes et trigraphes](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#Removal_of_trigraphs). Ces digraphes/trigraphes peuvent être remplacés par les caractères correspondant avec un script. Mais ces entreprises préfèrent que les compilateurs conservent cette complexité et que les développeurs aient des surprises quand ils utilisent certains caractères.
-
-La dépréciation des digraphes/trigraphes avait été prévue en 2009 pour C++11. Mais certains membres comme IBM et Bloomberg étaient réticents. Finalement, c’est la suppression pure et simple qui a été votée par les membres pour C++17 (sans passer par la dépréciation). IBM a même tenté une dernière [tentative pour conserver les digraphes/trigraphes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4210.pdf) ;
-
+    
 ```cpp
-/* Avec des digraphes et trigraphes */
+// Avec des digraphes et trigraphes
 ??=include <iostream>
-
 int main(int argc, char *argv<::>) ??< 
-        const char hello_world ??(??) = "Hello world !??/0";
-        std::cout << hello_world << std::endl;
-        return 0;
+  const char hello_world ??(??) = "Hello world !??/0";
+  std::cout << hello_world << std::endl;
 ??>
-
-/* Équivaut à */
+``` 
+    
+```cpp
+// Sans les digraphes et trigraphes
 #include <iostream>
 int main(int argc, char *argv[]) {
-        const char hello_world[] = "Hello world !\0";
-        std::cout << hello_world << std::endl;
-        return 0;
+  const char hello_world[] = "Hello world !";
+  std::cout << hello_world << std::endl;
 }
+``` 
+    
+Certaines entreprises maintiennent du très vieux code C/C++ contenant des [digraphes et trigraphes](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#Removal_of_trigraphs). Ces digraphes/trigraphes pourraient être remplacés par les caractères correspondants avec un script. Mais ces entreprises préfèrent les garder dans leur code source, maintenir cette complexité dans les compilateurs et entretenir la surprise quand les développeurs utilisent certaines suites de caractères.
+    
+**Question piège :** Que fait ce [code source](http://coliru.stacked-crooked.com/a/35548faf134a2c96) en C++98, en C++14 et en C++17 ?
+    
+```cpp
+#include <iostream>
+int main()
+{
+  std::cout // La question ?????/
+  << "L'univers, la vie et le reste\n"
+  << "Indiquer la date au format ??/??/??\n";
+}
+``` 
+    
+**Réponse**
+    
+* En C++98 et C++14, même comportement
+    
+        $ g++ -std=c++14 main.cpp && ./a.out
+        Indiquer la date au format \??
+    
+* En C++17, l'affichage est très différent
+    
+        $ g++ -std=c++1z -w main.cpp && ./a.out
+        L'univers, la vie et le reste
+        Indiquer la date au format ??/??/??
+    
+Les trigraphes auraient pu devenir obsolètes dès C++11 (proposé en 2009). Mais, quelques membres du comité de normalisation du C++, dont IBM et Bloomberg, avaient réussi à ne pas les rendre obsolètes. Pour C++17, les membres ont finalement voté la suppression pure et simple sans étape intermédiaire. IBM a même tenté une dernière [tentative pour conserver les trigraphes](https://wg21.link/n4210) mais sans succès.
 
+
+[[P0001]](https://wg21.link/p0001) Suppression du mot-clé déprécié `register`
+----------------------------------------------------------------------------
+    
+Historiquement, le mot-clé [`register`](http://en.cppreference.com/w/c/keyword/register) force l'utilisation d'un registre du processeur. Cela permettait de gagner en performance en indiquant au compilateur quelles variables à garder dans un registre (à l'époque les compilateurs n'étaient pas très futés).
+    
+```c
+// ERREUR Interdit sur les variables globales
+register int g = 0;
+    
+int main()
+{
+  register int r = 0; // OK
+    
+  // ERREUR Une variable register n'a pas d'adresse
+  // Mais GCC et Clang le tolère.
+  register int *pointeur = &r;
+    
+  register int tableau[1]; // Comportement indéfini
+}
+``` 
+    
+Le mot-clé `register` est déprécié depuis C++11. À l'époque, les contraintes de ce mot-clé (pas de pointeur...) ont été conservées pour la compatibilité avec le C, en particulier avec les arguments des fonctions. Pourtant, son usage n’est pas pertinent en C++ :  redondant avec d’autres fonctionnalités et ses restrictions (pas de pointeur...) ne peuvent être facilement transcrites en C++. Plutôt que d’essayer de résoudre les différences avec le C, C++17 fait de `register` un mot-clé réservé non utilisé. Espérons qu'un usage futur lui soit trouvé...
+
+[[P0002]](https://wg21.link/p0002) Suppression de `operator++(bool)` obsolète
+-----------------------------------------------------------------------------
+    
+Dans les temps anciens, le type `bool` n’existait pas. Les entiers étaient utilisés pour cet usage avec `#define FALSE 0` et `#define TRUE !0` (souvent égal à `1`). C'est à dire **zéro pour faux** et **toutes les autres valeurs pour vrai**.
+    
+La création du type `bool` avec le C++ avait nécessité de garder une comptabilité avec le vieux code : l'incrémentation avait été autorisée mais pas la décrémentation.
+    
+```cpp
+bool b = aimes_tu_cpp17();
+--b; // Erreur depuis C++98
+++b; // Erreur depuis C++17
 ```
 
+[[P0004]](https://wg21.link/p0004) Alias de `iostream`
+-----------------------------------------------------
+    
+Obsolète depuis C++98, C++17 interdit les alias de `iostream` afin de simplifier le standard C++. Ces alias sont avantageusement remplacés par les masques de bits `ios_base::openmode`, `os_base::iostate`… Les changements à apporter aux codes existants sont minimes.
+    
+```cpp
+// Autorisé avant C++17
+std::ios_base::open_mode mode = std::ios::out | std::ios::app;
+std::ios_base::io_state  etat = std::ios_base::goodbit;
+
+// En utilisant les masques de bit
+std::ios_base::openmode mode = std::ios::out | std::ios::app;
+std::ios_base::iostate  etat = std::ios_base::goodbit;
+
+std::ofstream fichier;
+fichier.open("exemple.txt", mode);
+fichier.clear(etat);
+```
 
 Corrections
 ===========
@@ -217,22 +238,20 @@ Corrections
 [[N4266]](https://wg21.link/n4266) Attributs pour `namespace` et `enum`
 ----------------------------------------------------------------------
     
-Cette *TS* est un correctif de 2014 (un oubli du C++14) qui permet d'appliquer des `[[attributs]]` aux `namespace` et `enum`.
+Ce *TS* corrige un oubli du C++14 et permet d'appliquer des `[[attributs]]` aux `namespace` et `enum`.
     
 ```cpp
 [[maybe_unused]]
 namespace debug
 {
-enum Couleurs {
+enum Couleur {
   Rouge,
   Vert,
   Web [[deprecated("Ce n'est pas une couleur")]],
   Bleu
 };
 }
-```
-
-
+``` 
     
 L'attribut `[[maybe_unused]]` est une nouveauté du C++17 et est expliqué tout en bas de cette dépêche.
 
@@ -242,21 +261,18 @@ L'attribut `[[maybe_unused]]` est une nouveauté du C++17 et est expliqué tout 
 Le *TS* N4261 complète la section 4.4 (conversion de qualification) sur la conversion d’un tableau de pointeurs constants/volatiles vers un autre type similaire.
 
 ```cpp
-double *tableau_2d[2][3];
-  
-      double  *       (*tableau_2d_ptr1)[3] = tableau_2d;
-      double  * const (*tableau_2d_ptr2)[3] = tableau_2d_ptr1;
-const double  * const (*tableau_2d_ptr3)[3] = tableau_2d_ptr2; // Légal en C++17
-
+double      *       tableau_2d[2][3];
+double      *       (*a)[3] = tableau_2d;
+double      * const (*b)[3] = a;
+double const* const (*c)[3] = b; // OK C++17
 ```
-
 
 [[P0136]](https://wg21.link/p0136) Héritage des constructeurs
 -------------------------------------------------------------
     
 Certaines règles d’héritage des constructeurs via `using` ont été modifiées dans un soucis de cohérence et de simplification. Concrètement, plusieurs cas d’héritages précédemment interdits sont maintenant autorisés.
 
-SFINAE sur les constructeurs hérités fonctionne de manière fiable :
+Le [_Substitution Failure Is Not An Error (SFINAE)_](http://h-deb.clg.qc.ca/Sujets/Divers--cplusplus/SFINAE.html) sur les constructeurs hérités fonctionne de manière fiable :
 
 ```cpp
 struct A {
@@ -270,7 +286,7 @@ struct B : A {
               // est un constructeur visible depuis B
   B();
 };
-B b(123ull);  // maintenant autorisé ; 
+B b(123ull);  // Autorisé en C++17
 ```
 
 Paramètres variables :
@@ -282,7 +298,7 @@ struct B : A { using A::A; };
     B b("%d %d", 1, 2); // Maintenant accepté dans toutes les implémentations
 ```
 
-Les droits d’accès sont maintenant identique à ceux de la classe de base :
+Les droits d’accès sont maintenant identiques à ceux de la classe de base :
 
 ```cpp
 class A {
@@ -386,16 +402,16 @@ Dans l’exemple ci-dessus, l’assertion peut — selon le compilateur — éch
 [[P0184]](https://wg21.link/p0184) Généralisation  des boucles pour gérer les *Intervalles (Ranges)*
 -----------------------------------------------------
     
-Cette petite *TS* permet aux boucles `for` *"each"* de gérer des conteneurs ayant des [`begin()` et `end()` retournant des types différents mais comparables](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
+Cette petite *TS* permet aux boucles `for` *"each"* de gérer des conteneurs ayant des `begin()` et `end()` retournant des types différents mais comparables.
     
-Cette correction est nécessaire à l'implémentation des [Intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf). Cela permet également de supporter d'avantage de [valeurs sentinelles](https://fr.wikipedia.org/wiki/Valeur_sentinelle).
+Cette correction est nécessaire à l'implémentation des [intervalles](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf). Cela permet également de supporter d'avantage de [valeurs sentinelles](https://fr.wikipedia.org/wiki/Valeur_sentinelle).
 
 [[P0012]](https://wg21.link/p0012) Intégrer les spécifications d'exception dans le type système
 -----------------------------------------------------------------------------------------------
     
 `noexcept` devient un [type système](http://en.cppreference.com/w/cpp/language/type) afin de pouvoir distinguer les types de [pointeur de fonction](http://en.cppreference.com/w/cpp/language/pointer#Pointers_to_functions) `noexcept` des autres.
     
-Ainsi [C++17 peut interdire la conversion de pointeurs de fonction `throw(quelqchose)` vers ceux de fonctions `noexcept`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html), mais l'inverse est toujours possible. Le code suivant est valide en **C++14**, mais ne compile plus avec **C++17** :
+Ainsi C++17 peut interdire la conversion de pointeurs de fonction `throw()` vers ceux de fonctions `noexcept`, mais l'inverse est toujours possible. Le code suivant est valide en **C++14**, mais ne compile plus avec **C++17** :
     
 ```cpp
 void (*p)() throw(int);
@@ -413,43 +429,6 @@ void f(T*, T*) {}
 void g1() noexcept {}
 void g2()          {}
 f(g1, g2);                 //Erreur C++17
-```
-
-[[P0386]](http://wg21.link/p0386) Variables `inline`
-----------------------------------------------------
-
-Les variables `inline` — comme les fonctions `inline` — peuvent être définies dans plusieurs unités de traduction (_translation units_). Son utilisation suggère au compilateur de substituer l'appel à la variable par son contenu. Elles sont adéquates pour remplacer les macros non-triviales. Plus subtil, on peut contourner la règle de la définition unique (_One Definition Rule_).
-
-```cpp
-struct A
-{
-  // Déclaration de la variable inline
-  static int v;
-};
-    
-// Définition de la variable inline
-inline int A::v = 0;
-    
-// Ou plus simplement
-struct B
-{
-  static inline int v = 0; 
-};
-    
-// Les variables constexpr sont implicitement inline
-constexpr const int celerite_lumiere = 299'792'458;
-```
-
-Par curiosité, [générons le code assembleur](https://framagit.org/Cpp17/variable_inline) x86_64 de l'exemple ci-dessus [avec](https://framagit.org/Cpp17/variable_inline/blob/master/avec_inline.cc) et [sans variable `inline`](https://framagit.org/Cpp17/variable_inline/blob/master/sans_inline.cc). Le compilateur `clang++ -S --std=c++1z -O0` optimise davantage le code avec variable `inline` en supprimant les lignes suivantes :
-    
-```nasm
-	.type	_ZN1A27variable_inline_sans_inlineE,@object
-	.section	.rodata,"a",@progbits
-	.globl	_ZN1A27variable_inline_sans_inlineE
-	.p2align	2
-_ZN1A27variable_inline_sans_inlineE:
-	.long	42
-	.size	_ZN1A27variable_inline_sans_inlineE, 4
 ```
 
 [[P0035]](http://wg21.link/p0035) Allocation mémoire dynamique des données
@@ -486,8 +465,7 @@ Si `std::align_val_t(alignof(maclasse))` est supérieur à `__STDCPP_DEFAULT_NEW
 [[P0135]](http://wg21.link/p0135) Court-circuitage du constructeur par copie
 ------------------------------------------------------
 
-C++17 garantie le [court-circuitage du constructeur par copie](https://en.wikipedia.org/wiki/Copy_elision). Mais pas dans tous les cas : ce *TS* distingue le cas général *"elision"* du cas spécifique *"genuine elision"*.
-
+C++17 garantit le [court-circuitage du constructeur par copie](https://en.wikipedia.org/wiki/Copy_elision). Mais pas dans tous les cas : ce *TS* distingue le cas général *"elision"* du cas spécifique *"genuine elision"*.
 
 ```cpp
 int n = 0; // compte le nombre d'appel au constructeur par copie
@@ -512,7 +490,7 @@ C'est a propos du verrouillage des fils d’exécution *(thread lock)* et des [s
     
     TODO    À compléter...
 
-[[N4267]](https://wg21.link/n4267) Caractère constant UTF-8 `u8`
+[[N4267]](https://wg21.link/n4267) Littéral de caractère UTF-8 `u8`
 ---------------------------------------------------------------
     
 ```cpp
@@ -532,57 +510,25 @@ const char     utf16  = u8'学'; // Erreur
     
 Quand un paragraphe n'est clair, il est judicieux de le réécrire.
 
-[[P0061]](https://wg21.link/p0061) `__has_include` pour C++17
--------------------------------------------------------------
-    
-La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/preprocessor/include) vérifie si l'en-tête `<filesystem>` est disponible pour inclusion ;
+[[N3922]](https://wg21.link/n3922) Nouvelles règles de déduction pour `auto` à partir des {listes d'initialisation}
+---------------------------------------
     
 ```cpp
-#if    __has_include(<filesystem>)
-#  include <filesystem>
-#elif  __has_include(<experimental/filesystem>)
-#  include <experimental/filesystem>
-#elif __has_include(<boost/filesystem.hpp>)
-#  include <boost/filesystem.hpp>
-#else
-#  error Ne trouve aucune en-tête filesystem
-#endif
-```
-
-
+auto a   {1};     //ok => int a{1};
+auto b = {1};     //ok => std::initializer_list<int> b = {1};
     
-Allons plus loin avec un autre exemple :
-     
-```cpp
-#if __has_include(<windows.h>)
-#  include <windows.h>
-   LONGLONG ticks1nano = []() {
-     LARGE_INTEGER freq;
-     QueryPerformanceFrequency(&freq);
-     return freq.QuadPart / 1000'000;
-   }();
-   LONGLONG nanosecondes() {
-     LARGE_INTEGER time;
-     QueryPerformanceCounter(&time);
-     return time.QuadPart/ticks1nano;
-   }
-#elif __has_include(<time.h>)
-#  include <time.h>
-   auto nanosecondes() {
-      struct timespec ts;
-      clock_gettime(CLOCK_MONOTONIC,&ts);
-      return 1000'000'000 * ts.tv_sec + ts.tv_nsec;
-   }
-#else
-#  error Ne trouve ni <windows.h> ni <time.h>
-#endif
+auto c   {1, 2};  //KO car plus d'un élément
+auto d = {1, 2};  //ok => std::initializer_list<int> d = {1, 2};
+    
+auto e   {1, 2.0}; //KO car plus d'un élément
+auto f = {1, 2.0}; //KO car pas le même type (int et double)
 ```
 
-[[N4268]](https://wg21.link/n4268) Évaluation constante pour les arguments `template` n'étant pas un type
+[[N4268]](https://wg21.link/n4268) Autoriser l'évaluation constante pour les arguments `template` n'étant pas un type
 ---------------------------------------------------------------------------
     
-Correction des évaluations constantes pour tout argument `template` n'étant pas un type [_(Allow constant evaluation for all non-type template arguments)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html). Les types **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
-         
+Cette *TS* harmonise les évaluations constantes pour les argument `template` parmi l'évantail de types pour cet argument. Les types **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
+    
 Type     | C++14  | C++17
 ---------|--------|-------
 Pointeur|`&variable`, tableau, fonction référant un objet statique ou `nullptr` | évaluation d'une adresse constante d'un objet complet statique ou d'une fonction, ou `nullptr`
@@ -592,10 +538,12 @@ Intégral `bool char int` ...|toutes expressions constantes|pareil
 `enum`|toutes expressions constantes|pareil
 `nullptr_t`|toutes expressions constantes|pareil
     
+Le code source suivant permet de vérifier que cette fonctionnalité est déjà [prise en compte par GCC-6 et Clang-3.6](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'//+Cette+classe+permet+de+tester%0A//+les+expressions+constantes%0Atemplate%3Cint*+ExpressionConstante%3E%0Aclass+Test%0A%7B+%7D%3B%0A++++%0A//+La+fonction+constexpr+getPtr()+retourne%0A//+un+pointeur+vers+un+objet+statique%0A//+(static+storage+duration+object)%0Aint+entier+%3D+42%3B%0Aconstexpr+int*+getPtr()+++++%7Breturn+%26entier%3B%7D%0Aconstexpr+int*+getNullptr()+%7Breturn+nullptr%3B%7D%0ATest%3C%26entier%3E++++++++ok_entier%3B%0ATest%3CgetPtr()%3E+++++++ok_Cxx17%3B+//KO+C%2B%2B14%0ATest%3CgetNullptr()%3E+++ok_nullptr%3B%0A++++%0A//+L!'expression+%26obj.statique+est+un%0A//+pointeur-vers-membre+d!'un+objet+statique%0Astruct+Str%0A%7B+int+membre%3B+static+int+statique%3B+%7D%3B%0AStr+obj%3B%0A//Test%3C%26Str::membre%3E+++ko_ptr_non_statique%3B%0ATest%3C%26Str::statique%3E+ok_ptr_statique%3B%0ATest%3C%26obj.statique%3E++ok_cxx17%3B+//KO+C%2B%2B14%0A++++%0A//+Le+pointeur+vers+un+%C3%A9l%C3%A9ment+de+tableau%0A//+statique+ne+semblent+pas+%C3%AAtre+support%C3%A9s%0Aint+++tableau%5B5%5D%3B%0A//Test%3C%26tableau%5B2%5D%3E++++ko_adresse_element%3B%0A'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:20.007346465412752,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g6,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+gcc+6.1',t:'0')),k:24.382417314114804,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:output,i:(compiler:1,editor:1),l:'5',n:'0',o:'%231+with+x86-64+gcc+6.1',t:'0')),k:30.610236220472437,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:output,i:(compiler:1,editor:1),l:'5',n:'0',o:'%231+with+x86-64+gcc+6.1',t:'0')),k:25,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) :
+    
 ```cpp
 // Cette classe permet de tester
 // les expressions constantes
-template<int* EXPRESSION_CONSTANTE>
+template<int* ExpressionConstante>
 class Test
 { };
     
@@ -627,14 +575,14 @@ Test<&tableau[2]>    ko_adresse_element;
 [[N4051]](https://wg21.link/n4051) Autoriser `typename` pour les paramètres `template template`
 -----------------------------------------------------------------------------------------------
     
-Avant C++17, seule la classe `Cpp98` était conforme au standard.
+Avant C++17, seule la classe `Cpp98` était conforme au standard :
     
 ```cpp
 template<template<typename> class    T> class Cpp98;
 template<template<typename> typename T> class Cpp17;
 ``` 
     
-Mais à quoi cela sert les paramètres `template template` ?  
+Mais à quoi cela sert les paramètres `template template` ?
 Cela sert, par [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'%23include+%3Cvector%3E%0A%23include+%3Clist%3E%0A%0Atemplate%3C+template+%3Ctypename,+typename%3E+typename+Container%0A++++++++,+typename+T%0A++++++++,+typename+Allocator+%3E%0Aauto+convert_to_vector(const+Container%3CT,+Allocator%3E%26+container)%0A%7B%0A+++std::vector%3CT,+Allocator%3E+v%3B%0A+++v.reserve(container.size())%3B%0A+++for+(const+auto%26+e+:+container)++v.push_back(e)%3B%0A+++return+v%3B%0A%7D%0A%0Aint+main()%0A%7B%0A++std::list%3Cint%3E+s%7B3,1,7,4%7D%3B%0A++auto+v+%3D+convert_to_vector(s)%3B%0A%7D'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4), à obtenir les paramètres `template` d'un conteneur :
     
 ```cpp
@@ -650,68 +598,108 @@ auto convert_to_vector (const Container<T, Allocator>& container)
 }
 ``` 
     
-Pour entretenir le cerveau, une version avec des variadiques  :
+C'est juste un exemple, la [version suivante](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'%23include+%3Cvector%3E%0A%23include+%3Clist%3E%0A%0Atemplate%3Ctypename+Container%3E%0Aauto+convert_to_vector+(const+Container%26+container)%0A%7B%0A+++std::vector%3Ctypename+Container::value_type,+typename+Container::allocator_type%3E+v%3B%0A+++v.reserve(container.size())%3B%0A+++for+(const+auto%26+e+:+container)++v.push_back(e)%3B%0A+++return+v%3B%0A%7D%0A%0Aint+main()%0A%7B%0A++std::list%3Cint%3E+s%7B3,1,7,4%7D%3B%0A++auto+v+%3D+convert_to_vector(s)%3B%0A%7D'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) est plus pertinente :
     
 ```cpp
-template< template<typename,typename...> typename ContainerOut
-        , template<typename,typename...> typename ContainerIn
-        , typename T
-        , typename... Args >
-auto convert (const ContainerIn<T,Args...>& in)
+template<typename Container>
+auto convert_to_vector (const Container& container)
 {
-   ContainerOut<T, Args...> out;
-   for (const auto& e : in)  out.insert(e);
-   return out;
+   std::vector<typename Container::value_type, typename Container::allocator_type> v;
+   v.reserve(container.size());
+   for (const auto& e : container)  v.push_back(e);
+   return v;
 }
 ``` 
     
-Pour la petite histoire, à l'origine des `template`, le mot clef `typename` n’existait pas. Tout était `class` !
+Chère lectrice, cher lecteur *LinuxFr.org*,
+Tu as peut-être déjà utilisé les paramètres `template template` ?
+Ou tu as peut-être de meilleurs idées sur l'utilité d'une telle fonctionnalité ?
+Alors partage dans les commentaires tes exemples ;-)
+Et le top du top serait un exemple de paramètres `template template` variadiques !
+Un truc du genre :
     
 ```cpp
-template <class T>
-class A {};
-``` 
-    
-Puis le mot-clef `typename` a été ajouté pour distinguer les types des paramètres `template`.
-    
-```cpp
-template <class T>
-class A
+template< template<typename,typename,typename...> typename Truc
+        , typename    Premier >
+        , typename    Deuxieme >
+        , typename... Reste >
+auto machin( const Truc<Premier, Deuxieme, Reste...>& t1
+           , const Truc<Deuxieme, Premier, Reste...>& t2)
 {
-    typename T::type v;
-};
-``` 
-    
-Et progressivement, le mot-clef `typename` a remplacé `class`.
-    
-```cpp
-template <typename T>
-class A
-{
-    typename T::type v;
-};
-``` 
-    
-Alors que le nom originel du C++ était ***C with `class`***, nous pourrions dire que le C++17 est le ***C++ without `class`***, c'est à dire, sans plus avoir besoin du mot-clef `class`. En effet, `class` est maintenant remplaçable soit par `typename`, soit par `struct` moyennant quelques changements :
-    
-```cpp
-// Avec class
-template <class T, template <class> C>
-class A : T
-{
-    typename C<T>::type v;
-};
-
-// Sans class
-template <typename T, template <typename> C>
-struct A : private T
-{
-private:
-    typename C<T>::type v;
-};
+    Truc<Reste...> t3 (t1, t2);
+    return t1 + t2 - t3;
+}
 ```
 
 
+
+**Une petite anecdote :** À l'époque lointaine où les `template` avaient été introduites au C++, seul le mot-clé `class` permettait d'indiquer que le paramètre `template` est un type (le mot-clé `typename` n'existait pas encore). Donc, pour un paramètre `template`, le mot-clé `class` désigne tout les types, dont `struct`, `int`... (pas seulement les types `class`). Dans l'exemple ci-dessous, `class T` signifie que `T` est un type, n'importe lequel :
+    
+```cpp
+template <class T>
+T foo(T);
+    
+int v = foo(42);
+``` 
+    
+Mais les compilateurs C++ avaient du mal a déduire la nature des certaines instructions :
+    
+```cpp
+template <class T>
+void foo()
+{
+  T::fonction();    // Est-ce objet de type T::fonction ?
+  T::type();        // Est-ce un appel de fonction ?
+  T::type     *  v; // Est-ce une multiplication ?
+  T::constante** v; // Est-ce une déclaration ?
+}
+``` 
+    
+Alors le mot-clef `typename` a été ajouté, [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'template%3Ctypename+...Types%3E%0Aauto+somme+(Types...+valeurs)%0A%7B+return+(valeurs+%2B+...)%3B+%7D%0A%0Atemplate%3Cbool+...Valeurs%3E%0Aauto+un_seul()%0A%7B+return+(...+%7C%7C+Valeurs)%3B+%7D%0A%0Aint+main()%0A%7B%0A++if+(un_seul%3Cfalse,true,false%3E())%0A++++return+somme(1,2,3,4)%3B%0A%7D%0A'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Weverything+-Wno-c%2B%2B98-compat+-Os'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) :
+    
+```cpp
+template <class T>
+void foo()
+{
+  T::fonction();       // Appel de fonction
+  typename T::type();  // Objet temporaire
+  typename T::type* v; // Déclaration d'une variable
+  T::constante * *v;   // Multiplication
+}
+``` 
+    
+Puis, le mot-clef `typename` a aussi remplacé `class` pour le paramètre `template`. Et c'est plus logique car ce n'est pas restreint aux seuls types déclarés avec le mot-clé `class`. La rétrocompatibilité ayant été conservée, les mots-clés `typename` et `class` sont interchangeables pour les paramètres `template`.
+    
+```cpp
+template <class T> // ou <typename T>
+void foo() { }
+    
+template <typename T> // ou <class T>
+void bar() { foo<T>(); }
+``` 
+    
+Et avec C++17, le cas du paramètre `template template` peut enfin utiliser `typename`.
+
+
+**Conséquence :** Alors que le nom originel du C++ était ***C with `class`***, nous pourrions dire que le C++17 est le ***C++ without `class`***, c'est à dire, sans avoir besoin du mot-clé `class`. En effet, `class` est maintenant remplaçable partout soit par `typename`, soit par `struct` moyennant quelques changements :
+    
+```cpp
+template <class T, template<class> C>
+class AvecClass : C<T>
+{
+    int v;
+};
+    
+template <typename T, template<typename> C>
+struct SansClass : private C<T>
+{
+private:
+    int v;
+};
+``` 
+    
+Alors, qu'en penses-tu ?
+***C++ without `class`*** c'est plus² la classe ?
 
 Sucre syntaxique
 ================
@@ -1051,31 +1039,22 @@ Pas mal de fonctions d'aide `make_***()` risquent de devenir inutiles...
 -----------------------------------------------
 
 
-Le `template<auto>` permet de remplacer `MaClasse<decltype(entier),entier>` par un élégant `MaClasse<entier>`. Allez, un exemple avant et après C++17 :
+Le `template<auto>` permet de remplacer `MaClasse<int,42>` par un élégant `MaClasse<42>`. Apparemment, ce n'est [pas encore supporté](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'template+%3Ctypename+Type,+Type+Constante%3E%0Astruct+Cpp14%0A%7B%0A++auto+foo()+const+%7B%0A++++auto+x+%3D+Constante%3B%0A++++return+%2B%2Bx%3B%0A++%7D%0A%7D%3B%0A++++%0Atemplate+%3Cauto+Constante%3E%0Astruct+Cpp17%0A%7B%0A++auto+foo()+const+%7B%0A++++auto+x+%3D+Constante%3B%0A++++return+%2B%2Bx%3B%0A++%7D%0A%7D%3B%0A++++%0Aint+main()%0A%7B%0A++const+auto+x+%3D+42%3B%0A++Cpp14%3Cdecltype(x),+x%3E+cpp14%3B%0A++Cpp17%3Cx%3E+cpp17%3B%0A++return+cpp14.foo()+%2B+cpp17.foo()%3B%0A%7D%0A'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:33.333333333333336,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-Os+-std%3Dc%2B%2B1z+-Weverything+-Wno-c%2B%2B98-compat'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:29.11051212938005,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:output,i:(compiler:1,editor:1),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:37.5561545372866,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) par Clang-3.9 et GCC-7.0.
     
 ```cpp
-// Avant C++17
-template <typename T, T Constante>
-class MaClasse
+template <typename Type, Type Constante>
+struct Cpp14
 {
-  T bar() const {
-    T x = Constante;
+  auto foo() const {
+    auto x = Constante;
     return ++x;
   }
 };
     
-int main()
-{
-  int entier = 42;
-  MaClasse<decltype(entier), entier> foo;
-  return foo.bar();
-}
-    
-// Avec C++17
 template <auto Constante>
-class MaClasse
+struct Cpp17
 {
-  auto bar() const {
+  auto foo() const {
     auto x = Constante;
     return ++x;
   }
@@ -1083,9 +1062,10 @@ class MaClasse
     
 int main()
 {
-  int entier = 42;
-  MaClasse<entier> foo;
-  return foo.bar();
+  const auto x = 42;
+  Cpp14<decltype(x), x> cpp14;
+  Cpp17<x> cpp17;
+  return cpp14.foo() + cpp17.foo();
 }
 ```
 
@@ -1095,11 +1075,42 @@ Mais à quoi cela sert les paramètres `template template` ?
 Cela sert, par [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'%23include+%3Cvector%3E%0A%23include+%3Clist%3E%0A%0Atemplate%3C+template+%3Ctypename,+typename%3E+typename+Container%0A++++++++,+typename+T%0A++++++++,+typename+Allocator+%3E%0Aauto+convert_to_vector(const+Container%3CT,+Allocator%3E%26+container)%0A%7B%0A+++std::vector%3CT,+Allocator%3E+v%3B%0A+++v.reserve(container.size())%3B%0A+++for+(const+auto%26+e+:+container)++v.push_back(e)%3B%0A+++return+v%3B%0A%7D%0A%0Aint+main()%0A%7B%0A++std::list%3Cint%3E+s%7B3,1,7,4%7D%3B%0A++auto+v+%3D+convert_to_vector(s)%3B%0A%7D'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4), à obtenir les paramètres `template` d'un conteneur :
    
 
-* [`auto x{8};` est de type `int`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
+[[P0386]](http://wg21.link/p0386) Variables `inline`
+----------------------------------------------------
     
-    TODO: Approfondir
-
-
+Les variables `inline` — comme les fonctions `inline` — peuvent être définies dans plusieurs unités de traduction (_translation units_). Son utilisation suggère au compilateur de substituer l'appel à la variable par son contenu. Elles sont adéquates pour remplacer les macros non-triviales. Plus subtil, on peut contourner la règle de la définition unique (_One Definition Rule_).
+    
+```cpp
+struct A
+{
+  // Déclaration de la variable inline
+  static int v;
+};
+    
+// Définition de la variable inline
+inline int A::v = 0;
+    
+// Ou plus simplement
+struct B
+{
+  static inline int v = 0; 
+};
+    
+// Les variables constexpr sont implicitement inline
+constexpr const int celerite_lumiere = 299'792'458;
+``` 
+    
+Par curiosité, [générons le code assembleur](https://framagit.org/Cpp17/variable_inline) x86_64 de l'exemple ci-dessus [avec](https://framagit.org/Cpp17/variable_inline/blob/master/avec_inline.cc) et [sans variable `inline`](https://framagit.org/Cpp17/variable_inline/blob/master/sans_inline.cc). Le compilateur `clang++ -S --std=c++1z -O0` optimise davantage le code avec variable `inline` en supprimant les lignes suivantes :
+    
+```nasm
+.type	_ZN1A27variable_inline_sans_inlineE,@object
+.section	.rodata,"a",@progbits
+.globl	_ZN1A27variable_inline_sans_inlineE
+.p2align	2
+_ZN1A27variable_inline_sans_inlineE:
+.long	42
+.size	_ZN1A27variable_inline_sans_inlineE, 4
+```
 
 [[N4295]](https://wg21.link/n4295) Expression dépliable
 -------------------------------------------------------
@@ -1122,21 +1133,69 @@ int main()
 }
 ```
 
-[Lambda](http://en.cppreference.com/w/cpp/language/lambda)
-========
+[[P0061]](https://wg21.link/p0061) `__has_include` pour C++17
+-------------------------------------------------------------
+    
+La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/preprocessor/include) vérifie si l'en-tête `<filesystem>` est disponible pour inclusion ;
+    
+```cpp
+#if    __has_include(<filesystem>)
+#  include <filesystem>
+#elif  __has_include(<experimental/filesystem>)
+#  include <experimental/filesystem>
+#elif __has_include(<boost/filesystem.hpp>)
+#  include <boost/filesystem.hpp>
+#else
+#  error Ne trouve aucune en-tête filesystem
+#endif
+``` 
+    
+Allons plus loin avec un autre exemple :
+     
+```cpp
+#if __has_include(<windows.h>)
+#  include <windows.h>
+   LONGLONG ticks1nano = []() {
+     LARGE_INTEGER freq;
+     QueryPerformanceFrequency(&freq);
+     return freq.QuadPart / 1000'000;
+   }();
+   LONGLONG nanosecondes() {
+     LARGE_INTEGER time;
+     QueryPerformanceCounter(&time);
+     return time.QuadPart/ticks1nano;
+   }
+#elif __has_include(<time.h>)
+#  include <time.h>
+   auto nanosecondes() {
+      struct timespec ts;
+      clock_gettime(CLOCK_MONOTONIC,&ts);
+      return 1000'000'000 * ts.tv_sec + ts.tv_nsec;
+   }
+#else
+#  error Ne trouve ni <windows.h> ni <time.h>
+#endif
+```
 
 
-* [`constexpr` par défaut](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4487.pdf)
-  si répond aux critères `constexpr` ;
+
+Lambda
+======
+    
+Les [lambdas](http://en.cppreference.com/w/cpp/language/lambda) ont été introduites avec C++11. C++14 a améliorer leur utilisation, notamment en permettant les variadiques lambdas. Et C++17 apporte deux autres améliorations.
 
 
-* Possibilité de [capturer `*this`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
-  Tout le contenu de l'objet `*this` est copié au lieu du pointeur `this`.
-  C'est très avantageux pour les petits objets.
-  La copie d'un objet plus volumineux permet aussi d'éviter de mettre en place des verrous
-  entre fils d'éxécution [*(value semantics)*](https://en.wikipedia.org/wiki/Value_semantics) ;
+[[N4487]](https://wg21.link/n4487) Lambda `constexpr`
+----------------------------------------------------
+    
+Les lambda sont automatiquement `constexpr` si répond aux critères `constexpr`.
+    
+    TODO Rappeler les critères `constexpr`
 
-
+[[P0018]](https://wg21.link/p0018) Capture de `*this`
+----------------------------------------------------
+    
+Dans une lambda, accéder aux membres de `this` se faisait toujours via le pointeur, comme `this->membre`. C++17 permet une capture d'une copie de `*this` avec la syntaxe `[=,copie=*this]`. Tout le contenu de l'objet `*this` est copié (capturé) au lieu de seulement du pointeur `this`. C'est très avantageux pour les petits objets. La copie d'un objet plus volumineux permet aussi d'éviter de mettre en place des verrous entre fils d'éxécution [*(value semantics)*](https://en.wikipedia.org/wiki/Value_semantics).
 
 Attributs
 =========
