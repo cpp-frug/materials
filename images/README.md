@@ -171,3 +171,31 @@ Six images générées = deux format (JPEG et WebP) et trois codes C++ écrits s
 4. ![WebP "auto i{0}"    ](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_auto.webp)
 5. ![JPEG "std::fill_n()"](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_fill.jpg)
 6. ![WebP "std::fill_n()"](http://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3_fill.webp)
+
+Compilé c'est Testé
+-------------------
+
+Auteur    | Contribution           | License
+----------|------------------------|----------
+Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
+
+L'adage *"Compilé c'est Testé, Linké c'est Livré"*
+est possible pour le C++ en codant sa lib en `constexpr`
+et ses tests unitaires en `static_assert()`.
+
+La réalisation de cette image s'est basée sur quatre logiciels :
+
+- inkscape (pour le dessin vectoriel initial) ;
+- scour (pour améliorer le fichier XML produit par inkscape) ;
+- geany (pour finaliser les améliorations manuellement) ;
+- meld (pour contrôler les changements à chaque étape).
+
+Deux versions :
+
+1. Le brouillon original matricielle ;
+2. La version vectorielle. 
+
+![Brouillon original](http://cpp-frug.github.io/materials/images/compiler-c-est-tester_copyright-OliverH-2016_CC-BY-SA-3.0_original.png)
+
+![Version vectorielle](http://cpp-frug.github.io/materials/images/compiler-c-est-tester_copyright-OliverH-2016_CC-BY-SA-3.0.svg)
+
