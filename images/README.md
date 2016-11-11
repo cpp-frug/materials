@@ -27,10 +27,13 @@ La réalisation de cette image s'est basée principalement sur deux logiciels :
 - potrace (vectorisation) ;
 - inkscape.
 
-Deux versions :
+Trois versions :
 
-1. L'originale avec les balises `<text>` et donc nécessite de la présence de la police Purisa ;
-2. Celle avec les texts remplacé par des chemins `<path>` donc on ne peut plus éditer les textes.
+1. L'ébauche originelle au crayon ;
+2. La version SVG avec les balises `<text>` et donc nécessite de la présence de la police Purisa ;
+3. Celle avec les textes remplacés par des chemins `<path>` donc ne peuvant plus être édités.
+
+![ébauche au crayon](http://cpp-frug.github.io/materials/images/cpp-complexe-draft.png)
 
 ![Version originale avec les balises <text>](http://cpp-frug.github.io/materials/images/cpp-complexe-original.svg)
 
