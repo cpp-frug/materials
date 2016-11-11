@@ -176,7 +176,7 @@ int main()
 Les trigraphes auraient pu devenir obsolètes dès C++11 (proposé en 2009). Mais, quelques membres du comité de normalisation du C++, dont IBM et Bloomberg, avaient réussi à ne pas les rendre obsolètes. Pour C++17, les membres ont finalement voté la suppression pure et simple sans étape intermédiaire. IBM a même tenté une dernière [tentative pour conserver les trigraphes](https://wg21.link/n4210) mais sans succès.
 
 
-[[P0001]](https://wg21.link/p0001) Suppression du mot-clé déprécié `register`
+[[P0001]](https://wg21.link/p0001) Suppression du mot-clé `register`
 ----------------------------------------------------------------------------
     
 Historiquement, le mot-clé [`register`](http://en.cppreference.com/w/c/keyword/register) force l'utilisation d'un registre du processeur. Cela permettait de gagner en performance en indiquant au compilateur quelles variables à garder dans un registre (à l'époque les compilateurs n'étaient pas très futés).
@@ -197,7 +197,7 @@ int main()
 }
 ``` 
     
-Le mot-clé `register` est déprécié depuis C++11. À l'époque, les contraintes de ce mot-clé (pas de pointeur...) ont été conservées pour la compatibilité avec le C, en particulier avec les arguments des fonctions. Pourtant, son usage n’est pas pertinent en C++ :  redondant avec d’autres fonctionnalités et ses restrictions (pas de pointeur...) ne peuvent être facilement transcrites en C++. Plutôt que d’essayer de résoudre les différences avec le C, C++17 fait de `register` un mot-clé réservé non utilisé. Espérons qu'un usage futur lui soit trouvé...
+Le mot-clé `register` est déprécié depuis C++11. À l'époque, les contraintes de ce mot-clé (pas de pointeur...) ont été conservées pour la compatibilité avec le C, en particulier avec les arguments des fonctions. Pourtant, son usage n’est pas pertinent en C++ :  redondant avec d’autres fonctionnalités et ses restrictions ne peuvent être facilement transcrites en C++. Plutôt que d’essayer de résoudre les différences avec le C, le standard fait de `register` un mot-clé réservé non utilisé. Espérons qu'un usage futur lui soit trouvé...
 
 [[P0002]](https://wg21.link/p0002) Suppression de `operator++(bool)` obsolète
 -----------------------------------------------------------------------------
@@ -493,22 +493,54 @@ C'est a propos du verrouillage des fils d’exécution *(thread lock)* et des [s
 [[N4267]](https://wg21.link/n4267) Littéral de caractère UTF-8 `u8`
 ---------------------------------------------------------------
     
-```cpp
-// Déjà disponible avant C++17
-const char     narrow =  'a';
-const char16_t ucs2   = u'é';
-const char32_t ucs4   = U'ï';
-const wchar_t  wide   = L'ô';
+En programmation, un [littéral](https://fr.wiktionary.org/wiki/litt%C3%A9ral#Nom_commun) est un préfixe ou un suffixe qui indique le **type** d'une constante (i.e. d'une valeur codée en dur). Ce *TS* compense le littéral `u8` pour les [chaînes de caractères](http://en.cppreference.com/w/cpp/language/string_literal) qui était absent des [caractères](http://en.cppreference.com/w/cpp/language/character_literal). Notons que ce littéral `u8` reste absent pour les [caractères en C](http://en.cppreference.com/w/c/language/character_constant) comme le montre ce tableau récapitulatif :
     
-// Avec C++17
-const char     utf8   = u8'ù';
-const char     utf16  = u8'学'; // Erreur
+Nom   |Préfixe| Type     |Chaîne de caractères| Caractère
+------|-------|----------|--------------------|-----------------
+Wide  | `L`   |`wchar_t` | C++98 et C89/C90   | C++98 et C89/C90
+UTF-8 | `u8`  |`char`    | C++11 et C11       | **C++17 seulement**
+UTF-16| `u`   |`char16_t`| C++11 et C11       | C++11 et C11
+UTF-32| `U`   |`char32_t`| C++11 et C11       | C++11 et C11
+    
+Ce littéral n'avait pas été introduit auparavant car il peut induire en erreur. En effet, un caractère `u8` ne peut contenir les symboles UTF-8, seulement ceux qui peuvent être contenus dans un `char`. Exception du `char` représenté par 32 bits, ici pour simplifier la compréhension, nous considérons que le type `char` est codé en 8 bits. En fait, un caractère `u8` sert à représenter n'importe quel `char` d'une chaîne de caractère `u8` qu'il représente un code UTF-8 ou pas.
+        
+```cpp
+const char* s = u8"aéîöù"; // Correct en C++11 et C11
+const char  c = u8'a';     // Correct en C++17
+const char ko = u8'é';     // 'é' dépasse la capacité de stockage du char (1 octet)
+const auto Ko = u8'é';     // Exactement le même problème, auto ne change rien
+const char ok = u8'\xFF';  // Correct en C++17 (ce n'est pas un code UTF-8 valide)
+``` 
+    
+L'[exemple ci-dessus](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(compileOnChange:'0'),source:'const+char*+s+%3D+u8%22a%C3%A9%C3%AE%C3%B6%C3%B9%22%3B+//+Correct+en+C%2B%2B11+et+C11%0Aconst+char++c+%3D+u8!'a!'%3B+++++//+Correct+en+C%2B%2B17%0Aconst+char+ko+%3D+u8!'%C3%A9!'%3B+++++//+!'%C3%A9!'+d%C3%A9passe+la+capacit%C3%A9+de+stockage+du+char+(1+octet)%0Aconst+auto+Ko+%3D+u8!'%C3%A9!'%3B+++++//+Exactement+le+m%C3%AAme+probl%C3%A8me,+auto+ne+change+rien%0Aconst+char+ok+%3D+u8!'%5CxFF!'%3B++//+Correct+en+C%2B%2B17'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g6,filters:(b:'0',commentOnly:'0',directives:'0'),options:'-std%3Dc%2B%2B1z++-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+gcc+6.1',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) est intéressant car GCC-6 et GCC-7 affichent des avertissements (`warning`) pour les variables `[kK]o` alors que Clang-3.6 à Clang-3.9 produisent des erreurs : GCC considère que ce code est conforme au standard C++17 (car pas d'erreur) alors que Clang non.
+
+Rappelons l'ensemble des littéraux de caractères avec cet [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(),source:'%23include+%3Ctype_traits%3E%0A%0A//+Pas+de+litt%C3%A9ral%0Aconst+auto+narrow+%3D+!'a!'%3B+//+char%0Astatic_assert(std::is_same_v%3Cdecltype(narrow),+const+char%3E)%3B%0A%0A//+Nouveau+litt%C3%A9ral+pour+C%2B%2B17%0Aconst+auto+utf8+%3D+u8!'e!'%3B+//+char%0Astatic_assert(std::is_same_v%3Cdecltype(utf8),+const+char%3E)%3B%0A%0A//+Litt%C3%A9raux+d%C3%A9j%C3%A0+disponibles+%0Aconst+auto+ucs2+%3D+u!'%C3%AE!'%3B+//+char16_t%0Aconst+auto+ucs4+%3D+U!'%C3%B6!'%3B+//+char32_t%0Aconst+auto+wide+%3D+L!'%C3%B9!'%3B+//+wchar_t%0A%0Astatic_assert(std::is_same_v%3Cdecltype(ucs2),+const+char16_t%3E)%3B%0Astatic_assert(std::is_same_v%3Cdecltype(ucs4),+const+char32_t%3E)%3B%0Astatic_assert(std::is_same_v%3Cdecltype(wide),+const+wchar_t%3E)%3B%0A'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g7snapshot,filters:(b:'0',commentOnly:'0',directives:'0'),options:'-std%3Dc%2B%2B1z++-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+gcc+7+(snapshot)',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) :
+    
+```cpp
+#include <type_traits>
+    
+// Pas de littéral
+const auto narrow = 'a'; // char
+static_assert(std::is_same_v<decltype(narrow), const char>);
+    
+// Nouveau littéral pour C++17
+const auto utf8 = u8'e'; // char
+static_assert(std::is_same_v<decltype(utf8), const char>);
+    
+// Littéraux déjà disponibles en C++ et C
+const auto ucs2 = u'î'; // char16_t
+const auto ucs4 = U'ö'; // char32_t
+const auto wide = L'ù'; // wchar_t
+    
+static_assert(std::is_same_v<decltype(ucs2), const char16_t>);
+static_assert(std::is_same_v<decltype(ucs4), const char32_t>);
+static_assert(std::is_same_v<decltype(wide), const wchar_t>);
 ```
 
 [[N4285]](https://wg21.link/n4285) Réécriture de paragraphes concernant les exceptions
 --------------------------------------------------------------------------------------
     
-Quand un paragraphe n'est clair, il est judicieux de le réécrire.
+Ce *TS* a le mérite d'identifier des paragraphes qui ne sont pas clairs et de proposer une reformulation.
 
 [[N3922]](https://wg21.link/n3922) Nouvelles règles de déduction pour `auto` à partir des {listes d'initialisation}
 ---------------------------------------
@@ -729,14 +761,16 @@ C++17 permet d'écrire `static_assert(condition)` avec un seul paramètre. Avant
 ```cpp
 // avant C++17 il était courant de fournir un message vide
 static_assert(sizeof(int) == 4, "");
-
+    
 // avec C++17
 static_assert(sizeof(int) == 4);
-```
-
-
+``` 
     
 Pour l’anecdote, cette fonctionnalité aurait bien pu s'appeler `constexpr_assert()` car `constexpr` exprime que c'est évalué lors de la compilation, ce qui est plus précis que `static` pour `constexpr_assert()`. La fonctionnalité `static_if` s'est bien fait renommée `constexpr_if` (voir plus bas dans la dépêche).
+    
+Soulignons que les [mots clés](http://en.cppreference.com/w/cpp/keyword) `constexpr` et `static_assert()` permettent au C++ de réaliser l'adage *"Compilé c'est testé, linké c'est livré"* comme illustré par le [comic strip](https://fr.wikipedia.org/wiki/Comic_strip) ci-dessous.
+    
+[![Un développeur annonce à son responsable "Compilé c'est Testé, Linké c'est Livré" puis explique que le code C++ est constexpr et les tests sont static_assert()](https://cpp-frug.github.io/materials/images/compiler-c-est-tester_copyright-OliverH-2016_CC-BY-SA-3.0.svg)](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#compil%C3%A9-cest-test%C3%A9)
 
 [[P0245]](http://wg21.link/p0245) Constante hexadécimale pour la virgule flottante 
 ----------------------------------------------------------------------------------
@@ -1373,12 +1407,12 @@ Proposer dans les commentaires un code source utilisant le maximum des nouveaut�
     
 Les vainqueurs recevront des petits cadeaux (goodies, autocollant...) sur le stand *LinuxFr.org* du [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) les 16 et 17 novembre. Possibilité de les envoyer par courrier ~~électronique~~ postal ;-)
 
-Commentaires
-============
+Troll
+=====
     
 La précédente dépêche a été inondée de [227 commentaires](https://linuxfr.org/news/c-17-genese-d-une-version-mineure#droit-dauteur-licences-remerciements) de [trolls](https://fr.wikipedia.org/wiki/Troll_%28Internet%29) avec bien souvent des propos blessants. Ce *TrollFr* est dix fois plus volumineux que la dépêche ! Le système de commentaires ne fait qu'attiser nos divergences. Et ne permet malheureusement pas de consolider nos points de vue. C'est bien dommage.
     
-Cette fois-ci, évitons d'entretenir les *TrollFr*. Ce ni respectueux pour les auteurs de la dépêche, ni pour les autres lectrices et lecteurs qui perdent leur temps à lire des arguments qui se répètent et à lire des propos méprisants.
+Cette fois-ci, évitons d'entretenir les *TrollFr*. Ce n'est  ni respectueux pour les auteurs de la dépêche, ni pour les autres lectrices et lecteurs qui perdent leur temps à lire des arguments qui se répètent et à lire des propos méprisants.
     
 Quand on pense à toute cette énergie dépensée et ces heures consacrées à rédiger des contre-arguments, on se dit qu'il aurait mieux valu créer une dépêche collaborative du style *"Faut-il débuter un logiciel prévu en C++ ?"* ou *"Est-il pertinent d'apprendre le C++ aujourd'hui ?"*. Et d'inviter les protagonistes à venir s'exprimer. Au moins, il en serait sortit des arguments pour et contre bien structurés et concis, utiles à tous.
     
