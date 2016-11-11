@@ -138,6 +138,11 @@ La réalisation de cette image s'est basée principalement sur deux logiciels :
 
 ![Chatons tristes C++17](http://cpp-frug.github.io/materials/images/cpp-chatons-tristes_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
+Ci-dessous le dessin original dessinée par Ziyue avant les améliorations réalisées avec GIMP et G'MIC. Cette image est au format WebP afin de limiter les fichiers binaires dans le dépôt Git. Chromium supporte depuis longtemps le format WebP, et Firefox devrait bientôt [le supporter](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490) aussi.
+
+![Dessin original de Ziyue](http://cpp-frug.github.io/materials/images/cpp-chatons-tristes_copyright-Ziyue-2016_CC-BY-SA-3_original.webp)
+
+
 C++17 sauve une écolière
 ------------------------
 
