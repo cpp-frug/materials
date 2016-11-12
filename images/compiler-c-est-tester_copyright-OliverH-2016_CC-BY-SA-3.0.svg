@@ -69,7 +69,7 @@
    <tspan x="1" y="20">Compilé c'est Testé</tspan>
    <tspan x="1" y="51">Linké c'est Livré</tspan>
   </text>
-  <text x="193" y="95" fill="#003">Et les tests ?</text>
+  <text x="193" y="95" fill="#003">Pas testé ?</text>
   <text fill="#030">
    <tspan x="360" y="19">
     <tspan>Le code est</tspan>
