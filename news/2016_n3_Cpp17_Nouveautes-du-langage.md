@@ -4,7 +4,7 @@
 Les nouveautés au cœur du C++17
 ===============================
 
-Auteurs | Oliver H, olibre, Adrien Jeser, gorbal, Storm, palm123, eggman, khivapia, Segfault, Benoît Sibaud, Lucas, cracky, Martin Peres et RyDroid.
+Auteurs | Oliver H, olibre, Adrien Jeser, eggman, gorbal, Storm, palm123, eggman, khivapia, Segfault, Benoît Sibaud, Lucas, cracky, Martin Peres et RyDroid.
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/nouveautes-au-coeur-du-c-17
@@ -12,7 +12,7 @@ Date    | 2016-07-22T00:53:12+02:00
 Tags    | c++17, c++ et cpp
 Score   |   0
 
-L'ajout des fonctionnalités au **C++17** a été clôturé. Cette troisième dépêche se concentre sur les changements au niveau du langage C++. Faisons donc le tour des nouveautés :-)
+L'ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les changements au niveau du langage C++. Quelques anecdotes parsèment cet article, des suggestions comme le **C++ without class** en echo au **C with class**, ou quelques illustrations inédites comme celle du *"Compilé c'est testé, linké c'est livré"*. Alors faisons donc le tour des nouveautés :-)
     
 ![C++17 à l'école primaire](https://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
@@ -32,6 +32,282 @@ L'ajout des fonctionnalités au **C++17** a été clôturé. Cette troisième d�
 ----
 
 ![Illustration C++ de Dominic Alves sous license CC-BY-SA 2.0](https://c2.staticflickr.com/2/1116/785982209_b0da7b4380_o.jpg)
+
+
+TODO
+====
+    
+Reste à faire avant publication :
+    
+Qui ?           | Quoi ?                                        | Fait ?
+----------------|-----------------------------------------------|----------    
+Oliver          | Vérifier les TS qui manquent                  | ...
+Oliver          | Ajouter/Réordonner les TS de cette dépêche    | non
+Oliver          | Préparer la dépêche suivante <br> **Changements au niveau de la bibliothèque standard** <br> Avec une liste exhaustive des TS et des `TODO`  | non
+Oliver          | Créer la dépêche suivante dans l'espace de rédaction *LinuxFr.org* <br> Ajouter les liens entre cette dépêche et la suivante <br> Proposer d'aider à la rédaction de la dépêche suivante | non
+???              | Déplacer dans la dépêche suivante le TS Alias de iostream | non
+Oliver           | Créer la dépêche **Bilan C++17** dans l'espace de rédaction *LinuxFr.org*  | non
+Oliver           | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l'espace de rédaction *LinuxFr.org* <br> Dans la section Troll, inviter à participer à cette dépêche <br> Prendre en compte les changements de eggman | non
+Oliver           | Relire la sous-section *"Évaluation stricte des expressions"* <br> Proposer des ajouts/améliorations | non
+???              | Ajouter des images (humoristiques) pour illustrer les sous-sections | non
+???              | Ajouter la section finale **Remerciments** pour remercier Adrien. Rappeler la licences et les auteurs. Des statistiques: la dépêche la plus longue de *LinuxFr.org* ... | non
+???              | Passer un coup de Grammalect sur tout les paragraphes <br> pour insérer les espaces insécables (et autres formatages de texte) | non
+
+
+Vérifier l'exactitude et l'ordre des TS
+---------------------------------------
+
+
+* Compatibilité avec le langage C
+
+
+    * [P0063] C++17 se réfère à C11 au lieu de C99
+
+
+* Suppression
+
+
+    * [N4086] Trigraphes
+    * [P0001] Mot-clé register
+    * [P0002] Incrémentation sur les booléens
+
+
+* Corrections
+
+
+    * [N4266] Attributs pour namespace et enum
+    * [N4261] Conversion des tableaux de pointeurs
+    * [P0136] Héritage des constructeurs
+    * [P0145] Évaluation stricte des expressions
+    * [P0184] Généralisation des boucles pour gérer les Intervalles (Ranges)
+    * [P0012] Intégrer les spécifications d'exception dans le type système
+    * [P0035] Allocation mémoire dynamique des données
+    * [P0135] Court-circuitage du constructeur par copie
+    * [P0296] Forward progress guarantees (FPG) et [P0299] FPGs for parallel algorithms
+    * [N4267] Littéral de caractère UTF-8 u8
+    * [N4285] Réécriture de paragraphes concernant les exceptions
+    * [N3922] Nouvelles règles de déduction pour auto à partir des {listes d'initialisation}
+    * [N4268] Autoriser l'évaluation constante pour les arguments template n'étant pas un type
+    * [N4051] Autoriser typename pour les paramètres template template
+
+
+* Sucre syntaxique
+
+
+    * [N4230] namespace imbriqué
+    * [N3928] Extension du static_assert()
+    * [P0245] Constante hexadécimale pour la virgule flottante
+    * [P0217] Attaches structurées (Structured bindings)
+    * [P0305] Instruction de sélection avec initialiseur
+    * [P0292] if constexpr
+    * [P0091] Déduction des arguments template du constructeur
+    * [P0127] Déclaration des paramètres template avec auto sauf pour les types
+    * [P0386] Variables inline
+    * [N4295] Expression dépliable
+    * [P0061] __has_include pour C++17
+
+
+* Lambda
+
+
+    * [N4487] Lambda constexpr
+    * [P0018] Capture de *this
+
+
+* Attributs
+
+
+    * [P0188] Attribut [[fallthrough]]
+    * [P0189] Attribut [[nodiscard]]
+    * [P0212] Attribut [[maybe_unused]]
+
+
+* Language
+
+
+   * Templates and Generic Code
+
+
+       *  [p0091] Template argument deduction for class templates
+       *  [p0127] `template <auto>`
+       * [n4268] Non-type template arguments fixes
+       * [n4051] `template<template<class...>typename bob> struct foo {}`
+       * [n4295] ( Folding + ... + expressions )
+       * [p0036] Revisions
+       * [n3922] `auto x{8};` is an `int`
+
+
+    * Lambda
+
+
+       *  [n4487] constexpr lambdas
+       *  [p0018] Capturing `*this` in lambdas
+
+
+    * Attributes
+
+
+       *  [p0188] `[[fallthrough]]`
+       * [p0189] `[[nodiscard]]`
+       * [p02120] `[[maybe_unused]]`
+       * [n4266] `[[attributes]]` on `namespace`s and `enum { erator[[s]] }`
+       * [p0028] `using` in attributes to avoid having to repeat an attribute namespace.
+       * [p0283] Compilers are now required to ignore non-standard attributes they don't recognize (The C++14 wording allowed compilers to reject unknown scoped attributes).
+
+
+    * Syntax cleanup
+
+
+       *  [p0386] Inline variables
+       *  [n4230] `namespace A::B`
+       * [n3928] Simple `static_assert(expression);` with no string
+
+
+    * Cleaner multi-return and flow control
+
+
+       *  [p0217] Structured bindings
+       *  [p0305] `if (init; condition)` and `switch (init; condition)`
+       *  [p0184] Generalizing range-based for loops
+       *  [p0292] `constexpr if`
+
+
+   * Misc
+
+
+       *  [p0245] Hexadecimal float point literals
+       *  [p0035] Dynamic memory allocation for over-aligned data
+       *  [p0135] Guaranteed copy elision
+       * [p0145] Fixed order-of-evaluation for (some) expressions with some
+       * [p0400] modifications
+       * [p0138] Direct list-initialization of enums
+       * [p0299] FPGs for parallel algorithms
+       * Forward progress guarantees (FPG)
+       * [n4267] `u8'U', u8'T', u8'F', u8'8'` character literals.
+       * [p0012] `noexcept` in the type system
+       * [p0061] `__has_include`
+       * [n4261] Arrays of pointer conversion fixes
+       * [p0136] inherited constructors fixes to some corner cases.
+       * [p0017] aggregate initialization with inheritance
+       * [p0137] `std::launder`, type punning, etc
+
+
+*  Library additions:
+
+
+    * Data types
+
+
+       *  [p0088] `std::variant<Ts...>`
+       * [n4480#optional] `std::optional`
+       * [n4480#any] `std::any`
+       * [n4480.html#string.view] `std::string_view`
+
+
+
+    * Invoke stuff
+
+
+       *   [n4169] `std::invoke`
+       *  [n4480] `std::apply`
+       *  [p0077] `std::is_callable`
+       *  [p0209] `std::make_from_tuple`, `std::apply` applied to object construction
+
+
+    * [p0218] File System TS v1
+
+
+       * `[class.path]`
+       * `[class.filesystem.error]`
+       * `[class.file_status]`
+       * `[class.directory_entry]`
+       * `[class.directory_iterator]` and `[class.recursive_directory_iterator]`
+       * `[fs.ops.funcs]`
+
+
+    * Threading
+
+
+       * [n4508] `std::shared_mutex`
+       * [p0152] `atomic<T>`[`::is_always_lockfree`
+       * [p0156] `lock_guard<Mutexes...>`
+       * [n4071] Parallelism TS v1
+       * [p0154] `hardware_*_interference_size`
+
+
+    * [p0220] (parts of) Library Fundamentals TS v1 not covered above or below
+       * [n4480] `[func.searchers]` and `[alg.search]`
+       * [n4480] `[pmr]`
+       * [n4480] `std::sample`, sampling from a range?
+
+
+    * Container Improvements
+
+
+       * [n4279] `try_emplace` and `insert_or_assign`
+       * [p0083] Splicing for `map<>`, `unordered_map<>`, `set<>`, and `unordered_set<>`
+       * [p0272] non-const [`.data()`] for string.
+       * [n4280] non-member `std::size`, `std::empty`, `std::data`
+       * [n4510] Minimal incomplete type support in containers
+      * [n4284] Contiguous iterator "concept"
+      * [p0031] `constexpr` iterators
+      * [p0084] The `emplace` family of functions [now returns a reference to the created object
+
+
+    * Smart pointer changes
+
+
+      * [n4089] `unique_ptr<T[]>` fixes
+      * [n4366] and other `unique_ptr` tweaks.
+      * [p0033] `weak_from_this` and some fixed to shared from this
+
+
+    * Other `std` datatype improvements:
+
+
+      * [n4387] `{}` construction of `std::tuple` and other improvements
+      * [n4277] TriviallyCopyable reference_wrapper, can be performance boost
+
+
+    * Misc
+
+
+      *  [p0063] C++17 library is based on C11 instead of C99
+      *  [p0180] Reserved `std[0-9]+` for future standard libraries
+      *  [p0040] `destroy(_at|_n)`, `uninitialized_move(_n)`, `uninitialized_value_construct(_n)`, `uninitialized_default_construct(_n)`
+      *  [n1422] Special math functions
+      *  [p0025] `std::clamp( a, b, c ) == std::max( b, std::min( a, c ) )`
+      * [n4259] `std::uncaught_exceptions`
+      * [p0007] `std::as_const`
+      * [n4389] `std::bool_constant`
+      * [p0006] A whole bunch of `_v` template variables
+      * [n3911] `std::void_t<T>
+      * [p0074] `std::owner_less<void>` like `std::less<void>`, but for smart pointers to sort based on contents
+      * [p0092] `std::chrono` polish
+      * [p0013] `std::conjunction`, `std::disjunction`, `std::negation` exposed
+      * [p0005] `std::not_fn`
+      * [n4258] Rules for noexcept within `std`
+      * [p0258] `std::is_contiguous_layout` useful for efficient hashing
+      * [p0067] `std::to_chars/std::from_chars`, high performance, locale agnostic number conversion; finally a way to serialize/deserialize to human readable formats (JSON & co) 
+      * [p0181] <s>std::default_order, indirection over `std::less`.</s> (breaks ABI of some compilers due to name mangling, removed.)
+
+
+
+* Removed
+
+
+ * [p0001] `register`, keyword reserved for future use
+ * [p0002] `bool b; ++b;`
+ * [n4086] trigraphs
+ * [p0004] ios aliases
+ * [n4190] `auto_ptr`, old `<functional>` stuff, `random_shuffle`
+ * [p0302] allocators in `std::function`
+
+
+* Spec changes:
+
+
+ * [n4285] exception specs and throw expressions
 
 
 Série de dépêches C++
@@ -125,7 +401,7 @@ Suppression
 ===========
 
 
-[[N4086]](https://wg21.link/n4086) Suppression des trigraphes
+[[N4086]](https://wg21.link/n4086) Trigraphes
 -------------------------------------------------------------
     
 ```cpp
@@ -175,8 +451,7 @@ int main()
     
 Les trigraphes auraient pu devenir obsolètes dès C++11 (proposé en 2009). Mais, quelques membres du comité de normalisation du C++, dont IBM et Bloomberg, avaient réussi à ne pas les rendre obsolètes. Pour C++17, les membres ont finalement voté la suppression pure et simple sans étape intermédiaire. IBM a même tenté une dernière [tentative pour conserver les trigraphes](https://wg21.link/n4210) mais sans succès.
 
-
-[[P0001]](https://wg21.link/p0001) Suppression du mot-clé `register`
+[[P0001]](https://wg21.link/p0001) Mot-clé `register`
 ----------------------------------------------------------------------------
     
 Historiquement, le mot-clé [`register`](http://en.cppreference.com/w/c/keyword/register) force l'utilisation d'un registre du processeur. Cela permettait de gagner en performance en indiquant au compilateur quelles variables à garder dans un registre (à l'époque les compilateurs n'étaient pas très futés).
@@ -199,7 +474,7 @@ int main()
     
 Le mot-clé `register` est déprécié depuis C++11. À l'époque, les contraintes de ce mot-clé (pas de pointeur...) ont été conservées pour la compatibilité avec le C, en particulier avec les arguments des fonctions. Pourtant, son usage n’est pas pertinent en C++ :  redondant avec d’autres fonctionnalités et ses restrictions ne peuvent être facilement transcrites en C++. Plutôt que d’essayer de résoudre les différences avec le C, le standard fait de `register` un mot-clé réservé non utilisé. Espérons qu'un usage futur lui soit trouvé...
 
-[[P0002]](https://wg21.link/p0002) Suppression de `operator++(bool)` obsolète
+[[P0002]](https://wg21.link/p0002) Incrémentation sur les booléens
 -----------------------------------------------------------------------------
     
 Dans les temps anciens, le type `bool` n’existait pas. Les entiers étaient utilisés pour cet usage avec `#define FALSE 0` et `#define TRUE !0` (souvent égal à `1`). C'est à dire **zéro pour faux** et **toutes les autres valeurs pour vrai**.
@@ -210,25 +485,6 @@ La création du type `bool` avec le C++ avait nécessité de garder une comptabi
 bool b = aimes_tu_cpp17();
 --b; // Erreur depuis C++98
 ++b; // Erreur depuis C++17
-```
-
-[[P0004]](https://wg21.link/p0004) Alias de `iostream`
------------------------------------------------------
-    
-Obsolète depuis C++98, C++17 interdit les alias de `iostream` afin de simplifier le standard C++. Ces alias sont avantageusement remplacés par les masques de bits `ios_base::openmode`, `os_base::iostate`… Les changements à apporter aux codes existants sont minimes.
-    
-```cpp
-// Autorisé avant C++17
-std::ios_base::open_mode mode = std::ios::out | std::ios::app;
-std::ios_base::io_state  etat = std::ios_base::goodbit;
-
-// En utilisant les masques de bit
-std::ios_base::openmode mode = std::ios::out | std::ios::app;
-std::ios_base::iostate  etat = std::ios_base::goodbit;
-
-std::ofstream fichier;
-fichier.open("exemple.txt", mode);
-fichier.clear(etat);
 ```
 
 Corrections
@@ -350,7 +606,7 @@ c.f(0); // accepté (pas de changements)
 [[P0145]](https://wg21.link/p0145) Évaluation stricte des expressions
 ---------------------------------------------------------------------
 
-Héritées du C, les sous-expressions sont indéfiniment séquencées. Ce choix amène à des comportements incertains, notamment lorsqu’on utilise le même objet.
+Héritées du C, les expressions sont indéfiniment séquencées. Le choix de l'ordre d'évalution est délégué au compilateur, qui peut optimiser le code. Par contre, cette liberté amène à des comportements incertains, notamment lorsqu’on utilise le même objet. Cette absence de spécification est dommageable avec les pratiques courantes, comme le chainage (`std::future<T>`, `std::io_base`, …).
 
 ```cpp
 
@@ -371,7 +627,10 @@ std::cout << i << i++;
 
 
 
-Cette absence de spécification est dommageable avec les pratiques courantes, comme le chaînage (`std::future<T>`, `std::io_base`, …).
+### Exemple commenté
+
+
+Ce problème n'est pas juste l'apanage des experts. C'est un piège qui concerne aussi les débutants. Un exemple commenté permettra à tous de mieux comprendre.
 
 ```cpp
 
@@ -397,7 +656,23 @@ Cette absence de spécification est dommageable avec les pratiques courantes, co
 
 
 
-Dans l’exemple ci-dessus, l’assertion peut — selon le compilateur — échouer. Les expressions annotées alphabétiquement sont dites séquencées, dans l’ordre suivant : A, B, C, D.
+Ce code provient du brouillon. Il remplace plusieurs caractères d'un objet std::string. Pourtant ce programme semble légitime, mais produira un résultat non désiré, selon le compilateur.
+
+
+La première ligne est en somme tout classique. Un objet std::string est déclaré et initialisé.
+
+Dans l’exemple ci-dessus, l’assertion peut — selon le compilateur — échouer. Les expressions annotées alphabétiquement sont dites séquencées, dans l’ordre suivant : A, B, C, D. Le compilateur pouvait au choix évaluer les sous-expressions (annoté numériquement) avant ou après l'expression aparenté. Cette TS ajoute plusieurs règles. 
+
+### Les nouvelles règles
+
+**L'ordre d'évaluation est :**
+
+- De la gauche vers la droite pour les expressions suffixés. Ceci inclue les appelles de fonction et la section des membres.
+- L'assignement de la droite vers la gauche.
+- Les opérateurs de décalage (_shift operators_) de la gauche vers la droite.
+
+
+Par contre, lorsque une surcharge d'opérateur est invoquée, la priorité arithmétique est utilisée.
 
 [[P0184]](https://wg21.link/p0184) Généralisation  des boucles pour gérer les *Intervalles (Ranges)*
 -----------------------------------------------------
@@ -493,31 +768,10 @@ C'est a propos du verrouillage des fils d’exécution *(thread lock)* et des [s
 [[N4267]](https://wg21.link/n4267) Littéral de caractère UTF-8 `u8`
 ---------------------------------------------------------------
     
-En programmation, un [littéral](https://fr.wiktionary.org/wiki/litt%C3%A9ral#Nom_commun) est un préfixe ou un suffixe qui indique le **type** d'une constante (i.e. d'une valeur codée en dur). Ce *TS* compense le littéral `u8` pour les [chaînes de caractères](http://en.cppreference.com/w/cpp/language/string_literal) qui était absent des [caractères](http://en.cppreference.com/w/cpp/language/character_literal). Notons que ce littéral `u8` reste absent pour les [caractères en C](http://en.cppreference.com/w/c/language/character_constant) comme le montre ce tableau récapitulatif :
-    
-Nom   |Préfixe| Type     |Chaîne de caractères| Caractère
-------|-------|----------|--------------------|-----------------
-Wide  | `L`   |`wchar_t` | C++98 et C89/C90   | C++98 et C89/C90
-UTF-8 | `u8`  |`char`    | C++11 et C11       | **C++17 seulement**
-UTF-16| `u`   |`char16_t`| C++11 et C11       | C++11 et C11
-UTF-32| `U`   |`char32_t`| C++11 et C11       | C++11 et C11
-    
-Ce littéral n'avait pas été introduit auparavant car il peut induire en erreur. En effet, un caractère `u8` ne peut contenir les symboles UTF-8, seulement ceux qui peuvent être contenus dans un `char`. Exception du `char` représenté par 32 bits, ici pour simplifier la compréhension, nous considérons que le type `char` est codé en 8 bits. En fait, un caractère `u8` sert à représenter n'importe quel `char` d'une chaîne de caractère `u8` qu'il représente un code UTF-8 ou pas.
-        
-```cpp
-const char* s = u8"aéîöù"; // Correct en C++11 et C11
-const char  c = u8'a';     // Correct en C++17
-const char ko = u8'é';     // 'é' dépasse la capacité de stockage du char (1 octet)
-const auto Ko = u8'é';     // Exactement le même problème, auto ne change rien
-const char ok = u8'\xFF';  // Correct en C++17 (ce n'est pas un code UTF-8 valide)
-``` 
-    
-L'[exemple ci-dessus](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(compileOnChange:'0'),source:'const+char*+s+%3D+u8%22a%C3%A9%C3%AE%C3%B6%C3%B9%22%3B+//+Correct+en+C%2B%2B11+et+C11%0Aconst+char++c+%3D+u8!'a!'%3B+++++//+Correct+en+C%2B%2B17%0Aconst+char+ko+%3D+u8!'%C3%A9!'%3B+++++//+!'%C3%A9!'+d%C3%A9passe+la+capacit%C3%A9+de+stockage+du+char+(1+octet)%0Aconst+auto+Ko+%3D+u8!'%C3%A9!'%3B+++++//+Exactement+le+m%C3%AAme+probl%C3%A8me,+auto+ne+change+rien%0Aconst+char+ok+%3D+u8!'%5CxFF!'%3B++//+Correct+en+C%2B%2B17'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g6,filters:(b:'0',commentOnly:'0',directives:'0'),options:'-std%3Dc%2B%2B1z++-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+gcc+6.1',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) est intéressant car GCC-6 et GCC-7 affichent des avertissements (`warning`) pour les variables `[kK]o` alors que Clang-3.6 à Clang-3.9 produisent des erreurs : GCC considère que ce code est conforme au standard C++17 (car pas d'erreur) alors que Clang non.
-
-Rappelons l'ensemble des littéraux de caractères avec cet [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(),source:'%23include+%3Ctype_traits%3E%0A%0A//+Pas+de+litt%C3%A9ral%0Aconst+auto+narrow+%3D+!'a!'%3B+//+char%0Astatic_assert(std::is_same_v%3Cdecltype(narrow),+const+char%3E)%3B%0A%0A//+Nouveau+litt%C3%A9ral+pour+C%2B%2B17%0Aconst+auto+utf8+%3D+u8!'e!'%3B+//+char%0Astatic_assert(std::is_same_v%3Cdecltype(utf8),+const+char%3E)%3B%0A%0A//+Litt%C3%A9raux+d%C3%A9j%C3%A0+disponibles+%0Aconst+auto+ucs2+%3D+u!'%C3%AE!'%3B+//+char16_t%0Aconst+auto+ucs4+%3D+U!'%C3%B6!'%3B+//+char32_t%0Aconst+auto+wide+%3D+L!'%C3%B9!'%3B+//+wchar_t%0A%0Astatic_assert(std::is_same_v%3Cdecltype(ucs2),+const+char16_t%3E)%3B%0Astatic_assert(std::is_same_v%3Cdecltype(ucs4),+const+char32_t%3E)%3B%0Astatic_assert(std::is_same_v%3Cdecltype(wide),+const+wchar_t%3E)%3B%0A'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g7snapshot,filters:(b:'0',commentOnly:'0',directives:'0'),options:'-std%3Dc%2B%2B1z++-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+gcc+7+(snapshot)',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4) :
+En programmation, un [littéral](https://fr.wiktionary.org/wiki/litt%C3%A9ral#Nom_commun) est un préfixe ou un suffixe qui indique le **type** d'une constante (i.e. d'une valeur codée en dur). Ce *TS* corrige l'absence du littéral `u8` pour les [caractères](http://en.cppreference.com/w/cpp/language/character_literal) déjà disponible pour les [chaînes de caractères](http://en.cppreference.com/w/cpp/language/string_literal). Nous avons maintenant [quatre littéraux de caractères](https://godbolt.org/g/60AKT3) :
     
 ```cpp
-#include <type_traits>
+#include <type_traits> // std::is_same_v (pas encore dispo pour Clang-3.9)
     
 // Pas de littéral
 const auto narrow = 'a'; // char
@@ -535,7 +789,31 @@ const auto wide = L'ù'; // wchar_t
 static_assert(std::is_same_v<decltype(ucs2), const char16_t>);
 static_assert(std::is_same_v<decltype(ucs4), const char32_t>);
 static_assert(std::is_same_v<decltype(wide), const wchar_t>);
-```
+``` 
+    
+Notons que ce littéral `u8` est (pour le moment?) absent des [caractères en C](http://en.cppreference.com/w/c/language/character_constant) comme le montre ce tableau récapitulatif :
+    
+Nom   |Préfixe| Type     |Chaîne de caractères| Caractère
+------|-------|----------|--------------------|-----------------
+Wide  | `L`   |`wchar_t` | C++98 et C89/C90   | C++98 et C89/C90
+UTF-8 | `u8`  |`char`    | C++11 et C11       | **C++17 seulement**
+UTF-16| `u`   |`char16_t`| C++11 et C11       | C++11 et C11
+UTF-32| `U`   |`char32_t`| C++11 et C11       | C++11 et C11
+    
+Ce littéral n'avait pas été introduit auparavant car il peut induire en erreur. En effet, un caractère `u8` ne peut contenir tous les codes UTF-8, seulement ceux qui peuvent être contenus dans un `char` (sauf du `char` représenté en 32 bits). En fait, le littéral `u8` sert à représenter n'importe quel `char` (dans le sens octet) d'une chaîne de caractère `u8` qu'il soit un code UTF-8 valide ou pas.
+    
+```cpp
+const char* s = u8"aéîöù";           // Correct en C++11 et C11
+const char  c = u8'a';               // Correct en C++17
+const char t[] = {u8'a',u8'e',u8'i'};// Correct en C++17
+const char ko = u8'é';               // 'é' dépasse la capacité de stockage du char (1 octet)
+const auto Ko = u8'é';               // Exactement le même problème, auto ne change rien
+const char ok = u8'\xFF';            // Correct en C++17 (ce n'est pas un code UTF-8 valide)
+const char a[] = u8"\xFF";           // Correct en C++11 et C11 (code UTF-8 invalide)
+const char b[] = {u8'\xFF',u8'\x04'};// Correct en C++17 (deux octets pour un code UTF-8 valide)
+``` 
+    
+L'[exemple ci-dessus](https://godbolt.org/g/RMJfWb) est intéressant car GCC-6 et GCC-7 affichent des avertissements (`warning`) pour les variables `[kK]o` alors que Clang-3.6 à Clang-3.9 produisent des erreurs : GCC considère que ce code est conforme au standard C++17 (car pas d'erreur) alors que Clang non.
 
 [[N4285]](https://wg21.link/n4285) Réécriture de paragraphes concernant les exceptions
 --------------------------------------------------------------------------------------
@@ -777,45 +1055,37 @@ Soulignons que les [mots clés](http://en.cppreference.com/w/cpp/keyword) `const
     
 La réunion de Jacksonville en février 2016 a amendé ce *TS* qui permet d'exprimer les [virgule flottante (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d'avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d'autres langages : C99, Java 5 (2004)...
     
-La représentation hexadécimale a l'avantage d'être celle du registre (mémoire binaire). Attention à la notation décimale des virgules flottantes. Par exemple, `0.1f` ne vaut pas exactement `0.1` mais `0.10000000149...`. Un petit exemple :
+La représentation hexadécimale a l'avantage d'être celle du registre (mémoire binaire). Attention à la notation décimale des virgules flottantes. Par exemple, `0.1f` ne vaut pas exactement `0.1` mais `0.10000000149...`. Un [exemple](http://coliru.stacked-crooked.com/a/7b70c88142f28581) :
     
 ```cpp
-#include <stdint.h>
-#include <iostream>
-#include <cassert>
-    
+#include <stdint.h> // int64_t
+#include <iostream> // std::cout
+
 int main()
 {
-  float un_dixieme = 0.1;
-  float fois_1E12 = un_dixieme * 1E12;
-  int64_t similaire = 1E12 / 10;
-  long double diff_longd = fois_1E12;
-  int64_t     diff_int64 = fois_1E12;
-  diff_longd -= similaire;
-  diff_int64 -= similaire;
+  float un_dixieme = 0.1f;
+  float f_1e11 = un_dixieme * 1e12f; // Erreur d'arrondi
+  int64_t i_1e11 = 0.1 * 1e12; // Pas d'erreur d'arrondi
+  double  diff = f_1e11;
+  diff -= i_1e11;  // soustraction f_1e12 - i_1e11
     
   std::cout.precision(99);
   std::cout << 
    "un_dixieme = "<< un_dixieme << "\n"
-   "fois_1E12  = "<< fois_1E12  << "\n"
-   "similaire  = "<< similaire  << "\n"
-   "diff_longd = "<< diff_longd << "\n"
-   "diff_int64 = "<< diff_int64 << '\n';
+   "f_1e12     = "<< f_1e11     << "\n"
+   "i_1e12     = "<< i_1e11     << "\n"
+   "diff       = "<< diff       << '\n';
 }
-```
-
-
-    
+``` 
     
 Qui donne le résultat :
     
     un_dixieme = 0.100000001490116119384765625
-    fois_1E12  = 99999997952
-    similaire  = 100000000000
-    diff_int64 = -2048
-    diff_longd = -2048
+    f_1e12     = 99999997952
+    i_1e12     = 100000000000
+    diff       = -2048
     
-Convaincu de l'intérêt des hexadécimaux pour les virgules flottantes ?
+Les hexadécimaux permettent d'écrire la représentation exacte des virgules flottantes en s'affranchissant de ces erreurs d'arrondis.
 Passons à la pratique :
     
 ```cpp
@@ -1410,13 +1680,22 @@ Les vainqueurs recevront des petits cadeaux (goodies, autocollant...) sur le sta
 Troll
 =====
     
-La précédente dépêche a été inondée de [227 commentaires](https://linuxfr.org/news/c-17-genese-d-une-version-mineure#droit-dauteur-licences-remerciements) de [trolls](https://fr.wikipedia.org/wiki/Troll_%28Internet%29) avec bien souvent des propos blessants. Ce *TrollFr* est dix fois plus volumineux que la dépêche ! Le système de commentaires ne fait qu'attiser nos divergences. Et ne permet malheureusement pas de consolider nos points de vue. C'est bien dommage.
+La précédente dépêche a reçu [227 commentaires](https://linuxfr.org/news/c-17-genese-d-une-version-mineure#droit-dauteur-licences-remerciements), soit un volume dix fois supérieur à la dépêche elle-même. Tous ces commentaires cachent tout de même quelques joyeux [trolls](https://fr.wikipedia.org/wiki/Troll_%28Internet%29) velus !
+
+~~Même si de nombreux commentaires sont intéressants, nous avons eu du mal à converger car, malgré toute la bonne volonté, le système de commentaires incite à attiser nos divergences, et à faire passer la critique pour de l’intelligence. Au final, les commentaires ne permettent de consolider nos points de vue.~~
+
+~~Les conséquences négatives de cette inondation de commentaires *TrollFr* :~~
+   
+
+~~* Incitation à l’agressivité entre protagonistes ;
+* Lecture fastidieuse pour les autres lectrices et lecteurs qui perdent leur temps à lire des arguments qui se répètent et à lire des propos méprisants ;
+* Dissuasion de poster des commentaires sur la dépêche elle-même.~~
+
+Quand on pense à toute l'énergie dépensée et toutes les heures consacrées à rédiger ces 227 commentaires ! Avec le recul nous aurions pu concentré tout cet investissement dans une dépêche collaborative du style « *Aujourd'hui, est-il pertinent de choisir le C++ pour une nouvelle application ?* »
+
+Mais il n'est jamais trop tard ! Aussi nous proposons-vous de rédiger la dépêche « *Faut-il continuer à apprendre le C++ ?* » Les nombreux commentaires de la dépêche précédente mériterai d'y être copiés. Malheureusement, les ceux-ci sont rarement sous licence compatible CC-BY-SA-4.0. Ceci est donc un appel à tous leurs auteurs de les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
     
-Cette fois-ci, évitons d'entretenir les *TrollFr*. Ce n'est  ni respectueux pour les auteurs de la dépêche, ni pour les autres lectrices et lecteurs qui perdent leur temps à lire des arguments qui se répètent et à lire des propos méprisants.
-    
-Quand on pense à toute cette énergie dépensée et ces heures consacrées à rédiger des contre-arguments, on se dit qu'il aurait mieux valu créer une dépêche collaborative du style *"Faut-il débuter un logiciel prévu en C++ ?"* ou *"Est-il pertinent d'apprendre le C++ aujourd'hui ?"*. Et d'inviter les protagonistes à venir s'exprimer. Au moins, il en serait sortit des arguments pour et contre bien structurés et concis, utiles à tous.
-    
-N'hésitons pas à avoir ce réflexe, bien que c'est plus tentant de nourrir un Troll !
+Merci et à vos claviers ! ;-)
 
 [![Panneau Troll barré](https://upload.wikimedia.org/wikipedia/commons/e/ea/DoNotFeedTroll.svg)](https://commons.wikimedia.org/wiki/File:DoNotFeedTroll.svg) | [![Panneau Please Do Not Feed the Trolls](https://upload.wikimedia.org/wikipedia/commons/1/19/Trolls.jpg)](https://commons.wikimedia.org/wiki/File:Trolls.jpg)
 ----|----
