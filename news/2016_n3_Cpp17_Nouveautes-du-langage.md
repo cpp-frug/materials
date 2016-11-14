@@ -39,276 +39,94 @@ TODO
     
 Reste à faire avant publication :
     
-Qui ?           | Quoi ?                                        | Fait ?
-----------------|-----------------------------------------------|----------    
-Oliver          | Vérifier les TS qui manquent                  | ...
-Oliver          | Ajouter/Réordonner les TS de cette dépêche    | non
-Oliver          | Préparer la dépêche suivante <br> **Changements au niveau de la bibliothèque standard** <br> Avec une liste exhaustive des TS et des `TODO`  | non
-Oliver          | Créer la dépêche suivante dans l'espace de rédaction *LinuxFr.org* <br> Ajouter les liens entre cette dépêche et la suivante <br> Proposer d'aider à la rédaction de la dépêche suivante | non
-???              | Déplacer dans la dépêche suivante le TS Alias de iostream | non
-Oliver           | Créer la dépêche **Bilan C++17** dans l'espace de rédaction *LinuxFr.org*  | non
-Oliver           | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l'espace de rédaction *LinuxFr.org* <br> Dans la section Troll, inviter à participer à cette dépêche <br> Prendre en compte les changements de eggman | non
-Oliver           | Relire la sous-section *"Évaluation stricte des expressions"* <br> Proposer des ajouts/améliorations | non
-???              | Ajouter des images (humoristiques) pour illustrer les sous-sections | non
-???              | Ajouter la section finale **Remerciments** pour remercier Adrien. Rappeler la licences et les auteurs. Des statistiques: la dépêche la plus longue de *LinuxFr.org* ... | non
-???              | Passer un coup de Grammalect sur tout les paragraphes <br> pour insérer les espaces insécables (et autres formatages de texte) | non
+Qui ?     | Quoi ?                                        
+----------|-----------------------------------------------
+Oliver    | ~~Vérifier les TS qui manquent~~
+Oliver    | ~~Réordonner les TS de cette dépêche~~
+???       | Discuter/Améliorer/Valider le nouveau sommaire
+???       | Appliquer le nouveau sommaire
+???       | Expliquer les nouveaux TS qui manquaient
+???       | Ajouter des images (humoristiques) pour illustrer les sous-sections
+**Oliver**| Préparer la dépêche suivante <br> **Changements au niveau de la bibliothèque standard** <br> Avec une liste exhaustive des TS et des `TODO`
+Oliver    | Créer la dépêche suivante dans l'espace de rédaction *LinuxFr.org* <br> Ajouter les liens entre cette dépêche et la suivante <br> Proposer d'aider à la rédaction de la dépêche suivante
+???       | Déplacer dans la dépêche suivante le TS Alias de iostream
+Oliver    | Créer la dépêche **Bilan C++17** dans l'espace de rédaction *LinuxFr.org*
+Oliver    | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l'espace de rédaction *LinuxFr.org* <br> Dans la section Troll, inviter à participer à cette dépêche <br> Prendre en compte les changements de eggman
+Oliver    | Relire la sous-section *"Évaluation stricte des expressions"* <br> Proposer des ajouts/améliorations
+Oliver    | Mettre à jour le chapitre **Concours** : Présenter les deux concours (héxadécimaux et code C++17 qui ne ressemble plus à C++98) + S'organiser pour les récompense
+???       | Ajouter la section finale **Remerciments** pour remercier Adrien. Rappeler la licences et les auteurs. Des statistiques: la dépêche la plus longue de *LinuxFr.org* ...
+???       | Passer un coup de Grammalect sur tout les paragraphes <br> pour insérer les espaces insécables (et autres formatages de texte)
 
 
-Vérifier l'exactitude et l'ordre des TS
----------------------------------------
-
-
-* Compatibilité avec le langage C
-
-
-    * [P0063] C++17 se réfère à C11 au lieu de C99
-
-
-* Suppression
-
-
-    * [N4086] Trigraphes
-    * [P0001] Mot-clé register
-    * [P0002] Incrémentation sur les booléens
-
-
-* Corrections
-
-
-    * [N4266] Attributs pour namespace et enum
-    * [N4261] Conversion des tableaux de pointeurs
-    * [P0136] Héritage des constructeurs
-    * [P0145] Évaluation stricte des expressions
-    * [P0184] Généralisation des boucles pour gérer les Intervalles (Ranges)
-    * [P0012] Intégrer les spécifications d'exception dans le type système
-    * [P0035] Allocation mémoire dynamique des données
-    * [P0135] Court-circuitage du constructeur par copie
-    * [P0296] Forward progress guarantees (FPG) et [P0299] FPGs for parallel algorithms
-    * [N4267] Littéral de caractère UTF-8 u8
-    * [N4285] Réécriture de paragraphes concernant les exceptions
-    * [N3922] Nouvelles règles de déduction pour auto à partir des {listes d'initialisation}
-    * [N4268] Autoriser l'évaluation constante pour les arguments template n'étant pas un type
-    * [N4051] Autoriser typename pour les paramètres template template
-
-
-* Sucre syntaxique
-
-
-    * [N4230] namespace imbriqué
-    * [N3928] Extension du static_assert()
-    * [P0245] Constante hexadécimale pour la virgule flottante
-    * [P0217] Attaches structurées (Structured bindings)
-    * [P0305] Instruction de sélection avec initialiseur
-    * [P0292] if constexpr
-    * [P0091] Déduction des arguments template du constructeur
-    * [P0127] Déclaration des paramètres template avec auto sauf pour les types
-    * [P0386] Variables inline
-    * [N4295] Expression dépliable
-    * [P0061] __has_include pour C++17
-
-
-* Lambda
-
-
-    * [N4487] Lambda constexpr
-    * [P0018] Capture de *this
-
-
-* Attributs
-
-
+Proposition d'un nouveau sommaire
+---------------------------------
+    
+Auteur | Discussion
+-------|----------------------
+Oliver | J'ai rajouté des TS qui manquaient, j'ai mis en haut les TS qui me semblent les plus importantes, et tout en bas les correction, puis les suppressions (je pense que c'est plus logique)
+???    | Commentaires/Suggestions/Remarques/Réactions...
+    
+**Légende:**  le **+** au début de la puce indique un nouveau *TS* qui manquait, le **->** indique une proposition de renommage du titre de section, le **+>** indique une proposition d'ajout dans le titre de section
+    
+* Améliorations notables
+    
+       * [p0061] `__has_include`
+       * [P0135] Court-circuitage du constructeur par copie +> (Guaranteed copy elision)
+       * [P0145] Évaluation stricte des expressions -> Fixer l'ordre d'évaluation de certaines expressions
+       * [P0245] Constante hexadécimale pour la virgule flottante -> Littéral pour exprimer la virgule flottante en hexadécimal
+       * [p0292] `constexpr if`
+       * [P0386] Variables inline -> Variable inline
+     
+* Améliorations concernant les attributs
+    
     * [P0188] Attribut [[fallthrough]]
     * [P0189] Attribut [[nodiscard]]
     * [P0212] Attribut [[maybe_unused]]
-
-
-* Language
-
-
-   * Templates and Generic Code
-
-
-       *  [p0091] Template argument deduction for class templates
-       *  [p0127] `template <auto>`
-       * [n4268] Non-type template arguments fixes
-       * [n4051] `template<template<class...>typename bob> struct foo {}`
-       * [n4295] ( Folding + ... + expressions )
-       * [p0036] Revisions
-       * [n3922] `auto x{8};` is an `int`
-
-
-    * Lambda
-
-
-       *  [n4487] constexpr lambdas
-       *  [p0018] Capturing `*this` in lambdas
-
-
-    * Attributes
-
-
-       *  [p0188] `[[fallthrough]]`
-       * [p0189] `[[nodiscard]]`
-       * [p02120] `[[maybe_unused]]`
-       * [n4266] `[[attributes]]` on `namespace`s and `enum { erator[[s]] }`
-       * [p0028] `using` in attributes to avoid having to repeat an attribute namespace.
-       * [p0283] Compilers are now required to ignore non-standard attributes they don't recognize (The C++14 wording allowed compilers to reject unknown scoped attributes).
-
-
-    * Syntax cleanup
-
-
-       *  [p0386] Inline variables
-       *  [n4230] `namespace A::B`
-       * [n3928] Simple `static_assert(expression);` with no string
-
-
-    * Cleaner multi-return and flow control
-
-
-       *  [p0217] Structured bindings
-       *  [p0305] `if (init; condition)` and `switch (init; condition)`
-       *  [p0184] Generalizing range-based for loops
-       *  [p0292] `constexpr if`
-
-
-   * Misc
-
-
-       *  [p0245] Hexadecimal float point literals
-       *  [p0035] Dynamic memory allocation for over-aligned data
-       *  [p0135] Guaranteed copy elision
-       * [p0145] Fixed order-of-evaluation for (some) expressions with some
-       * [p0400] modifications
-       * [p0138] Direct list-initialization of enums
-       * [p0299] FPGs for parallel algorithms
-       * Forward progress guarantees (FPG)
-       * [n4267] `u8'U', u8'T', u8'F', u8'8'` character literals.
-       * [p0012] `noexcept` in the type system
-       * [p0061] `__has_include`
-       * [n4261] Arrays of pointer conversion fixes
-       * [p0136] inherited constructors fixes to some corner cases.
-       * [p0017] aggregate initialization with inheritance
-       * [p0137] `std::launder`, type punning, etc
-
-
-*  Library additions:
-
-
-    * Data types
-
-
-       *  [p0088] `std::variant<Ts...>`
-       * [n4480#optional] `std::optional`
-       * [n4480#any] `std::any`
-       * [n4480.html#string.view] `std::string_view`
-
-
-
-    * Invoke stuff
-
-
-       *   [n4169] `std::invoke`
-       *  [n4480] `std::apply`
-       *  [p0077] `std::is_callable`
-       *  [p0209] `std::make_from_tuple`, `std::apply` applied to object construction
-
-
-    * [p0218] File System TS v1
-
-
-       * `[class.path]`
-       * `[class.filesystem.error]`
-       * `[class.file_status]`
-       * `[class.directory_entry]`
-       * `[class.directory_iterator]` and `[class.recursive_directory_iterator]`
-       * `[fs.ops.funcs]`
-
-
-    * Threading
-
-
-       * [n4508] `std::shared_mutex`
-       * [p0152] `atomic<T>`[`::is_always_lockfree`
-       * [p0156] `lock_guard<Mutexes...>`
-       * [n4071] Parallelism TS v1
-       * [p0154] `hardware_*_interference_size`
-
-
-    * [p0220] (parts of) Library Fundamentals TS v1 not covered above or below
-       * [n4480] `[func.searchers]` and `[alg.search]`
-       * [n4480] `[pmr]`
-       * [n4480] `std::sample`, sampling from a range?
-
-
-    * Container Improvements
-
-
-       * [n4279] `try_emplace` and `insert_or_assign`
-       * [p0083] Splicing for `map<>`, `unordered_map<>`, `set<>`, and `unordered_set<>`
-       * [p0272] non-const [`.data()`] for string.
-       * [n4280] non-member `std::size`, `std::empty`, `std::data`
-       * [n4510] Minimal incomplete type support in containers
-      * [n4284] Contiguous iterator "concept"
-      * [p0031] `constexpr` iterators
-      * [p0084] The `emplace` family of functions [now returns a reference to the created object
-
-
-    * Smart pointer changes
-
-
-      * [n4089] `unique_ptr<T[]>` fixes
-      * [n4366] and other `unique_ptr` tweaks.
-      * [p0033] `weak_from_this` and some fixed to shared from this
-
-
-    * Other `std` datatype improvements:
-
-
-      * [n4387] `{}` construction of `std::tuple` and other improvements
-      * [n4277] TriviallyCopyable reference_wrapper, can be performance boost
-
-
-    * Misc
-
-
-      *  [p0063] C++17 library is based on C11 instead of C99
-      *  [p0180] Reserved `std[0-9]+` for future standard libraries
-      *  [p0040] `destroy(_at|_n)`, `uninitialized_move(_n)`, `uninitialized_value_construct(_n)`, `uninitialized_default_construct(_n)`
-      *  [n1422] Special math functions
-      *  [p0025] `std::clamp( a, b, c ) == std::max( b, std::min( a, c ) )`
-      * [n4259] `std::uncaught_exceptions`
-      * [p0007] `std::as_const`
-      * [n4389] `std::bool_constant`
-      * [p0006] A whole bunch of `_v` template variables
-      * [n3911] `std::void_t<T>
-      * [p0074] `std::owner_less<void>` like `std::less<void>`, but for smart pointers to sort based on contents
-      * [p0092] `std::chrono` polish
-      * [p0013] `std::conjunction`, `std::disjunction`, `std::negation` exposed
-      * [p0005] `std::not_fn`
-      * [n4258] Rules for noexcept within `std`
-      * [p0258] `std::is_contiguous_layout` useful for efficient hashing
-      * [p0067] `std::to_chars/std::from_chars`, high performance, locale agnostic number conversion; finally a way to serialize/deserialize to human readable formats (JSON & co) 
-      * [p0181] <s>std::default_order, indirection over `std::less`.</s> (breaks ABI of some compilers due to name mangling, removed.)
-
-
-
-* Removed
-
-
- * [p0001] `register`, keyword reserved for future use
- * [p0002] `bool b; ++b;`
- * [n4086] trigraphs
- * [p0004] ios aliases
- * [n4190] `auto_ptr`, old `<functional>` stuff, `random_shuffle`
- * [p0302] allocators in `std::function`
-
-
-* Spec changes:
-
-
- * [n4285] exception specs and throw expressions
-
+    * [N4266] Attributs pour namespace et enum +> `[[attributes]]` on `namespace`s and `enum { erator[[s]] }`
+    * + [p0028] `using` in attributes to avoid having to repeat an attribute namespace.
+    * + [p0283] Compilers are now required to ignore non-standard attributes they don't recognize (The C++14 wording allowed compilers to reject unknown scoped attributes).
+     
+* Améliorations concernant les lambda
+    
+   * [N4487] Lambda constexpr
+   * [P0018] Capture de *this
+     
+* Sucre syntaxique
+    
+   * [N3928] Extension du static_assert() -> `static_assert(expr);` avec un seul paramètre (sans le second paramètre "message")
+   * [N4230] namespace imbriqué -> namespace imbriqué `namespace A::B`
+   * [N4295] Expression dépliable
+   * [P0091] Déduction des arguments template du constructeur
+   * [P0127] Déclaration des paramètres template avec auto sauf pour les types -> `template <auto>`
+   * [P0217] Attaches structurées (Structured bindings)
+   * [P0305] Instruction de sélection avec initialiseur +> `if (init; condition)` and `switch (init; condition)`
+    
+* Corrections
+    
+   * [N3922] Nouvelles règles de déduction pour auto à partir des {listes d'initialisation} +> `auto x{8};` is an `int`
+   * [N4051] Autoriser typename pour les paramètres template template
+   * [N4261] Conversion des tableaux de pointeurs -> (Arrays of pointer conversion fixes)
+   * [N4267] Littéral de caractère UTF-8 u8
+   * [N4268] Autoriser l'évaluation constante pour les arguments template n'étant pas un type
+   * [N4285] Réécriture de paragraphes concernant les exceptions
+   * [P0012] Intégrer les spécifications d'exception dans le type système +> `noexcept` in the type system
+   * + [p0017] aggregate initialization with inheritance
+   * [P0035] Allocation mémoire dynamique des données
+   * + [p0036] Revisions
+   * [P0136] Héritage des constructeurs
+   * + [p0138] Direct list-initialization of enums
+   * [P0184] Généralisation des boucles pour gérer les Intervalles (Ranges)
+   * [P0296] Forward progress guarantees (FPG) et [P0299] FPGs for parallel algorithms
+   * + [p0400] modifications
+    
+* Compatibilité avec le langage C
+    
+    * [P0063] C++17 se réfère à C11 au lieu de C99
+     
+* Suppression
+    * [N4086] Trigraphes
+    * [P0001] Mot-clé register
+    * [P0002] Incrémentation sur les booléens
 
 Série de dépêches C++
 =====================
@@ -659,9 +477,8 @@ Ce problème n'est pas juste l'apanage des experts. C'est un piège qui concerne
 Ce code provient du brouillon. Il remplace plusieurs caractères d'un objet std::string. Pourtant ce programme semble légitime, mais produira un résultat non désiré, selon le compilateur.
 
 
-La première ligne est en somme tout classique. Un objet std::string est déclaré et initialisé.
-
-Dans l’exemple ci-dessus, l’assertion peut — selon le compilateur — échouer. Les expressions annotées alphabétiquement sont dites séquencées, dans l’ordre suivant : A, B, C, D. Le compilateur pouvait au choix évaluer les sous-expressions (annoté numériquement) avant ou après l'expression aparenté. Cette TS ajoute plusieurs règles. 
+La première ligne est en somme tout classique. Un objet std::string est déclaré et initialisé. 
+L'instruction suivante utilise le chainage. [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace) est une fonction membre de l'objet `s`. Chaque appel et leurs arguments sont souvent perçu comme un groupe d'expression (par exemple : `replace(0, 4, "")`). Dans l'exemple, ils sont annotés alphabétiquement. À première vue, chacun est dépendant du précédant. Donc leurs évaluations devraient être séquencés de la gauche vers la droite. En réalité avant cette norme, toutes les expressions sont indéfiniment séquencées.
 
 ### Les nouvelles règles
 
@@ -1677,8 +1494,8 @@ Proposer dans les commentaires un code source utilisant le maximum des nouveaut�
     
 Les vainqueurs recevront des petits cadeaux (goodies, autocollant...) sur le stand *LinuxFr.org* du [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) les 16 et 17 novembre. Possibilité de les envoyer par courrier ~~électronique~~ postal ;-)
 
-Troll
-=====
+Trolls
+======
     
 La précédente dépêche a reçu [227 commentaires](https://linuxfr.org/news/c-17-genese-d-une-version-mineure#droit-dauteur-licences-remerciements), soit un volume dix fois supérieur à la dépêche elle-même. Tous ces commentaires cachent tout de même quelques joyeux [trolls](https://fr.wikipedia.org/wiki/Troll_%28Internet%29) velus !
 
@@ -1693,7 +1510,7 @@ La précédente dépêche a reçu [227 commentaires](https://linuxfr.org/news/c-
 
 Quand on pense à toute l'énergie dépensée et toutes les heures consacrées à rédiger ces 227 commentaires ! Avec le recul nous aurions pu concentré tout cet investissement dans une dépêche collaborative du style « *Aujourd'hui, est-il pertinent de choisir le C++ pour une nouvelle application ?* »
 
-Mais il n'est jamais trop tard ! Aussi nous proposons-vous de rédiger la dépêche « *Faut-il continuer à apprendre le C++ ?* » Les nombreux commentaires de la dépêche précédente mériterai d'y être copiés. Malheureusement, les ceux-ci sont rarement sous licence compatible CC-BY-SA-4.0. Ceci est donc un appel à tous leurs auteurs de les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
+Mais il n'est jamais trop tard ! Aussi nous proposons-vous de rédiger la dépêche « *Faut-il continuer à apprendre le C++ ?* » Les nombreux commentaires de la dépêche précédente mériterai d'y être copiés. Malheureusement, ceux-ci sont rarement sous licence compatible CC-BY-SA-4.0. Ceci est donc un appel à tous leurs auteurs de les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
     
 Merci et à vos claviers ! ;-)
 
