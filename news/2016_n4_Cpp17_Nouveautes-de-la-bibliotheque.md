@@ -5,6 +5,8 @@ La STL
 ======
     
 Petit rappel, l'ensemble des fonctionnalités `std::*` ne s'appelle plus [**STL**](https://fr.wikipedia.org/wiki/Standard_Template_Library) _(Standard Template Library)_, mais [**bibliothèque standard du C++**](https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_standard_du_C%2B%2B) _(C++ Standard Library)_.
+    
+    TODO Rappeler l'historique de la STL à la std, Mieux expliquer
 
 
 Résumé
@@ -31,28 +33,21 @@ Nouvelles structures de données
 
 Le *TS* [[N4480]](https://wg21.link/n4480) intégre trois nouvelles structures de données que nous allons aborder en trois sections (le numéro de ce *TS* sera dupliqué dans cacun de ces titres de section). Ce chapitre termine par un second *TS*, le [[P0088]](https://wg21.link/p0088), pour une quatrième structure de donnée.
 
-[[N4480]](https://wg21.link/n4480) `std::optional`
--------------------------------------------------
+[[N4480]](https://wg21.link/n4480) `optional`, `any`, `string_view`...
+----------------------------------------------------------------------
     
-    TODO
-
-
-[[N4480]](https://wg21.link/n4480) `std::any`
---------------------------------------------
-    
-    TODO
-
-
-[[N4480]](https://wg21.link/n4480) `std::string_view`
-----------------------------------------------------
-    
-    TODO
+* [`std::optional<>`](http://en.cppreference.com/w/cpp/utility/optional) en s'inspirant de [`boost::optional<>`](http://www.boost.org/doc/libs/1_61_0/libs/optional) ;
+* [`std::any`](http://en.cppreference.com/w/cpp/utility/any) en s'inspirant de [`boost::any`](http://www.boost.org/doc/libs/1_61_0/libs/any) ;
+* [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) ;
+* et [autres extensions](http://en.cppreference.com/w/cpp/experimental/lib_extensions#Merged_into_C++17).
 
 
 [[P0088]](https://wg21.link/p0088) `std::variant`
 ------------------------------------------------
     
-    TODO
+* Ajout du `std::variant` [*(type-safe union for C++17)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0088r2.html) et d'une partie des [*Library Fundamentals TS v1*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) :
+* [`std::variant<int,char,float>`](http://en.cppreference.com/w/cpp/utility/variant) en s'inspirant de [`boost::variant<>`](http://www.boost.org/doc/libs/1_61_0/libs/variant) (certains auraient aimé la possibilité d’interdire un objet `std::variant` vide et l'optimisation du `std::variant` pour les types légers) ;
+    
 
 
 
@@ -88,17 +83,15 @@ File System TS v1
 
 Ajout de [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem). Enfin le C++ dispose d'une API standardisée pour gérer fichiers et répertoires ! 
     
-    ```cpp
     TODO fournir un exemple
-    ```
     
-    C'est une longue histoire :
+C'est une longue histoire :
     
-    * 2003 [`boost::filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem) ;
-    * 2004 [requête pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html) ;
-    * 2005 [première proposition détaillée pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1841.html) ;
-    * Il aura fallu une dizaine d'années et trois versions majeures pour permettre au groupe d'étude SW3 _(Study Group 3)_ de rédiger l'ultime spécification technique _(TS)_ [N4100 (le titre est en français dans le document)](https://wg21.link/n4100) qui correspond au standard [ISO/IEC TS 18822:2015](http://www.iso.org/iso/catalogue_detail.htm?csnumber=63483) ;
-    * L'implémentation de `std::experimental::filesystem` sur plusieurs plateformes et compilateurs ([Visual C++ 2012/2013/2015](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/msdn.microsoft.com/en-us/library/hh874694.aspx) et [GCC-5.3](https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dynamic_or_shared.html#manual.intro.using.linkage.experimental)) a été nécessaire pour décider de l'intégration dans la bibliothèque standard.
+* 2003 [`boost::filesystem`](http://www.boost.org/doc/libs/1_61_0/libs/filesystem) ;
+* 2004 [requête pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1576.html) ;
+* 2005 [première proposition détaillée pour intégration dans la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1841.html) ;
+* Il aura fallu une dizaine d'années et trois versions majeures pour permettre au groupe d'étude SW3 _(Study Group 3)_ de rédiger l'ultime spécification technique _(TS)_ [N4100 (le titre est en français dans le document)](https://wg21.link/n4100) qui correspond au standard [ISO/IEC TS 18822:2015](http://www.iso.org/iso/catalogue_detail.htm?csnumber=63483) ;
+* L'implémentation de `std::experimental::filesystem` sur plusieurs plateformes et compilateurs ([Visual C++ 2012/2013/2015](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/msdn.microsoft.com/en-us/library/hh874694.aspx) et [GCC-5.3](https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dynamic_or_shared.html#manual.intro.using.linkage.experimental)) a été nécessaire pour décider de l'intégration dans la bibliothèque standard.
 
 
 Le *TS* [[P0218]](https://wg21.link/p0218) propose d'intégrer `boost::filesystem` dans C++17 avec quelques différences.
@@ -109,6 +102,8 @@ Le *TS* [[P0218]](https://wg21.link/p0218) propose d'intégrer `boost::filesyste
 * `[class.directory_entry]`
 * `[class.directory_iterator]` and `[class.recursive_directory_iterator]`
 * `[fs.ops.funcs]`
+
+
 
 Threading
 =========
@@ -125,14 +120,16 @@ Threading
     TODO
 
 
-[[P0152]](https://wg21.link/p0152) `atomic<T>`[`::is_always_lockfree`
+[[P0152]](https://wg21.link/p0152) `atomic<T>::is_always_lockfree`
 --------------------------------------------------------------------
+
+Ajout de `.is_always_lockfree()`.
     
     TODO
 
 
-[[P0154]](https://wg21.link/p0154) `hardware_*_interference_size`
-----------------------------------------------------------------
+[[P0154]](https://wg21.link/p0154) Ajout `hardware_*_interference_size`
+----------------------------------------------------------------------
     
     TODO
 
@@ -196,6 +193,8 @@ Amélioration des conteneurs
 [[P0083]](https://wg21.link/p0083) Splicing for `map<>`, `unordered_map<>`, `set<>` et `unordered_set<>`
 -------------------------------------------------------------------------------------------------------
     
+Ce TS *Splicing Maps and Sets* ajoute des fonctions `std::set::splice()`, `std::map::splice()`, `std::unordered_set::splice()` et `std::unordered_map::splice()` comme pour [`std::list::splice()`](http://fr.cppreference.com/w/cpp/container/list/splice).
+    
     TODO
 
 
@@ -205,10 +204,10 @@ Amélioration des conteneurs
     TODO
 
 
-[[P0272]](https://wg21.link/p0272) Fonction `std::string::data()` non-`const`
-----------------------------------------------------------------------------
+[[P0272]](https://wg21.link/p0272) Fonction `string::data()` non-`const`
+-----------------------------------------------------------------------
     
-    TODO
+Ajout des fonctions `std::string::data()` non-const.
 
 
 
@@ -297,10 +296,20 @@ Quelles sont tes attentes avec cette intégration dans la `std::` ?
 Penses-tu utiliser un jour la version de la `std::` plutôt quer celle de `boost::` ?
 
 
-[[P0025]](https://wg21.link/p0025) `std::clamp(a,b,c) == std::max(b,std::min(a,c))`
+[[P0025]](https://wg21.link/p0025) `std::clamp(x,4,8) == std::min(std::max(x,4),8)`
 ----------------------------------------------------------------------------------
+
+Ajout de [`std::clamp()`](http://en.cppreference.com/w/cpp/algorithm/clamp).
+
+Exemple pour borner x dans l'intervalle [4, 8] :
     
-    TODO
+```cpp
+// C++14
+auto x = std::max(4,std::min(x,8));
+
+// C++17
+auto x = std::clamp(x,4,8);
+```    
 
 
 
@@ -310,13 +319,21 @@ Améliorations diverses
 [[P0180]](https://wg21.link/p0180) Mots-clés `std[0-9]+` réservés pour de futures versions de la `std::`
 -------------------------------------------------------------------------------------------------------
     
-    TODO
+Ce TS *Reserve a New Library Namespace Future Standardization* résèrve tous les mots-clés `std[0-9]+` pour le nommage d'éventuelles futures versions de la ~~STL~~ bibliothèque standard C++ qui casseraient la rétrocompatibilité.
+
 
 
 [[P0040]](https://wg21.link/p0040) `destroy(_at|_n)`, `uninitialized_move(_n)`, `uninitialized_value_construct(_n)`, `uninitialized_default_construct(_n)`
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ce TS *Extending memory management tools* ajoute :
+
+* `destroy(_at|_n)`
+* `uninitialized_move(_n)`
+* `uninitialized_value_construct(_n)`
+* `uninitialized_default_construct(_n)`
     
-    TODO
+    TODO liens vers cppref + explications 
 
 
 [[N3911]](https://wg21.link/n3911) `std::void_t<T>`
@@ -417,6 +434,7 @@ Suppression
 
 Cela cassait l'ABI de certains compilateurs à cause du *mangling*
 
+
 [[P0302]](https://wg21.link/p0302) Allocateurs des `std::function`
 -----------------------------------------------------------------
     
@@ -424,58 +442,27 @@ Cela cassait l'ABI de certains compilateurs à cause du *mangling*
 
 
 
-
-
-* Ajout du `std::variant` [*(type-safe union for C++17)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0088r2.html) et d'une partie des [*Library Fundamentals TS v1*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) :
+Fonctionnalités *majeures* 
+==========================
     
-    * [`std::variant<int,char,float>`](http://en.cppreference.com/w/cpp/utility/variant) en s'inspirant de [`boost::variant<>`](http://www.boost.org/doc/libs/1_61_0/libs/variant) (certains auraient aimé la possibilité d’interdire un objet `std::variant` vide et l'optimisation du `std::variant` pour les types légers) ;
-    * [`std::optional<std::string>`](http://en.cppreference.com/w/cpp/utility/optional) en s'inspirant de [`boost::optional<>`](http://www.boost.org/doc/libs/1_61_0/libs/optional) ;
-    * [`std::any`](http://en.cppreference.com/w/cpp/utility/any) en s'inspirant de [`boost::any`](http://www.boost.org/doc/libs/1_61_0/libs/any) ;
-    * [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) ;
-    * et [autres extensions](http://en.cppreference.com/w/cpp/experimental/lib_extensions#Merged_into_C++17).
-
-* Ajout de `hardware_*_interference_size` ;
-
-* Ajout de `.is_always_lockfree()` ;
-
-* Ajout de [`std::clamp()`](http://en.cppreference.com/w/cpp/algorithm/clamp). Par exemple, `std::clamp(x,4,8)` est l'équivalent de `std::min(std::max(x,4),8)`.
-
-* Ajout des fonctions `string::data()` non-const ;
-
-
-* Ajout des `destroy(_at|_n)`, `uninitialized_move(_n)`, `uninitialized_value_construct(_n)`, `uninitialized_default_construct(_n)` [*(Extending memory management tools)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r2.html) ;
-
-* Ajout des fonctions `std::set::splice()`, `std::map::splice()`, `std::unordered_set::splice()` et `std::unordered_map::splice()` comme pour [`std::list::splice()`](http://fr.cppreference.com/w/cpp/container/list/splice) [*(Splicing Maps and Sets)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r2.pdf) ;
-
-* Réservation du nommage `std[0-9]+` pour d'éventuelles futures versions de la ~~STL~~ bibliothèque standard C++ qui casseraient la rétrocompatibilité [*(Reserve a New Library Namespace Future Standardization)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0180r1.html).
-
-C++17 fait l'impasse sur des fonctionnalités _majeures_
-------------------------------------------------------
-
-Deux _gros_ morceaux ont été inclus dans **C++17** :
-
-
+Quatre _gros_ morceaux ont été inclus dans **C++17** :
+    
 * le parallélisme avec les [69 algorithmes parallélisées](http://en.cppreference.com/w/cpp/experimental/parallelism) ;
-* et [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem).
-
+* le [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem) ;
+* les autres transfuges de boost (optional, any, string_view, variant...) ;
+* les fonctions spéciales mathématiques.
+    
 Par contre, les fonctionnalités suivantes n’ont pas été considérées comme suffisamment mures pour être incluses :
-
-* [Concepts](http://fr.cppreference.com/w/cpp/concept) (voir aussi la [version en anglais](http://en.cppreference.com/w/cpp/language/constraints)) ;
-* Modules, par exemple **`import std.string;`** à la place de **`#include <string>`** [*(A Module System for C++)*](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) ;
-* Syntaxe d'appel uniforme [*(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ;
+    
 * [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ;
 * Réseau [_(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) ;
 * Tableaux [_(Array)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3820.html). Une idée de 2013, mais finalement abandonnée ;
 * [_Ranges_](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ;
 * Mémoire transactionnelle [_(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ;
-* Réflexion [_(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html) ;
 * et autres extensions majeures de la bibliothèque standard. 
-
+    
 Le comité attend de voir des implémentations satisfaisantes dans les compilateurs avant de les inclure...
-
+     
 Même si **C++17** va un peu plus transcender notre façon de coder en C++, de nombreux développeurs s’attendaient à une version majeure (révolutionnaire). Par rapport à **C++11**, les apports du **C++17** ressemblent plus à une version mineure.
-
+    
 ![Évolution des fonctionnalités majeures](https://herbsutter.files.wordpress.com/2016/06/wg21-timeline.png)
-
-
-
