@@ -46,9 +46,9 @@ Oliver    | ~~Réordonner les TS de cette dépêche~~
 Oliver    | ~~Appliquer le nouveau sommaire~~
 Oliver    | ~~Expliquer les nouveaux TS qui manquaient~~
 ???       | Ajouter des images (humoristiques) pour illustrer les sous-sections
-???       | Ajouter le chapitre sur les fonctionnalités majeures qui n'ont pas pu être intégrées à C++17
-**Oliver**| Préparer la dépêche suivante <br> **[Changements au niveau de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)** <br> Avec une liste exhaustive des TS et des `TODO`
-Oliver    | Créer la dépêche suivante dans l'espace de rédaction *LinuxFr.org* <br> Ajouter les liens entre cette dépêche et la suivante <br> Proposer d'aider à la rédaction de la dépêche suivante
+Oliver    | ~~Ajouter le chapitre sur les fonctionnalités majeures qui n'ont pas pu être intégrées à C++17~~
+Oliver    | ~~Préparer la dépêche suivante <br> **[Changements au niveau de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)** <br> Avec une liste exhaustive des TS et des `TODO`~~
+Oliver    | ~~Créer la dépêche suivante dans l'espace de rédaction *LinuxFr.org* <br> Ajouter les liens entre cette dépêche et la suivante <br> Proposer d'aider à la rédaction de la dépêche suivante~~
 ???       | Déplacer dans la dépêche suivante le TS Alias de iostream
 Oliver    | Créer la dépêche **Bilan C++17** dans l'espace de rédaction *LinuxFr.org*
 Oliver    | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l'espace de rédaction *LinuxFr.org*
@@ -79,14 +79,14 @@ La seconde dépêche, [*C++17, Genèse d’une version mineure*](https://linuxfr
 3. Changements C++17 au niveau du langage
 -----------------------------------------
     
-Cette troisième dépêche [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) du cœur du C++17 : Déduction des arguments `template` du constructeur `std::array a{1,2,3}` ; Décomposition du retour de fonction `auto [x,y]=fonction()` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué `namespace aaa::bbb { ... }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
+Cette [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) du cœur du C++17 : Déduction des arguments `template` du constructeur `std::array a{1,2,3}` ; Décomposition du retour de fonction `auto [x,y]=fonction()` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué `namespace aaa::bbb { ... }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
 
 Par contre, des fonctionnalités majeures qui étaient très attendues sont toujours en cours d'élaboration ne sont pas encore suffisamment matures pour être publiées avec C++17 : [Concepts](http://fr.cppreference.com/w/cpp/concept) ; [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) qui propose des `import std.string;` en alternative des `#include <string>` ; [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ; [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ; [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ; [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
 
 4. Changements C++17 au niveau de la bibliothèque standard
 ----------------------------------------------------------
     
-La quatrième dépêche traitera des *TS* concernant la `std::` dont les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms), le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) et autres transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) comme [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) et [`boost::math`](http://www.boost.org/libs/math) (les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)).
+La [quatrième dépêche](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) traite des *TS* concernant la `std::` dont les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms), le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) et autres transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) comme [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) et [`boost::math`](http://www.boost.org/libs/math) (les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)).
     
 Tout comme la dépêche précédente, des fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ou le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) sont repoussées pour une prochaine version du C++...
 
@@ -1550,43 +1550,50 @@ bool b = aimes_tu_cpp17();
 ++b; // Erreur depuis C++17
 ```
 
+Fonctionnalités majeures non intégrées
+======================================
+   
+
+Par contre, au moment de la clôture du périmètre fonctionnel C++17 (juin 2016), les fonctionnalités suivantes n’ont pas été considérées comme suffisamment mures :
+    
+* [Concepts](http://fr.cppreference.com/w/cpp/concept) avec les mot-sclés `concept` et `requires` (voir aussi la [version en anglais](http://en.cppreference.com/w/cpp/language/constraints)) ;
+* Modules, par exemple **`import std.string;`** à la place de **`#include <string>`** [*(A Module System for C++)*](https://wg21.link/p0142) ;
+* Syntaxe d'appel uniforme [*(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ;
+* Réflexion [_(Static Reflection)_](https://wg21.link/p0194) avec le mot-clé `reflexpr`.
+
 Exemple final
 =============
-
-
+    
 Donc en C++17 nous pourrons écrire :
-
+    
 ```cpp
 #include <array>
-
+    
 struct Truc
 {
   bool  b = false;      
   float f = 0xA.Bp3f; // hexa
 };
-
+    
 int main (int argc, 
     [[maybe_unused]] char* argv[])
 {
   // Déduction array<int,4>
   std::array tableau {1,2,3,argc};
-   
+    
   // lambda constexpr
   auto f = [](){ return Truc(); };
-
+    
   if constexpr (auto [x,y]=f(); x)
     return y + tableau[1] * argc;
   else
     return y - tableau[2] * argc;
 }
-```
-
-
-
+``` 
+    
 Alors, chères lectrices et chers lecteurs de *LinuxFr.org* ?
 Séduits ? Conquis ? Impatients de coder en C++17 ?
 La tentation est grande d’épater ses collègues avec du code qu’ils ne comprennent plus… non ?
-
 
 Deux concours
 =============
@@ -1636,7 +1643,7 @@ Malgré tout le soin apporté, il reste certainement des oublis, des ambiguïté
 La suite
 ========
     
-Nous venons de découvrir les nombreuses évolutions au niveau du langage, le cœur du C++. La dépêche suivante nous emmènera au niveau de la bibliothèque standard.
+Nous venons de découvrir les nombreuses évolutions au niveau du langage, le cœur du C++. La [dépêche suivante](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) nous emmènera au niveau de la bibliothèque standard.
     
 Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites apporter ta pierre à cet édifice ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction) (un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder).
     
