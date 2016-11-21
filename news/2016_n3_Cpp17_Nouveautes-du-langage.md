@@ -7,27 +7,28 @@ Les nouveautés au cœur du C++17
 Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf) et [RyDroid](https://linuxfr.org/users/rydroid)
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
-URL     | https://linuxfr.org/news/nouveautes-au-coeur-du-c-17
+URL     | https://linuxfr.org/news/nouveautes-au-coeur-du-cpp17
 Date    | 2016-07-22T00:53:12+02:00
 Tags    | c++17, c++ et cpp
 Score   |   0
 
-L'ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les changements au niveau du langage C++. Quelques anecdotes parsèment cet article, des suggestions comme le **C++ without class** en echo au **C with classes**, ou quelques illustrations inédites comme celle du *"Compilé c'est testé, linké c'est livré"*. Alors faisons donc le tour des nouveautés :-)
+L'ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les changements au niveau du langage C++. Quelques anecdotes parsèment cet article, des suggestions comme le **C++ without class** en echo au **C with classes**, ou quelques illustrations inédites comme celle du « *Compilé c'est testé, linké c'est livré* ». Alors faisons donc le tour des nouveautés :-)
     
 ![C++17 à l'école primaire](https://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
 ----
 
-* [La précédente dépêche "C++17, Genèse d'une version mineure"](https://linuxfr.org/news/c-17-genese-d-une-version-mineure)
+* [La précédente dépêche « C++17, Genèse d'une version mineure »](https://linuxfr.org/news/c-17-genese-d-une-version-mineure)
 * [Contenu markdown de cette dépêche sur le dépôt C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md)
-* [Journal "C++17 est sur les rails" par rewind a propos de la réunion du comité en mars 2016](https://linuxfr.org/users/rewind/journaux/c-17-est-sur-les-rails)
+* [La prochaine dépêche « C++17 élargit la bliothèque standard »](https://linuxfr.org/news/cpp17-bibliotheque-standard-std)
 * [Réunion du comité en mars 2016 racontée par Herb Sutter](https://isocpp.org/blog/2016/03/trip-report-jax-sutter)
 * [Réunion du comité en juin 2016 racontée par Herb Sutter](https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/)
 * [Réunion du comité en mars 2016 détaillée par botondballo](https://botondballo.wordpress.com/2016/03/21/trip-report-c-standards-meeting-in-jacksonville-february-2016/)
-* [Liste très complète des nouveautés C++17 sur StackOverflow.com](http://stackoverflow.com/a/38060437/938111)
+* [Liste très complète des nouveautés C++17 (licence CC BY-SA 3.0) par Yakk et contributeurs](http://stackoverflow.com/a/38060437/938111)
 * [Liste des nouveautés C++17 sur Meeting C++](https://meetingcpp.com/index.php/br/items/final-features)
 * [Dépôts Git du comité de standardisation ISO C++](https://github.com/cplusplus))
 * [Article Wikipédia C++17](https://en.wikipedia.org/wiki/C%2B%2B17)
+* [Les principaux apports de C++11/14/17 (licence MIT) par Anthony Calandra et autres contributeurs ](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/README.md)
 
 ----
 
@@ -41,28 +42,19 @@ Reste à faire avant publication :
     
 Qui ?     | Quoi ?                                        
 ----------|-----------------------------------------------
-Oliver    | ~~Vérifier les TS qui manquent~~
-Oliver    | ~~Réordonner les TS de cette dépêche~~
-Oliver    | ~~Appliquer le nouveau sommaire~~
-Oliver    | ~~Expliquer les nouveaux TS qui manquaient~~
-???       | Ajouter des images (humoristiques) pour illustrer les sous-sections
-Oliver    | ~~Ajouter le chapitre sur les fonctionnalités majeures qui n'ont pas pu être intégrées à C++17~~
-Oliver    | ~~Préparer la dépêche suivante <br> **[Changements au niveau de la bibliothèque standard](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)** <br> Avec une liste exhaustive des TS et des `TODO`~~
-Oliver    | ~~Créer la dépêche suivante dans l'espace de rédaction *LinuxFr.org* <br> Ajouter les liens entre cette dépêche et la suivante <br> Proposer d'aider à la rédaction de la dépêche suivante~~
-???       | Déplacer dans la dépêche suivante le TS Alias de iostream
+???       | Ajouter des images (humoristiques) pour illustrer les sous-sections (s'inspirer des précédentes dépêches)
+Adrien    | Déplacer dans la dépêche suivante le TS Alias de iostream
 Oliver    | Créer la dépêche **Bilan C++17** dans l'espace de rédaction *LinuxFr.org*
 Oliver    | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l'espace de rédaction *LinuxFr.org*
-eggman    | ~~Dans la section Troll, inviter à participer à cette dépêche <br> Prendre en compte les changements de eggman~~
-Oliver    | Relire la sous-section *"Évaluation stricte des expressions"* <br> Proposer des ajouts/améliorations
-Oliver    | ~~Mettre à jour le chapitre **Concours** : Présenter les deux concours (hexadécimaux et code C++17 qui ne ressemble plus à C++98)~~
-Oliver    | ~~Ajouter la section finale **Remerciments** pour remercier Adrien. Rappeler la licences et les auteurs.~~
+Oliver    | Relire le TS P0145, Proposer des ajouts/améliorations
 Oliver    | Des statistiques: la dépêche la plus longue de *LinuxFr.org* ...
-???       | Passer un coup de Grammalect sur tout les paragraphes <br> pour insérer les espaces insécables (et autres formatages de texte)
+Adrien    | Passer un coup de Grammalect sur tout les paragraphes <br> pour insérer les espaces insécables (et autres formatages de texte)
+???       | Relire le chapitre **Fonctionnalités majeures non intégrées**. Devrait-il en dire un peu plus ?
 
 Série de dépêches C++
 =====================
     
-Cette dépêche fait partie d'une série de six dépêches disponibles également sur [ce dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md). Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d'évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour](https://github.com/cpp-frug/materials/blob/gh-pages/news/README.md#pour-contribuer) avec vos questions/suggestions/corrections.... Ce dépôt Git est géré par le [**Groupe des Utilisateurs C++ Francophone**]((http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones)) (C++FRUG).
+Cette dépêche fait partie d'une série de six dépêches disponibles également sur [ce dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md). Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d'évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour](https://github.com/cpp-frug/materials/blob/gh-pages/news/README.md#pour-contribuer) avec vos questions/suggestions/corrections.... Ce dépôt Git est géré par le [**Groupe des Utilisateurs C++ Francophone**](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG).
     
 Résumé de chacune des dépêches :
 
@@ -175,65 +167,121 @@ int main()
 [[P0145]](https://wg21.link/p0145) Fixer l'ordre d'évaluation des expressions
 -----------------------------------------------------------------------------
     
-Héritées du C, les expressions sont indéfiniment séquencées. Le choix de l'ordre d'évaluation est délégué au compilateur, qui peut optimiser le code. Par contre, cette liberté amène à des comportements incertains, notamment lorsqu’on utilise le même objet. Cette absence de spécification est dommageable avec les pratiques courantes, comme le chaînage (`std::future<T>`, `std::io_base`, …).
+### Anecdote
+    
+Le livre mythique [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) de l'inventeur du C++, [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) contient une erreur subtile à la [page 1046](http://www.ebooksbucket.com/the-c-programming-language-4th-edition-b198) du paragraphe *36.3.6 STL-like Operations* (quatrième édition publiée en 2013). Sauras-tu la retrouver ? Voici l'extrait en question :
+    
+>The `replace()` replaces  one  substring  with  another  and  adjusts  the
+`string`’s  size  accordingly.   For example:
+>
+>```cpp
+>void f()
+>{
+>  string s = "but I have heard it works even if you don't believe in it";
+>  s.replace(0,4,"");                   // erase initial "but "
+>  s.replace(s.find("even"),4,"only");
+>  s.replace(s.find(" don't"),6,"");    // erase by replacing with ""
+>  assert(s=="I have heard it works only if you believe in it");
+>}
+>```
+>
+>Code relying on "magic" constants like the number of characters to be replaced is error-prone.
+> A `replace()` returns a reference to the object for which it was called.  This can be used for chaining operations:
+>
+>```cpp
+>void f2()
+>{
+>  string s = "but I have heard it works even if you don't believe in it";
+>  s.replace(0,4,"").replace(s.find("even"),4,"only").replace(s.find(" don't"),6,"");
+>  assert(s=="I have heard it works only if you believe in it");
+>}
+>```
+    
+L'erreur est de croire que l'expression `replace(find()).replace(find())` dans la fonction `f2()` va toujours s'évaluer dans le même ordre. Car le standard donne toute latitude au compilateur d'optimiser le code en décidant l'ordre d'appel du chaînage et des paramètres de fonction. Au final, d'après le standard C++, la variable `s` peut théoriquement contenir différents résultats. Et c'est aussi le cas en pratique :
+    
+Compilateur                   | variable `s`
+------------------------------|--------------
+[GCC][g] <br> [Visual C++][v] | `I have heard it works evenonlyyou donieve in it`
+[LLVM/Clang][c]               | `I have heard it works only if you believe in it`
+    
+[g]: http://coliru.stacked-crooked.com/a/a6035cb6e64f038f
+[c]: http://coliru.stacked-crooked.com/a/84408d788238bacd
+[v]: http://rextester.com/VKFPX23982
+    
+Pas trouvé ? Faut dire que ce livre de référence a été relu attentivement par les meilleurs experts C++, et étudié par de nombreux développeurs C++ aguerris, et pourtant c'est un programme qui a trouvé l'erreur. Non pas de l'[IA](https://fr.wikipedia.org/wiki/Intelligence_artificielle), juste un [outil d'analyse statique du code source](https://fr.wikipedia.org/wiki/Analyse_statique_de_programmes). Même les meilleurs experts C++ se font avoir avec ces règles pas toujours intuitives. Et le comité de normalisation C++ a donc décidé de fixer l'ordre d'évaluation avec ce *TS*.
+    
+
+### Détails
+    
+Le mécanisme est expliquée en détail par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111). En gros, avant C++17, pour des questions de performance, le standard C++ spécifie qu'il n'y a pas d'ordre d'appel des paramètres de fonction et du chaînage. Ce comportement est hérité du C.
+    
+Par exemple dans l'expression `f().g(h())` les fonction `f()` peut-être appelée avant ou après `h()`. Le standard C++ fait la différence entre *unspecified* (non-spécifié) et *unsequenced* (non-séquencé). Ce comportement est bien spécifié, donc Avant C++17 c'est *unsequenced*. À partir de C++17, c'est `f()` avant `g()` *(sequenced before)*.
     
 ```cpp
+// Avant C++17, f() peut être appelée avant ou après h()
+f().g( h() ); 
+// C++17 est plus intuitif : f() est toujours appelée avant h()
+``` 
     
+C'est aussi le cas de l'expression `std::cout << f() << g() << h()` qui peut appeler ces trois fonctions dans n'importe quel ordre.
+    
+```cpp
+// Avant C++17, le compilateur décide l'ordre d'évaluation de f(), g() et h()
+std::cout << f() << g() << h() << std::endl; 
+// C++17 fixe l'ordre intuitif : d'abord f(), puis g() et enfin h()
+``` 
+    
+Deux autres exemples que le C++ partage avec le langage C :
+    
+```cpp
 std::map<int, int> m;
 m[0] = m.size();
-int i = 0;
-    
-// Doit afficher 0 ou 1 ?
-// Avec Clang : 0
-// Avec G++ : 1
-std::cout << m[0] << std::endl; 
-    
-// Avec Clang : 00
-// Avec G++ : 10
-std::cout << i << i++; 
-    
+std::cout << m[0]; // Afficher 0 ou 1 ?
+// Clang : 0
+// GCC   : 1
 ``` 
     
-### Exemple commenté
+```cpp
+int i = 0;
+std::cout << i << ' ' << i++; 
+// Clang : 0 0
+// GCC   : 1 0
+``` 
     
-Ce problème n'est pas juste l'apanage des experts. C'est un piège qui concerne aussi les débutants. Un exemple commenté permettra à tous de mieux comprendre.
+Donc, beaucoup de codes sont potentiellement truffés de ces pièges, ce qui est également le cas quand `std::future<T>` est utilisé. Tout le monde se fait avoir, débutants comme experts.
+    
+Revenons-en à l'exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) qui est justement repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au §5.2.2 Function call (page 107).
     
 ```cpp
     
-    std::string s = "but I have heard it works even if you don't believe in it";
-    s.replace(0, 4, "")
-//  ^ ^       ^  ^  ^
-//  A B       |  |  |
-//            1  2  3
+   std::string s = "but I have heard it works even if you don't believe in it";
     
-        .replace(s.find("even"), 4, "only")
-//       ^       ^               ^  ^
-//       C       |               |  |
-//               4               5  6
-//              
-        .replace(s.find(" don't"), 6, "");
-//      ^        ^                 ^  ^
-//      D        |                 |  |
-//               7                 8  9
-     assert(s == "I have heard it works only if you believe in it");
+   s.replace(0, 4, "")
+// ^ ^       ^  ^  ^
+// A B       1  2  3
     
+    .replace(s.find("even"), 4, "only")
+//   ^       ^               ^  ^
+//   C       4               5  6
     
+    .replace(s.find(" don't"), 6, "");
+//   ^        ^                 ^  ^
+//   D        7                 8  9
 ``` 
     
-Ce code provient du brouillon. Il remplace plusieurs caractères d'un objet std::string. Pourtant ce programme semble légitime, mais produira un résultat non désiré, selon le compilateur.
+Ce code remplace plusieurs caractères d'un objet `std::string`. La première ligne déclare et initialise un objet `std::string`. 
+Les trois lignes suivantes utilisent le chaînage. [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace) est une fonction membre de l'objet `s`. Chaque appel et leurs arguments sont souvent perçus comme un groupe d'expression (par exemple : `replace(0, 4, "")`).
+Dans cet exemple, les appels de fonction sont annotés alphabétiquement. Intuitivement, on pourrait penser que chacun est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. En réalité avant ce C++17, toutes les expressions sont indéfiniment séquencées.
     
-La première ligne est somme toute, assez classique. Un objet std::string est déclaré et initialisé. 
-L'instruction suivante utilise le chaînage. [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace) est une fonction membre de l'objet `s`. Chaque appel et leurs arguments sont souvent perçus comme un groupe d'expression (par exemple : `replace(0, 4, "")`). Dans l'exemple, ils sont annotés alphabétiquement. À première vue, chacun est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. En réalité avant cette norme, toutes les expressions sont indéfiniment séquencées.
+### Nouvelle règle
     
-### Les nouvelles règles
+L'évaluation est :
     
-**L'ordre d'évaluation est :**
-    
-- De la gauche vers la droite pour les expressions suffixées. Ceci inclue les appels de fonction et la section des membres.
-- L'assignement de la droite vers la gauche.
+- De la gauche vers la droite pour les expressions suffixées. Ceci inclue les appels de fonction et la section des membres ;
+- L'assignement de la droite vers la gauche (`a = b = c = d`) ;
 - Les opérateurs de décalage (_shift operators_) de la gauche vers la droite.
     
-Par contre, lorsque une surcharge d'opérateur est invoquée, la priorité arithmétique est utilisée.
+Par contre, lorsque une surcharge d'opérateur est invoquée, la priorité arithmétique est utilisée. Peut-être que le code généré sera moins performant, mais le langage gagne grandement en simplicité.
 
 [[P0400]](https://wg21.link/p0400) Corrige la précédente TS P0145
 -----------------------------------------------------------------
@@ -245,7 +293,7 @@ Une toute petite reformulation d'une phrase de la *TS* concernant l'ordre d'éva
 [[P0245]](http://wg21.link/p0245) Littéral pour exprimer la virgule flottante en hexadécimal
 --------------------------------------------------------------------------------------------
     
-La réunion de Jacksonville en février 2016 a amendé ce *TS* qui permet d'exprimer les [virgule flottante (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d'avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d'autres langages : C99, Java 5 (2004)...
+La réunion de Jacksonville en février 2016 a amendé ce *TS* qui permet d'exprimer les [virgules flottantes (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d'avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d'autres langages : C99, Java 5 (2004)...
     
 La représentation hexadécimale a l'avantage d'être celle du registre (mémoire binaire). Attention à la notation décimale des virgules flottantes. Par exemple, `0.1f` ne vaut pas exactement `0.1` mais `0.10000000149...`. Un [exemple](http://coliru.stacked-crooked.com/a/7b70c88142f28581) :
     
@@ -305,7 +353,7 @@ assert(w == 1617891339.55602931976318359375);
 
 ### Concours
     
-Chère lectrice, cher lecteur *LinuxFr.org*, as-tu d'autres idées de jeux de mots avec cette notation hexadécimale ? Alors défoule toi dans les commentaires ;-) Les plus beaux jeux de mots seront récompensés par des petits cadeaux *(goodies)* sur le stand *LinuxFr.org* au salon [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) les 16 et 17 novembre 2016. Possibilité de les envoyer par courrier ~~électronique~~ postal ;-)
+Chère lectrice, cher lecteur *LinuxFr.org*, as-tu d'autres idées de jeux de mots avec cette notation hexadécimale ? Alors défoule toi dans les commentaires ;-) Les plus beaux jeux de mots seront récompensés par des petits cadeaux *(goodies)* collectés lors du dernier salon [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) (16 et 17 novembre 2016) et seront envoyés par courrier ~~électronique~~ postal ;-)
     
 Remarquons le `p` à la fin. Celui-ci représente l'exposant binaire et il est suivi par un entier décimal (et non pas hexadécimal). Cet exposant binaire est obligatoire pour plusieurs raisons :
     
@@ -318,7 +366,6 @@ Tentons de représenter cette notation hexadécimale en [regex](https://fr.wikip
     
 * `0[xX][0-9a-fA-F]+[.]?[pP][+-]?[0-9]+[fFlL]?`
 * `0[xX][0-9a-fA-F]*[.][0-9a-fA-F]+[pP][+-]?[0-9]+[fFlL]?`
-
 
 
 ### Termes du standard
@@ -656,7 +703,7 @@ Dans une lambda, accéder aux membres de `this` se faisait toujours via le point
 Sucre syntaxique
 ================
 
-[[N3928]](https://wg21.link/n3928) `static_assert(expr)` avec un seul paramètre (sans le second paramètre "message")
+[[N3928]](https://wg21.link/n3928) `static_assert(expr)` avec un seul paramètre (sans le second paramètre « message »)
 -----------------------------------------------------------------
     
 C++17 permet d'écrire `static_assert(condition)` avec un seul paramètre. Avant, seule la fonction [`static_assert(condition, message)`](http://fr.cppreference.com/w/cpp/language/static_assert) était disponible avec le second paramètre `message` obligatoire.
@@ -1143,7 +1190,7 @@ L'[exemple ci-dessus](https://godbolt.org/g/RMJfWb) est intéressant car GCC-6 e
 [[N4268]](https://wg21.link/n4268) Autoriser l'évaluation constante pour les arguments `template`
 ---------------------------------------------------------------------------
     
-Cette *TS* harmonise les évaluations constantes pour les arguments `template` n'étant pas un type. Les arguments de type **pointeur**, **référence** et **pointeur-vers-membre** acceptent d'avantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
+Cette *TS* harmonise les évaluations constantes pour les arguments `template` n'étant pas un type. Les arguments de type **pointeur**, **référence** et **pointeur-vers-membre** acceptent davantage d'expressions constantes. C'est un oubli de C++11 qui avait pourtant étendu la notion d'expression constante. La [table suivante](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4198.html) résume les changements.
     
 Type     | C++14  | C++17
 ---------|--------|-------
@@ -1183,7 +1230,7 @@ Test<&Str::statique> ok_ptr_statique;
 Test<&obj.statique>  ok_cxx17; //KO C++14
     
 // Le pointeur vers un élément de tableau
-// statique ne semblent pas être supportés
+// statique ne semble pas être supporté
 int   tableau[5];
 Test<&tableau[2]>    ko_adresse_element;
 ```
@@ -1605,7 +1652,7 @@ Cette dépêche propose deux concours :
     
 Pour ce second concours, proposez dans les commentaires un code source utilisant les différentes nouveautés du C++17 (et aussi C++11/14). Un développeur étant resté au bon vieux C++ du siècle dernier *devrait croire* que ce n'est pas du C++. Objectif : le code le plus différent du C++98. Néanmoins, le code source doit être *facilement* compréhensible par un développeur habitué aux récentes versions du C++, ce n'est pas un [concours d'offuscation](http://linuxfr.org/news/ioccc-2005-cest-parti "The International Obfuscated C Code Contest"). Le code source doit être sous licence libre, pensez à bien faire figurer la licence de votre choix.
     
-Les meilleures réponses seront sélectionnées parmi celles qui auront le plus de points *"pertinents"* et le moins de points *"inutiles"*. Le résultat se fera sur la dépêche suivante. Les vainqueurs recevront des petits cadeaux (goodies, autocollants...) collectés sur les différents stands au [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) les 16 et 17 novembre 2016. Et peut-être même un livre à choisir parmi ceux des éditions Eyrolles et ENI. Possibilité d'envoyer les récompenses par courrier ~~électronique~~ postal.
+Les meilleures réponses seront sélectionnées parmi celles qui auront le plus de points « *pertinents* » et le moins de points « *inutiles* ». Le résultat se fera sur la dépêche suivante. Les vainqueurs recevront des petits cadeaux (goodies, autocollants...) collectés sur les différents stands au [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) les 16 et 17 novembre 2016. Et peut-être même un livre à choisir parmi ceux des éditions Eyrolles et ENI. Possibilité d'envoyer les récompenses par courrier ~~électronique~~ postal.
 
 Appel à participation
 ======
@@ -1614,7 +1661,7 @@ La précédente dépêche a reçu [227 commentaires](https://linuxfr.org/news/c-
 
 Quand on pense à toute cette énergie dépensée et toutes ces heures consacrées à rédiger ces 227 commentaires ! Avec le recul nous aurions pu concentrer tout cet investissement dans une dépêche collaborative du style *« Aujourd'hui, est-il pertinent de choisir le C++ pour une nouvelle application ? »*.
 
-Mais il n'est jamais trop tard ! Aussi nous vous proposons de rédiger la dépêche « *Faut-il continuer à apprendre le C++ ?* » Les nombreux commentaires de la dépêche précédente méritent d'y être copiés. Malheureusement, ceux-ci sont rarement sous licence compatible CC-BY-SA-4.0. Ceci est donc un appel à tous leurs auteurs de les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
+Mais il n'est jamais trop tard ! Aussi nous proposons vous de rédiger la dépêche « *Faut-il continuer à apprendre le C++ ?* » Les nombreux commentaires de la dépêche précédente méritent d'y être copiés. Malheureusement, ceux-ci sont rarement sous licence compatible CC-BY-SA-4.0. Ceci est donc un appel à tous leurs auteurs de les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
     
 Merci et à vos claviers ! ;-)
 
@@ -1631,19 +1678,22 @@ Donc n'hésitez pas à réutiliser ce contenu libre pour créer, par exemple, de
 Les auteurs
 -----------
     
-Par respect de la licence, merci de [créditer](https://fr.wiktionary.org/wiki/cr%C3%A9diter#Verbe) les auteurs. Les deux principaux sont [Oliver H](https://linuxfr.org/users/oliver_h) (750 éditions) et [Adrien Jeser](https://linuxfr.org/users/jeser) (330 éditions). Merci aussi aux nombreux autres contributeurs de cette dépêche : [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf) et [RyDroid](https://linuxfr.org/users/rydroid).
+Par respect de la licence, merci de [créditer](https://fr.wiktionary.org/wiki/cr%C3%A9diter#Verbe) les auteurs :
     
-Merci aussi à Ziyue et Oliver H pour avoir dessiné spécialement pour cette dépêche l'[écolière sauvée par le C++](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#c17-sauve-une-%C3%A9coli%C3%A8re) et [« compilé c'est testé »](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#compil%C3%A9-cest-test%C3%A9) (tous deux sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr)). Merci aux auteurs des autres illustrations.
+* Les principaux auteurs sont [Oliver H](https://linuxfr.org/users/oliver_h) et [Adrien Jeser](https://linuxfr.org/users/jeser) ;
+* Les nombreux autres contributeurs dont l'ancêtre de cette dépêche ou via le [dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) sont [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf) et [RyDroid](https://linuxfr.org/users/rydroid), [olibre](https://github.com/olibre).
     
-Continuer à corriger et à améliorer cette dépêche
--------------------------------------------------
+Un immense merci à toutes ces personnes ayant rédigés bénévolement un article de très grande qualité. Merci aussi à Ziyue et Oliver H pour avoir dessiné spécialement pour cette dépêche l'[écolière sauvée par le C++](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#c17-sauve-une-%C3%A9coli%C3%A8re) et [« compilé c'est testé »](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#compil%C3%A9-cest-test%C3%A9) (tous deux sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr)). Merci aux auteurs des autres illustrations.
     
-Malgré tout le soin apporté, il reste certainement des oublis, des ambiguïtés, des fôtes... Bien que cette dépêche restera figée sur le site *LinuxFr.org*, il est possible de continuer à enrichir ce contenu sur [le dépôt Git C++FRUG](https://github.com/cpp-frug/materials/blob/gh-pages/news). C’est donc sur ce dépôt que se trouve les versions les plus à jour. Merci de nous aider à maintenir ce document à jour ;-)
+Continuer à corriger et à améliorer ce document
+-----------------------------------------------
+    
+Malgré tout le soin apporté, il reste certainement des oublis, des ambiguïtés, des fôtes... Bien que cette dépêche restera figée sur le site *LinuxFr.org*, il est possible de continuer à l'enrichir sur le [dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) du [**Groupe des Utilisateurs C++ Francophone**](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG). C’est donc sur ce dépôt que se trouve les versions les plus à jour. Merci de nous aider à maintenir ce document à jour ;-)
 
 La suite
 ========
     
-Nous venons de découvrir les nombreuses évolutions au niveau du langage, le cœur du C++. La [dépêche suivante](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) nous emmènera au niveau de la bibliothèque standard.
+Nous venons de découvrir les nombreuses évolutions au niveau du langage : le cœur du C++. La [dépêche suivante](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) nous emmènera au niveau de la bibliothèque standard.
     
 Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites apporter ta pierre à cet édifice ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction) (un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder).
     
