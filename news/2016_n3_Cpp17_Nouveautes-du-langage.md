@@ -46,7 +46,8 @@ Qui ?     | Quoi ?
 Adrien    | Déplacer dans la dépêche suivante le TS Alias de iostream
 Oliver    | Créer la dépêche **Bilan C++17** dans l'espace de rédaction *LinuxFr.org*
 Oliver    | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l'espace de rédaction *LinuxFr.org*
-Oliver    | Relire le TS P0145, Proposer des ajouts/améliorations
+Oliver    | ~~Relire le TS P0145, Proposer des ajouts/améliorations~~
+???       | Simplifier le § [P0036] Révision de la TS précédente N4295
 Oliver    | Des statistiques: la dépêche la plus longue de *LinuxFr.org* ...
 Adrien    | Passer un coup de Grammalect sur tout les paragraphes <br> pour insérer les espaces insécables (et autres formatages de texte)
 ???       | Relire le chapitre **Fonctionnalités majeures non intégrées**. Devrait-il en dire un peu plus ?
@@ -185,7 +186,6 @@ Le livre mythique [*The C++ Programming Language*](https://fr.wikipedia.org/wiki
 >}
 >```
 >
->Code relying on "magic" constants like the number of characters to be replaced is error-prone.
 > A `replace()` returns a reference to the object for which it was called.  This can be used for chaining operations:
 >
 >```cpp
@@ -197,12 +197,12 @@ Le livre mythique [*The C++ Programming Language*](https://fr.wikipedia.org/wiki
 >}
 >```
     
-L'erreur est de croire que l'expression `replace(find()).replace(find())` dans la fonction `f2()` va toujours s'évaluer dans le même ordre. Car le standard donne toute latitude au compilateur d'optimiser le code en décidant l'ordre d'appel du chaînage et des paramètres de fonction. Au final, d'après le standard C++, la variable `s` peut théoriquement contenir différents résultats. Et c'est aussi le cas en pratique :
+L'erreur est de croire que l'expression `replace(find()).replace(find())` dans la fonction `f2()` va toujours s'évaluer dans le même ordre. Le standard donne toute latitude au compilateur d'optimiser le code. Au final, d'après le standard C++, la variable `s` peut théoriquement contenir différents résultats. Et c'est aussi le cas en pratique :
     
-Compilateur                   | variable `s`
-------------------------------|--------------
-[GCC][g] <br> [Visual C++][v] | `I have heard it works evenonlyyou donieve in it`
-[LLVM/Clang][c]               | `I have heard it works only if you believe in it`
+Compilateur                     | Résultat contenu par la variable `s`
+--------------------------------|--------------
+[GCC][g] et<br> [Visual C++][v] | `I have heard it works evenonlyyou donieve in it`
+[LLVM/Clang][c]                 | `I have heard it works only if you believe in it`
     
 [g]: http://coliru.stacked-crooked.com/a/a6035cb6e64f038f
 [c]: http://coliru.stacked-crooked.com/a/84408d788238bacd
@@ -213,7 +213,7 @@ Pas trouvé ? Faut dire que ce livre de référence a été relu attentivement p
 
 ### Détails
     
-Le mécanisme est expliquée en détail par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111). En gros, avant C++17, pour des questions de performance, le standard C++ spécifie qu'il n'y a pas d'ordre d'appel des paramètres de fonction et du chaînage. Ce comportement est hérité du C.
+Le mécanisme est expliquée en détail par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111). Avant C++17, pour des questions de performance, le standard C++ spécifie qu'il n'y a pas d'ordre d'appel des paramètres de fonction et du chaînage. Ce comportement est hérité du C.
     
 Par exemple dans l'expression `f().g(h())` les fonction `f()` peut-être appelée avant ou après `h()`. Le standard C++ fait la différence entre *unspecified* (non-spécifié) et *unsequenced* (non-séquencé). Ce comportement est bien spécifié, donc Avant C++17 c'est *unsequenced*. À partir de C++17, c'est `f()` avant `g()` *(sequenced before)*.
     
@@ -236,7 +236,7 @@ Deux autres exemples que le C++ partage avec le langage C :
 ```cpp
 std::map<int, int> m;
 m[0] = m.size();
-std::cout << m[0]; // Afficher 0 ou 1 ?
+std::cout << m[0]; // Affiche 0 ou 1 ?
 // Clang : 0
 // GCC   : 1
 ``` 
@@ -250,7 +250,7 @@ std::cout << i << ' ' << i++;
     
 Donc, beaucoup de codes sont potentiellement truffés de ces pièges, ce qui est également le cas quand `std::future<T>` est utilisé. Tout le monde se fait avoir, débutants comme experts.
     
-Revenons-en à l'exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) qui est justement repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au §5.2.2 Function call (page 107).
+Revenons-en à l'exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) qui est justement repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au *§5.2.2 Function call* (page 107).
     
 ```cpp
     
@@ -282,6 +282,12 @@ L'évaluation est :
 - Les opérateurs de décalage (_shift operators_) de la gauche vers la droite.
     
 Par contre, lorsque une surcharge d'opérateur est invoquée, la priorité arithmétique est utilisée. Peut-être que le code généré sera moins performant, mais le langage gagne grandement en simplicité.
+    
+Expression                                     | Résultat avant C++17 | Avec C++17
+-----------------------------------------------|----------------------|-----------
+`std::map<int,int> m;` <br> `m[0] = m.size();` | *unsequenced*        | `m[0] = ??`
+`int i = 0, ++i++, ++i++, ++i++, ++i, i++;`    | `i = 8`              | `i = 8`
+`int i = 0; i = i++ + 1;`                      | *unsequenced*        | *unsequenced*
 
 [[P0400]](https://wg21.link/p0400) Corrige la précédente TS P0145
 -----------------------------------------------------------------
@@ -370,7 +376,7 @@ Tentons de représenter cette notation hexadécimale en [regex](https://fr.wikip
 
 ### Termes du standard
     
-Allez, soyons curieux, regardons comment le standard C++ spécifie cette notation avec un extrait du chapitre **§ 2.13.4 Floating literals** du [brouillon C++17](https://github.com/cplusplus/draft/raw/master/papers/n4604.pdf) :
+Allez, soyons curieux, regardons comment le standard C++ spécifie cette notation avec un extrait du chapitre **§ 2.13.4 Floating literals** du [brouillon C++17](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf) :
     
 > *hexadecimal-floating-literal:*
 >   &emsp; *hexadecimal-prefix hexadecimal-fractional-constant binary-exponent-part floating-suffix<sub>opt</sub>*
@@ -408,7 +414,9 @@ Et l'équivalent chez [cppreference.com](http://en.cppreference.com/w/cpp/langua
 >  * `f F` defines float
 >  * `l L` defines long double
     
-En attendant C++17, il est possible d'utiliser [`strtof()`](http://en.cppreference.com/w/cpp/string/byte/strtof) et [`std::hexfloat`](http://en.cppreference.com/w/cpp/io/manip/fixed) pour jouer avec les virgules flottantes hexadécimales. Un exemple :
+### `strtof()` et `std::hexfloat`
+    
+En attendant C++17, il est possible d'utiliser [`strtof()`](http://en.cppreference.com/w/cpp/string/byte/strtof) et [`std::hexfloat`](http://en.cppreference.com/w/cpp/io/manip/fixed) pour jouer avec les virgules flottantes hexadécimales :
     
 ```cpp
 #include <iostream>
@@ -639,7 +647,7 @@ int main (int argc, char** DOC_ONLY(argv))
 }
 ``` 
     
-[Mozilla propose aussi `DebugOnly<T>`](https://developer.mozilla.org/docs/Mozilla/Debugging/DebugOnly%3CT%3E) (plus élégant qu'une macro).
+Mozilla propose aussi [`DebugOnly<T>`](https://developer.mozilla.org/docs/Mozilla/Debugging/DebugOnly%3CT%3E) (plus élégant qu'une macro).
 
 [[N4266]](https://wg21.link/n4266) Appliquer les `[[attributs]]` aux `namespace` et `enum`
 -----------------------------------------------------------------------------------------
@@ -659,22 +667,25 @@ enum Couleur {
 }
 ```
 
-[[P0028]](https://wg21.link/p0028) `using` évite la répétition des namespace d'`[[attribut]]`
+[[P0028]](https://wg21.link/p0028) `using` évite la répétition de namespace d'`[[attribut]]`s
 --------------------------------------------------------------------------------------------
-    
+   
+
+Répétition du *namespace* `rpr` pour les deux attributs :
+     
 ```cpp 
-// Avant ce TS, on était obligé de répéter le namespace "rpr"
-void f() {
-  [[ rpr :: kernel, rpr :: target(cpu,gpu)]]
-  do_task();
+void foo() {
+  [[rpr::kernel, rpr::target(cpu,gpu)]]
+  bar();
 }
 ``` 
-    
+   
+Utilise le même *namespace* `rpr` pour les deux attributs :
+     
 ```cpp
-// Ce TS permet d'éviter de répéter "rpr"
-void f() {
-  [[ using rpr:  kernel, target(cpu,gpu)]]
-  do_task();
+void foo() {
+  [[using rpr: kernel, target(cpu,gpu)]]
+  bar();
 }
 ```
 
@@ -693,7 +704,7 @@ Les [lambdas](http://en.cppreference.com/w/cpp/language/lambda) ont été introd
 [[N4487]](https://wg21.link/n4487) Lambda `constexpr`
 ----------------------------------------------------
     
-Les lambda sont automatiquement `constexpr` si répond aux critères `constexpr`.
+Les lambda sont automatiquement `constexpr` si répond aux critères `constexpr`. Cela permet d'utiliser les lambdas dans les fonctions `constexpr` :-)
 
 [[P0018]](https://wg21.link/p0018) Capture de `*this`
 ----------------------------------------------------
@@ -703,7 +714,7 @@ Dans une lambda, accéder aux membres de `this` se faisait toujours via le point
 Sucre syntaxique
 ================
 
-[[N3928]](https://wg21.link/n3928) `static_assert(expr)` avec un seul paramètre (sans le second paramètre « message »)
+[[N3928]](https://wg21.link/n3928) `static_assert(expr)` avec un seul paramètre <br> <sup>(sans le second paramètre `message`)</sup>
 -----------------------------------------------------------------
     
 C++17 permet d'écrire `static_assert(condition)` avec un seul paramètre. Avant, seule la fonction [`static_assert(condition, message)`](http://fr.cppreference.com/w/cpp/language/static_assert) était disponible avec le second paramètre `message` obligatoire.
@@ -891,6 +902,40 @@ int main()
   Cpp17<x> cpp17;
   return cpp14.foo() + cpp17.foo();
 }
+``` 
+    
+Cette nouveauté permet de simplifier l'écriture du [`std::integral_constant`](http://en.cppreference.com/w/cpp/types/integral_constant#Possible_implementation) :
+    
+```cpp
+template <auto v>
+struct integral_constant
+{
+  using type = integral_constant;
+  using value_type = decltype(v);
+  static constexpr value_type value = v;
+  constexpr operator value_type()   const noexcept { return value; }
+  constexpr value_type operator()() const noexcept { return value; }
+};
+``` 
+    
+Et par conséquent, simplifier un peu la méta-programmation :
+    
+```cpp
+template <auto x, auto y>
+constexpr auto
+operator+(integral_constant<x>, integral_constant<y>)
+{ return integral_constant<x + y>{}; }
+    
+template <auto x, auto y>
+constexpr auto
+operator*(integral_constant<x>, integral_constant<y>)
+{ return integral_constant<x * y>{}; }
+    
+integral_constant<1> un;
+integral_constant<2> deux;
+integral_constant<3> trois;
+auto resultat = deux * trois + un;
+static_assert( resultat.value == integral_constant<7>::value );
 ```
 
 [[P0217]](https://wg21.link/p0217) Attaches structurées *(Structured bindings)*
@@ -1057,7 +1102,9 @@ auto machin( const Truc<Premier, Deuxieme, Reste...>& t1
 }
 ``` 
     
-**Anecdote :** À l'époque lointaine où les `template` avaient été introduites au C++, seul le mot-clé `class` permettait d'indiquer que le paramètre `template` est un type (le mot-clé `typename` n'existait pas encore). Donc, pour un paramètre `template`, le mot-clé `class` désigne tous les types, dont `struct`, `int`... (pas seulement les types `class`). Dans l'exemple ci-dessous, `class T` signifie que `T` est un type, n'importe lequel :
+### Anecdote
+    
+À l'époque lointaine où les `template` avaient été introduites au C++, seul le mot-clé `class` permettait d'indiquer que le paramètre `template` est un type (le mot-clé `typename` n'existait pas encore). Donc, pour un paramètre `template`, le mot-clé `class` désigne tous les types, dont `struct`, `int`... (pas seulement les types `class`). Dans l'exemple ci-dessous, `class T` signifie que `T` est un type, n'importe lequel :
     
 ```cpp
 template <class T>
@@ -1104,7 +1151,9 @@ void bar() { foo<T>(); }
     
 Et avec C++17, le cas du paramètre `template template` peut enfin utiliser `typename`.
     
-**Conséquence :** Alors que le nom originel du C++ était ***C with `class`***, nous pourrions dire que le C++17 est le ***C++ without `class`***, c'est à dire, sans avoir besoin du mot-clé `class`. En effet, `class` est maintenant remplaçable partout soit par `typename`, soit par `struct` moyennant quelques changements :
+### C++ without `class`
+    
+Alors que le nom originel du C++ était ***C with `class`***, nous pourrions dire que le C++17 est, par conséquent, le ***C++ without `class`***. C'est à dire, sans avoir besoin du mot-clé `class`. En effet, `class` est maintenant remplaçable partout soit par `typename`, soit par `struct` moyennant quelques changements :
     
 ```cpp
 template <class T, template<class> C>
@@ -1236,8 +1285,8 @@ Test<&tableau[2]>    ko_adresse_element;
 ```
 
 
-[[N4285]](https://wg21.link/n4285) Réécriture de paragraphes concernant les exceptions
---------------------------------------------------------------------------------------
+[[N4285]](https://wg21.link/n4285) Réécriture des paragraphes concernant les exceptions
+---------------------------------------------------------------------------------------
     
 Ce *TS* a le mérite d'identifier des paragraphes qui ne sont pas clairs et de proposer une reformulation.
     
@@ -1661,7 +1710,7 @@ La précédente dépêche a reçu [227 commentaires](https://linuxfr.org/news/c-
 
 Quand on pense à toute cette énergie dépensée et toutes ces heures consacrées à rédiger ces 227 commentaires ! Avec le recul nous aurions pu concentrer tout cet investissement dans une dépêche collaborative du style *« Aujourd'hui, est-il pertinent de choisir le C++ pour une nouvelle application ? »*.
 
-Mais il n'est jamais trop tard ! Aussi nous proposons vous de rédiger la dépêche « *Faut-il continuer à apprendre le C++ ?* » Les nombreux commentaires de la dépêche précédente méritent d'y être copiés. Malheureusement, ceux-ci sont rarement sous licence compatible CC-BY-SA-4.0. Ceci est donc un appel à tous leurs auteurs de les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
+Mais il n'est jamais trop tard ! Aussi nous proposons vous de rédiger la dépêche *« Faut-il continuer à apprendre le C++ ? »* Les nombreux commentaires de la dépêche précédente méritent d'y être copiés. Malheureusement, ceux-ci sont rarement sous licence compatible CC-BY-SA-4.0. Ceci est donc un appel à tous leurs auteurs de les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
     
 Merci et à vos claviers ! ;-)
 
