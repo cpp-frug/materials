@@ -1,19 +1,24 @@
-Déception et nouveau processus de standardisation pour C++20
-============================================================
+Bilan C++17 et attentes C++20
+=============================
+
+Bilan C++17
+-----------
+
+* Plein de nettoyages et d'améliorations appréciables au niveau du langage, mais pas le boulversement attendu des fonctionnalités Concept, Import, Réflexion...
+* De gros pavés du côté de la bibliothèque standard, mais souvent déjà disponibles avec boost 
+
+
+Changement du cycle de publication
+----------------------------------
 
 Face à la déception de cette version _pas très majeure_,
 le comité réfléchit à faciliter la contribution de la communauté C++
-et à améliorer le processus de standardisation.
+et à fuidifier le processus de standardisation.
 
 C'est la fin de l'alternance de versions majeurs/mineures : 
 Toutes fonctionnalités prêtes l'année N-1 seront intégrées dans le standard pour l'année N,
 qu'elles soient majeurs ou mineures.
 
-Et toi, cher lecteur/chère lectrice de LinuxFr.org, es-tu un peu déçu(e) du périmètre fonctionnel C++17 ?
-Penses-tu que toutes ces nouvelles fonctionnalités ne font que compliquer inutilement le langage le plus complexe que l'humanité ait inventé ?
-Ou au contraire, es-tu persuadé(e) que grâce à ces évolutions, le C++ va progresser dans le classement du _TIOBE Index_ et écarter des prétendants comme ~~[D](https://fr.wikipedia.org/wiki/D_(langage)),~~ [Dart](https://fr.wikipedia.org/wiki/Dart_(langage_informatique)), [Nim](https://fr.wikipedia.org/wiki/Nim_(langage)), [Rust](https://fr.wikipedia.org/wiki/Rust_(langage)) ou [Pony](http://www.ponylang.org/) ?
-
-![Indice TIOBE de popularité des langages de programmation, la courbe en vert clair représente l'inexorable descente du C++ qui reste quand même en troisième place derrière Java et C, mais devant Python et C#](http://cdn.edureka.co/blog/wp-content/uploads/2016/06/TIOBE-index-2016.png)
 
 ---------------------------------------------------------------
 
@@ -157,13 +162,20 @@ target_compile_features(MonApp PRIVATE cxx_decltype)
 target_link_libraries(MonApp MaLib)
 ```
 
-
-
-
 Et toi, cher lecteur/chère lectrice de LinuxFr.org, es-tu content(e) de la disponibilité rapide des fonctionnalités des prochaines versions C++ ?
 Et quand penses-tu que tu pourras utiliser ces nouvelles fonctionnalités C++ dans ton travail ?
 Subis-tu l'interdiction d'utiliser C++17 ? (à cause de règles de codage figées ou de l'obligation de rester sur un vieux compilateur ?)
 Et dans tes loisirs, dans combien de temps penses-tu passer au C++17 ?
+
+
+C++20
+--------
+
+TODO
+
+http://ldionne.com/meetingcpp-2016/#/18
+
+
 
 ---------------------------------------------------------------
 
