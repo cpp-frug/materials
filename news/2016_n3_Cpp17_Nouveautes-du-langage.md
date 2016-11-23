@@ -12,7 +12,7 @@ Date    | 2016-07-22T00:53:12+02:00
 Tags    | c++17, c++ et cpp
 Score   |   0
 
-L'ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les changements au niveau du langage C++. Quelques anecdotes parsèment cet article, des suggestions comme le **C++ without class** en echo au **C with classes**, ou quelques illustrations inédites comme celle du « *Compilé c'est testé, linké c'est livré* ». Alors faisons donc le tour des nouveautés :-)
+L'ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les changements au niveau du langage C++. Quelques anecdotes parsèment cet article, des suggestions comme le **C++ without class** en écho au **C with classes**, ou quelques illustrations inédites comme celle du « *Compilé c'est testé, linké c'est livré* ». Alors faisons donc le tour des nouveautés :-)
     
 ![C++17 à l'école primaire](https://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
@@ -57,42 +57,23 @@ Série de dépêches C++
     
 Cette dépêche fait partie d'une série de six dépêches disponibles également sur [ce dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md). Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d'évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour](https://github.com/cpp-frug/materials/blob/gh-pages/news/README.md#pour-contribuer) avec vos questions/suggestions/corrections.... Ce dépôt Git est géré par le [**Groupe des Utilisateurs C++ Francophone**](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG).
     
-Résumé de chacune des dépêches :
-
-1. Les coulisses
-----------------
+Résumé des dépêches :
     
-La première dépêche, [*Les coulisses du standard C++*](https://linuxfr.org/news/les-coulisses-du-standard-cpp) est très longue mais passionnante. Elle présente la naissance du langage, le comité de normalisation, les brouillons du standard, la procédure de normalisation, les spécifications techniques (*TS*), les correctifs (*DR*) publiés en parallèle... bref, des aspects souvent méconnus des développeurs C++.
-
-2. Genèse du C++17
-------------------
+1. [**Les coulisses du standard**](https://linuxfr.org/news/les-coulisses-du-standard-cpp) est très longue mais passionnante. Elle présente la naissance du langage, le comité de normalisation, les brouillons du standard, la procédure de normalisation, les spécifications techniques (*TS*), les correctifs (*DR*)... bref, des aspects souvent méconnus des développeurs C++.
     
-La seconde dépêche, [*C++17, Genèse d’une version mineure*](https://linuxfr.org/news/c-17-genese-d-une-version-mineure) dresse le périmètre fonctionnel du prochain C++ en rappelant les deux [réunions du comité de standardisation C++](http://www.open-std.org/jtc1/sc22/wg21/docs/meetings) de 2016 et la longue évolution de ce langage de programmation. 
-
-3. Changements C++17 au niveau du langage
------------------------------------------
+2. [**Genèse du C++17**](https://linuxfr.org/news/c-17-genese-d-une-version-mineure) rappelle la longue évolution de ce langage de programmation et dessine le périmètre fonctionnel amendé par deux [réunions du comité de standardisation C++](http://www.open-std.org/jtc1/sc22/wg21/docs/meetings) en 2016.
     
-Cette [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) du cœur du C++17 : Déduction des arguments `template` du constructeur `std::array a{1,2,3}` ; Décomposition du retour de fonction `auto [x,y]=fonction()` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué `namespace aaa::bbb { ... }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
-
-Par contre, des fonctionnalités majeures qui étaient très attendues sont toujours en cours d'élaboration ne sont pas encore suffisamment matures pour être publiées avec C++17 : [Concepts](http://fr.cppreference.com/w/cpp/concept) ; [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) qui propose des `import std.string;` en alternative des `#include <string>` ; [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ; [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ; [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ; [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
-
-4. Changements C++17 au niveau de la bibliothèque standard
-----------------------------------------------------------
+3. Cette [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) du cœur du C++17 : Déduction des arguments `template` du constructeur `std::array a{1,2,3}` ; Décomposition du retour de fonction `auto [x,y]=fonction()` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué `namespace aaa::bbb { ... }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
     
-La [quatrième dépêche](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) traite des *TS* concernant la `std::` dont les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms), le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) et autres transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) comme [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) et [`boost::math`](http://www.boost.org/libs/math) (les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)).
+    Par contre, des fonctionnalités majeures qui étaient très attendues sont toujours en cours d'élaboration ne sont pas encore suffisamment matures pour être publiées avec C++17 : [Concepts](http://fr.cppreference.com/w/cpp/concept) ; [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) qui propose des `import std.string;` en alternative des `#include <string>` ; [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ; [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ; [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ; [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
     
-Tout comme la dépêche précédente, des fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ou le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) sont repoussées pour une prochaine version du C++...
-
-5. Bilan C++17 et attentes pour C++20
--------------------------------------
+4. [**Changements C++17 au niveau de la bibliothèque standard**](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) comme les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms), le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) et autres transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) comme [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) et [`boost::math`](http://www.boost.org/libs/math) (les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)).
     
-Alors, version mineure ou majeure ? Les améliorations sont appréciables, mais aucune fonctionnalité majeure au niveau du langage. Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs (ce qui n'est pas le cas de C++17). Et C++20 ?
-
-
-6. Faut-il apprendre le C++ ?
------------------------------
+    Tout comme la dépêche précédente, des fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ou le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) sont repoussées pour une prochaine version du C++...
     
-Cette [sixième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md) compare le C++ aux alternatives et permet de mieux situer l'intérêt du C++ dans le monde sans cesse mouvant de l'informatique.
+5. [**Bilan C++17 et attentes pour C++20**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) Version mineure ou majeure ? Les améliorations sont appréciables, mais aucune fonctionnalité majeure au niveau du langage. Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs (ce qui n'est pas le cas de C++17). Et C++20 ?
+    
+6. [**Faut-il apprendre le C++ ?**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md) compare le C++ aux alternatives et permet de mieux situer l'intérêt du C++ dans le monde sans cesse mouvant de l'informatique.
 
 Améliorations notables
 ======================
@@ -165,6 +146,11 @@ int main()
 }           // pas de garantie avant C++17
 ```
 
+
+
+Les expressions sont catégorisés suivant cette taxonomie :
+[Faire un schéma]
+
 [[P0145]](https://wg21.link/p0145) Fixer l'ordre d'évaluation des expressions
 -----------------------------------------------------------------------------
     
@@ -208,12 +194,47 @@ Compilateur                     | Résultat contenu par la variable `s`
 [c]: http://coliru.stacked-crooked.com/a/84408d788238bacd
 [v]: http://rextester.com/VKFPX23982
     
-Pas trouvé ? Faut dire que ce livre de référence a été relu attentivement par les meilleurs experts C++, et étudié par de nombreux développeurs C++ aguerris, et pourtant c'est un programme qui a trouvé l'erreur. Non pas de l'[IA](https://fr.wikipedia.org/wiki/Intelligence_artificielle), juste un [outil d'analyse statique du code source](https://fr.wikipedia.org/wiki/Analyse_statique_de_programmes). Même les meilleurs experts C++ se font avoir avec ces règles pas toujours intuitives. Et le comité de normalisation C++ a donc décidé de fixer l'ordre d'évaluation avec ce *TS*.
-    
+Pas trouvé ? Pas d'inquiétude, aucun humain n'avait trouvé cette erreur. Ce n'est pas une nouvelle forme d'[IA](https://fr.wikipedia.org/wiki/Intelligence_artificielle), mais juste un [outil d'analyse statique du code source](https://fr.wikipedia.org/wiki/Analyse_statique_de_programmes). Et pourtant, ce livre de référence a été relu attentivement par les meilleurs experts C++ et étudié par de nombreux développeurs C++ aguerris.
 
-### Détails
+### Explications
     
-Le mécanisme est expliquée en détail par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111). Avant C++17, pour des questions de performance, le standard C++ spécifie qu'il n'y a pas d'ordre d'appel des paramètres de fonction et du chaînage. Ce comportement est hérité du C.
+Le C++ partage avec le C cette règle : pour des questions de performance, le standard C++ (avant C++17) ne fixe pas l'ordre d'évaluation du chaînage, ni des paramètres de fonction. C'est le compilateur qui décide selon les optimisations possibles. Le standard utilise le terme *unsequenced* (séquencement non défini).
+    
+Ci-dessous, la première ligne déclare et initialise un objet `std::string`. Les lignes suivantes cherchent et remplacent plusieurs caractères de cette `std::string` en utilisant le chaînage des fonctions [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace).
+    
+Intuitivement, on pourrait penser que chaque appel et leurs arguments comme `replace(0,4,"")` est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. Mais ce n'est pas le cas avant C++17, ces appels de fonction peuvent être appelées dans n'importe quel ordre. Plus de détails sont donnés par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111) (en Anglais).
+    
+```cpp
+    
+   std::string s = "but I have heard it works even if you don't believe in it";
+    
+   s.replace(0, 4, "")
+//   A
+    
+    .replace(s.find("even"), 4, "only")
+//   B         BB
+    
+    .replace(s.find(" don't"), 6, "");
+//   C         CC
+``` 
+    
+Voici toutes les ordres d'appel autorisés par les standards C++ (avant C++17) et C (en supposant que ce soit une `struct string` avec des fonctions). C++17 n'autorise que cette dernière possibilité (TODO: à vérifier/confirmer).
+    
+1. CC, BB, A, B, C ;
+1. BB, CC, A, B, C ;
+2. CC, A, BB, B, C ;
+2. BB, A, CC, B, C ;
+3. A, CC, BB, B, C ;
+3. A, BB, CC, B, C ;
+4. A, BB, B, CC, C ;
+    
+Pour info, cet exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) a justement été repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au **§5.2.2 Function call** (page 107).
+    
+### Conséquence
+    
+Même les meilleurs experts C++ se font avoir avec ces règles pas toujours intuitives. Et le comité de normalisation C++ a donc décidé de fixer l'ordre d'évaluation avec ce *TS*.
+    
+### Autres exemples
     
 Par exemple dans l'expression `f().g(h())` les fonction `f()` peut-être appelée avant ou après `h()`. Le standard C++ fait la différence entre *unspecified* (non-spécifié) et *unsequenced* (non-séquencé). Ce comportement est bien spécifié, donc Avant C++17 c'est *unsequenced*. À partir de C++17, c'est `f()` avant `g()` *(sequenced before)*.
     
@@ -249,30 +270,7 @@ std::cout << i << ' ' << i++;
 ``` 
     
 Donc, beaucoup de codes sont potentiellement truffés de ces pièges, ce qui est également le cas quand `std::future<T>` est utilisé. Tout le monde se fait avoir, débutants comme experts.
-    
-Revenons-en à l'exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) qui est justement repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au *§5.2.2 Function call* (page 107).
-    
-```cpp
-    
-   std::string s = "but I have heard it works even if you don't believe in it";
-    
-   s.replace(0, 4, "")
-// ^ ^       ^  ^  ^
-// A B       1  2  3
-    
-    .replace(s.find("even"), 4, "only")
-//   ^       ^               ^  ^
-//   C       4               5  6
-    
-    .replace(s.find(" don't"), 6, "");
-//   ^        ^                 ^  ^
-//   D        7                 8  9
-``` 
-    
-Ce code remplace plusieurs caractères d'un objet `std::string`. La première ligne déclare et initialise un objet `std::string`. 
-Les trois lignes suivantes utilisent le chaînage. [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace) est une fonction membre de l'objet `s`. Chaque appel et leurs arguments sont souvent perçus comme un groupe d'expression (par exemple : `replace(0, 4, "")`).
-Dans cet exemple, les appels de fonction sont annotés alphabétiquement. Intuitivement, on pourrait penser que chacun est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. En réalité avant ce C++17, toutes les expressions sont indéfiniment séquencées.
-    
+        
 ### Nouvelle règle
     
 L'évaluation est :
