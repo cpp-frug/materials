@@ -1104,6 +1104,8 @@ Un usage actuel est de reduire les erreurs et incoherences possibles lors de l'i
 L'exemple suivant montre comment s'assurer que l'allocateur et la factory de WidgetManager gerent bien le type Widget :
 
 ```cpp
+// Version GCC 6.1  : (so, removing `typename` keyword in type-aliasing declaration) https://godbolt.org/g/5AtrFU
+// Version MSVC++15 : (below)
 struct Widget
 {};
 template <typename T>
@@ -1124,7 +1126,7 @@ struct WidgetManager
 	using elem_type = T;
 	using allocator_type = typename T_Allocator<elem_type>;
 	using factory_type = typename T_Factory<elem_type, typename T_Allocator>;
-}
+};
 
 void	UseWidgetManager(void)
 {
