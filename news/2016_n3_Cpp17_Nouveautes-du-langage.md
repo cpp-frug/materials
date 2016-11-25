@@ -444,7 +444,7 @@ int main (int argc, char *argv[])
 }
 ``` 
     
-Nous pouvons regretter qu'il faille utiliser des fonctions `strtof()` issues du C. En théorie, `std::hexfloat` devrait fonctionner pour l'entrée (`istream`). Mais dans la pratique `std::hexfloat` semble ne fonctionner que pour la sortie (`ostream`). L'exemple suivant ne fonctionne toujours pas avec GCC-6.2, Clang-3.9 et MSVC++15 :
+Nous pouvons regretter qu'il faille utiliser des fonctions `strtof()` issues du C, qui imposent de verifier si `errno == ERANGE`. En théorie, `std::hexfloat` devrait fonctionner pour l'entrée (`istream`). Mais dans la pratique `std::hexfloat` semble ne fonctionner que pour la sortie (`ostream`). L'exemple suivant ne fonctionne toujours pas avec GCC-6.2, Clang-3.9 et MSVC++15 :
     
 ```cpp
 double d;
