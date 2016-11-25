@@ -450,7 +450,7 @@ std::istringstream iss("0xA.Bp-1");
 iss >> std::hexfloat >> d;
 std::cout << d;
 ```
-Notons que c'est l'extraction qui ne s'effectue pas correctement.L'istringstream reste quand a lui dans un etat correcte, ainsi les erreurs sont verifiables.
+Notons que c'est l'extraction qui ne s'effectue pas correctement. L'istringstream reste quand a lui dans un etat correcte, ainsi les erreurs sont verifiables.
 
 ```cpp
 std::cout
