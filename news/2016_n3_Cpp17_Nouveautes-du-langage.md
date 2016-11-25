@@ -258,15 +258,17 @@ Deux autres exemples que le C++ partage avec le langage C :
 std::map<int, int> m;
 m[0] = m.size();
 std::cout << m[0]; // Affiche 0 ou 1 ?
-// Clang : 0
-// GCC   : 1
+// Clang  : 0
+// GCC    : 1
+// MSVC++ : 0
 ``` 
     
 ```cpp
 int i = 0;
 std::cout << i << ' ' << i++; 
-// Clang : 0 0
-// GCC   : 1 0
+// Clang  : 0 0
+// GCC    : 1 0
+// MSVC++ : 1 0
 ``` 
     
 Donc, beaucoup de codes sont potentiellement truffés de ces pièges, ce qui est également le cas quand `std::future<T>` est utilisé. Tout le monde se fait avoir, débutants comme experts.
@@ -440,12 +442,25 @@ int main (int argc, char *argv[])
 }
 ``` 
     
-Nous pouvons regretter qu'il faille utiliser des fonctions `strtof()` issues du C. En théorie, `std::hexfloat` devrait fonctionner pour l'entrée (`istream`). Mais dans la pratique `std::hexfloat` semble ne fonctionner que pour la sortie (`ostream`). L'exemple suivant ne fonctionne toujours pas avec GCC-6.2 et Clang-3.9 :
+Nous pouvons regretter qu'il faille utiliser des fonctions `strtof()` issues du C. En théorie, `std::hexfloat` devrait fonctionner pour l'entrée (`istream`). Mais dans la pratique `std::hexfloat` semble ne fonctionner que pour la sortie (`ostream`). L'exemple suivant ne fonctionne toujours pas avec GCC-6.2, Clang-3.9 et MSVC++15 :
     
 ```cpp
 double d;
-std::istringstream("0xA.Bp-1") >> std::hexfloat >> d;
+std::istringstream iss("0xA.Bp-1");
+iss >> std::hexfloat >> d;
 std::cout << d;
+```
+Notons que c'est l'extraction qui ne s'effectue pas correctement.L'istringstream reste quand a lui dans un etat correcte, ainsi les erreurs sont verifiables.
+
+```cpp
+std::cout
+	<< std::boolalpha
+	<< iss.fail()	<< '\n'	// false
+	<< iss.bad()	<< '\n'	// false
+	<< iss.eof()	<< '\n'	// false
+	<< iss.str()	<< '\n'	// "0xA.Bp-1"
+	<< std::endl
+	;
 ```
 
 
@@ -506,7 +521,12 @@ struct B
 // Les variables constexpr sont implicitement inline
 constexpr const int celerite_lumiere = 299'792'458;
 ``` 
-    
+Pour cette synthaxe simplifie, en C++14 nous aurions obtenue la reponse suivante de la par du compilateur :
+> error C2433: 'B::v': 'inline' not permitted on data declarations
+> error C2864: 'B::v': a static data member with an in-class initializer must have non-volatile const integral type
+> note: type is 'int'
+Dorenavant, l'uniformite de synthaxe est acceptee, independement de la presence d'un CV-qualifier.
+
 Par curiosité, [générons le code assembleur](https://framagit.org/Cpp17/variable_inline) x86_64 de l'exemple ci-dessus [avec](https://framagit.org/Cpp17/variable_inline/blob/master/avec_inline.cc) et [sans variable `inline`](https://framagit.org/Cpp17/variable_inline/blob/master/sans_inline.cc). Le compilateur `clang++ -S --std=c++1z -O0` optimise davantage le code avec variable `inline` en supprimant les lignes suivantes :
     
 ```nasm
@@ -868,6 +888,7 @@ std::tuple t_avec("voiture",4,'L');
 ``` 
     
 Pas mal de fonctions d'aide `make_***()` risquent de devenir inutiles...
+(Une partie l'etait deja avec l'apparition des initializer-list, comme make_pair)
 
 [[P0127]](https://wg21.link/p0127) Déclaration des paramètres `template<auto>`
 -----------------------------------------------------------------------------
@@ -1079,7 +1100,39 @@ auto convert_to_vector (const Container& container)
    return v;
 }
 ``` 
-    
+Un usage actuel est de reduire les erreurs et incoherences possibles lors de l'instanciation d'un type template.
+L'exemple suivant montre comment s'assurer que l'allocateur et la factory de WidgetManager gerent bien le type Widget :
+
+```cpp
+struct Widget
+{};
+template <typename T>
+struct MyAllocator
+{};
+template <typename T, template<typename> class T_Allocator>
+struct MyFactory
+{};
+
+template
+<
+	typename T,
+	template <typename> class T_Allocator,
+	template <typename, template<typename> class> typename T_Factory
+>
+struct WidgetManager
+{
+	using elem_type = T;
+	using allocator_type = typename T_Allocator<elem_type>;
+	using factory_type = typename T_Factory<elem_type, typename T_Allocator>;
+}
+
+void	UseWidgetManager(void)
+{
+	WidgetManager<Widget, MyAllocator, MyFactory> wManager;
+}
+```
+
+
 Chère lectrice, cher lecteur *LinuxFr.org*,
 Tu as peut-être déjà utilisé les paramètres `template template` ?
 Ou tu as peut-être de meilleurs idées sur l'utilité d'une telle fonctionnalité ?
@@ -1634,7 +1687,14 @@ Le mot-clé `register` est déprécié depuis C++11. À l'époque, les contraint
 [[P0002]](https://wg21.link/p0002) Incrémentation sur les booléens
 -----------------------------------------------------------------------------
     
-Dans les temps anciens, le type `bool` n’existait pas. Les entiers étaient utilisés pour cet usage avec `#define FALSE 0` et `#define TRUE !0` (souvent égal à `1`). C'est à dire **zéro pour faux** et **toutes les autres valeurs pour vrai**.
+Dans les temps anciens, le type `bool` n’existait pas. Les entiers étaient utilisés pour cet usage avec :
+```c
+#define BOOL int
+#define FALSE 0
+#define TRUE 1 // ou !0, en fonction des implementations
+```
+C'est à dire **zéro pour faux** et **toutes les autres valeurs pour vrai**.
+Voir [stdbool.h](http://clang.llvm.org/doxygen/stdbool_8h_source.html "CLang.LLVM's Doxygen").
     
 La création du type `bool` avec le C++ avait nécessité de garder une comptabilité avec le vieux code : l'incrémentation avait été autorisée mais pas la décrémentation.
     
