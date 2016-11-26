@@ -4,7 +4,7 @@
 Les nouveautés au cœur du C++17
 ===============================
 
-Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid) et [Dua Guillaume "Guss"](https://github.com/GuillaumeDua)
+Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [Guillaume Dua "Guss"](https://github.com/GuillaumeDua), [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid) et [Dua Guillaume "Guss"](https://github.com/GuillaumeDua)
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/nouveautes-au-coeur-du-cpp17
@@ -58,7 +58,6 @@ Série de dépêches C++
 =====================
 
 
-
 Cette dépêche fait partie de toute une série disponible également sur [le dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) du [*Groupe des Utilisateurs C++ Francophone*](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG). Alors que cet article restera figé sur le site *LinuxFr. org*, il continuera d’évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour](https://github.com/cpp-frug/materials/blob/gh-pages/news/README.md#pour-contribuer) avec vos questions/suggestions/corrections.
 
 1. [**Les coulisses du standard**](https://linuxfr.org/news/les-coulisses-du-standard-cpp) (20 août 2016) nous dévoile des aspects souvent méconnus des développeurs C++ de la naissance du langage aux derniers réglages de son processus de normalisation.
@@ -68,7 +67,6 @@ Cette dépêche fait partie de toute une série disponible également sur [le d�
 5. [**Bilan C++17 et attentes pour C++20**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) Version mineure ou majeure ? Et pour C++20 ?
 6. [**Faut-il apprendre le C++ ?**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md) compare le C++ aux alternatives et permet de mieux situer l’intérêt du C++ dans le monde sans cesse mouvant de l’informatique.
 7.…
-
 
 Améliorations notables
 ======================
@@ -144,7 +142,6 @@ int main()
 
 
 Les expressions sont catégorisées suivant cette taxonomie :
-
     
     TODO [Faire un schéma]
 
@@ -207,7 +204,6 @@ Compilateur                     | Résultat contenu par la variable `s`
 
 ### Détails
     
-
 Ci-dessous, la première ligne déclare et initialise un objet `std::string`. Les lignes suivantes cherchent et remplacent plusieurs caractères de cette `std::string` en utilisant le chaînage des fonctions [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace).
     
 Intuitivement, on pourrait penser que chaque appel et leurs arguments comme `replace(0,4,"")` est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. Mais ce n’est pas le cas avant C++17, ces appels de fonction peuvent être appelées dans n’importe quel ordre. Plus de détails sont donnés par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111) (en Anglais).
@@ -237,7 +233,6 @@ Ci-dessous les ordres d’appel autorisés par les standards C++ (avant C++17) e
 4. A, BB, B, CC, C ;
     
 Pour info, cet exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) a justement été repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au **§5.2.2 Function call** (page 107).
-
 
 ### Autres exemples
     
@@ -300,7 +295,6 @@ Expression                                     | Résultat avant C++17 | Avec C+
 -----------------------------------------------------------------
     
 Une toute petite reformulation d’une phrase de la *TS* concernant l’ordre d’évaluation des arguments de fonction.
-
 
 
 [[P0245]](http://wg21.link/p0245) Littéral pour exprimer la virgule flottante en hexadécimal
@@ -380,7 +374,6 @@ Tentons de représenter cette notation hexadécimale en [regex](https://fr.wikip
 * `0[xX][0-9a-fA-F]+[.]?[pP][+-]?[0-9]+[fFlL]?`
 * `0[xX][0-9a-fA-F]*[.][0-9a-fA-F]+[pP][+-]?[0-9]+[fFlL]?`
 
-
 ### Termes du standard
     
 Allez, soyons curieux, regardons comment le standard C++ spécifie cette notation avec un extrait du chapitre **§ 2.13.4 Floating literals** du [brouillon C++17](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf) :
@@ -456,20 +449,18 @@ double d;
 std::istringstream iss("0xA.Bp-1");
 iss >> std::hexfloat >> d;
 std::cout << d;
-```
-Notons que c'est l'extraction qui ne s'effectue pas correctement. L'istringstream reste quand a lui dans un etat correcte, ainsi les erreurs sont verifiables.
-
+``` 
+    
+Notons que c'est l'extraction qui ne s'effectue pas correctement. L'`istringstream` reste quand à lui dans un état correct, ainsi les erreurs sont vérifiables.
+    
 ```cpp
 std::cout
-	<< std::boolalpha
-	<< iss.fail()	<< '\n'	// false
-	<< iss.bad()	<< '\n'	// false
-	<< iss.eof()	<< '\n'	// false
-	<< iss.str()	<< '\n'	// "0xA.Bp-1"
-	<< std::endl
-	;
+  << std::boolalpha
+  << iss.fail() << '\n' // false
+  << iss.bad()  << '\n' // false
+  << iss.eof()  << '\n' // false
+  << iss.str()  << '\n';// "0xA.Bp-1"
 ```
-
 
 [[P0292]](https://wg21.link/p0292) `if constexpr`
 ------------------------------------------------
@@ -528,12 +519,15 @@ struct B
 // Les variables constexpr sont implicitement inline
 constexpr const int celerite_lumiere = 299'792'458;
 ``` 
-Pour cette synthaxe simplifie, en C++14 nous aurions obtenue la reponse suivante de la par du compilateur :
-> error C2433: 'B::v': 'inline' not permitted on data declarations
-> error C2864: 'B::v': a static data member with an in-class initializer must have non-volatile const integral type
-> note: type is 'int'
-Dorenavant, l'uniformite de synthaxe est acceptee, independement de la presence d'un CV-qualifier.
-
+    
+En C++14, pour cette syntaxe avec `inline`, le compilateur produit ces erreurs :
+    
+    error C2433: 'B::v': 'inline' not permitted on data declarations
+    error C2864: 'B::v': a static data member with an in-class initializer must have non-volatile const integral type
+    note: type is 'int'
+    
+Dorénavant, l'uniformité de syntaxe est acceptée, indépendamment de la présence d'un [CV-qualifier](http://en.cppreference.com/w/cpp/language/cv).
+    
 Par curiosité, [générons le code assembleur](https://framagit.org/Cpp17/variable_inline) x86_64 (syntaxe NASM) de l’exemple ci-dessus [avec](https://framagit.org/Cpp17/variable_inline/blob/master/avec_inline.cc) et [sans variable `inline`](https://framagit.org/Cpp17/variable_inline/blob/master/sans_inline.cc). Le compilateur `clang++ -S --std=c++1z -O0` optimise davantage le code avec variable `inline` en supprimant les lignes suivantes :
     
 ```nasm
@@ -904,8 +898,7 @@ auto t_avant = std::make_tuple("voiture",4,'L');
 std::tuple t_avec("voiture",4,'L');
 ``` 
     
-Pas mal de fonctions d'aide `make_***()` risquent de devenir inutiles...
-(Une partie l'etait deja avec l'apparition des initializer-list, comme make_pair)
+Déjà qu'une partie des fonctions d'aide `make_***()` ne sont plus très utiles avec l'arrivée des [initializer-list](https://fr.wikipedia.org/wiki/C%2B%2B11#Liste_d.27initialiseurs) [(en)](https://en.wikipedia.org/wiki/C%2B%2B11#Initializer_lists), comme pour [`make_pair`](http://en.cppreference.com/w/cpp/utility/pair/make_pair). Mais en plus, avec la déduction des paramètres `template` au niveau du constructeur, il n'y a plus beaucoup de fonctions d'aide `make_***()` qui vont rester indispensables !
 
 [[P0127]](https://wg21.link/p0127) Déclaration des paramètres `template<auto>`
 -----------------------------------------------------------------------------
@@ -1117,41 +1110,39 @@ auto convert_to_vector (const Container& container)
    return v;
 }
 ``` 
-Un usage actuel est de reduire les erreurs et incoherences possibles lors de l'instanciation d'un type template.
-L'exemple suivant montre comment s'assurer que l'allocateur et la factory de WidgetManager gerent bien le type Widget :
-
+    
+Un usage courant est de réduire les erreurs et incohérences possibles lors de l'instanciation d'un type `template`. L'exemple suivant montre comment s'assurer que l'`Allocator` et la `Factory` de `WidgetManager` gèrent bien le type `Widget`. L'exemple ci-dessous compile pour [VC++15](https://fr.wikipedia.org/wiki/Visual_C%2B%2B#Versions_32bits_.26_64bits). La [version pour GCC6](https://godbolt.org/g/5AtrFU) n'a pas besoin du mot-clé `typename` dans la déclaration des [types alias](http://en.cppreference.com/w/cpp/language/type_alias).
+    
 ```cpp
-// Version GCC 6.1  : (so, removing `typename` keyword in type-aliasing declaration) https://godbolt.org/g/5AtrFU
-// Version MSVC++15 : (below)
 struct Widget
 {};
+    
 template <typename T>
 struct MyAllocator
 {};
+    
 template <typename T, template<typename> class T_Allocator>
 struct MyFactory
 {};
-
+    
 template
-<
-	typename T,
-	template <typename> class T_Allocator,
-	template <typename, template<typename> class> typename T_Factory
+< typename T
+, template <typename> class Allocator
+, template <typename, template<typename> class> typename Factory
 >
 struct WidgetManager
 {
-	using elem_type = T;
-	using allocator_type = typename T_Allocator<elem_type>;
-	using factory_type = typename T_Factory<elem_type, typename T_Allocator>;
-};
-
-void	UseWidgetManager(void)
+  using type           = T;
+  using allocator_type = typename Allocator<type>;
+  using factory_type   = typename Factory<type, typename Allocator>;
+}; //GCC6: Pas besoin de ^^^^^^^^       ni de   ^^^^^^^^
+    
+int main()
 {
-	WidgetManager<Widget, MyAllocator, MyFactory> wManager;
+  WidgetManager<Widget, MyAllocator, MyFactory> wManager;
 }
-```
-
-
+``` 
+    
 Chère lectrice, cher lecteur *LinuxFr.org*,
 Tu as peut-être déjà utilisé les paramètres `template template` ?
 Ou tu as peut-être de meilleurs idées sur l'utilité d'une telle fonctionnalité ?
@@ -1703,17 +1694,18 @@ int main()
     
 Le mot-clé `register` est déprécié depuis C++11. À l'époque, les contraintes de ce mot-clé (pas de pointeur...) ont été conservées pour la compatibilité avec le C, en particulier avec les arguments des fonctions. Pourtant, son usage n’est pas pertinent en C++ :  redondant avec d’autres fonctionnalités et ses restrictions ne peuvent être facilement transcrites en C++. Plutôt que d’essayer de résoudre les différences avec le C, le standard fait de `register` un mot-clé réservé non utilisé. Espérons qu'un usage futur lui soit trouvé...
 
-[[P0002]](https://wg21.link/p0002) Incrémentation sur les booléens
------------------------------------------------------------------------------
+[[P0002]](https://wg21.link/p0002) Incrémentation des booléens
+--------------------------------------------------------------
     
 Dans les temps anciens, le type `bool` n’existait pas. Les entiers étaient utilisés pour cet usage avec :
+    
 ```c
 #define BOOL int
 #define FALSE 0
-#define TRUE 1 // ou !0, en fonction des implementations
-```
-C'est à dire **zéro pour faux** et **toutes les autres valeurs pour vrai**.
-Voir [stdbool.h](http://clang.llvm.org/doxygen/stdbool_8h_source.html "CLang.LLVM's Doxygen").
+#define TRUE !FALSE // ou !0 ou 1, selon les implémentations
+``` 
+    
+C'est à dire **zéro pour faux** et **toutes les autres valeurs pour vrai**. Voir [stdbool.h](http://clang.llvm.org/doxygen/stdbool_8h_source.html "CLang.LLVM's Doxygen").
     
 La création du type `bool` avec le C++ avait nécessité de garder une comptabilité avec le vieux code : l'incrémentation avait été autorisée mais pas la décrémentation.
     
@@ -1806,8 +1798,8 @@ Les auteurs
     
 Par respect de la licence, merci de [créditer](https://fr.wiktionary.org/wiki/cr%C3%A9diter#Verbe) les auteurs :
     
-* Les principaux auteurs sont [Oliver H](https://linuxfr.org/users/oliver_h) et [Adrien Jeser](https://linuxfr.org/users/jeser) ;
-* Les nombreux autres contributeurs dont l'ancêtre de cette dépêche ou via le [dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) sont [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [olibre](https://github.com/olibre) et [Guillaume Dua "Guss"](https://github.com/GuillaumeDua).
+* Les principaux auteurs sont [Adrien Jeser](https://linuxfr.org/users/jeser) et [Oliver H](https://linuxfr.org/users/oliver_h) ;
+* Les nombreux autres contributeurs dont l'ancêtre de cette dépêche ou via le [dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) sont [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [olibre](https://github.com/olibre) et [Guillaume Dua "Guss"](https://github.com/GuillaumeDua).
     
 Un immense merci à toutes ces personnes ayant rédigés bénévolement un article de très grande qualité. Merci aussi à Ziyue et Oliver H pour avoir dessiné spécialement pour cette dépêche l'[écolière sauvée par le C++](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#c17-sauve-une-%C3%A9coli%C3%A8re) et [« compilé c'est testé »](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#compil%C3%A9-cest-test%C3%A9) (tous deux sous licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.fr)). Merci aux auteurs des autres illustrations.
     
