@@ -1,10 +1,14 @@
-Ce répertoire contient les dépêches C++
+Ce répertoire contient les dépêches C++ :
 
-1. [Les coulisses du standard C++](2016_n1_Coulisses-du-standard.md)
-2. [C++17 - Genèse d'une version mineure](2016_n2_Cpp17_Genese-d-une-version-mineure.md)
-3. [C++17 - Nouveautés au niveau du langage](2016_n3_Cpp17_Nouveautes-du-langage.md)
-4. [C++17 - Nouveautés au niveau de la bibliothèque standard](2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)
-5. [Bilan C++17 et attentes pour C++20](2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md)
+* [Les coulisses du standard C++](2016_n1_Coulisses-du-standard.md)
+* [C++17 – Genèse d'une version mineure](2016_n2_Cpp17_Genese-d-une-version-mineure.md)
+* [C++17 – Nouveautés au cœur du langage](2016_n3_Cpp17_Nouveautes-du-langage.md)
+   - [C++17 étend le cœur du langage](2016_n3.1_Cpp17-etend-le-coeur-du-langage.md)
+   - [C++17 améliore lambda et `[[attribut]]`](2016_n3_Cpp17-ameliore-lambda-et-attribut.md)
+   - [C++17 au cœur sucré](2016_n3_Cpp17-au-coeur-sucre.md)
+   - [C++17 nettoie le cœur du langage](2016_n3_Cpp17-nettoie-le-coeur-du-langage.md)
+* [C++17 – Nouveautés au niveau de la bibliothèque standard](2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)
+* [Bilan C++17 et attentes pour C++20](2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md)
 
 Pour contribuer
 ---------------
@@ -34,11 +38,11 @@ Créer alors un compte GitHub.
 Ce qui est apprécié
 -------------------
 
-* Etre concis ([TL;DR](https://fr.wiktionary.org/wiki/tl;dr))
-* Réaliser des tâches à partir de la pages des [Issues](https://github.com/cpp-frug/materials/issues)
+* Être concis ([TL;DR](https://fr.wiktionary.org/wiki/tl;dr))
+* Réaliser des tâches à partir de la page des [Issues](https://github.com/cpp-frug/materials/issues)
 * Proposer des illustrations pour les prochaines dépêches dans le répertoire [images](https://github.com/cpp-frug/materials/tree/gh-pages/images) ;
 * Positiver les dépêches ;
-* Identifier les aspects qui pourraient irriter/aggacer certains lecteurs ;
+* Identifier les aspects qui pourraient irriter/agacer certains lecteurs ;
 * Utiliser les vrais mots en Français (délaisser le Franglais) ;
-* Vérifier les fôtes (passer Gramalac) ;
-* Dès que la dépêche est publiée, lire les commentaires, rester calme/poli/respectueux.
+* Vérifier les fautes, formattage, espaces insécables (passer [Grammalecte](http://www.dicollecte.org/grammalecte/)) ;
+* Dès que la dépêche est publiée, suivre les commentaires, rester calme/poli/respectueux.
