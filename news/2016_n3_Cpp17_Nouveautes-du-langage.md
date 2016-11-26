@@ -12,9 +12,10 @@ Date    | 2016-07-22T00:53:12+02:00
 Tags    | c++17, c++ et cpp
 Score   |   0
 
-L'ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les changements au niveau du langage C++. Quelques anecdotes parsèment cet article, des suggestions comme le **C++ without class** en écho au **C with classes**, ou quelques illustrations inédites comme celle du « *Compilé c'est testé, linké c'est livré* ». Alors faisons donc le tour des nouveautés :-)
-    
-![C++17 à l'école primaire](https://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
+L’ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les changements au niveau du langage C++. Quelques anecdotes parsèment cet article, des suggestions comme le **C++ without class** en écho au **C with classes**, ou quelques illustrations inédites comme celle du « *Compilé c’est testé, linké c’est livré* ». Alors faisons donc le tour des nouveautés :-)
+
+
+![C++17 à l’école primaire](https://cpp-frug.github.io/materials/images/cpp-ecole-primaire_copyright-Ziyue-OliverH-2016_CC-BY-SA-3.jpg)
 
 ----
 
@@ -42,38 +43,32 @@ Reste à faire avant publication :
     
 Qui ?     | Quoi ?                                        
 ----------|-----------------------------------------------
-???       | Ajouter des images (humoristiques) pour illustrer les sous-sections (s'inspirer des précédentes dépêches)
+???       | Ajouter des images (humoristiques) pour illustrer les sous-sections (s’inspirer des précédentes dépêches)
 Adrien    | Déplacer dans la dépêche suivante le TS Alias de iostream
-Oliver    | Créer la dépêche **Bilan C++17** dans l'espace de rédaction *LinuxFr.org*
-Oliver    | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l'espace de rédaction *LinuxFr.org*
+Oliver    | Créer la dépêche **Bilan C++17** dans l’espace de rédaction *LinuxFr.org*
+Oliver    | Créer la dépêche **Faut-il continuer à apprendre le C++ ?** dans l’espace de rédaction *LinuxFr.org*
 Oliver    | ~~Relire le TS P0145, Proposer des ajouts/améliorations~~
 ???       | Simplifier le § [P0036] Révision de la TS précédente N4295
-Oliver    | Des statistiques: la dépêche la plus longue de *LinuxFr.org* ...
+Oliver    | Des statistiques: la dépêche la plus longue de *LinuxFr.org* …
 Adrien    | Passer un coup de Grammalect sur tout les paragraphes <br> pour insérer les espaces insécables (et autres formatages de texte)
 ???       | Relire le chapitre **Fonctionnalités majeures non intégrées**. Devrait-il en dire un peu plus ?
+???       | Supprimer les textes transférés des nouvelles dépêches
 
 Série de dépêches C++
 =====================
-    
-Cette dépêche fait partie d'une série de six dépêches disponibles également sur [ce dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md). Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d'évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour](https://github.com/cpp-frug/materials/blob/gh-pages/news/README.md#pour-contribuer) avec vos questions/suggestions/corrections.... Ce dépôt Git est géré par le [**Groupe des Utilisateurs C++ Francophone**](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG).
-    
-Résumé des dépêches :
-    
-1. [**Les coulisses du standard**](https://linuxfr.org/news/les-coulisses-du-standard-cpp) est très longue mais passionnante. Elle présente la naissance du langage, le comité de normalisation, les brouillons du standard, la procédure de normalisation, les spécifications techniques (*TS*), les correctifs (*DR*)... bref, des aspects souvent méconnus des développeurs C++.
-    
-2. [**Genèse du C++17**](https://linuxfr.org/news/c-17-genese-d-une-version-mineure) rappelle la longue évolution de ce langage de programmation et dessine le périmètre fonctionnel amendé par deux [réunions du comité de standardisation C++](http://www.open-std.org/jtc1/sc22/wg21/docs/meetings) en 2016.
-    
-3. Cette [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) du cœur du C++17 : Déduction des arguments `template` du constructeur `std::array a{1,2,3}` ; Décomposition du retour de fonction `auto [x,y]=fonction()` ; `template<auto>` pour éviter la redondance dans `MaClasse<decltype(variable),variable>` ; `namespace` imbriqué `namespace aaa::bbb { ... }` ; `if constexpr` pour sélectionner du code à la compilation (peut remplacer `#if` dans certains cas) ; Lambda `constexpr` ; Lambda pouvant capturer `*this` ; `if(init;condition)` et `switch(init;condition)` comme pour `for(init;cond;inc)` ; Variables `inline`...
-    
-    Par contre, des fonctionnalités majeures qui étaient très attendues sont toujours en cours d'élaboration ne sont pas encore suffisamment matures pour être publiées avec C++17 : [Concepts](http://fr.cppreference.com/w/cpp/concept) ; [Modules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0142r0.pdf) qui propose des `import std.string;` en alternative des `#include <string>` ; [Syntaxe d'appel uniforme *(Uniform call syntax)*](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax#C.2B.2B_proposal) ; [Coroutines](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0057r4.pdf) ; [Mémoire Transactionnelle _(Transactional Memory)_](http://en.cppreference.com/w/cpp/language/transactional_memory) ; [Réflexion _(Static Reflection)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0194r1.html).
-    
-4. [**Changements C++17 au niveau de la bibliothèque standard**](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) comme les [algorithmes parallélisés](http://en.cppreference.com/w/cpp/experimental/parallelism#Parallelized_versions_of_existing_algorithms), le [`std::string_view`](http://en.cppreference.com/w/cpp/string/basic_string_view) et autres transfuges de chez [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) comme [`std::filesystem`](http://en.cppreference.com/w/cpp/filesystem), [`std::variant`](http://en.cppreference.com/w/cpp/utility/variant), [`std::any`](http://en.cppreference.com/w/cpp/utility/any), [`std::optional`](http://en.cppreference.com/w/cpp/utility/optional) et [`boost::math`](http://www.boost.org/libs/math) (les [fonctions spéciales mathématiques](http://en.cppreference.com/w/cpp/numeric/special_math)).
-    
-    Tout comme la dépêche précédente, des fonctionnalités majeures très attendues, comme les [intervalles *(Ranges)*](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4569.pdf) ou le [réseau _(Networking)_](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4588.pdf) sont repoussées pour une prochaine version du C++...
-    
-5. [**Bilan C++17 et attentes pour C++20**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) Version mineure ou majeure ? Les améliorations sont appréciables, mais aucune fonctionnalité majeure au niveau du langage. Et côté bibliothèque standard, la plupart des fonctionnalités majeures sont déjà disponibles dans [Boost](https://fr.wikipedia.org/wiki/Boost_(biblioth%C3%A8ques)) et supportent donc aussi d'anciennes versions des compilateurs (ce qui n'est pas le cas de C++17). Et C++20 ?
-    
-6. [**Faut-il apprendre le C++ ?**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md) compare le C++ aux alternatives et permet de mieux situer l'intérêt du C++ dans le monde sans cesse mouvant de l'informatique.
+
+
+
+Cette dépêche fait partie de toute une série disponible également sur [le dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) du [*Groupe des Utilisateurs C++ Francophone*](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG). Alors que cet article restera figé sur le site *LinuxFr. org*, il continuera d’évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour](https://github.com/cpp-frug/materials/blob/gh-pages/news/README.md#pour-contribuer) avec vos questions/suggestions/corrections.
+
+1. [**Les coulisses du standard**](https://linuxfr.org/news/les-coulisses-du-standard-cpp) (20 août 2016) nous dévoile des aspects souvent méconnus des développeurs C++ de la naissance du langage aux derniers réglages de son processus de normalisation.
+2. [**Genèse du C++17**](https://linuxfr.org/news/c-17-genese-d-une-version-mineure) (2 oct. 2016) rappelle la longue maturation des fonctionnalités du C++17 et dresse le périmètre fonctionnel amendé par deux [réunions du comité de standardisation C++](http://www.open-std.org/jtc1/sc22/wg21/docs/meetings) en 2016.
+3. Cette [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) concernant le langage C++.
+4. La suite, [**Changements C++17 au niveau de la bibliothèque standard**](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) comme son nom l’indique s’attaque aux `std ::*`.
+5. [**Bilan C++17 et attentes pour C++20**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) Version mineure ou majeure ? Et pour C++20 ?
+6. [**Faut-il apprendre le C++ ?**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md) compare le C++ aux alternatives et permet de mieux situer l’intérêt du C++ dans le monde sans cesse mouvant de l’informatique.
+7.…
+
 
 Améliorations notables
 ======================
@@ -81,9 +76,9 @@ Améliorations notables
 
 [[P0061]](https://wg21.link/p0061) `__has_include`
 --------------------------------------------------
-    
-La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/preprocessor/include) vérifie si l'en-tête `<filesystem>` est disponible pour inclusion ;
-    
+
+La macro [**`__has_include()`**](http://en.cppreference.com/w/cpp/preprocessor/include) vérifie si l’en-tête est disponible pour inclusion.
+
 ```cpp
 #if    __has_include(<filesystem>)
 #  include           <filesystem>
@@ -95,9 +90,9 @@ La macro [**`__has_include(<filesystem>)`**](http://en.cppreference.com/w/cpp/pr
 #  error Ne trouve aucune en-tête filesystem
 #endif
 ``` 
-    
+
 Allons plus loin avec un autre exemple :
-     
+
 ```cpp
 #if __has_include(<windows.h>)
 #  include <windows.h>
@@ -128,10 +123,10 @@ Allons plus loin avec un autre exemple :
 [[P0135]](http://wg21.link/p0135) Court-circuitage du constructeur par copie *(Guaranteed copy elision)*
 ------------------------------------------------------
     
-C++17 garantit le [court-circuitage du constructeur par copie](https://en.wikipedia.org/wiki/Copy_elision). Mais pas dans tous les cas : ce *TS* distingue le cas général *"elision"* du cas spécifique *"genuine elision"*.
+C++17 garantit le [court-circuitage du constructeur par copie](https://en.wikipedia.org/wiki/Copy_elision). Mais pas dans tous les cas : ce *TS* distingue le cas général *« elision »* du cas spécifique *« genuine elision »*.
     
 ```cpp
-int n = 0; // compte le nombre d'appel au constructeur par copie
+int n = 0; // compte le nombre d’appel du constructeur par copie
 
 struct A
 {
@@ -148,16 +143,20 @@ int main()
 
 
 
-Les expressions sont catégorisés suivant cette taxonomie :
-[Faire un schéma]
+Les expressions sont catégorisées suivant cette taxonomie :
 
-[[P0145]](https://wg21.link/p0145) Fixer l'ordre d'évaluation des expressions
+    
+    TODO [Faire un schéma]
+
+[[P0145]](https://wg21.link/p0145) Fixer l’ordre d’évaluation des expressions
 -----------------------------------------------------------------------------
-    
+
+
 ### Anecdote
-    
-Le livre mythique [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) de l'inventeur du C++, [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) contient une erreur subtile à la [page 1046](http://www.ebooksbucket.com/the-c-programming-language-4th-edition-b198) du paragraphe *36.3.6 STL-like Operations* (quatrième édition publiée en 2013). Sauras-tu la retrouver ? Voici l'extrait en question :
-    
+
+
+Le livre mythique [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) de l’inventeur du C++, [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) contient une erreur subtile à la [page 1046](http://www.ebooksbucket.com/the-c-programming-language-4th-edition-b198) du paragraphe *36.3.6 STL-like Operations* (quatrième édition publiée en 2013). Sauras-tu la retrouver ? Voici l’extrait en question :
+
 >The `replace()` replaces  one  substring  with  another  and  adjusts  the
 `string`’s  size  accordingly.   For example:
 >
@@ -183,26 +182,35 @@ Le livre mythique [*The C++ Programming Language*](https://fr.wikipedia.org/wiki
 >}
 >```
     
-L'erreur est de croire que l'expression `replace(find()).replace(find())` dans la fonction `f2()` va toujours s'évaluer dans le même ordre. Le standard donne toute latitude au compilateur d'optimiser le code. Au final, d'après le standard C++, la variable `s` peut théoriquement contenir différents résultats. Et c'est aussi le cas en pratique :
-    
+
+
+Pas trouvé ? Pas d’inquiétude, aucun humain n’avait trouvé cette erreur. Ce n’est que bien après la publication que cette erreur a été trouvée, pas par une nouvelle forme d’[Intelligence Artificielle](https://fr.wikipedia.org/wiki/Intelligence_artificielle), mais juste un [outil d’analyse statique de code source](https://fr.wikipedia.org/wiki/Analyse_statique_de_programmes) au nez et à la barbe des pointures C++ aguerries.
+
+
+### Explication
+
+
+Pour des questions de performance, le standard C++ (avant C++17) indique que c’est le compilateur qui optimise l’ordre d’évaluation du chaînage et des paramètres de fonction. Le standard utilise le terme *unsequenced* (séquencement non défini). Le C et le C++ partagent ensemble cette règle.
+
+
+Donc, l’expression `replace(find()). replace(find())` dans la fonction `f2()` peut être évaluée dans des ordres différents. En théorie, la variable `s` peut contenir différents résultats. Et en pratique aussi :
+
+
 Compilateur                     | Résultat contenu par la variable `s`
 --------------------------------|--------------
 [GCC][g] et<br> [Visual C++][v] | `I have heard it works evenonlyyou donieve in it`
 [LLVM/Clang][c]                 | `I have heard it works only if you believe in it`
-    
-[g]: http://coliru.stacked-crooked.com/a/a6035cb6e64f038f
-[c]: http://coliru.stacked-crooked.com/a/84408d788238bacd
-[v]: http://rextester.com/VKFPX23982
-    
-Pas trouvé ? Pas d'inquiétude, aucun humain n'avait trouvé cette erreur. Ce n'est pas une nouvelle forme d'[IA](https://fr.wikipedia.org/wiki/Intelligence_artificielle), mais juste un [outil d'analyse statique du code source](https://fr.wikipedia.org/wiki/Analyse_statique_de_programmes). Et pourtant, ce livre de référence a été relu attentivement par les meilleurs experts C++ et étudié par de nombreux développeurs C++ aguerris.
 
-### Explications
+[g] : http://coliru.stacked-crooked.com/a/a6035cb6e64f038f
+[c] : http://coliru.stacked-crooked.com/a/84408d788238bacd
+[v] : http://rextester.com/VKFPX23982
+
+### Détails
     
-Le C++ partage avec le C cette règle : pour des questions de performance, le standard C++ (avant C++17) ne fixe pas l'ordre d'évaluation du chaînage, ni des paramètres de fonction. C'est le compilateur qui décide selon les optimisations possibles. Le standard utilise le terme *unsequenced* (séquencement non défini).
-    
+
 Ci-dessous, la première ligne déclare et initialise un objet `std::string`. Les lignes suivantes cherchent et remplacent plusieurs caractères de cette `std::string` en utilisant le chaînage des fonctions [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace).
     
-Intuitivement, on pourrait penser que chaque appel et leurs arguments comme `replace(0,4,"")` est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. Mais ce n'est pas le cas avant C++17, ces appels de fonction peuvent être appelées dans n'importe quel ordre. Plus de détails sont donnés par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111) (en Anglais).
+Intuitivement, on pourrait penser que chaque appel et leurs arguments comme `replace(0,4,"")` est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. Mais ce n’est pas le cas avant C++17, ces appels de fonction peuvent être appelées dans n’importe quel ordre. Plus de détails sont donnés par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111) (en Anglais).
     
 ```cpp
     
@@ -218,7 +226,7 @@ Intuitivement, on pourrait penser que chaque appel et leurs arguments comme `rep
 //   C         CC
 ``` 
     
-Voici toutes les ordres d'appel autorisés par les standards C++ (avant C++17) et C (en supposant que ce soit une `struct string` avec des fonctions). C++17 n'autorise que cette dernière possibilité (TODO: à vérifier/confirmer).
+Ci-dessous les ordres d’appel autorisés par les standards C++ (avant C++17) et C (en supposant que ce soit une `struct string` avec des fonctions). C++17 n’autorise que cette dernière possibilité (TODO: à vérifier/confirmer).
     
 1. CC, BB, A, B, C ;
 1. BB, CC, A, B, C ;
@@ -229,14 +237,11 @@ Voici toutes les ordres d'appel autorisés par les standards C++ (avant C++17) e
 4. A, BB, B, CC, C ;
     
 Pour info, cet exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) a justement été repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au **§5.2.2 Function call** (page 107).
-    
-### Conséquence
-    
-Même les meilleurs experts C++ se font avoir avec ces règles pas toujours intuitives. Et le comité de normalisation C++ a donc décidé de fixer l'ordre d'évaluation avec ce *TS*.
-    
+
+
 ### Autres exemples
     
-Par exemple dans l'expression `f().g(h())` les fonction `f()` peut-être appelée avant ou après `h()`. Le standard C++ fait la différence entre *unspecified* (non-spécifié) et *unsequenced* (non-séquencé). Ce comportement est bien spécifié, donc Avant C++17 c'est *unsequenced*. À partir de C++17, c'est `f()` avant `g()` *(sequenced before)*.
+Par exemple dans l’expression `f().g(h())` les fonction `f()` peut-être appelée avant ou après `h()`. Le standard C++ fait la différence entre *unspecified* (non-spécifié) et *unsequenced* (non-séquencé). Ce comportement est bien spécifié, donc Avant C++17 c’est *unsequenced*. À partir de C++17, c’est `f()` avant `g()` *(sequenced before)*.
     
 ```cpp
 // Avant C++17, f() peut être appelée avant ou après h()
@@ -244,12 +249,12 @@ f().g( h() );
 // C++17 est plus intuitif : f() est toujours appelée avant h()
 ``` 
     
-C'est aussi le cas de l'expression `std::cout << f() << g() << h()` qui peut appeler ces trois fonctions dans n'importe quel ordre.
+C’est aussi le cas de l’expression `std::cout << f() << g() << h()` qui peut appeler ces trois fonctions dans n’importe quel ordre.
     
 ```cpp
-// Avant C++17, le compilateur décide l'ordre d'évaluation de f(), g() et h()
+// Avant C++17, le compilateur décide l’ordre d’évaluation de f(), g() et h()
 std::cout << f() << g() << h() << std::endl; 
-// C++17 fixe l'ordre intuitif : d'abord f(), puis g() et enfin h()
+// C++17 fixe l’ordre intuitif : d’abord f(), puis g() et enfin h()
 ``` 
     
 Deux autres exemples que le C++ partage avec le langage C :
@@ -271,17 +276,19 @@ std::cout << i << ' ' << i++;
 // MSVC++ : 1 0
 ``` 
     
-Donc, beaucoup de codes sont potentiellement truffés de ces pièges, ce qui est également le cas quand `std::future<T>` est utilisé. Tout le monde se fait avoir, débutants comme experts.
+### Conséquence
+    
+Donc, beaucoup de codes sont potentiellement truffés de ces pièges, ce qui est également le cas quand `std::future<T>` est utilisé. Tout le monde se fait avoir, débutants comme experts. Même les meilleurs experts C++ se font avoir avec ces règles pas toujours intuitives. Et le comité de normalisation C++ a donc décidé de fixer l’ordre d’évaluation avec ce *TS*.
         
 ### Nouvelle règle
     
-L'évaluation est :
+L’évaluation est :
     
 - De la gauche vers la droite pour les expressions suffixées. Ceci inclue les appels de fonction et la section des membres ;
-- L'assignement de la droite vers la gauche (`a = b = c = d`) ;
+- L’assignement de la droite vers la gauche (`a = b = c = d`) ;
 - Les opérateurs de décalage (_shift operators_) de la gauche vers la droite.
     
-Par contre, lorsque une surcharge d'opérateur est invoquée, la priorité arithmétique est utilisée. Peut-être que le code généré sera moins performant, mais le langage gagne grandement en simplicité.
+Par contre, lorsque une surcharge d’opérateur est invoquée, la priorité arithmétique est utilisée. Peut-être que le code généré sera moins performant, mais le langage gagne grandement en simplicité.
     
 Expression                                     | Résultat avant C++17 | Avec C++17
 -----------------------------------------------|----------------------|-----------
@@ -292,16 +299,16 @@ Expression                                     | Résultat avant C++17 | Avec C+
 [[P0400]](https://wg21.link/p0400) Corrige la précédente TS P0145
 -----------------------------------------------------------------
     
-Une toute petite reformulation d'une phrase de la *TS* concernant l'ordre d'évaluation des arguments de fonction.
+Une toute petite reformulation d’une phrase de la *TS* concernant l’ordre d’évaluation des arguments de fonction.
 
 
 
 [[P0245]](http://wg21.link/p0245) Littéral pour exprimer la virgule flottante en hexadécimal
 --------------------------------------------------------------------------------------------
     
-La réunion de Jacksonville en février 2016 a amendé ce *TS* qui permet d'exprimer les [virgules flottantes (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d'avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d'autres langages : C99, Java 5 (2004)...
+La réunion de Jacksonville en février 2016 a amendé ce *TS* qui permet d’exprimer les [virgules flottantes (IEEE 754)](https://fr.wikipedia.org/wiki/Virgule_flottante#Norme_IEEE_754) en hexadécimal. Enfin, le C++ permet d’avoir une représentation exacte des [virgules flottantes](http://en.cppreference.com/w/cpp/language/floating_literal). Cette fonctionnalité était déjà présente depuis longtemps dans d’autres langages : C99, Java 5 (2004)…
     
-La représentation hexadécimale a l'avantage d'être celle du registre (mémoire binaire). Attention à la notation décimale des virgules flottantes. Par exemple, `0.1f` ne vaut pas exactement `0.1` mais `0.10000000149...`. Un [exemple](http://coliru.stacked-crooked.com/a/7b70c88142f28581) :
+La représentation hexadécimale a l’avantage d’être celle du registre (mémoire binaire). Attention à la notation décimale des virgules flottantes. Par exemple, `0.1f` ne vaut pas exactement `0.1` mais `0.10000000149…`. Un [exemple](http://coliru.stacked-crooked.com/a/7b70c88142f28581) :
     
 ```cpp
 #include <stdint.h> // int64_t
@@ -331,7 +338,7 @@ Qui donne le résultat :
     i_1e12     = 100000000000
     diff       = -2048
     
-Les hexadécimaux permettent d'écrire la représentation exacte des virgules flottantes en s'affranchissant de ces erreurs d'arrondis.
+Les hexadécimaux permettent d’écrire la représentation exacte des virgules flottantes en s’affranchissant de ces erreurs d’arrondis.
 Passons à la pratique :
     
 ```cpp
@@ -359,13 +366,13 @@ assert(w == 1617891339.55602931976318359375);
 
 ### Concours
     
-Chère lectrice, cher lecteur *LinuxFr.org*, as-tu d'autres idées de jeux de mots avec cette notation hexadécimale ? Alors défoule toi dans les commentaires ;-) Les plus beaux jeux de mots seront récompensés par des petits cadeaux *(goodies)* collectés lors du dernier salon [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) (16 et 17 novembre 2016) et seront envoyés par courrier ~~électronique~~ postal ;-)
+Chère lectrice, cher lecteur *LinuxFr.org*, as-tu d’autres idées de jeux de mots avec cette notation hexadécimale ? Alors défoule toi dans les commentaires ;-) Les plus beaux jeux de mots seront récompensés par des petits cadeaux *(goodies)* collectés lors du dernier salon [Paris Open Source Summit](https://linuxfr.org/sections/paris-open-source-summit) (16 et 17 novembre 2016) et seront envoyés par courrier ~~électronique~~ postal ;-)
     
-Remarquons le `p` à la fin. Celui-ci représente l'exposant binaire et il est suivi par un entier décimal (et non pas hexadécimal). Cet exposant binaire est obligatoire pour plusieurs raisons :
+Remarquons le `p` à la fin. Celui-ci représente l’exposant binaire et il est suivi par un entier décimal (et non pas hexadécimal). Cet exposant binaire est obligatoire pour plusieurs raisons :
     
-- Évite l'ambiguïté du `f` final dans `0xA.Bf` (`float` ou le chiffre `F` hexadécimal ?) ;
-- Évite l'ambiguïté du `E` dans `0xa.bE-12` (exposant `-12` ou `0xA.BE - 12` ?) ;
-- Correspond à la norme [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) (puissance de deux) ;
+- Évite l’ambiguïté du `f` final dans `0xA.Bf` (`float` ou le chiffre `F` hexadécimal ?) ;
+- Évite l’ambiguïté du `E` dans `0xa.bE-12` (exposant `-12` ou `0xA.BE - 12` ?) ;
+- Corresponds à la norme [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) (puissance de deux) ;
 - 100% compatible avec la notation C99 (et celle d'autres langages).
     
 Tentons de représenter cette notation hexadécimale en [regex](https://fr.wikipedia.org/wiki/Expression_rationnelle) :
@@ -467,7 +474,7 @@ std::cout
 [[P0292]](https://wg21.link/p0292) `if constexpr`
 ------------------------------------------------
     
-À [l'origine (fin 2011)](https://wg21.link/n3322), c'était `static_if`. Puis renommé en [`constexpr_if`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0128r0.html). Et détaché en deux mots `constexpr if`. Finalement, les deux mots sont inversés pour donner `if constexpr`. Cette fonctionnalité va simplifier beaucoup de code générique :
+À [l’origine (fin 2011)](https://wg21.link/n3322), c’était `static_if`. Puis renommé en [`constexpr_if`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0128r0.html). Et détaché en deux mots `constexpr if`. Finalement, les deux mots sont inversés pour donner `if constexpr`. Cette fonctionnalité va simplifier beaucoup de code générique :
     
 ```cpp
 // Trois définitions nécessaires avant C++17
@@ -500,7 +507,7 @@ void fonction (const T& t, const R&... r)
 [[P0386]](http://wg21.link/p0386) Variable `inline`
 ---------------------------------------------------
     
-Les variables `inline` — comme les fonctions `inline` — peuvent être définies dans plusieurs unités de traduction (_translation units_). Son utilisation suggère au compilateur de substituer l'appel à la variable par son contenu. Elles sont adéquates pour remplacer les macros non-triviales. Plus subtil, on peut contourner la règle de la définition unique (_One Definition Rule_).
+Les variables `inline` — comme les fonctions `inline` — peuvent être définies dans plusieurs unités de traduction (_translation units_). Son utilisation suggère au compilateur de substituer l’appel à la variable par son contenu. Elles sont adéquates pour remplacer les macros non-triviales. Plus subtil, on peut contourner la règle de la définition unique (_One Definition Rule_).
     
 ```cpp
 struct A
@@ -527,7 +534,7 @@ Pour cette synthaxe simplifie, en C++14 nous aurions obtenue la reponse suivante
 > note: type is 'int'
 Dorenavant, l'uniformite de synthaxe est acceptee, independement de la presence d'un CV-qualifier.
 
-Par curiosité, [générons le code assembleur](https://framagit.org/Cpp17/variable_inline) x86_64 de l'exemple ci-dessus [avec](https://framagit.org/Cpp17/variable_inline/blob/master/avec_inline.cc) et [sans variable `inline`](https://framagit.org/Cpp17/variable_inline/blob/master/sans_inline.cc). Le compilateur `clang++ -S --std=c++1z -O0` optimise davantage le code avec variable `inline` en supprimant les lignes suivantes :
+Par curiosité, [générons le code assembleur](https://framagit.org/Cpp17/variable_inline) x86_64 (syntaxe NASM) de l’exemple ci-dessus [avec](https://framagit.org/Cpp17/variable_inline/blob/master/avec_inline.cc) et [sans variable `inline`](https://framagit.org/Cpp17/variable_inline/blob/master/sans_inline.cc). Le compilateur `clang++ -S --std=c++1z -O0` optimise davantage le code avec variable `inline` en supprimant les lignes suivantes :
     
 ```nasm
 .type	_ZN1A27variable_inline_sans_inlineE,@object
@@ -631,21 +638,31 @@ int main (int argc, char *argv[])
 [[P0212]](https://wg21.link/p0212) `[[maybe_unused]]`
 ----------------------------------------------------
     
-L'attribut **`[[maybe_unused]]`** [(qui devait s'appeler `[[unused]]`)](https://wg21.link/p0068) permet de supprimer des avertissements _(warning)_ quand une variable, une fonction ou un paramètre de fonction n'est pas utilisé. Notons que la spécification C++ traite de plus en plus des avertissements _(warning)_, auparavant seules les erreurs des compilateurs étaient traitées.
+L'attribut **`[[maybe_unused]]`** [(qui devait s'appeler `[[unused]]`)](https://wg21.link/p0068) permet de supprimer des avertissements _(warning)_ quand une variable, une fonction ou un paramètre de fonction n'est pas utilisé. Notons que la spécification C++ traite de plus en plus des avertissements _(warning)_, auparavant seules les erreurs des compilateurs étaient spécifiées.
     
 ```cpp
+std::mutex g_mutex;
+    
 [[maybe_unused]]
 void affiche_division(int a)
-{ std::cout << (42/a); }
+{
+  [[maybe_unused]]
+  std::lock_guard<std::mutex> lock(g_mutex);
+    
+  std::cout << (42/a);
+}
     
 int main (int argc, [[maybe_unused]] char *argv[])
 {
   [[maybe_unused]]
   bool test = argc % 2;
+    
   assert(test); // assert() désactivé en
 }               // mode Release (-DNDEBUG)
+``` 
     
-// Avant C++17, pour éviter les warnings :
+```cpp 
+// Pour éviter les warnings avant C++17
 #ifdef DOXYGEN_PARSING
 #  define DOC_ONLY(x) x
 #else
