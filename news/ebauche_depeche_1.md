@@ -129,14 +129,14 @@ Intuitivement, on s'attendrait à évaluer les arguments des fonctions comme `fi
 Le tableau ci-dessous présente sur chacune des sept lignes, un ordre d'appel possible selon les standards C++ (avant C++17) et C (en supposant que ce soit une `struct string` avec des pointeurs de fonction).
     
 1<sup>er</sup> appel|2<sup>e</sup> appel|3<sup>e</sup> appel|4<sup>e</sup> appel|5<sup>e</sup> appel
---------------|-------------|-------------|-------------|-------------
-`find(" don't")`|`find("even")`|`replace(0,4,"")`|`replace(f,4,"only")`|`replace(f,6,"")`
-`find("even")`|`find(" don't")`|`replace(0,4,"")`|`replace(f,4,"only")`|`replace(f,6,"")`
-`find(" don't")`|`replace(0,4,"")`|`find("even")`|`replace(f,4,"only")`|`replace(f,6,"")`
-`find("even")`|`replace(0,4,"")`|`find(" don't")`|`replace(f,4,"only")`|`replace(f,6,"")`
-`replace(0,4,"")`|`find(" don't")`|`find("even")`|`replace(f,4,"only")`|`replace(f,6,"")`
-`replace(0,4,"")`|`find("even")`, `find(" don't")`|`replace(f,4,"only")`|`replace(f,6,"")`
-`replace(0,4,"")`|`find("even")`|`replace(f,4,"only")`|`find(" don't")`|`replace(f,6,"")`
+-----------------|-----------------|-----------------|-------------|-------------
+`find(" don't")` |`find("even")`   |`replace(0,4,"")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`find("even")`   |`find(" don't")` |`replace(0,4,"")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`find(" don't")` |`replace(0,4,"")`|`find("even")`   |`replace(f,4,"only")`|`replace(f,6,"")`
+`find("even")`   |`replace(0,4,"")`|`find(" don't")` |`replace(f,4,"only")`|`replace(f,6,"")`
+`replace(0,4,"")`|`find(" don't")` |`find("even")`   |`replace(f,4,"only")`|`replace(f,6,"")`
+`replace(0,4,"")`|`find("even")`   |`find(" don't")` |`replace(f,4,"only")`|`replace(f,6,"")`
+`replace(0,4,"")`|`find("even")`   |`replace(f,4,"only")`|`find(" don't")`|`replace(f,6,"")`
     
 C++17 n’autorise qu'une seule possibilité, la dernière, et correspond à :
     
