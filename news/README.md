@@ -4,9 +4,9 @@ Ce répertoire contient les dépêches C++ :
 * [C++17 – Genèse d'une version mineure](2016_n2_Cpp17_Genese-d-une-version-mineure.md)
 * [C++17 – Nouveautés au cœur du langage](2016_n3_Cpp17_Nouveautes-du-langage.md)
    - [C++17 étend le cœur du langage](2016_n3.1_Cpp17-etend-le-coeur-du-langage.md)
-   - [C++17 améliore lambda et `[[attribut]]`](2016_n3_Cpp17-ameliore-lambda-et-attribut.md)
-   - [C++17 au cœur sucré](2016_n3_Cpp17-au-coeur-sucre.md)
-   - [C++17 nettoie le cœur du langage](2016_n3_Cpp17-nettoie-le-coeur-du-langage.md)
+   - [C++17 améliore lambda et `[[attribut]]`](2016_n3.2_Cpp17-ameliore-lambda-et-attribut.md)
+   - [C++17 au cœur sucré](2016_n3.3_Cpp17-au-coeur-sucre.md)
+   - [C++17 nettoie le cœur du langage](2016_n3.4_Cpp17-nettoie-le-coeur-du-langage.md)
 * [C++17 – Nouveautés au niveau de la bibliothèque standard](2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md)
 * [Bilan C++17 et attentes pour C++20](2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md)
 
