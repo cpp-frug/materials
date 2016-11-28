@@ -60,13 +60,60 @@ Série de dépêches C++
 
 Cette dépêche fait partie de toute une série disponible également sur [le dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) du [*Groupe des Utilisateurs C++ Francophone*](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG). Alors que cet article restera figé sur le site *LinuxFr. org*, il continuera d’évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour](https://github.com/cpp-frug/materials/blob/gh-pages/news/README.md#pour-contribuer) avec vos questions/suggestions/corrections.
 
-1. [**Les coulisses du standard**](https://linuxfr.org/news/les-coulisses-du-standard-cpp) (20 août 2016) nous dévoile des aspects souvent méconnus des développeurs C++ de la naissance du langage aux derniers réglages de son processus de normalisation.
+1. [**Les coulisses du standard**](https://linuxfr.org/news/les-coulisses-du-standard-cpp) (20 août 2016) nous dévoile des aspects biens souvent méconnus des développeurs C++ de la naissance du langage aux derniers soubresauts de son processus de normalisation.
 2. [**Genèse du C++17**](https://linuxfr.org/news/c-17-genese-d-une-version-mineure) (2 oct. 2016) rappelle la longue maturation des fonctionnalités du C++17 et dresse le périmètre fonctionnel amendé par deux [réunions du comité de standardisation C++](http://www.open-std.org/jtc1/sc22/wg21/docs/meetings) en 2016.
 3. Cette [troisième dépêche](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) [décrypte](https://fr.wiktionary.org/wiki/d%C3%A9crypter#figur.C3.A9) les spécifications techniques (*TS*) concernant le langage C++.
 4. La suite, [**Changements C++17 au niveau de la bibliothèque standard**](https://linuxfr.org/news/cpp17-bibliotheque-standard-std) comme son nom l’indique s’attaque aux `std ::*`.
 5. [**Bilan C++17 et attentes pour C++20**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) Version mineure ou majeure ? Et pour C++20 ?
 6. [**Faut-il apprendre le C++ ?**](https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md) compare le C++ aux alternatives et permet de mieux situer l’intérêt du C++ dans le monde sans cesse mouvant de l’informatique.
-7.…
+7. …
+    
+Date              | Dépêche                        
+------------------|-------------------------------------------------
+[20 août 2016][L1]|[Les coulisses du standard][G1] de la naissance aux processus de normalisation.
+[ 2 oct. 2016][L2]|[Genèse du C++17][G2] lors des deux réunions du comité de standardisation
+?? déc. 2016      |[C++17 étend le cœur du langage][G3] avec des nouveautés ne pouvant pas être réalisées facilement
+[?? déc. 2016][L4]|[lambda et `[[attribut]]`][G4] 
+[?? déc. 2016][L5]|[C++17 au goût sucré][G5] <br> avec beaucoup de sucre syntaxique <br> au cœur du langage
+[?? déc. 2016][L6]|[Grand nettoyage du C++][G6] 
+[?? ???? 2017][L7]|[bibliothèque standard][G7]
+[?? ???? 2017][L8]|[bibliothèque standard][G8]
+[?? ???? 2017][L9]|[bibliothèque standard][G9]
+[?? ???? 2017][LA]|[bibliothèque standard][GA]
+[?? ???? 2017][LB]|[bibliothèque standard][GB]
+[?? ???? 2017][LC]|[Bilan C++17][GC] <br> Version mineure ou majeure ?
+[?? ???? 2017][LD]|[Attentes C++20][GD] <br> Et pour C++20 ? Comment participer ?
+[?? ???? 2017][LE]|[Faut-il continuer à apprendre le C++ ?][GE] <br> Alternatives ? Intérêt du C++ dans le monde sans cesse mouvant de l’informatique ?
+    
+[L1]: https://linuxfr.org/news/les-coulisses-du-standard-cpp
+[L2]: https://linuxfr.org/news/c-17-genese-d-une-version-mineure
+[L4]: https://linuxfr.org/news/lambda-et-attribut-du-c-17
+[L5]: https://linuxfr.org/news/c-17-au-gout-sucre
+[L6]: https://linuxfr.org/news/c-17-fait-le-grand-nettoyage-du-c
+[L7]: https://linuxfr.org/news/TODO
+[L8]: https://linuxfr.org/news/TODO
+[L9]: https://linuxfr.org/news/TODO
+[LA]: https://linuxfr.org/news/TODO
+[LB]: https://linuxfr.org/news/TODO
+[LC]: https://linuxfr.org/news/TODO
+[LD]: https://linuxfr.org/news/TODO
+[LE]: https://linuxfr.org/news/TODO
+    
+[G1]: https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md
+[G3]: https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md
+[G2]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[G4]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[G5]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[G6]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[G6]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[G7]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[G8]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[G9]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[GA]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[GB]: https://github.com/cpp-frug/materials/blob/gh-pages/news/TODO
+[GC]: https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md
+[GD]: https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md
+[GE]: https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n1_Faut-il-continuer-d-apprendre-le-Cpp.md
 
 Améliorations notables
 ======================
@@ -195,42 +242,45 @@ Donc, l’expression `replace(find()). replace(find())` dans la fonction `f2()` 
 
 Compilateur                     | Résultat contenu par la variable `s`
 --------------------------------|--------------
-[GCC][g] et<br> [Visual C++][v] | `I have heard it works evenonlyyou donieve in it`
+[GCC][g] et<br> [MSVC][v] | `I have heard it works evenonlyyou donieve in it`
 [LLVM/Clang][c]                 | `I have heard it works only if you believe in it`
-
-[g] : http://coliru.stacked-crooked.com/a/a6035cb6e64f038f
-[c] : http://coliru.stacked-crooked.com/a/84408d788238bacd
-[v] : http://rextester.com/VKFPX23982
+    
+[g]: http://coliru.stacked-crooked.com/a/a6035cb6e64f038f
+[c]: http://coliru.stacked-crooked.com/a/84408d788238bacd
+[v]: http://rextester.com/VKFPX23982a
 
 ### Détails
     
-Ci-dessous, la première ligne déclare et initialise un objet `std::string`. Les lignes suivantes cherchent et remplacent plusieurs caractères de cette `std::string` en utilisant le chaînage des fonctions [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace).
-    
-Intuitivement, on pourrait penser que chaque appel et leurs arguments comme `replace(0,4,"")` est dépendant du précédent. Donc leurs évaluations devraient être séquencées de la gauche vers la droite. Mais ce n’est pas le cas avant C++17, ces appels de fonction peuvent être appelées dans n’importe quel ordre. Plus de détails sont donnés par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111) (en Anglais).
+Ci-dessous, la première ligne déclare et initialise un objet `std::string`. La seconde ligne cherche et remplace plusieurs caractères de cette `std::string` en utilisant le chaînage des fonctions [`replace`](http://en.cppreference.com/w/cpp/string/basic_string/replace).
     
 ```cpp
-    
-   std::string s = "but I have heard it works even if you don't believe in it";
-    
-   s.replace(0, 4, "")
-//   A
-    
-    .replace(s.find("even"), 4, "only")
-//   B         BB
-    
-    .replace(s.find(" don't"), 6, "");
-//   C         CC
+std::string s = "but I have heard it works even if you don't believe in it";
+s.replace(0,4,"").replace(s.find("even"),4,"only").replace(s.find(" don't"),6,"");
 ``` 
     
-Ci-dessous les ordres d’appel autorisés par les standards C++ (avant C++17) et C (en supposant que ce soit une `struct string` avec des fonctions). C++17 n’autorise que cette dernière possibilité (TODO: à vérifier/confirmer).
+Intuitivement, on s'attendrait à évaluer les arguments des fonctions comme `find("even")` juste avant d'appeler `replace(résultat,4,"only")`. Mais ce n’est pas le cas avant C++17, ces arguments peuvent être évalués dans différents ordres. Plus de détails sont donnés par [Shafik Yaghmour](http://stackoverflow.com/a/27158813/938111) (en Anglais).
     
-1. CC, BB, A, B, C ;
-1. BB, CC, A, B, C ;
-2. CC, A, BB, B, C ;
-2. BB, A, CC, B, C ;
-3. A, CC, BB, B, C ;
-3. A, BB, CC, B, C ;
-4. A, BB, B, CC, C ;
+Le tableau ci-dessous présente sur chacune des sept lignes, un ordre d'appel possible selon les standards C++ (avant C++17) et C (en supposant que ce soit une `struct string` avec des pointeurs de fonction).
+    
+1<sup>er</sup> appel|2<sup>e</sup> appel|3<sup>e</sup> appel|4<sup>e</sup> appel|5<sup>e</sup> appel
+--------------|-------------|-------------|-------------|-------------
+`find(" don't")`|`find("even")`|`replace(0,4,"")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`find("even")`|`find(" don't")`|`replace(0,4,"")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`find(" don't")`|`replace(0,4,"")`|`find("even")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`find("even")`|`replace(0,4,"")`|`find(" don't")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`replace(0,4,"")`|`find(" don't")`|`find("even")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`replace(0,4,"")`|`find("even")`, `find(" don't")`|`replace(f,4,"only")`|`replace(f,6,"")`
+`replace(0,4,"")`|`find("even")`|`replace(f,4,"only")`|`find(" don't")`|`replace(f,6,"")`
+    
+C++17 n’autorise qu'une seule possibilité, la dernière, et correspond à :
+    
+```cpp
+s.replace(0, 4, "");
+auto p = s.find("even");
+s.replace(p, 4, "only");
+auto q = s.find(" don't");
+s.replace(q, 6, "");
+``` 
     
 Pour info, cet exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) a justement été repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au **§5.2.2 Function call** (page 107).
 
@@ -1082,6 +1132,8 @@ template<template<typename> class    T> class Cpp98;
 template<template<typename> typename T> class Cpp17;
 ``` 
     
+### Utilité des paramètres `template template`
+    
 Mais à quoi cela sert les paramètres `template template` ?
 Cela sert, par [exemple](http://gcc.godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(j:1,options:(colouriseAsm:'0',compileOnChange:'0'),source:'%23include+%3Cvector%3E%0A%23include+%3Clist%3E%0A%0Atemplate%3C+template+%3Ctypename,+typename%3E+typename+Container%0A++++++++,+typename+T%0A++++++++,+typename+Allocator+%3E%0Aauto+convert_to_vector(const+Container%3CT,+Allocator%3E%26+container)%0A%7B%0A+++std::vector%3CT,+Allocator%3E+v%3B%0A+++v.reserve(container.size())%3B%0A+++for+(const+auto%26+e+:+container)++v.push_back(e)%3B%0A+++return+v%3B%0A%7D%0A%0Aint+main()%0A%7B%0A++std::list%3Cint%3E+s%7B3,1,7,4%7D%3B%0A++auto+v+%3D+convert_to_vector(s)%3B%0A%7D'),l:'5',n:'1',o:'C%2B%2B+source+%231',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang390,filters:(b:'0',commentOnly:'0',directives:'0',intel:'0'),options:'-std%3Dc%2B%2B1z+-Wall+-Wextra+-pedantic'),l:'5',n:'0',o:'%231+with+x86-64+clang+3.9.0',t:'0')),k:49.99999999999999,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4), à obtenir les paramètres `template` d'un conteneur :
     
@@ -1111,7 +1163,9 @@ auto convert_to_vector (const Container& container)
 }
 ``` 
     
-Un usage courant est de réduire les erreurs et incohérences possibles lors de l'instanciation d'un type `template`. L'exemple suivant montre comment s'assurer que l'`Allocator` et la `Factory` de `WidgetManager` gèrent bien le type `Widget`. L'exemple ci-dessous compile pour [VC++15](https://fr.wikipedia.org/wiki/Visual_C%2B%2B#Versions_32bits_.26_64bits). La [version pour GCC6](https://godbolt.org/g/5AtrFU) n'a pas besoin du mot-clé `typename` dans la déclaration des [types alias](http://en.cppreference.com/w/cpp/language/type_alias).
+### Utile pour vérifier si le paramètre `template` est correct
+     
+Un usage courant est de détecter des incohérences dès l'instanciation d'une `class template`. L'exemple suivant montre comment s'assurer que l'`Allocator` et la `Factory` de `WidgetManager` gèrent bien le type `Widget`. L'exemple compile pour [VC++15](https://fr.wikipedia.org/wiki/Visual_C%2B%2B#Versions_32bits_.26_64bits). La [version pour GCC6](https://godbolt.org/g/5AtrFU) n'a pas besoin du mot-clé `typename` dans la déclaration des [types alias](http://en.cppreference.com/w/cpp/language/type_alias).
     
 ```cpp
 struct Widget
@@ -1139,9 +1193,11 @@ struct WidgetManager
     
 int main()
 {
-  WidgetManager<Widget, MyAllocator, MyFactory> wManager;
+  WidgetManager<MonWidget, MonAllocateur, MaFabrique> MonWM;
 }
 ``` 
+    
+### D'autres idées ?
     
 Chère lectrice, cher lecteur *LinuxFr.org*,
 Tu as peut-être déjà utilisé les paramètres `template template` ?
