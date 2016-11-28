@@ -54,7 +54,7 @@ Date              | Dépêche
 Spécifications Techniques
 =========================
 
-Deux [*TS*](Spécification Technique)](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) ont été amendés par le commité de normalisation du C++ afin de fixer l’ordre d’évaluation des expressions :
+Deux [*TS*](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) ont été amendés par le commité de normalisation du C++ afin de fixer l’ordre d’évaluation des expressions :
     
 * [[P0145]](https://wg21.link/p0145) définit les changements nécessaires au standard C++ ; 
 * [[P0400]](https://wg21.link/p0400) reformule une phrase de cette précédente *TS* P0145.
