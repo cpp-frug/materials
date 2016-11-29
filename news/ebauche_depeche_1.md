@@ -12,7 +12,7 @@ Date    | 2016-07-22T00:53:12+02:00
 Tags    | c++17, c++ et cpp
 Score   |   0
 
-Le C++ est un langage bien présent et depuis longtemps dans les logiciels libres (navigateur web, environnement de bureau...). 2017 approche avec la sortie de **C++17**. Pour finir l'année, nous vous proposons le [calendrier de l'Avent][avent] du C++ avec des dépêches pédagogiques et de qualité. Après deux dépêches de mise-en-bouche, nous entrons entre enfin dans le vif du sujet en décortiquant les deux [*TS*](Spécification Technique)](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) concernant l'ordre d'évaluation des expressions. Allez c'est parti :-)
+Le C++ est un langage bien présent et depuis longtemps dans les logiciels libres (navigateur web, environnement de bureau...). 2017 approche avec la sortie de **C++17**. Pour finir l'année, nous vous proposons le [calendrier de l'Avent][avent] du C++ avec des dépêches pédagogiques et de qualité. Après deux dépêches de mise-en-bouche, nous entrons entre enfin dans le vif du sujet en décortiquant les deux [*TS*(Spécification Technique)](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) concernant l'ordre d'évaluation des expressions. Allez c'est parti :-)
     
 [avent]: https://fr.wikipedia.org/wiki/Calendrier_de_l'Avent
 
