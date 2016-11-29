@@ -67,8 +67,7 @@ Anecdote
 
 Le livre mythique [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) de l’inventeur du C++, [Bjarne Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) contient une erreur subtile à la [page 1046](http://www.ebooksbucket.com/the-c-programming-language-4th-edition-b198) du paragraphe *36.3.6 STL-like Operations* (quatrième édition publiée en 2013). Sauras-tu la retrouver ? Voici l’extrait en question :
 
->The `replace()` replaces  one  substring  with  another  and  adjusts  the
-`string`’s  size  accordingly.   For example:
+>The `replace()` replaces one substring with another and adjusts the `string`’s  size accordingly. For example:
 >
 >```cpp
 >void f()
