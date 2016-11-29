@@ -12,7 +12,9 @@ Date    | 2016-07-22T00:53:12+02:00
 Tags    | c++17, c++ et cpp
 Score   |   0
 
-L’ajout des fonctionnalités au **C++17** a été clôturé au premier semestre 2016. Depuis, nous nous efforçons à vous fournir des dépêches de qualité sur le sujet. Après deux dépêches de mise-en-bouche, cette troisième dépêche entre enfin dans le vif du sujet en décortiquant les deux [*TS*](Spécification Technique)](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) concernant l'ordre d'évaluation des expressions. Allez c'est parti :-)
+Le C++ est un langage bien présent et depuis longtemps dans les logiciels libres (navigateur web, environnement de bureau...). 2017 approche avec la sortie de **C++17**. Pour finir l'année, nous vous proposons le [calendrier de l'Avent][avent] du C++ avec des dépêches pédagogiques et de qualité. Après deux dépêches de mise-en-bouche, nous entrons entre enfin dans le vif du sujet en décortiquant les deux [*TS*](Spécification Technique)](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) concernant l'ordre d'évaluation des expressions. Allez c'est parti :-)
+    
+[avent]: https://fr.wikipedia.org/wiki/Calendrier_de_l'Avent
 
 ----
 
@@ -148,8 +150,6 @@ auto q = s.find(" don't");
 s.replace(q, 6, "");
 ``` 
     
-Pour info, cet exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) a justement été repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au **§5.2.2 Function call** (page 107).
-
 Autres exemples
 ===============
     
@@ -192,7 +192,9 @@ Conséquence
 ===========
     
 Donc, beaucoup de codes sont potentiellement truffés de ces pièges, ce qui est également le cas quand `std::future<T>` est utilisé. Tout le monde se fait avoir, débutants comme experts. Même les meilleurs experts C++ se font avoir avec ces règles pas toujours intuitives. Et le comité de normalisation C++ a donc décidé de fixer l’ordre d’évaluation avec ce *TS*.
-        
+    
+Pour info, cet exemple du livre [*The C++ Programming Language*](https://fr.wikipedia.org/wiki/The_C%2B%2B_Programming_Language) a justement été repris par le [standard C++ (brouillon de juillet 2016)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4606.pdf), au **§5.2.2 Function call** (page 107).
+    
 Nouvelle règle
 ==============
     
