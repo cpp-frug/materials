@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="142.95mm" version="1.1" viewBox="0 0 744.09449 506.51536" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="b" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.3360687"/>
+  </filter>
+  <linearGradient id="a" x1="58" x2="120" y1="57.222" y2="115.22" gradientTransform="translate(.8495 3.3271)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fc0" offset="0"/>
+   <stop stop-color="#ff9000" offset="1"/>
+  </linearGradient>
+  <marker id="Arrow1Mend" overflow="visible" orient="auto">
+   <path transform="matrix(-.4 0 0 -.4 -4 0)" d="m0 0 5-5-17.5 5 17.5 5-5-5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-77.111 6.1523e-8)">
+  <g transform="translate(156.94 -135.71)">
+   <g transform="translate(-10)">
+    <text x="188.49141" y="175.54976" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="188.49141" y="175.54976" fill="#95a5a6">Se réfère à une fonction ou un objet ?</tspan></text>
+    <g transform="translate(173.93)">
+     <text x="95.497375" y="151.54977" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="95.497375" y="151.54977">Expression</tspan></text>
+     <rect x="51.518" y="136.21" width="153.54" height="23.234" fill="none" stroke="#95a5a6"/>
+    </g>
+   </g>
+   <g transform="translate(161.06)">
+    <text x="169.36218" y="237.6021" fill="#e74c3c" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="169.36218" y="237.6021" fill="#e74c3c" font-weight="bold">rvalue</tspan></text>
+    <rect x="163.14" y="220.5" width="55.558" height="25.254" fill="none" stroke="#95a5a6"/>
+   </g>
+   <g transform="translate(161.06)">
+    <text x="51.066536" y="237.6021" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="51.066536" y="237.6021" fill="#27ae60" font-weight="bold">lvalue</tspan></text>
+    <rect x="43.942" y="220.5" width="55.558" height="25.254" fill="none" stroke="#95a5a6"/>
+   </g>
+   <path d="m319.47 184.78 35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
+   <path d="m267.68 184.02-35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
+   <text x="217.60902" y="202.82388" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="217.60902" y="202.82388">Oui</tspan></text>
+   <text x="347.03036" y="202.63931" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="347.03036" y="202.63931">Non</tspan></text>
+  </g>
+  <g>
+   <rect x="458.2" y="144.9" width="285.9" height="359.64" fill="#ecf0f1"/>
+   <rect x="155.21" y="145.89" width="285.9" height="359.64" fill="#ecf0f1" stroke="#bdc3c7" stroke-dasharray="5.92602441, 5.92602441" stroke-width="1.9753"/>
+   <text x="171.38437" y="170.1447" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:150%" xml:space="preserve"><tspan x="171.38437" y="170.1447" style="line-height:150%">struct Object {};</tspan><tspan x="171.38437" y="188.1447" style="line-height:150%"/><tspan x="171.38437" y="206.1447" style="line-height:150%">int n = 0 ;</tspan><tspan x="171.38437" y="224.1447" style="line-height:150%"/><tspan x="171.38437" y="242.1447" style="line-height:150%">int function() { return 0 ; }</tspan><tspan x="171.38437" y="260.14468" style="line-height:150%">int&amp; function_ref() { return n ; }</tspan><tspan x="171.38437" y="278.14468" style="line-height:150%"/><tspan x="171.38437" y="296.14468" style="line-height:150%">int main() {</tspan><tspan x="171.38437" y="314.14468" style="line-height:150%">     int a ;</tspan><tspan x="171.38437" y="332.14468" style="line-height:150%">     int b = 8 + 3 ; </tspan><tspan x="171.38437" y="350.14468" style="line-height:150%">     Object obj ;</tspan><tspan x="171.38437" y="368.14468" style="line-height:150%"/><tspan x="171.38437" y="386.14468" style="line-height:150%">     int i  = function() ;</tspan><tspan x="171.38437" y="404.14468" style="line-height:150%">     int j  = function_ref();</tspan><tspan x="171.38437" y="422.14468" style="line-height:150%"/><tspan x="171.38437" y="440.14468" style="line-height:150%">     ((i &lt; 3) ? i : j) = a ;</tspan><tspan x="171.38437" y="458.14468" style="line-height:150%"/><tspan x="171.38437" y="476.14468" style="line-height:150%">     return 0 ;</tspan><tspan x="171.38437" y="494.14468" style="line-height:150%">}</tspan></text>
+  </g>
+  <g fill="none">
+   <g stroke-dashoffset="7.8" stroke-width="2">
+    <rect x="189.06" y="195.34" width="10.102" height="13.132" stroke="#27ae60"/>
+    <rect x="215.33" y="195.34" width="10.102" height="13.132" stroke="#e74c3c"/>
+    <rect x="304.22" y="230.63" width="10.102" height="13.132" stroke="#e74c3c"/>
+   </g>
+   <g stroke="#27ae60" stroke-dashoffset="7.8" stroke-width="2">
+    <rect x="335.53" y="250.29" width="10.102" height="13.132"/>
+    <rect x="207.73" y="303.75" width="10.102" height="13.132"/>
+    <rect x="207.73" y="320.02" width="10.102" height="13.132"/>
+   </g>
+   <rect x="233.01" y="320.93" width="36.774" height="12.304" stroke="#e74c3c" stroke-dashoffset="7.8" stroke-width="2"/>
+   <g stroke="#27ae60" stroke-width="2">
+    <rect x="232.99" y="340.1" width="20.07" height="12.743" stroke-dashoffset="7.8"/>
+    <rect x="207.71" y="375.53" width="10.14" height="12.099" stroke-dashoffset="7.5011"/>
+    <rect x="207.71" y="395.78" width="10.14" height="12.099" stroke-dashoffset="7.5011"/>
+    <rect x="188.52" y="428.86" width="83.515" height="15.474" stroke-dashoffset="7.8"/>
+   </g>
+   <g>
+    <rect x="284.93" y="427.58" width="12.047" height="15.792" stroke="#e74c3c" stroke-dashoffset="7.8" stroke-width="2"/>
+    <rect x="229.67" y="465.42" width="10.14" height="12.099" stroke="#e74c3c" stroke-dashoffset="7.5011" stroke-width="2"/>
+    <rect x="233.46" y="394.12" width="82.578" height="14.18" stroke="#27ae60" stroke-dashoffset="8.3772" stroke-width="2.0996"/>
+    <rect x="233.33" y="375.4" width="60.329" height="13.002" stroke="#27ae60" stroke-dashoffset="7.1979" stroke-width="2"/>
+   </g>
+   <rect x="233.15" y="375.32" width="60.329" height="13.002" stroke="#e74c3c" stroke-dasharray="6, 6" stroke-width="2"/>
+  </g>
+  <g transform="matrix(.32478 0 0 .32478 536.86 153.75)">
+   <g stroke="#000">
+    <path d="m74.202 4.7066c-0.80171 0-1.5735 0.17356-2.2681 0.49266-0.69467 0.3191-1.3194 0.77602-1.8448 1.3466-0.52538 0.57058-0.84393 1.3234-1.2399 2.0035-22.303 38.303-42.603 77.939-63.931 116.89-0.2117 0.13217-0.2117 0.76491-0.2117 1.1824 0 0.87068 0.15981 1.7088 0.45363 2.4633 0.29383 0.75443 0.71454 1.4329 1.2399 2.0035 0.52537 0.57057 1.1501 1.0275 1.8448 1.3466 0.69467 0.31911 1.4664 0.49266 2.2681 0.49266h63.508 0.3629 63.508c0.80172 0 1.5735-0.17355 2.2681-0.49266 0.69467-0.3191 1.3194-0.77602 1.8448-1.3466 0.52538-0.57059 0.9461-1.249 1.2399-2.0035 0.29381-0.75444 0.45363-1.5926 0.45363-2.4633 0-0.41748 0-1.0502-0.2117-1.1824-21.32-38.942-41.62-78.578-63.925-116.88-0.396-0.68008-0.71454-1.4329-1.2399-2.0035-0.52538-0.57058-1.1501-1.0275-1.8447-1.3466-0.69468-0.3191-1.4664-0.49266-2.2681-0.49266z" fill="none" filter="url(#b)" stroke-width="3"/>
+    <path d="m71.845 4.8271c-0.80171 0-1.5735 0.17356-2.2681 0.49266-0.69467 0.3191-1.3194 0.77602-1.8448 1.3466-0.52538 0.57058-0.84393 1.3234-1.2399 2.0035-22.302 38.303-42.603 77.939-63.931 116.89-0.2117 0.13217-0.2117 0.76491-0.2117 1.1824 0 0.87068 0.15981 1.7088 0.45363 2.4633 0.29383 0.75443 0.71454 1.4329 1.2399 2.0035 0.52537 0.57057 1.1501 1.0275 1.8448 1.3466 0.69467 0.31911 1.4664 0.49266 2.2681 0.49266h63.508 0.3629 63.508c0.80172 0 1.5735-0.17355 2.2681-0.49266 0.69467-0.3191 1.3194-0.77602 1.8448-1.3466 0.52538-0.57059 0.9461-1.249 1.2399-2.0035 0.29381-0.75444 0.45363-1.5926 0.45363-2.4633 0-0.41748 0-1.0502-0.2117-1.1824-21.33-38.951-41.629-78.587-63.932-116.89-0.396-0.68008-0.71454-1.4329-1.2399-2.0035-0.52538-0.57058-1.1501-1.0275-1.8447-1.3466-0.69468-0.3191-1.4664-0.49266-2.2681-0.49266z" fill="#fff" stroke-width="3"/>
+    <path d="m71.745 13.604c-0.71581 0-1.4049 0.15496-2.0251 0.43987-0.62024 0.28491-1.178 0.69287-1.6471 1.2023-0.46909 0.50945-0.75351 1.1816-1.1071 1.7888-19.913 34.199-37.411 67.43-57.081 104.37-0.16804 0.31554-0.18902 0.68296-0.18902 1.0557 0 0.77739 0.14268 1.5258 0.40503 2.1994 0.26234 0.67359 0.63798 1.2794 1.1071 1.7888 0.46908 0.50945 1.0268 0.91741 1.6471 1.2023 0.62024 0.28491 1.3093 0.43987 2.0251 0.43987h56.703 0.32402 56.703c0.71583 0 1.4049-0.15496 2.0251-0.43987 0.62024-0.28492 1.178-0.69288 1.6471-1.2023 0.4691-0.50944 0.84473-1.1152 1.1071-1.7888 0.26233-0.67361 0.40602-1.422 0.40503-2.1994-4.8e-4 -0.37305-0.0207-0.74033-0.18902-1.0557-18.66-34.951-37.177-70.163-57.085-104.36-0.35348-0.60726-0.63798-1.2794-1.1071-1.7888-0.46908-0.50945-1.0268-0.91741-1.6471-1.2023-0.62025-0.28491-1.3093-0.43987-2.0251-0.43987z" fill="url(#a)" stroke-width=".90046px"/>
+   </g>
+   <g transform="translate(-6.4844,-2.7419)">
+    <path d="m77 43.063c-4.9706 0-9 4.0294-9 9 0 0.1177-0.0045 0.22715 0 0.34375l4 48h0.03125c0.18138 2.5964 2.3262 4.6562 4.9688 4.6562s4.7874-2.0598 4.9688-4.6562h0.03125l3.7812-45.344c0.126-0.862 0.219-1.735 0.219-2.659 0.0045-0.1166 0-0.22605 0-0.34375 0-4.9706-4.0294-9-9-9z"/>
+    <ellipse transform="matrix(.81818 0 0 1 68 59)" cx="11" cy="57.407" rx="11" ry="9"/>
+   </g>
+  </g>
+  <g fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px">
+   <text x="585.80658" y="185.68684" style="line-height:125%" xml:space="preserve"><tspan x="585.80658" y="185.68684"><tspan x="585.80658" y="185.68684" font-size="16px">Précisions</tspan></tspan></text>
+   <text x="501.38388" y="233.5822" style="line-height:125%" xml:space="preserve"><tspan x="501.38388" y="233.5822"><tspan x="501.38388" y="233.5822" dx="0 0 0 5.4718742 0 0 5.4718742 0 0 0 0 0 0 5.4718781 0 0 0 0 0 0 0 0 0 5.4718781 0 0 0 5.4718781" text-align="justify">Si la valeur retrounée est une </tspan></tspan><tspan x="501.38388" y="248.5822"><tspan x="501.38388" y="248.5822" dx="0 0 0 0 0 0 0 0 0 0 0 2.2753906 0 0 0 0 0 2.2753906 0 0 0 0 0 2.2753906 0 0 0 2.2753906" text-align="justify">référence, alors c'est une lvalue. </tspan></tspan><tspan x="501.38388" y="263.58218"><tspan x="501.38388" y="263.58218" text-align="justify">Sinon c'est une rvalue.</tspan></tspan></text>
+   <text x="501.08505" y="371.24234" style="line-height:125%" xml:space="preserve"><tspan x="501.08505" y="371.24234"><tspan x="501.08505" y="371.24234" dx="0 0 0 3.3580723 0 0 0 3.3580704 0 0 3.3580704 0 0 3.3580704 0 0 0 0 0 0 0 0 3.3580627 0 0 0 3.358078" text-align="justify">Le nom de la fonction est une </tspan></tspan><tspan x="501.08505" y="386.24234"><tspan x="501.08505" y="386.24234" dx="0 0 0 0 0 0 0 0 8.546875 0 0 0 8.546875 0 0 0 0 0 0 0 8.546875 0 0 8.546875" text-align="justify">lvalue. Par contre, la valeur </tspan></tspan><tspan x="501.08505" y="401.24234"><tspan x="501.08505" y="401.24234" text-align="justify">retrournée est une rvalue. </tspan></tspan></text>
+   <text x="501.15536" y="435.89273" style="line-height:125%" xml:space="preserve"><tspan x="501.15536" y="435.89273"><tspan x="501.15536" y="435.89273" dx="0 0 0 0 0.42734337 0 0 0 0 0 0 0.42734528 0 0 0 0 0.42733765 0 0 0 0 0.42735291 0 0 0 0 0 0 0 0 0 0.42733765" text-align="justify">Une lvalue peut être convertie en </tspan></tspan><tspan x="501.15536" y="450.89273"><tspan x="501.15536" y="450.89273" dx="0 0 0 0 0 0 0 0 3.858593 0 3.858593 0 0 0 0 0 0 0 0 0 3.8585892 0 0 3.8585968 0 0 0 3.8585968" text-align="justify">rvalue. A condition de pas être </tspan></tspan><tspan x="501.15536" y="465.89273"><tspan x="501.15536" y="465.89273" text-align="justify">une fonction ou un tableau.</tspan></tspan></text>
+  </g>
+  <g fill="none">
+   <g stroke="#000" stroke-width="1px">
+    <path d="m493.69 229.04-176.84 6.7603" marker-end=""/>
+    <path d="m493.18 229.55-147.04 25.448" marker-end=""/>
+    <path d="m493.9 368.45-195.23 8.7806" marker-end=""/>
+    <path d="m493.39 431.9-193.72-1.1327" marker-end=""/>
+    <path d="m493.54 431.95-176.43-33.571" marker-end=""/>
+   </g>
+   <rect x="233.13" y="394.16" width="82.578" height="14.18" stroke="#e74c3c" stroke-dasharray="6, 6" stroke-width="2"/>
+   <rect x="284.88" y="427.53" width="12.047" height="15.792" stroke="#27ae60" stroke-dasharray="6, 6" stroke-width="2"/>
+  </g>
+  <g>
+   <circle cx="493.83" cy="229.8" r="3.2143" marker-end=""/>
+   <circle cx="493.83" cy="368.09" r="3.2143" marker-end=""/>
+   <circle cx="493.83" cy="432.24" r="3.2143" marker-end=""/>
+  </g>
+ </g>
+</svg>
