@@ -207,3 +207,21 @@ Deux versions :
 
 ![Version vectorielle](http://cpp-frug.github.io/materials/images/compiler-c-est-tester_copyright-OliverH-2016_CC-BY-SA-3.0.svg)
 
+
+Un bogue dans le livre de Bjarne
+--------------------------------
+
+Auteur    | Contribution           | License
+----------|------------------------|----------
+Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
+
+Le livre de référence du C++ par Bjarne Stroustrup contient une erreur.  
+Pas de soucis : pour corriger la situation, on change le langage !
+
+La réalisation de cette image s'est basée sur quatre logiciels :
+
+- [Simple Scan](https://launchpad.net/simple-scan) pour la numériqason ;
+- [Krita](https://fr.wikipedia.org/wiki/Krita) pour la retouche et les textes ;
+- [GREYC's Magic for Image Computing](http://gmic.eu/) pour son filtre *Vector Painting* ;
+
+![Bjarne propose de changer le C++ pour corriger son livre qu'il tient dans ses mains](http://cpp-frug.github.io/materials/images/cpp17-bjarne-ordre-evaluation.png)
