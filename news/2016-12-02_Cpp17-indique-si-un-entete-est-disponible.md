@@ -124,17 +124,17 @@ L'exemple ci-dessous illustre l'utilisation de la macro `__has_include()` mais a
 L'exemple suivant utilise également la macro `__has_include()`.
 C'est une possibilité pour une implémentation multi-plateforme du future [*Networking TS*](https://github.com/SG4).
 
-```
+```cpp
 #if __has_include(<winsock2.h>)
 
 #include <winsock2.h>
 
-struct T_WindowsSocketImpl : AbstractSocket
+struct WindowsSocketImpl : AbstractSocket
 {
   // implémentation Windows
 };
 
-using T_Socket = T_WindowsSocketImpl;
+using MySocket = WindowsSocketImpl;
 
 #else
 
@@ -145,27 +145,49 @@ struct UnixSocketImpl : AbstractSocket
   // implémentation Unix
 };
 
-using T_Socket = UnixSocketImpl;
+using MySocket = UnixSocketImpl;
 
 #endif
 
 // Usage
-AbstractSocket * socket = new T_Socket();
+AbstractSocket * socket = new MySocket();
 ```
 
-Appel à participation
-=====================
-    
-La précédente dépêche a reçu [227 commentaires](https://linuxfr.org/news/c-17-genese-d-une-version-mineure#droit-dauteur-licences-remerciements), soit un volume dix fois supérieur à la dépêche elle-même. Tous ces commentaires cachent tout de même quelques joyeux [trolls](https://fr.wikipedia.org/wiki/Troll_%28Internet%29) velus !
-    
-Quand on pense à toute cette énergie dépensée et toutes ces heures consacrées à rédiger ces 227 commentaires ! Avec le recul nous aurions pu concentrer tout cet investissement dans une dépêche collaborative du style *« Aujourd’hui, est-il pertinent de choisir le C++ pour une nouvelle application ? »*.
-    
+Roue de secour
+==============
+
+Nous pouvons aussi imaginer l'utilisation de cette macro `__has_include()` pour selectionner la bibliothèque à utiliser selon la disponibilité de différentes alternatives.
+
+```cpp
+#if __has_include(<optional>)
+
+#include <optional>
+using MyOptional = std::optional;
+
+#elif __has_include(<experimental/optional>)
+
+#warning Utilise std::experimental::optional à la place de std::optional
+#include <experimental/optional>  // roue de secour
+using MyOptional = std::experimental::optional;
+
+#elif __has_include(<boost/optional>)
+
+#warning Utilise boost::optional à la place de std::optional
+#include <boost/optional>        // roue de secour secondaire
+using MyOptional = boost::optional;
+
+#else
+#  error Ne trouve ni <optional>, ni <experimental/optional>, ni <boost/optional>
+#endif
+```
+
+Faut-il continuer à apprendre le C++ ?
+======================================
+     
 [![Panneau Please Do Not Feed the Trolls](https://upload.wikimedia.org/wikipedia/commons/1/19/Trolls.jpg)](https://commons.wikimedia.org/wiki/File:Trolls.jpg) | [![Panneau Troll barré](https://upload.wikimedia.org/wikipedia/commons/e/ea/DoNotFeedTroll.svg)](https://commons.wikimedia.org/wiki/File:DoNotFeedTroll.svg)
 ----|----
     
-Mais il n’est jamais trop tard ! Aussi nous proposons vous de rédiger la dépêche [*« Faut-il continuer à apprendre le C++ ? »*](https://linuxfr.org/news/faut-il-continuer-a-apprendre-le-c) Les nombreux commentaires de la dépêche précédente méritent d’y être copiés. Malheureusement, ceux-ci sont rarement sous licence compatible CC BY-SA 4.0. Ceci est donc un appel à tous leurs auteurs pour les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
-    
-Merci et à vos claviers ! &emsp; **( ͡° ͜ʖ ͡°)**
+Merci de nous aider à structurer et consolider les différentes idées sur cette question sur l'espace de rédaction collaboratif de *LinuxFr.org* : [*« Faut-il continuer à apprendre le C++ ? »*](https://linuxfr.org/news/faut-il-continuer-a-apprendre-le-c)
 
 Réutilisation
 =============
@@ -188,12 +210,13 @@ Continuer à améliorer ce document
 =================================
     
 Malgré tout le soin apporté, il reste certainement des oublis, des ambiguïtés, des fôtes... Bien que cette dépêche restera figée sur le site *LinuxFr.org*, il est possible de continuer à l'enrichir sur le [dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) du [**Groupe des Utilisateurs C++ Francophone**](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG). C’est donc sur ce dépôt que se trouve les versions les plus à jour. &emsp; **(ღ˘⌣˘ღ)**
+
 Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d’évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour][md] avec vos questions/suggestions/corrections. L’idée est de partager ce contenu libre et de créer/enrichir des articles Wikipédia quand la licence [sera CC BY-SA 4.0](https://meta.wikimedia.org/wiki/Terms_of_use/Creative_Commons_4.0/fr). &emsp; **٩(•‿•)۶**
 
 La suite
 ========
     
-Nous venons de découvrir un changement important au niveau du langage. La dépêche suivante nous dévoilera une autre nouveauté du C++17.
+La dépêche suivante nous dévoilera une autre nouveauté du C++17.
     
 Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites apporter ta pierre à cet édifice ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction) (un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder).
     
