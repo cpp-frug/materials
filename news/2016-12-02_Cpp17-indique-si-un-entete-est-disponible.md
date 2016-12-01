@@ -83,7 +83,18 @@ La macro [**`__has_include()`**](http://en.cppreference.com/w/cpp/preprocessor/i
 #endif
 ```
 
-Allons plus loin avec un autre exemple :
+Dépendance optionelle
+=====================
+
+Sans cette fonctionnalité, le code source avait moins de possibilité de s'adapter automatiquement à l'environnement de compilation. Pour les dépendances optionnelles, l'outil de compilation (autotools, CMake...) devaient détecter la présence de telle ou telle dépendance et passer au compilateur des macro pour activer/désactiver des parties du code source.
+
+Et sans cette complexité en amont, il est difficil de proposer du code C ou C++ qui gère des dépendances optionelles : si l'entête *(header)* d'une dépendance est absent, le compilateur arrête la compilation car le code source tente d'inclure l'entête introuvable de cette dépendance, même si la dépendance est optionnelle.
+
+Chère lectrice, cher lecteur *LinuxFr.org*, tu as peut être une exemple pertienent en tête.
+Tu souhaites déplacer la complexité de l'outil de compilation vers le code source ?
+Fait nous part de tes idées dans les commentaires.
+
+L'exemple ci-dessous illustre l'utilisation de la macro `__has_include()` mais aurait aussi pu se baser sur la détection de macros comme `WIN32`, `_WIN64` ou `MSCVER`...
 
 ```cpp
 #if __has_include(<windows.h>)
@@ -110,8 +121,37 @@ Allons plus loin avec un autre exemple :
 #endif
 ```
 
+L'exemple suivant utilise également la macro `__has_include()`.
+C'est une possibilité pour une implémentation multi-plateforme du future [*Networking TS*](https://github.com/SG4).
 
+```
+#if __has_include(<winsock2.h>)
 
+#include <winsock2.h>
+
+struct T_WindowsSocketImpl : AbstractSocket
+{
+  // implémentation Windows
+};
+
+using T_Socket = T_WindowsSocketImpl;
+
+#else
+
+#include <sys/socket.h>
+
+struct UnixSocketImpl : AbstractSocket
+{
+  // implémentation Unix
+};
+
+using T_Socket = UnixSocketImpl;
+
+#endif
+
+// Usage
+AbstractSocket * socket = new T_Socket();
+```
 
 Appel à participation
 =====================
