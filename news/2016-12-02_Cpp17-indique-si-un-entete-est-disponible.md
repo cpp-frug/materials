@@ -16,7 +16,7 @@ Chaque jour de décembre a droit à sa surprise. Après l'[ordre d'évaluation][
 [TS]: https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts
 
 
-[![Bjarne propose de changer le C++ pour corriger son livre qu'il tient dans ses mains](http://cpp-frug.github.io/materials/images/cpp17-bjarne-ordre-evaluation.png)](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#un-bogue-dans-le-livre-de-bjarne)
+[![Une personne déprime de ne plus rien comprendre au C++ et son collègues le rassure que LinuxFr.org publie le calendrier de l'Avent du C++ avec des explications pédagogiques](http://cpp-frug.github.io/materials/images/calendrier-avent-cpp.png)](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#calendrier-de-l-avent-du-c)
  
 
 ----
