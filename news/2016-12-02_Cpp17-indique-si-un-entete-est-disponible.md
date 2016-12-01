@@ -1,5 +1,5 @@
-C++17 indique la disponibilité des entêtes *(header)*
-=====================================================
+C++17 indique la disponibilité des entêtes *(headers)*
+======================================================
 
 Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [Guillaume Dua](https://github.com/GuillaumeDua), [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky) et [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid)
 --------|------------------------------
@@ -170,10 +170,10 @@ using MyOptional = std::optional;
 #include <experimental/optional>  // roue de secour
 using MyOptional = std::experimental::optional;
 
-#elif __has_include(<boost/optional>)
+#elif __has_include(<boost/optional.hpp>)
 
 #warning Utilise boost::optional à la place de std::optional
-#include <boost/optional>        // roue de secour secondaire
+#include <boost/optional.hpp>     // roue de secour secondaire
 using MyOptional = boost::optional;
 
 #else
