@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="194.60664mm"
-   height="26.606144mm"
-   viewBox="0 0 689.5511 94.273738"
+   width="200mm"
+   height="36mm"
+   viewBox="0 0 708.66142 127.55906"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0632101"
-     inkscape:cx="331.72032"
+     inkscape:cx="178.88129"
      inkscape:cy="5.166587"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -56,7 +56,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-49.791954,-78.118136)">
+     transform="translate(-49.791954,-44.832819)">
     <flowRoot
        xml:space="preserve"
        id="flowRoot4265"
@@ -67,8 +67,9 @@
            height="23.419378"
            x="366.4816"
            y="57.355133" /></flowRegion><flowPara
-         id="flowPara4271"></flowPara></flowRoot>    <g
-       id="g4324">
+         id="flowPara4271" /></flowRoot>    <g
+       id="g4324"
+       transform="translate(9.555137,-16.642656)">
       <circle
          r="8.2142859"
          cy="121.01141"
