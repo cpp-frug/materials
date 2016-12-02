@@ -116,7 +116,7 @@
          id="text4163"
          y="150.10428"
          x="88.559044"
-         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:monospace;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="150.10428"
            x="88.559044"
@@ -133,13 +133,13 @@
          x="287.2348"
          style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle"
            y="150.10428"
            x="287.2348"
            id="tspan4169"
            sodipodi:role="line">constexpr_if</tspan><tspan
            id="tspan4179"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle"
            y="168.85428"
            x="287.2348"
            sodipodi:role="line">constexpr_else</tspan></text>
@@ -148,7 +148,7 @@
          id="text4171"
          y="159.68802"
          x="440.25943"
-         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="159.68802"
            x="440.25943"
@@ -159,7 +159,7 @@
          id="text4175"
          y="159.68802"
          x="639.92163"
-         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="159.68802"
            x="639.92163"
@@ -201,7 +201,7 @@
              height="36.394981"
              width="119.94518"
              id="rect4277" /></flowRegion><flowPara
-           id="flowPara4279">1er réunion du comité</flowPara></flowRoot>      <flowRoot
+           id="flowPara4279">Mars 2016</flowPara></flowRoot>      <flowRoot
          transform="translate(256.26593,-11.939547)"
          style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00001e;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="flowRoot4273-5"
@@ -213,6 +213,6 @@
              height="36.394981"
              width="119.94518"
              id="rect4277-8" /></flowRegion><flowPara
-           id="flowPara4279-3">2ème réunion du comité</flowPara></flowRoot>    </g>
+           id="flowPara4279-3">Juin 2016</flowPara></flowRoot>    </g>
   </g>
 </svg>
