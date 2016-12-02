@@ -1,25 +1,24 @@
 C++17 fixe l'ordre d'évaluation
 ===============================
 
-Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [Guillaume Dua](https://github.com/GuillaumeDua), [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky) et [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid)
+Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [Guillaume Dua](https://github.com/GuillaumeDua), [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf) et [RyDroid](https://linuxfr.org/users/rydroid)
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/cpp17-fixe-l-ordre-d-evaluation-des-expressions
 Date    | 2016-12-01
-Tags    | c++17, c++ et cpp
-Score   |   0
+Tags    | c++17, cpp17, c++ et cpp
+Score   |   40
 
 Le C++ est un langage bien présent et depuis longtemps dans les logiciels libres (environnements de bureau, outils bureautiques, navigateurs web…). 2017 approche à grands pas avec la promesse d’un tout nouveau **C++17**.
     
-Pour finir l’année, voici le [calendrier de l’Avent][avent] du C++ avec des dépêches pédagogiques sur ce qui nous attend en 2017++. Après [deux][1] [dépêches][2] de mise-en-bouche, nous entrons enfin dans le vif du sujet avec deux [Spécifications Techniques][TS] concernant l’*ordre d’évaluation des expressions*. Allez, c’est parti ! &emsp; **ᕕ(ᐛ)ᕗ**
+Pour finir l’année, voici le [calendrier de l’Avent][avent] du C++ avec des dépêches pédagogiques sur ce qui nous attend en 2017. Après [deux][1] [dépêches][2] de mise-en-bouche, nous entrons enfin dans le vif du sujet avec deux [Spécifications Techniques][TS] concernant l’*ordre d’évaluation des expressions*. Allez, c’est parti ! &emsp; **ᕕ(ᐛ)ᕗ**
     
 [avent]: https://fr.wikipedia.org/wiki/Calendrier_de_l'Avent
 [1]: https://linuxfr.org/news/les-coulisses-du-standard-cpp
 [2]: https://linuxfr.org/news/c-17-genese-d-une-version-mineure
 [TS]: https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts
 
-
-[![Bjarne propose de changer le C++ pour corriger son livre qu'il tient dans ses mains](http://cpp-frug.github.io/materials/images/cpp17-bjarne-ordre-evaluation.png)](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#un-bogue-dans-le-livre-de-bjarne)
+[![Bjarne propose de changer le C++ pour corriger son livre qu'il tient entre ses mains](http://cpp-frug.github.io/materials/images/cpp17-bjarne-ordre-evaluation.png)](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#un-bogue-dans-le-livre-de-bjarne)
  
 
 ----
@@ -40,7 +39,7 @@ Pour finir l’année, voici le [calendrier de l’Avent][avent] du C++ avec des
 Série de dépêches C++
 =====================
     
-Cette dépêche fait partie de toute une série disponible également sur [le dépôt Git][dG] du [*Groupe des Utilisateurs C++ Francophone*][CppFRUG]. Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d’évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour][md] avec vos questions/suggestions/corrections. L’idée est de partager ce contenu libre et de créer/enrichir des articles Wikipédia quand la licence [sera CC BY-SA 4.0](https://meta.wikimedia.org/wiki/Terms_of_use/Creative_Commons_4.0/fr). &emsp; **٩(•‿•)۶**
+Cette dépêche fait partie de toute une série disponible également sur [le dépôt Git][dG] du [*Groupe des Utilisateurs C++ Francophone*][CppFRUG]. Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d’évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour][md] avec vos questions/suggestions/corrections. L’idée est de partager ce contenu libre et de créer/enrichir des articles Wikipédia quand la licence [sera CC BY-SA 4.0](https://meta.wikimedia.org/wiki/Terms_of_use/Creative_Commons_4.0/fr). &emsp;
     
 [dG]: https://github.com/cpp-frug/materials
 [CppFRUG]: http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones
@@ -117,11 +116,11 @@ Explications
     
 Pour des questions de performance, le standard C++ (avant C++17) indique que c’est le compilateur qui optimise l’ordre d’évaluation du chaînage et des paramètres de fonction. Le standard utilise le terme *unsequenced* (séquencement non défini). Le C et le C++ partagent ensemble cette règle.
     
-Donc, l’expression `replace(find()).replace(find())` dans la fonction `f2()` peut être évaluée dans des ordres différents. En théorie, la variable `s` pourrait donc contenir différents résultats. Et c'est aussi le cas en pratique :
+Donc, l’expression `replace(find()).replace(find())` dans la fonction `f2()` peut être évaluée dans des ordres différents. En théorie, la variable `s` pourrait donc contenir différents résultats. Et c’est aussi le cas en pratique :
 
 Compilateur              | Résultat contenu par la variable `s`
 -------------------------|------------------------------------------
-[GCC][g] et<br> [MSVC][v]| `I have heard it works evenonlyyou donieve in it`
+[GCC][g] et [MSVC][v]    | `I have heard it works evenonlyyou donieve in it`
 [LLVM/Clang][c]          | `I have heard it works only if you believe in it`
     
 [g]: http://coliru.stacked-crooked.com/a/a6035cb6e64f038f
@@ -245,7 +244,7 @@ Nouvelle règle
 L’évaluation est :
     
 * De la gauche vers la droite pour les expressions suffixées. Ceci inclue les appels de fonction et la section des membres ;
-* L’assignement de la droite vers la gauche (`a = b = c = d`) ;
+* L’affectation de la droite vers la gauche (`a = b = c = d`) ;
 * Les opérateurs de décalage *(shift operators)* de la gauche vers la droite.
     
 Par contre, lorsque une surcharge d’opérateur est invoquée, la priorité arithmétique est utilisée.
@@ -274,7 +273,7 @@ Quand on pense à toute cette énergie dépensée et toutes ces heures consacré
     
 Mais il n’est jamais trop tard ! Aussi nous proposons vous de rédiger la dépêche [*« Faut-il continuer à apprendre le C++ ? »*](https://linuxfr.org/news/faut-il-continuer-a-apprendre-le-c) Les nombreux commentaires de la dépêche précédente méritent d’y être copiés. Malheureusement, ceux-ci sont rarement sous licence compatible CC BY-SA 4.0. Ceci est donc un appel à tous leurs auteurs pour les copier dans cette dépêche afin de la nourrir. Ainsi, nous pourrons les structurer et proposer des réponses concises, claires et utiles à tous.
     
-Merci et à vos claviers ! &emsp; **( ͡° ͜ʖ ͡°)**
+Merci et à vos claviers ! &emsp;
 
 Réutilisation
 =============
@@ -296,7 +295,7 @@ Par respect de la licence, merci de [créditer](https://fr.wiktionary.org/wiki/c
 Continuer à améliorer ce document
 =================================
     
-Malgré tout le soin apporté, il reste certainement des oublis, des ambiguïtés, des fôtes... Bien que cette dépêche restera figée sur le site *LinuxFr.org*, il est possible de continuer à l'enrichir sur le [dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) du [**Groupe des Utilisateurs C++ Francophone**](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG). C’est donc sur ce dépôt que se trouve les versions les plus à jour. &emsp; **(ღ˘⌣˘ღ)**
+Malgré tout le soin apporté, il reste certainement des oublis, des ambiguïtés, des fôtes... Bien que cette dépêche restera figée sur le site *LinuxFr.org*, il est possible de continuer à l'enrichir sur le [dépôt Git](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md) du [**Groupe des Utilisateurs C++ Francophone**](http://linuxfr.org/news/douzieme-rencontre-parisienne-c-mercredi-27-avril-2016#historique-des-rencontres-c-francophones) (C++FRUG). C’est donc sur ce dépôt que se trouvent les versions les plus à jour. &emsp; **(ღ˘⌣˘ღ)**
 
 La suite
 ========
