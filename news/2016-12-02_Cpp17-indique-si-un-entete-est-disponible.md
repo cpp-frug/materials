@@ -79,7 +79,7 @@ La macro [**`__has_include()`**](http://en.cppreference.com/w/cpp/preprocessor/i
 #elif __has_include(<boost/filesystem.hpp>)
 #  include          <boost/filesystem.hpp>
 #else
-#  error Ne trouve aucune en-tête filesystem
+#  error Ne trouve aucun en-tête filesystem
 #endif
 ```
 
@@ -153,7 +153,7 @@ using MySocket = UnixSocketImpl;
 AbstractSocket * socket = new MySocket();
 ```
 
-Roue de secour
+Roue de secours
 ==============
 
 Nous pouvons aussi imaginer l'utilisation de cette macro `__has_include()` pour selectionner la bibliothèque à utiliser selon la disponibilité de différentes alternatives.
@@ -167,13 +167,13 @@ using MyOptional = std::optional;
 #elif __has_include(<experimental/optional>)
 
 #warning Utilise std::experimental::optional à la place de std::optional
-#include <experimental/optional>  // roue de secour
+#include <experimental/optional>  // roue de secours
 using MyOptional = std::experimental::optional;
 
 #elif __has_include(<boost/optional.hpp>)
 
 #warning Utilise boost::optional à la place de std::optional
-#include <boost/optional.hpp>     // roue de secour secondaire
+#include <boost/optional.hpp>     // roue de secours secondaire
 using MyOptional = boost::optional;
 
 #else
