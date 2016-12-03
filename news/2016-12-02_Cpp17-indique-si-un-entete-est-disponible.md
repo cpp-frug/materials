@@ -49,7 +49,7 @@ Publication        | Dépêche
 Initialement, nous allions publier [une grosse dépêche super trop longue](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016_n3_Cpp17_Nouveautes-du-langage.md). Puis, fin novembre, nous nous sommes ravisés et nous vous proposons plutôt une petite dépêche par jour, d’où l’idée du calendrier de l’Avent du C++. &emsp; **(ღˇ◡ˇ)~♥**
     
 [La]: https://linuxfr.org/news/les-coulisses-du-standard-cpp
-[Lo]: https://linuxfr.org/news/cpp17-ameliore-les-lambdas-et-attribut-s
+[Lo]: http://linuxfr.org/news/cpp-17-genese-d-une-version-mineure
 [L1]: https://linuxfr.org/news/cpp17-fixe-l-ordre-d-evaluation-des-expressions
 [LE]: https://linuxfr.org/news/faut-il-continuer-a-apprendre-le-cpp
     
