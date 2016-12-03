@@ -1,7 +1,7 @@
 C++17 indique la disponibilité des entêtes *(headers)*
 ======================================================
 
-Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [Guillaume Dua](https://github.com/GuillaumeDua), [olibre](https://github.com/olibre), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky) et [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid)
+Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https://linuxfr.org/users/jeser), [Guillaume Dua](https://github.com/GuillaumeDua), [olibre](https://github.com/olibre), [Julien HENRY](https://github.com/henryju), [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [Xavier Claude](http://linuxfr.org/users/claudex), [ZeroHeure](http://linuxfr.org/users/andrianarivony), [Bruno Michel](http://linuxfr.org/users/nono) et [Nils Ratusznik](http://linuxfr.org/users/nils--2).
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/cpp17-indique-si-un-entete-est-disponible
@@ -16,8 +16,7 @@ Chaque jour de décembre a droit à sa surprise. Après l'[ordre d'évaluation][
 [TS]: https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts
 
 
-[![Une personne déprime de ne plus rien comprendre au C++ et son collègues le rassure que LinuxFr.org publie le calendrier de l'Avent du C++ avec des explications pédagogiques](http://cpp-frug.github.io/materials/images/calendrier-avent-cpp.png)](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#calendrier-de-l-avent-du-c)
- 
+[![Une personne déprime de ne plus rien comprendre au C++ et son collègue le rassure que LinuxFr.org publie le calendrier de l'Avent du C++ avec des explications pédagogiques](http://cpp-frug.github.io/materials/images/calendrier-avent-cpp.png)](https://github.com/cpp-frug/materials/blob/gh-pages/images/README.md#calendrier-de-l-avent-du-c)
 
 ----
 
@@ -60,11 +59,12 @@ Initialement, nous allions publier [une grosse dépêche super trop longue](http
 [G2]: https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-12-02_Cpp17-indique-si-un-entete-est-disponible.md
 [GE]: https://github.com/cpp-frug/materials/blob/gh-pages/news/2017_n14_Faut-il-apprendre-le-Cpp.md
 
-Spécification Technique
-=========================
 
-La macro [`__has_include`](http://en.cppreference.com/w/cpp/preprocessor/include) est dans les cartons depuis plusieurs années.
-Le comité de normalisation du C++ a intégrée cette fonctionnalité en amendant le [*TS*](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) [P0061](http://wg21.link/p0061).
+
+Spécification Technique
+=======================
+
+La macro [`__has_include`](http://en.cppreference.com/w/cpp/preprocessor/include) est dans les cartons depuis plusieurs années. Le comité de normalisation du C++ a intégré cette fonctionnalité en amendant le [*TS*](https://linuxfr.org/news/les-coulisses-du-standard-cpp#technical-specification-ts) [P0061](http://wg21.link/p0061).
 
 La macro
 ========
@@ -83,18 +83,26 @@ La macro [**`__has_include()`**](http://en.cppreference.com/w/cpp/preprocessor/i
 #endif
 ```
 
-Dépendance optionelle
-=====================
 
-Sans cette fonctionnalité, le code source avait moins de possibilité de s'adapter automatiquement à l'environnement de compilation. Pour les dépendances optionnelles, l'outil de compilation (autotools, CMake...) devaient détecter la présence de telle ou telle dépendance et passer au compilateur des macro pour activer/désactiver des parties du code source.
 
-Et sans cette complexité en amont, il est difficil de proposer du code C ou C++ qui gère des dépendances optionelles : si l'entête *(header)* d'une dépendance est absent, le compilateur arrête la compilation car le code source tente d'inclure l'entête introuvable de cette dépendance, même si la dépendance est optionnelle.
 
-Chère lectrice, cher lecteur *LinuxFr.org*, tu as peut être une exemple pertienent en tête.
+Dépendance optionnelle
+======================
+
+Sans cette fonctionnalité, le code source avait moins de possibilité de s'adapter automatiquement à l'environnement de compilation. Pour les dépendances optionnelles, l'outil de compilation (autotools, CMake...) devaient détecter la présence de telle ou telle dépendance et passer au compilateur des macros pour activer/désactiver des parties du code source.
+
+Et sans cette complexité en amont, il est difficile de proposer du code C ou C++ qui gère des dépendances optionelles : si l'entête *(header)* d'une dépendance est absent, le compilateur arrête la compilation car le code source tente d'inclure l'entête introuvable de cette dépendance, même si la dépendance est optionnelle.
+
+
+Chère lectrice, cher lecteur *LinuxFr.org*, tu as peut être un exemple pertinent en tête.
 Tu souhaites déplacer la complexité de l'outil de compilation vers le code source ?
 Fait nous part de tes idées dans les commentaires.
 
-L'exemple ci-dessous illustre l'utilisation de la macro `__has_include()` mais aurait aussi pu se baser sur la détection de macros comme `WIN32`, `_WIN64` ou `MSCVER`...
+
+
+L'exemple ci-dessous illustre l'utilisation de la macro `__has_include()` mais aurait aussi pu se baser sur la détection de macros comme `WIN32`, `_WIN64` ou `MSCVER`…
+
+
 
 ```cpp
 #if __has_include(<windows.h>)
@@ -121,8 +129,13 @@ L'exemple ci-dessous illustre l'utilisation de la macro `__has_include()` mais a
 #endif
 ```
 
+
+
+
 L'exemple suivant utilise également la macro `__has_include()`.
-C'est une possibilité pour une implémentation multi-plateforme du future [*Networking TS*](https://github.com/SG4).
+C'est une possibilité pour une implémentation multi-plateforme du futur [*Networking TS*](https://github.com/SG4).
+
+
 
 ```cpp
 #if __has_include(<winsock2.h>)
@@ -153,10 +166,16 @@ using MySocket = UnixSocketImpl;
 AbstractSocket * socket = new MySocket();
 ```
 
-Roue de secours
-==============
 
-Nous pouvons aussi imaginer l'utilisation de cette macro `__has_include()` pour selectionner la bibliothèque à utiliser selon la disponibilité de différentes alternatives.
+
+
+Roue de secours
+===============
+
+
+Nous pouvons aussi imaginer l'utilisation de cette macro `__has_include()` pour sélectionner la bibliothèque à utiliser selon la disponibilité de différentes alternatives.
+
+
 
 ```cpp
 #if __has_include(<optional>)
@@ -181,6 +200,9 @@ using MyOptional = boost::optional;
 #endif
 ```
 
+
+
+
 Faut-il continuer à apprendre le C++ ?
 ======================================
      
@@ -188,6 +210,8 @@ Faut-il continuer à apprendre le C++ ?
 ----|----
     
 Merci de nous aider à structurer et consolider les différentes idées sur cette question sur l'espace de rédaction collaboratif de *LinuxFr.org* : [*« Faut-il continuer à apprendre le C++ ? »*](https://linuxfr.org/news/faut-il-continuer-a-apprendre-le-c)
+
+
 
 Réutilisation
 =============
@@ -197,14 +221,18 @@ Le texte de cette dépêche est protégé par ~~le [droit d’auteur](https://fr
 Donc n'hésitez pas à réutiliser ce contenu libre pour créer, par exemple, des supports de formation, des présentations _(Meetups)_, des publications sur d’autres blogs, des articles pour des magazines, et aussi un article C++17 sur Wikipédia dès que [Wikipédia passera de la licence CC-BY-SA-3.0 à la CC-BY-SA-4.0](https://meta.wikimedia.org/wiki/Terms_of_use/Creative_Commons_4.0) (le contenu de cette dépêche utilise la version la CC-BY-SA-4.0).
     
 
+
+
 Les auteurs
 ===========
     
 Par respect de la licence, merci de [créditer](https://fr.wiktionary.org/wiki/cr%C3%A9diter#Verbe) les auteurs :
     
 * Les principaux auteurs sont [Adrien Jeser](https://linuxfr.org/users/jeser) et [Oliver H](https://linuxfr.org/users/oliver_h) ;
-* Les nombreux autres contributeurs ayant contribué sur l'ancêtre de cette dépêche ou sur le [dépôt Git](https://github.com/cpp-frug/materials) sont [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [olibre](https://github.com/olibre) et [Guss](https://github.com/GuillaumeDua).
+* Les nombreux autres contributeurs ayant contribué sur l'ancêtre de cette dépêche ou sur le [dépôt Git](https://github.com/cpp-frug/materials) sont [eggman](https://linuxfr.org/users/eggman), [Yves Bourguignon](https://linuxfr.org/users/biomin), [Storm](https://linuxfr.org/users/storm--2), [gorbal](https://linuxfr.org/users/gorbal), [palm123](https://linuxfr.org/users/palm123), [khivapia](https://linuxfr.org/users/khivapia), [BAud](https://linuxfr.org/users/baud), [Segfault](https://linuxfr.org/users/elly), [Benoît Sibaud](https://linuxfr.org/users/oumph), [Lucas](https://linuxfr.org/users/george), [cracky](https://linuxfr.org/users/cracky), [Martin Peres](https://linuxfr.org/users/mupuf), [RyDroid](https://linuxfr.org/users/rydroid), [olibre](https://github.com/olibre), [Guss](https://github.com/GuillaumeDua), [Julien HENRY](https://github.com/henryju), [Xavier Claude](http://linuxfr.org/users/claudex), [ZeroHeure](http://linuxfr.org/users/andrianarivony), [Bruno Michel](http://linuxfr.org/users/nono) et [Nils Ratusznik](http://linuxfr.org/users/nils--2).
     
+
+
 
 Continuer à améliorer ce document
 =================================
@@ -213,6 +241,8 @@ Malgré tout le soin apporté, il reste certainement des oublis, des ambiguïté
 
 Alors que cet article restera figé sur le site *LinuxFr.org*, il continuera d’évoluer sur le dépôt Git. Merci de nous aider [à maintenir ce document à jour][md] avec vos questions/suggestions/corrections. L’idée est de partager ce contenu libre et de créer/enrichir des articles Wikipédia quand la licence [sera CC BY-SA 4.0](https://meta.wikimedia.org/wiki/Terms_of_use/Creative_Commons_4.0/fr). &emsp; **٩(•‿•)۶**
 
+
+
 La suite
 ========
     
@@ -220,4 +250,4 @@ La dépêche suivante nous dévoilera une autre nouveauté du C++17.
     
 Chère lectrice, cher lecteur _LinuxFr.org_. Tu souhaites apporter ta pierre à cet édifice ? Rejoins‐nous dans l’[espace de rédaction collaborative sur _LinuxFr.org_](https://linuxfr.org/redaction) (un [compte](https://linuxfr.org/compte/inscription) est nécessaire pour y accéder).
     
-À suivre...
+À suivre…
