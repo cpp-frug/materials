@@ -19,7 +19,7 @@ Ce répertoire contient les dépêches C++ :
    - [C++ apporte tout plein d'améliorations de la bibliothèque standard](2017_n09_Cpp17-apporte-des-ameliorations-diverses.md)
 * [Bilan C++17 et attentes pour C++20](2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) est scindé en deux dépêches
    - [C++17 chez le psy](2017_n12_Bilan-Cpp17.md)
-   - [Attentes pour C++20](2017_n13_Attentes-pour-Cpp20.md)
+   - [C++20 déjà très attendu](2017_n13_Attentes-pour-Cpp20.md)
 * [Faut-il continuer à apprendre le C++ ?](2017_n14_Faut-il-apprendre-le-Cpp.md)
 
 
