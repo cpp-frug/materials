@@ -2,7 +2,7 @@ Ce répertoire contient les dépêches C++ :
 
 * [Les coulisses du standard C++](2016_n1_Coulisses-du-standard.md)
 * [C++17 – Genèse d'une version mineure](2016_n2_Cpp17_Genese-d-une-version-mineure.md)
-* Calendrier de l'Avent du C++ [Nouveautés au cœur du C++17](2016_n3_Cpp17_Nouveautes-du-langage.md)
+* Calendrier de l'Avent du C++ (découpage du document [*Nouveautés au cœur du C++17*](2016_n3_Cpp17_Nouveautes-du-langage.md))
    - 01-12-2016 [C++17 fixe l'ordre d'évaluation](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-12-01_Cpp17-ordre-evaluation.md)
    - 02-12-2016 [C++17 indique la disponibilité des entêtes *(headers)*](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-12-02_Cpp17-indique-si-un-entete-est-disponible.md)
    - [C++17 améliore les lambdas](2016_n7_Cpp17-lambda-attribut.md)
