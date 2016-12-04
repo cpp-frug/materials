@@ -2,12 +2,14 @@ Ce répertoire contient les dépêches C++ :
 
 * [Les coulisses du standard C++](2016_n1_Coulisses-du-standard.md)
 * [C++17 – Genèse d'une version mineure](2016_n2_Cpp17_Genese-d-une-version-mineure.md)
-* [C++17 – Nouveautés au cœur du langage](2016_n3_Cpp17_Nouveautes-du-langage.md) est scindé en quatre dépêches
-   - [C++17 étend le cœur du langage](2016_n6_Cpp17-etend-le-coeur-du-langage.md)
-   - [C++17 améliore lambda et `[[attribut]]`](2016_n7_Cpp17-lambda-attribut.md)
+* Calendrier de l'Avent du C++ [Nouveautés au cœur du C++17](2016_n3_Cpp17_Nouveautes-du-langage.md)
+   - 01-12-2016 [C++17 fixe l'ordre d'évaluation](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-12-01_Cpp17-ordre-evaluation.md)
+   - 02-12-2016 [C++17 indique la disponibilité des entêtes *(headers)*](https://github.com/cpp-frug/materials/blob/gh-pages/news/2016-12-02_Cpp17-indique-si-un-entete-est-disponible.md)
+   - [C++17 améliore les lambdas](2016_n7_Cpp17-lambda-attribut.md)
+   - [C++17 double les `[[attributs]]`](2016_n7_Cpp17-lambda-attribut.md)
    - [C++17 au cœur sucré](2017_n01_Cpp17-au-coeur-sucre.md)
    - [C++17 nettoie le cœur du langage](2017_n02_Cpp17-nettoie-le-coeur-du-langage.md)
-* [C++17 – Nouveautés au niveau de la bibliothèque standard](2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) est scindé en plusieurs dépêches
+* [C++17 bouscule la bibliothèque standard](2016_n4_Cpp17_Nouveautes-de-la-bibliotheque.md) est scindé en plusieurs dépêches
    - [C++17 fait le plein de nouvelles structures de données](2017_n03_Cpp17-structures-de-donnees.md)
    - [C++17 intègre enfin le `boost::filesystem`](2017_n04_Cpp17-filesystem.md)
    - [C++17 améliore les conteneurs](2017_n05_Cpp17-ameliore-les-conteneurs.md)
@@ -16,9 +18,10 @@ Ce répertoire contient les dépêches C++ :
    - [C++ bouscule les pointeurs intelligents](2017_n08_Cpp17-bouscule-smart-pointer.md)
    - [C++ apporte tout plein d'améliorations de la bibliothèque standard](2017_n09_Cpp17-apporte-des-ameliorations-diverses.md)
 * [Bilan C++17 et attentes pour C++20](2016_n5_Bilan-Cpp17-et-attentes-Cpp20.md) est scindé en deux dépêches
-   - [Bilan C++17](2017_n12_Bilan-Cpp17.md)
+   - [C++17 chez le psy](2017_n12_Bilan-Cpp17.md)
    - [Attentes pour C++20](2017_n13_Attentes-pour-Cpp20.md)
 * [Faut-il continuer à apprendre le C++ ?](2017_n14_Faut-il-apprendre-le-Cpp.md)
+
 
 Pour contribuer
 ---------------
