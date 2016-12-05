@@ -167,7 +167,7 @@ s.replace(s.find(" don't"), 6, "");
 Autres exemples
 ===============
     
-Par exemple, dans l’expression `f().g(h())` la fonction `f()` peut-être appelée avant ou après `h()`. Le standard C++ fait la différence entre *unspecified* (non-spécifié) et *unsequenced* (non-séquencé). Ce comportement est bien spécifié, donc jusqu’à C++14 c’est *unsequenced*. À partir de C++17, c’est `f()` avant `g()` *(sequenced before)*.
+Par exemple, dans l’expression `f().g(h())` la fonction `f()` peut-être appelée avant ou après `h()`. Le standard C++ fait la différence entre *unspecified* (non-spécifié) et *unsequenced* (non-séquencé). Ce comportement est bien spécifié, donc jusqu’à C++14 c’est *unsequenced*. À partir de C++17, c’est `f()` avant `h()` *(sequenced before)*.
 
 ```cpp
 // Avant C++17, f() peut être appelée avant ou après h()
