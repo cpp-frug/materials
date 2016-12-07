@@ -1,97 +1,678 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg width="210mm" height="122.15mm" version="1.1" viewBox="0 0 744.09448 432.80864" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <filter id="b">
-   <feGaussianBlur stdDeviation="3.8309765"/>
-  </filter>
-  <radialGradient id="a" cx="-789" cy="95.362" r="409" gradientTransform="matrix(.81781 .98038 -.81622 .68087 -65.915 803.96)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#0085f8" offset="0"/>
-   <stop stop-color="#003b6e" offset="1"/>
-  </radialGradient>
-  <marker id="Arrow1Mend" overflow="visible" orient="auto">
-   <path transform="matrix(-.4 0 0 -.4 -4 0)" d="m0 0 5-5-17.5 5 17.5 5-5-5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
-  </marker>
- </defs>
- <metadata>
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <g transform="translate(-43.857 6.1523e-8)">
-  <text x="319.49435" y="39.834991" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="319.49435" y="39.834991" fill="#95a5a6">Désigne une fonction ou objet ?</tspan></text>
-  <text x="382.37711" y="15.835044" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="382.37711" y="15.835044">Expression</tspan></text>
-  <rect x="338.4" y=".50001" width="153.54" height="23.234" fill="none" stroke="#95a5a6"/>
-  <text x="296.10086" y="101.93423" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="296.10086" y="101.93423" fill="#000000">glvalue</tspan></text>
-  <rect x="290.2" y="85.997" width="55.558" height="25.254" fill="none" stroke="#95a5a6"/>
-  <path d="m352.9 48.31-35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
-  <text x="302.82678" y="67.109161" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="302.82678" y="67.109161">Oui</tspan></text>
-  <path d="m346.91 131.28 35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
-  <path d="m295.13 130.52-35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
-  <g fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px">
-   <text x="245.05371" y="149.3223" style="line-height:125%" xml:space="preserve"><tspan x="245.05371" y="149.3223">Non</tspan></text>
-   <text x="374.4751" y="149.13773" style="line-height:125%" xml:space="preserve"><tspan x="374.4751" y="149.13773">Oui</tspan></text>
-   <text x="314.70102" y="125.45053" style="line-height:125%" xml:space="preserve"><tspan x="314.70102" y="125.45053" fill="#95a5a6">Implique des références rvalues ?</tspan></text>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="122.15mm"
+   version="1.1"
+   viewBox="0 0 744.09448 432.80864"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="cpp11.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     id="namedview231"
+     showgrid="false"
+     inkscape:zoom="1.5422498"
+     inkscape:cx="247.25436"
+     inkscape:cy="255.84229"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <filter
+       id="b">
+      <feGaussianBlur
+         stdDeviation="3.8309765"
+         id="feGaussianBlur7" />
+    </filter>
+    <radialGradient
+       id="a"
+       cx="-789"
+       cy="95.362"
+       r="409"
+       gradientTransform="matrix(0.81781,0.98038,-0.81622,0.68087,-65.915,803.96)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#0085f8"
+         offset="0"
+         id="stop10" />
+      <stop
+         stop-color="#003b6e"
+         offset="1"
+         id="stop12" />
+    </radialGradient>
+    <marker
+       id="Arrow1Mend"
+       overflow="visible"
+       orient="auto">
+      <path
+         transform="matrix(-.4 0 0 -.4 -4 0)"
+         d="m0 0 5-5-17.5 5 17.5 5-5-5z"
+         fill-rule="evenodd"
+         stroke="#000"
+         stroke-width="1pt"
+         id="path15" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     sodipodi:linespacing="125%"
+     id="text21"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="39.834991"
+     x="240.50537"><tspan
+       style="fill:#95a5a6"
+       id="tspan23"
+       y="39.834991"
+       x="240.50537">Désigne une fonction ou objet temporaire ?</tspan></text>
+  <text
+     sodipodi:linespacing="125%"
+     id="text25"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="15.835044"
+     x="338.52011"><tspan
+       id="tspan27"
+       y="15.835044"
+       x="338.52011">Expression</tspan></text>
+  <rect
+     style="fill:none;stroke:#95a5a6"
+     id="rect29"
+     height="23.233999"
+     width="153.53999"
+     y="0.50001007"
+     x="294.543" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text31"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="101.93423"
+     x="252.24387"><tspan
+       style="fill:#000000"
+       id="tspan33"
+       y="101.93423"
+       x="252.24387">glvalue</tspan></text>
+  <rect
+     style="fill:none;stroke:#95a5a6"
+     id="rect35"
+     height="25.254"
+     width="55.557999"
+     y="85.997002"
+     x="246.34302" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)"
+     inkscape:connector-curvature="0"
+     id="path37"
+     d="m 309.043,48.31 -35,35" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text39"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="67.109161"
+     x="258.96979"><tspan
+       id="tspan41"
+       y="67.109161"
+       x="258.96979">Oui</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)"
+     inkscape:connector-curvature="0"
+     id="path43"
+     d="m 303.053,131.28 35,35" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)"
+     inkscape:connector-curvature="0"
+     id="path45"
+     d="m 251.273,130.52 -35,35" />
+  <g
+     style="font-size:12px;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     id="g47"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     transform="translate(-39.857,6.1522996e-8)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text49"
+       xml:space="preserve"
+       style="line-height:125%"
+       y="149.3223"
+       x="245.05371"><tspan
+         id="tspan51"
+         y="149.3223"
+         x="245.05371">Non</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text53"
+       xml:space="preserve"
+       style="line-height:125%"
+       y="149.13773"
+       x="374.4751"><tspan
+         id="tspan55"
+         y="149.13773"
+         x="374.4751">Oui</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text57"
+       xml:space="preserve"
+       style="line-height:125%"
+       y="125.45053"
+       x="312.70102"><tspan
+         style="fill:#95a5a6"
+         id="tspan59"
+         y="125.45053"
+         x="312.70102">Implique des références rvalues ?</tspan></text>
   </g>
-  <text x="493.67538" y="101.88736" fill="#e74c3c" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="493.67538" y="101.88736" fill="#000000">rvalue</tspan></text>
-  <rect x="484.99" y="84.787" width="55.558" height="25.254" fill="none" stroke="#95a5a6"/>
-  <path d="m480.26 49.063 35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
-  <text x="507.81891" y="66.924591" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="507.81891" y="66.924591">Non</tspan></text>
-  <path d="m537.33 131.28 35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
-  <path d="m485.54 130.52-35 35" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000" stroke-width="1px"/>
-  <g font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px">
-   <text x="435.46732" y="149.32233" fill="#000000" style="line-height:125%" xml:space="preserve"><tspan x="435.46732" y="149.32233">Oui</tspan></text>
-   <text x="564.88867" y="149.13776" fill="#000000" style="line-height:125%" xml:space="preserve"><tspan x="564.88867" y="149.13776">Non</tspan></text>
-   <text x="239.3728" y="184.07394" fill="#27ae60" style="line-height:125%" xml:space="preserve"><tspan x="239.3728" y="184.07394" fill="#27ae60" font-weight="bold">lvalue</tspan></text>
+  <text
+     sodipodi:linespacing="125%"
+     id="text61"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#e74c3c"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="101.88736"
+     x="449.81839"><tspan
+       style="fill:#000000"
+       id="tspan63"
+       y="101.88736"
+       x="449.81839">rvalue</tspan></text>
+  <rect
+     style="fill:none;stroke:#95a5a6"
+     id="rect65"
+     height="25.254"
+     width="55.557999"
+     y="84.787003"
+     x="441.133" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)"
+     inkscape:connector-curvature="0"
+     id="path67"
+     d="m 436.403,49.063 35,35" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text69"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="66.924591"
+     x="463.96191"><tspan
+       id="tspan71"
+       y="66.924591"
+       x="463.96191">Non</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)"
+     inkscape:connector-curvature="0"
+     id="path73"
+     d="m 493.473,131.28 35,35" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)"
+     inkscape:connector-curvature="0"
+     id="path75"
+     d="m 441.683,130.52 -35,35" />
+  <g
+     style="font-size:12px;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px"
+     id="g77"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     transform="translate(-43.857,6.1523e-8)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text79"
+       xml:space="preserve"
+       style="line-height:125%;fill:#000000"
+       y="149.32233"
+       x="435.46732"><tspan
+         id="tspan81"
+         y="149.32233"
+         x="435.46732">Oui</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text83"
+       xml:space="preserve"
+       style="line-height:125%;fill:#000000"
+       y="149.13776"
+       x="564.88867"><tspan
+         id="tspan85"
+         y="149.13776"
+         x="564.88867">Non</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text87"
+       xml:space="preserve"
+       style="line-height:125%;fill:#27ae60"
+       y="184.07394"
+       x="239.3728"><tspan
+         style="font-weight:bold;fill:#27ae60"
+         id="tspan89"
+         font-weight="bold"
+         y="184.07394"
+         x="239.3728">lvalue</tspan></text>
   </g>
-  <rect x="233.15" y="166.97" width="55.558" height="25.254" fill="none" stroke="#95a5a6"/>
-  <text x="395.29834" y="184.07394" fill="#9b59b6" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="395.29834" y="184.07394" fill="#9b59b6" font-weight="bold">xvalue</tspan></text>
-  <rect x="389.08" y="166.97" width="55.558" height="25.254" fill="none" stroke="#95a5a6"/>
-  <text x="545.02246" y="182.91083" fill="#e74c3c" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="545.02246" y="182.91083" fill="#e74c3c" font-weight="bold">prvalue</tspan></text>
-  <rect x="543.1" y="166.97" width="55.558" height="25.254" fill="none" stroke="#95a5a6"/>
-  <rect x="424.5" y="215.65" width="319.59" height="215.55" fill="#ecf0f1"/>
-  <g>
-   <circle cx="439.16" cy="308.71" r="3.2143"/>
-   <circle cx="439.16" cy="355.17" r="3.2143"/>
-   <circle cx="439.16" cy="413.2" r="3.2143"/>
+  <rect
+     style="fill:none;stroke:#95a5a6"
+     id="rect91"
+     height="25.254"
+     width="55.557999"
+     y="166.97"
+     x="189.293" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text93"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#9b59b6"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="184.07394"
+     x="351.44135"><tspan
+       style="font-weight:bold;fill:#9b59b6"
+       id="tspan95"
+       font-weight="bold"
+       y="184.07394"
+       x="351.44135">xvalue</tspan></text>
+  <rect
+     style="fill:none;stroke:#95a5a6"
+     id="rect97"
+     height="25.254"
+     width="55.557999"
+     y="166.97"
+     x="345.22299" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text99"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#e74c3c"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="182.91083"
+     x="501.16547"><tspan
+       style="font-weight:bold;fill:#e74c3c"
+       id="tspan101"
+       font-weight="bold"
+       y="182.91083"
+       x="501.16547">prvalue</tspan></text>
+  <rect
+     style="fill:none;stroke:#95a5a6"
+     id="rect103"
+     height="25.254"
+     width="55.557999"
+     y="166.97"
+     x="499.24298" />
+  <rect
+     style="fill:#ecf0f1"
+     id="rect105"
+     height="215.55"
+     width="319.59"
+     y="215.64999"
+     x="380.64301" />
+  <g
+     id="g107"
+     transform="translate(-43.857,6.1523e-8)">
+    <circle
+       id="circle109"
+       r="3.2142999"
+       cy="308.70999"
+       cx="439.16" />
+    <circle
+       id="circle111"
+       r="3.2142999"
+       cy="355.17001"
+       cx="439.16" />
+    <circle
+       id="circle113"
+       r="3.2142999"
+       cy="413.20001"
+       cx="439.16" />
   </g>
-  <flowRoot transform="translate(254.44 -732.5)" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><flowRegion><rect x="255" y="970" width="347.86" height="17.857"/></flowRegion><flowPara font-size="16px" text-align="justify">Une xvalues est créée si:</flowPara></flowRoot>
-  <g transform="matrix(.15994 0 0 .15994 589.69 209.05)">
-   <path d="m-667 99.66c-70.44 0-127.7 57.27-127.7 127.71 0 70.43 57.26 127.69 127.7 127.69s127.7-57.26 127.7-127.69c0-70.44-57.26-127.71-127.7-127.71z" filter="url(#b)"/>
-   <circle transform="matrix(.3 0 0 .3 -466.9 159.15)" cx="-667" cy="227.36" r="409" fill="url(#a)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="33.333"/>
-   <path d="m-689.39 249.32v-3.89c0-6.63 0.75-12.02 2.25-16.15 1.51-4.14 3.74-7.91 6.72-11.33 2.97-3.42 9.65-9.44 20.04-18.05 5.54-4.51 8.31-8.65 8.31-12.41s-1.11-6.68-3.33-8.76c-2.22-2.09-5.59-3.13-10.1-3.13-4.86 0-8.87 1.61-12.05 4.82s-1.1 12.38-6.1 16.82c-7.36 6.53-37.75 6.02-39.79-4.93-2.55-13.74 6.69-26.4 15.95-35.32s23.46-13.38 42.6-13.38c14.91 0 26.94 3.11 36.1 9.33 12.44 8.41 18.66 19.62 18.66 33.63 0 5.81-1.61 11.42-4.82 16.82s-9.78 11.99-19.69 19.79c-6.9 5.47-11.26 9.86-13.07 13.17-1.81 3.32-2.72 12.97-2.72 12.97 0 10.81-38.96 10.61-38.96 0z"/>
-   <circle transform="matrix(.25123 0 0 .25123 -509.28 174.45)" cx="-638.52" cy="463.34" r="61.518" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="39.804"/>
-   <path d="m-689.39 249.32v-3.89c0-6.63 0.75-12.02 2.25-16.15 1.51-4.14 3.74-7.91 6.72-11.33 2.97-3.42 9.65-9.44 20.04-18.05 5.54-4.51 8.31-8.65 8.31-12.41s-1.11-6.68-3.33-8.76c-2.22-2.09-5.59-3.13-10.1-3.13-4.86 0-8.87 1.61-12.05 4.82s-1.1 12.38-6.1 16.82c-7.36 6.53-37.75 6.02-39.79-4.93-2.55-13.74 6.69-26.4 15.95-35.32s23.46-13.38 42.6-13.38c14.91 0 26.94 3.11 36.1 9.33 12.44 8.41 18.66 19.62 18.66 33.63 0 5.81-1.61 11.42-4.82 16.82s-9.78 11.99-19.69 19.79c-6.9 5.47-11.26 9.86-13.07 13.17-1.81 3.32-2.72 12.97-2.72 12.97 0 10.81-38.96 10.61-38.96 0z" fill="#fff"/>
-   <circle transform="matrix(.25123 0 0 .25123 -509.28 174.45)" cx="-638.52" cy="463.34" r="61.518" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="39.804"/>
+  <flowRoot
+     id="flowRoot115"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     transform="translate(210.583,-732.5)"><flowRegion
+       id="flowRegion117"><rect
+         id="rect119"
+         height="17.857"
+         width="347.85999"
+         y="970"
+         x="255" /></flowRegion><flowPara
+       style="font-size:16px;text-align:justify"
+       id="flowPara121"
+       text-align="justify"
+       font-size="16px">Une xvalues est créée si:</flowPara></flowRoot>  <g
+     id="g123"
+     transform="matrix(0.15994,0,0,0.15994,545.833,209.05)">
+    <path
+       style="filter:url(#b)"
+       inkscape:connector-curvature="0"
+       id="path125"
+       d="m -667,99.66 c -70.44,0 -127.7,57.27 -127.7,127.71 0,70.43 57.26,127.69 127.7,127.69 70.44,0 127.7,-57.26 127.7,-127.69 0,-70.44 -57.26,-127.71 -127.7,-127.71 z" />
+    <circle
+       style="fill:url(#a);stroke:#ffffff;stroke-width:33.33300018;stroke-linecap:round;stroke-linejoin:round"
+       id="circle127"
+       r="409"
+       cy="227.36"
+       cx="-667"
+       transform="matrix(0.3,0,0,0.3,-466.9,159.15)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path129"
+       d="m -689.39,249.32 0,-3.89 c 0,-6.63 0.75,-12.02 2.25,-16.15 1.51,-4.14 3.74,-7.91 6.72,-11.33 2.97,-3.42 9.65,-9.44 20.04,-18.05 5.54,-4.51 8.31,-8.65 8.31,-12.41 0,-3.76 -1.11,-6.68 -3.33,-8.76 -2.22,-2.09 -5.59,-3.13 -10.1,-3.13 -4.86,0 -8.87,1.61 -12.05,4.82 -3.18,3.21 -1.1,12.38 -6.1,16.82 -7.36,6.53 -37.75,6.02 -39.79,-4.93 -2.55,-13.74 6.69,-26.4 15.95,-35.32 9.26,-8.92 23.46,-13.38 42.6,-13.38 14.91,0 26.94,3.11 36.1,9.33 12.44,8.41 18.66,19.62 18.66,33.63 0,5.81 -1.61,11.42 -4.82,16.82 -3.21,5.4 -9.78,11.99 -19.69,19.79 -6.9,5.47 -11.26,9.86 -13.07,13.17 -1.81,3.32 -2.72,12.97 -2.72,12.97 0,10.81 -38.96,10.61 -38.96,0 z" />
+    <circle
+       style="stroke:#000000;stroke-width:39.80400085;stroke-linecap:round;stroke-linejoin:round"
+       id="circle131"
+       r="61.518002"
+       cy="463.34"
+       cx="-638.52002"
+       transform="matrix(0.25123,0,0,0.25123,-509.28,174.45)" />
+    <path
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0"
+       id="path133"
+       d="m -689.39,249.32 0,-3.89 c 0,-6.63 0.75,-12.02 2.25,-16.15 1.51,-4.14 3.74,-7.91 6.72,-11.33 2.97,-3.42 9.65,-9.44 20.04,-18.05 5.54,-4.51 8.31,-8.65 8.31,-12.41 0,-3.76 -1.11,-6.68 -3.33,-8.76 -2.22,-2.09 -5.59,-3.13 -10.1,-3.13 -4.86,0 -8.87,1.61 -12.05,4.82 -3.18,3.21 -1.1,12.38 -6.1,16.82 -7.36,6.53 -37.75,6.02 -39.79,-4.93 -2.55,-13.74 6.69,-26.4 15.95,-35.32 9.26,-8.92 23.46,-13.38 42.6,-13.38 14.91,0 26.94,3.11 36.1,9.33 12.44,8.41 18.66,19.62 18.66,33.63 0,5.81 -1.61,11.42 -4.82,16.82 -3.21,5.4 -9.78,11.99 -19.69,19.79 -6.9,5.47 -11.26,9.86 -13.07,13.17 -1.81,3.32 -2.72,12.97 -2.72,12.97 0,10.81 -38.96,10.61 -38.96,0 z" />
+    <circle
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:39.80400085;stroke-linecap:round;stroke-linejoin:round"
+       id="circle135"
+       r="61.518002"
+       cy="463.34"
+       cx="-638.52002"
+       transform="matrix(0.25123,0,0,0.25123,-509.28,174.45)" />
   </g>
-  <rect x="88.523" y="216.45" width="319.59" height="215.55" fill="#ecf0f1" stroke="#bdc3c7" stroke-dasharray="4.85055879, 4.85055879" stroke-width="1.6169"/>
-  <text x="176.25157" y="238.36395" fill="#000000" font-family="'DejaVu Sans'" font-size="12px" letter-spacing="0px" word-spacing="0px" style="line-height:150%" xml:space="preserve"><tspan x="176.25157" y="238.36395" style="line-height:150%">struct A {</tspan><tspan x="176.25157" y="256.36395" style="line-height:150%">     int m ;</tspan><tspan x="176.25157" y="274.36395" style="line-height:150%">};</tspan><tspan x="176.25157" y="292.36395" style="line-height:150%"/><tspan x="176.25157" y="310.36395" style="line-height:150%">A&amp;&amp; operator+(A, A) ;</tspan><tspan x="176.25157" y="328.36395" style="line-height:150%">int i = a + a ;</tspan><tspan x="176.25157" y="346.36395" style="line-height:150%"/><tspan x="176.25157" y="364.36392" style="line-height:150%">A&amp;&amp; f() ;</tspan><tspan x="176.25157" y="382.36392" style="line-height:150%">f().m ;</tspan><tspan x="176.25157" y="400.36395" style="line-height:150%">A a ;</tspan><tspan x="176.25157" y="418.36395" style="line-height:150%">A&amp;&amp; ar = std::move(a) ;</tspan></text>
-  <g fill="none">
-   <g stroke="#9b59b6">
-    <rect x="205.77" y="352.67" width="17.107" height="16.602" stroke-width="2"/>
-    <rect x="236.23" y="407" width="80.173" height="14.008" stroke-width="2"/>
-    <rect x="175.73" y="371.18" width="31.113" height="15.96" stroke-width="2.0621"/>
-    <rect x="214.73" y="316.74" width="36.953" height="15.74" stroke-width="2"/>
-   </g>
-   <g stroke="#27ae60" stroke-width="2">
-    <rect x="205.4" y="407.16" width="15.217" height="13.702"/>
-    <rect x="187.31" y="388.81" width="10.487" height="14.022"/>
-    <rect x="214.19" y="245.49" width="13.285" height="13.79"/>
-   </g>
+  <rect
+     style="fill:#ecf0f1;stroke:#bdc3c7;stroke-width:1.61689997;stroke-dasharray:4.85055879, 4.85055879"
+     id="rect137"
+     height="215.55"
+     width="319.59"
+     y="216.45"
+     x="44.666004" />
+  <text
+     sodipodi:linespacing="150%"
+     id="text139"
+     xml:space="preserve"
+     style="font-size:12px;line-height:150%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     y="238.36395"
+     x="132.39458"><tspan
+       id="tspan141"
+       style="line-height:150%"
+       y="238.36395"
+       x="132.39458">struct A {</tspan><tspan
+       id="tspan143"
+       style="line-height:150%"
+       y="256.36395"
+       x="132.39458">     int m ;</tspan><tspan
+       id="tspan145"
+       style="line-height:150%"
+       y="274.36395"
+       x="132.39458">};</tspan><tspan
+       id="tspan147"
+       style="line-height:150%"
+       y="292.36395"
+       x="132.39458" /><tspan
+       id="tspan149"
+       style="line-height:150%"
+       y="310.36395"
+       x="132.39458">A&amp;&amp; operator+(A, A) ;</tspan><tspan
+       id="tspan151"
+       style="line-height:150%"
+       y="328.36395"
+       x="132.39458">int i = a + a ;</tspan><tspan
+       id="tspan153"
+       style="line-height:150%"
+       y="346.36395"
+       x="132.39458" /><tspan
+       id="tspan155"
+       style="line-height:150%"
+       y="364.36392"
+       x="132.39458">A&amp;&amp; f() ;</tspan><tspan
+       id="tspan157"
+       style="line-height:150%"
+       y="382.36392"
+       x="132.39458">f().m ;</tspan><tspan
+       id="tspan159"
+       style="line-height:150%"
+       y="400.36395"
+       x="132.39458">A a ;</tspan><tspan
+       id="tspan161"
+       style="line-height:150%"
+       y="418.36395"
+       x="132.39458">A&amp;&amp; ar = std::move(a) ;</tspan></text>
+  <g
+     style="fill:none"
+     id="g163"
+     transform="translate(-43.857,6.1523e-8)">
+    <g
+       style="stroke:#9b59b6"
+       id="g165">
+      <rect
+         style="stroke-width:2"
+         id="rect167"
+         height="16.601999"
+         width="17.107"
+         y="352.67001"
+         x="205.77" />
+      <rect
+         style="stroke-width:2"
+         id="rect169"
+         height="14.008"
+         width="80.172997"
+         y="407"
+         x="236.23" />
+      <rect
+         style="stroke-width:2.06209993"
+         id="rect171"
+         height="15.96"
+         width="31.113001"
+         y="371.17999"
+         x="175.73" />
+      <rect
+         style="stroke-width:2"
+         id="rect173"
+         height="15.74"
+         width="36.952999"
+         y="316.73999"
+         x="214.73" />
+    </g>
+    <g
+       style="stroke:#27ae60;stroke-width:2"
+       id="g175">
+      <rect
+         id="rect177"
+         height="13.702"
+         width="15.217"
+         y="407.16"
+         x="205.39999" />
+      <rect
+         id="rect179"
+         height="14.022"
+         width="10.487"
+         y="388.81"
+         x="187.31" />
+      <rect
+         id="rect181"
+         height="13.79"
+         width="13.285"
+         y="245.49001"
+         x="214.19" />
+    </g>
   </g>
-  <g stroke-width="1px">
-   <text x="513.74573" y="251.30771" fill="#000000" font-family="sans-serif" font-size="15px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="513.74573" y="251.30771">Une xvalue est créée si :</tspan></text>
-   <text x="445.80301" y="311.94986" fill="#000000" font-family="'DejaVu Sans'" font-size="11.25px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="669.71606" y="326.01236"><tspan x="445.80301" y="311.94986" dx="0 0 0 0 0 0 0 0 4.4847641 0 0 0 0 0 4.4847641 0 0 0 0 0 0 0 0 4.4847717 0 0 0 0 0 0 0 0 0 0 4.4847565" text-align="justify">L'appel d'une fonction (explicite ou </tspan><tspan x="669.71606" y="311.94986" dx="0">implicite) </tspan></tspan><tspan x="445.80301" y="0"><tspan x="445.80301" y="326.01236" font-size="11.25px">retourne une référence rvalue d'un objet.</tspan></tspan></text>
-   <path d="m438.46 307.72-186.43 15.714" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000"/>
-   <path d="m438.46 308.15-214.29 48.572" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000"/>
-   <text x="445.60315" y="358.64944" fill="#000000" font-family="'DejaVu Sans'" font-size="11.25px" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="638.56335" y="372.71194"><tspan x="445.60315" y="358.64944" dx="0 0 0 0 0 0 4.3234863 0 0 0 0 4.3234863 0 0 0 0 0 0 4.3234863 0 0 4.3234863" text-align="justify">Accès d'un membre de classe </tspan><tspan x="638.56335" y="358.64944" dx="0 0 0 0 0 0 0 0 0 0 4.3234863">désignant une </tspan></tspan><tspan x="445.60315" y="386.77444"><tspan x="445.60315" y="372.71194" dx="0 0 0 0 0 0 0 0.85078049 0 0 0 0 0 0 0 0 0 0 0 0 0.85077667 0 0 0 0 0.85076904 0 0 0 0 0 0 0.8507843 0 0 0 0 0 0 0 0 0 0 0 0 0.85076904" font-size="11.25px">donnée non-statique dans lequel l'expression de </tspan></tspan><tspan x="445.60315" y="0"><tspan x="445.60315" y="386.77444" font-size="11.25px">objet est une xvalue</tspan></tspan></text>
-   <text x="445.60315" y="417.22183" fill="#000000" font-family="'DejaVu Sans'" font-size="11.25px" letter-spacing="0px" text-align="justify" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="445.60315" y="417.22183"><tspan x="445.60315" y="417.22183">Conversion vers une référence rvalue d'un objet.</tspan></tspan></text>
-   <path d="m439.64 354.91-230.82 22.223" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000"/>
-   <path d="m438.12 413-121.22 1.5152" fill="none" marker-end="url(#Arrow1Mend)" stroke="#000"/>
+  <g
+     style="stroke-width:1px"
+     id="g183"
+     transform="translate(-43.857,6.1523e-8)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text185"
+       xml:space="preserve"
+       style="font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="15px"
+       y="251.30771"
+       x="513.74573"><tspan
+         id="tspan187"
+         y="251.30771"
+         x="513.74573">Une xvalue est créée si :</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text189"
+       xml:space="preserve"
+       style="font-size:11.25px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="11.25px"
+       y="311.94986"
+       x="445.80301"><tspan
+         id="tspan191"
+         y="326.01236"
+         x="669.71606"><tspan
+           style="text-align:justify"
+           id="tspan193"
+           text-align="justify"
+           dx="0 0 0 0 0 0 0 0 4.4847641 0 0 0 0 0 4.4847641 0 0 0 0 0 0 0 0 4.4847717 0 0 0 0 0 0 0 0 0 0 4.4847565"
+           y="311.94986"
+           x="445.80301">L'appel d'une fonction (explicite ou </tspan><tspan
+           id="tspan195"
+           dx="0"
+           y="311.94986"
+           x="669.71606">implicite) </tspan></tspan><tspan
+         id="tspan197"
+         y="0"
+         x="445.80301"><tspan
+           style="font-size:11.25px"
+           id="tspan199"
+           font-size="11.25px"
+           y="326.01236"
+           x="445.80301">retourne une référence rvalue d'un objet.</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;marker-end:url(#Arrow1Mend)"
+       inkscape:connector-curvature="0"
+       id="path201"
+       d="M 438.46,307.72 252.03,323.434" />
+    <path
+       style="fill:none;stroke:#000000;marker-end:url(#Arrow1Mend)"
+       inkscape:connector-curvature="0"
+       id="path203"
+       d="M 438.46,308.15 224.17,356.722" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text205"
+       xml:space="preserve"
+       style="font-size:11.25px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="11.25px"
+       y="358.64944"
+       x="445.60315"><tspan
+         id="tspan207"
+         y="372.71194"
+         x="638.56335"><tspan
+           style="text-align:justify"
+           id="tspan209"
+           text-align="justify"
+           dx="0 0 0 0 0 0 4.3234863 0 0 0 0 4.3234863 0 0 0 0 0 0 4.3234863 0 0 4.3234863"
+           y="358.64944"
+           x="445.60315">Accès d'un membre de classe </tspan><tspan
+           id="tspan211"
+           dx="0 0 0 0 0 0 0 0 0 0 4.3234863"
+           y="358.64944"
+           x="638.56335">désignant une </tspan></tspan><tspan
+         id="tspan213"
+         y="386.77444"
+         x="445.60315"><tspan
+           style="font-size:11.25px"
+           id="tspan215"
+           font-size="11.25px"
+           dx="0 0 0 0 0 0 0 0.85078049 0 0 0 0 0 0 0 0 0 0 0 0 0.85077667 0 0 0 0 0.85076904 0 0 0 0 0 0 0.8507843 0 0 0 0 0 0 0 0 0 0 0 0 0.85076904"
+           y="372.71194"
+           x="445.60315">donnée non-statique dans lequel l'expression de </tspan></tspan><tspan
+         id="tspan217"
+         y="0"
+         x="445.60315"><tspan
+           style="font-size:11.25px"
+           id="tspan219"
+           font-size="11.25px"
+           y="386.77444"
+           x="445.60315">objet est une xvalue</tspan></tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text221"
+       xml:space="preserve"
+       style="font-size:11.25px;line-height:125%;font-family:'DejaVu Sans';text-align:justify;letter-spacing:0px;word-spacing:0px;fill:#000000"
+       word-spacing="0px"
+       text-align="justify"
+       letter-spacing="0px"
+       font-size="11.25px"
+       y="417.22183"
+       x="445.60315"><tspan
+         id="tspan223"
+         y="417.22183"
+         x="445.60315"><tspan
+           id="tspan225"
+           y="417.22183"
+           x="445.60315">Conversion vers une référence rvalue d'un objet.</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;marker-end:url(#Arrow1Mend)"
+       inkscape:connector-curvature="0"
+       id="path227"
+       d="M 439.64,354.91 208.82,377.133" />
+    <path
+       style="fill:none;stroke:#000000;marker-end:url(#Arrow1Mend)"
+       inkscape:connector-curvature="0"
+       id="path229"
+       d="M 438.12,413 316.9,414.5152" />
   </g>
- </g>
 </svg>
