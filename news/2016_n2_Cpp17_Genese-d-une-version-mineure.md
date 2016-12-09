@@ -153,7 +153,7 @@ int main()
 
 Quelques compilateurs en ligne pour tester tes idées :
     
-* [gcc.godbolt.org](http://gcc.godbolt.org/#compilers:!((source:%27struct+MaClasse%0A{%0A++++template%3Cclass+T%3E%0A++++void+fait()+{+}%0A}%3B%0A%0Atemplate%3Cclass+T%3E%0Avoid+mafonction(T%26+t)%0A{%0A++++t.fait%3Cint%3E()%3B+//error:+expected+primary-expression+before+!%27int!%27%0A}%0A%0Aint+main()%0A{%0A++++MaClasse+maclasse%3B%0A++++mafonction(maclasse)%3B%0A}%27)),filterAsm:(commentOnly:!t,directives:!t,labels:!t),version:3) de [Matt Godbolt](https://github.com/mattgodbolt) propulsé par [GCC Explorer](https://github.com/mattgodbolt/gcc-explorer) sous licence [BSD-2-Clause](https://github.com/mattgodbolt/gcc-explorer/blob/master/LICENSE) ;
+* [gcc.godbolt.org](https://godbolt.org/g/Tg5unk) de [Matt Godbolt](https://github.com/mattgodbolt) propulsé par [GCC Explorer](https://github.com/mattgodbolt/gcc-explorer) sous licence [BSD-2-Clause](https://github.com/mattgodbolt/gcc-explorer/blob/master/LICENSE) ;
 * [coliru.stacked-crooked.com](http://coliru.stacked-crooked.com/a/71c3371692723de1) (astuce : remplacer `g++` par `clang++`) ;
 * [cpp.sh](http://www.cpp.sh/22av) ;
 * [codepad.org](http://codepad.org/XYy3ZoXw) ;
