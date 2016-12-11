@@ -136,7 +136,7 @@ Cette complexité pourrait aussi être gérée au niveau des outils de compilati
 Dépendance optionnelle
 ======================
 
-Sans cette fonctionnalité, le code source avait moins de possibilité de s'adapter automatiquement à l'environnement de compilation. Pour les dépendances optionnelles, l'outil de compilation (autotools, CMake...) devaient détecter la présence de telle ou telle dépendance et passer au compilateur des macros pour activer/désactiver des parties du code source.
+Sans cette fonctionnalité, le code source avait moins de possibilité de s'adapter automatiquement à l'environnement de compilation. Pour les dépendances optionnelles, l'outil de compilation (autotools, CMake...) devait détecter la présence de telle ou telle dépendance et passer au compilateur des macros pour activer/désactiver des parties du code source.
 
 Et sans cette complexité en amont, il est difficile de proposer du code C ou C++ qui gère des dépendances optionelles : si l'entête *(header)* d'une dépendance est absent, le compilateur arrête la compilation car le code source tente d'inclure l'entête introuvable de cette dépendance, même si la dépendance est optionnelle.
 
