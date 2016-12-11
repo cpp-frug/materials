@@ -5,7 +5,7 @@ Auteurs | [Oliver H](https://linuxfr.org/users/oliver_h), [Adrien Jeser](https:/
 --------|------------------------------
 License | [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
 URL     | https://linuxfr.org/news/cpp17-exprime-la-virgule-flottante-en-hexadecimal-et-offre-des-cadeaux-aux-lecteurs-linuxfr-org
-Date    | 2016-12-06
+Date    | 2016-12-07
 Tags    | c++17 et c++
 Score   | 30
 
