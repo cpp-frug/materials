@@ -29,9 +29,9 @@
      inkscape:window-height="704"
      id="namedview231"
      showgrid="false"
-     inkscape:zoom="1.0905353"
-     inkscape:cx="141.88881"
-     inkscape:cy="255.84229"
+     inkscape:zoom="2.1810706"
+     inkscape:cx="347.44401"
+     inkscape:cy="300.23488"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -94,11 +94,11 @@
      letter-spacing="0px"
      font-size="12px"
      y="39.834991"
-     x="228.50537"><tspan
+     x="218.50537"><tspan
        style="fill:#95a5a6"
        id="tspan23"
        y="39.834991"
-       x="228.50537">Désigne une fonction ou objet non temporaire ?</tspan></text>
+       x="218.50537">Désigne une fonction ou un objet non temporaire ?</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text25"
@@ -490,65 +490,55 @@
        style="line-height:150%"
        y="418.36395"
        x="132.39458">A&amp;&amp; ar = std::move(a) ;</tspan></text>
-  <g
-     style="fill:none"
-     id="g163"
-     transform="translate(-43.857,6.1523e-8)">
-    <g
-       style="stroke:#9b59b6"
-       id="g165">
-      <rect
-         style="stroke-width:2"
-         id="rect167"
-         height="16.601999"
-         width="17.107"
-         y="352.67001"
-         x="205.77" />
-      <rect
-         style="stroke-width:2"
-         id="rect169"
-         height="14.008"
-         width="80.172997"
-         y="407"
-         x="236.23" />
-      <rect
-         style="stroke-width:2.06209993"
-         id="rect171"
-         height="15.96"
-         width="31.113001"
-         y="371.17999"
-         x="175.73" />
-      <rect
-         style="stroke-width:2"
-         id="rect173"
-         height="15.74"
-         width="36.952999"
-         y="316.73999"
-         x="214.73" />
-    </g>
-    <g
-       style="stroke:#27ae60;stroke-width:2"
-       id="g175">
-      <rect
-         id="rect177"
-         height="13.702"
-         width="15.217"
-         y="407.16"
-         x="205.39999" />
-      <rect
-         id="rect179"
-         height="14.022"
-         width="10.487"
-         y="388.81"
-         x="187.31" />
-      <rect
-         id="rect181"
-         height="13.79"
-         width="13.285"
-         y="245.49001"
-         x="214.19" />
-    </g>
-  </g>
+  <rect
+     style="fill:none;stroke:#9b59b6;stroke-width:2"
+     id="rect167"
+     height="16.601999"
+     width="17.107"
+     y="352.67001"
+     x="161.91301" />
+  <rect
+     style="fill:none;stroke:#9b59b6;stroke-width:2"
+     id="rect169"
+     height="14.008"
+     width="80.172997"
+     y="407"
+     x="192.373" />
+  <rect
+     style="fill:none;stroke:#9b59b6;stroke-width:2.06209993"
+     id="rect171"
+     height="15.96"
+     width="31.113001"
+     y="371.17999"
+     x="131.873" />
+  <rect
+     style="fill:none;stroke:#9b59b6;stroke-width:2"
+     id="rect173"
+     height="15.74"
+     width="36.952999"
+     y="316.73999"
+     x="170.873" />
+  <rect
+     style="fill:none;stroke:#9b59b6;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect177"
+     height="12.305618"
+     width="50.041363"
+     y="407.85822"
+     x="129.22987" />
+  <rect
+     style="fill:none;stroke:#27ae60;stroke-width:2"
+     id="rect179"
+     height="14.022"
+     width="10.487"
+     y="388.81"
+     x="143.453" />
+  <rect
+     style="fill:none;stroke:#27ae60;stroke-width:2"
+     id="rect181"
+     height="13.79"
+     width="13.285"
+     y="245.49001"
+     x="170.33301" />
   <g
      style="stroke-width:1px"
      id="g183"
