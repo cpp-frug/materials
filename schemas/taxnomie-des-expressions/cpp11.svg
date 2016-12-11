@@ -29,8 +29,8 @@
      inkscape:window-height="704"
      id="namedview231"
      showgrid="false"
-     inkscape:zoom="1.5422498"
-     inkscape:cx="247.25436"
+     inkscape:zoom="1.0905353"
+     inkscape:cx="141.88881"
      inkscape:cy="255.84229"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -94,11 +94,11 @@
      letter-spacing="0px"
      font-size="12px"
      y="39.834991"
-     x="240.50537"><tspan
+     x="228.50537"><tspan
        style="fill:#95a5a6"
        id="tspan23"
        y="39.834991"
-       x="240.50537">Désigne une fonction ou objet temporaire ?</tspan></text>
+       x="228.50537">Désigne une fonction ou objet non temporaire ?</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text25"
