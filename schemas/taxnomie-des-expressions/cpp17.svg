@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="54.390991mm"
+   version="1.1"
+   viewBox="0 0 744.09447 192.72117"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="cpp17.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     id="namedview231"
+     showgrid="false"
+     inkscape:zoom="1.0905353"
+     inkscape:cx="349.32321"
+     inkscape:cy="68.145379"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs4">
+    <filter
+       id="b">
+      <feGaussianBlur
+         stdDeviation="3.8309765"
+         id="feGaussianBlur7" />
+    </filter>
+    <radialGradient
+       id="a"
+       cx="-789"
+       cy="95.362"
+       r="409"
+       gradientTransform="matrix(0.81781,0.98038,-0.81622,0.68087,-65.915,803.96)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#0085f8"
+         offset="0"
+         id="stop10" />
+      <stop
+         stop-color="#003b6e"
+         offset="1"
+         id="stop12" />
+    </radialGradient>
+    <marker
+       id="Arrow1Mend"
+       overflow="visible"
+       orient="auto"
+       style="overflow:visible">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         id="path15"
+         inkscape:connector-curvature="0"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g4390"
+     transform="translate(188.79325,0)">
+    <text
+       x="23.517059"
+       y="39.831821"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       xml:space="preserve"
+       id="text21"
+       sodipodi:linespacing="125%"><tspan
+         x="23.517059"
+         y="39.831821"
+         id="tspan23"
+         style="fill:#95a5a6">Identifie une fonction, un objet, un champs de bits ?</tspan></text>
+    <text
+       x="149.72711"
+       y="15.831875"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       xml:space="preserve"
+       id="text25"
+       sodipodi:linespacing="125%"><tspan
+         x="149.72711"
+         y="15.831875"
+         id="tspan27">Expression</tspan></text>
+    <rect
+       x="105.75"
+       y="0.49684143"
+       width="153.53999"
+       height="23.233999"
+       id="rect29"
+       style="fill:none;stroke:#95a5a6" />
+    <text
+       x="63.450867"
+       y="101.93106"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       xml:space="preserve"
+       id="text31"
+       sodipodi:linespacing="125%"><tspan
+         x="63.450867"
+         y="101.93106"
+         id="tspan33"
+         style="fill:#000000">glvalue</tspan></text>
+    <rect
+       x="57.550018"
+       y="85.993835"
+       width="55.557999"
+       height="25.254"
+       id="rect35"
+       style="fill:none;stroke:#95a5a6" />
+    <path
+       d="m 120.25,48.306831 -34.999999,35"
+       id="path37"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)" />
+    <text
+       x="70.176788"
+       y="67.105995"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       xml:space="preserve"
+       id="text39"
+       sodipodi:linespacing="125%"><tspan
+         x="70.176788"
+         y="67.105995"
+         id="tspan41">Oui</tspan></text>
+    <path
+       d="m 114.26,131.27683 35,35"
+       id="path43"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)" />
+    <path
+       d="m 62.480001,130.51683 -35,35"
+       id="path45"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text49"
+       xml:space="preserve"
+       style="font-size:medium;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       y="149.31912"
+       x="16.403717"><tspan
+         id="tspan51"
+         y="149.31912"
+         x="16.403717">Non</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text53"
+       xml:space="preserve"
+       style="font-size:medium;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       y="149.13455"
+       x="145.8251"><tspan
+         id="tspan55"
+         y="149.13455"
+         x="145.8251">Oui</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text57"
+       xml:space="preserve"
+       style="font-size:medium;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       y="125.44736"
+       x="79.906799"><tspan
+         style="fill:#95a5a6"
+         id="tspan59"
+         y="125.44736"
+         x="79.906799">La ressource peut être réutilisée ?</tspan></text>
+    <text
+       x="261.02539"
+       y="101.88419"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#e74c3c"
+       xml:space="preserve"
+       id="text61"
+       sodipodi:linespacing="125%"><tspan
+         x="261.02539"
+         y="101.88419"
+         id="tspan63"
+         style="fill:#000000">rvalue</tspan></text>
+    <rect
+       x="252.34"
+       y="84.783836"
+       width="55.557999"
+       height="25.254"
+       id="rect65"
+       style="fill:none;stroke:#95a5a6" />
+    <path
+       d="m 247.61,49.059831 35,35"
+       id="path67"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)" />
+    <text
+       x="275.16891"
+       y="66.921425"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+       xml:space="preserve"
+       id="text69"
+       sodipodi:linespacing="125%"><tspan
+         x="275.16891"
+         y="66.921425"
+         id="tspan71">Non</tspan></text>
+    <path
+       d="m 304.68,131.27683 35,35"
+       id="path73"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)" />
+    <path
+       d="m 252.89,130.51683 -35,35"
+       id="path75"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1px;marker-end:url(#Arrow1Mend)" />
+    <g
+       transform="translate(-232.65,-0.00316858)"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       id="g77"
+       style="font-size:12px;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px">
+      <text
+         x="435.46732"
+         y="149.32233"
+         style="line-height:125%;fill:#000000"
+         xml:space="preserve"
+         id="text79"
+         sodipodi:linespacing="125%"><tspan
+           x="435.46732"
+           y="149.32233"
+           id="tspan81">Oui</tspan></text>
+      <text
+         x="564.88867"
+         y="149.13776"
+         style="line-height:125%;fill:#000000"
+         xml:space="preserve"
+         id="text83"
+         sodipodi:linespacing="125%"><tspan
+           x="564.88867"
+           y="149.13776"
+           id="tspan85">Non</tspan></text>
+      <text
+         x="239.3728"
+         y="184.07394"
+         style="line-height:125%;fill:#27ae60"
+         xml:space="preserve"
+         id="text87"
+         sodipodi:linespacing="125%"><tspan
+           x="239.3728"
+           y="184.07394"
+           font-weight="bold"
+           id="tspan89"
+           style="font-weight:bold;fill:#27ae60">lvalue</tspan></text>
+    </g>
+    <rect
+       x="0.5"
+       y="166.96683"
+       width="55.557999"
+       height="25.254"
+       id="rect91"
+       style="fill:none;stroke:#95a5a6" />
+    <text
+       x="162.64835"
+       y="184.07077"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#9b59b6"
+       xml:space="preserve"
+       id="text93"
+       sodipodi:linespacing="125%"><tspan
+         x="162.64835"
+         y="184.07077"
+         font-weight="bold"
+         id="tspan95"
+         style="font-weight:bold;fill:#9b59b6">xvalue</tspan></text>
+    <rect
+       x="156.42999"
+       y="166.96683"
+       width="55.557999"
+       height="25.254"
+       id="rect97"
+       style="fill:none;stroke:#95a5a6" />
+    <text
+       x="312.37247"
+       y="182.90765"
+       font-size="12px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#e74c3c"
+       xml:space="preserve"
+       id="text99"
+       sodipodi:linespacing="125%"><tspan
+         x="312.37247"
+         y="182.90765"
+         font-weight="bold"
+         id="tspan101"
+         style="font-weight:bold;fill:#e74c3c">prvalue</tspan></text>
+    <rect
+       x="310.44998"
+       y="166.96683"
+       width="55.557999"
+       height="25.254"
+       id="rect103"
+       style="fill:none;stroke:#95a5a6" />
+  </g>
+  <flowRoot
+     id="flowRoot115"
+     xml:space="preserve"
+     style="font-size:12px;line-height:125%;font-family:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000"
+     word-spacing="0px"
+     letter-spacing="0px"
+     font-size="12px"
+     transform="translate(21.790001,-732.50317)"><flowRegion
+       id="flowRegion117"><rect
+         id="rect119"
+         height="17.857"
+         width="347.85999"
+         y="970"
+         x="255" /></flowRegion><flowPara
+       style="font-size:16px;text-align:justify"
+       id="flowPara121"
+       text-align="justify"
+       font-size="16px">Une xvalues est créée si:</flowPara></flowRoot></svg>
