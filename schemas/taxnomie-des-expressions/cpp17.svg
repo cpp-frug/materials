@@ -30,7 +30,7 @@
      id="namedview231"
      showgrid="false"
      inkscape:zoom="1.0905353"
-     inkscape:cx="349.32321"
+     inkscape:cx="200.31382"
      inkscape:cy="68.145379"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -85,7 +85,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -93,7 +93,7 @@
      id="g4390"
      transform="translate(188.79325,0)">
     <text
-       x="23.517059"
+       x="25.517059"
        y="39.831821"
        font-size="12px"
        letter-spacing="0px"
@@ -102,10 +102,10 @@
        xml:space="preserve"
        id="text21"
        sodipodi:linespacing="125%"><tspan
-         x="23.517059"
+         x="25.517059"
          y="39.831821"
          id="tspan23"
-         style="fill:#95a5a6">Identifie une fonction, un objet, un champs de bits ?</tspan></text>
+         style="fill:#95a5a6">Identifie une fonction, un objet, un champ de bits ?</tspan></text>
     <text
        x="149.72711"
        y="15.831875"
