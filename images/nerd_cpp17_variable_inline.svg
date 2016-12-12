@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" width="100%" viewBox="0 -10 3600 1062" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Les deux filles nerds résolvent une erreur de link d'une variable membre static non définie en rajoutant inline</title>
+ <metadata  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:RDF  xmlns:cc="http://creativecommons.org/ns#">
+   <cc:Work xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_cpp17_variable_inline.svg">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:creator><cc:Agent><dc:title>Oliver H</dc:title></cc:Agent></dc:creator>
+    <dc:language>fr</dc:language>
+    <dc:date>2016</dc:date>
+    <cc:license  rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+   </cc:Work>
+   <cc:License   rdf:about="http://creativecommons.org/licenses/by/4.0/">
+    <cc:permits  rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits  rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits  rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <text fill="#000" font-family="Purisa" font-size="85px" font-weight="bold" text-anchor="middle">
+	 <tspan x="1202" y="67"  text-align="center">Grrrrrrr...</tspan>
+	 <tspan x="1202" y="153" text-align="center">je n'arrive pas</tspan>
+	 <tspan x="1202" y="238" text-align="center">à comprendre</tspan>
+	 <tspan x="1202" y="323" text-align="center">cette erreur !</tspan>
+ </text>
+ <text fill="#000" font-size="85px" text-anchor="middle" font-weight="bold">
+	 <tspan x="2055" y="68"  font-family="Purisa">Essaye</tspan>
+	 <tspan x="2055" y="153" font-family="Purisa">avec</tspan>
+	 <tspan x="2055" y="235" font-family="monospace">inline</tspan>
+ </text>
+ <text fill="#000" font-family="Purisa" font-size="85px" font-weight="bold" text-anchor="middle">
+	 <tspan x="3100" y="84">Quoi ? Comme les</tspan>
+	 <tspan x="3100" y="186">fonctions <tspan font-family="monospace">inline</tspan> ?</tspan>
+ </text>
+ <g transform="matrix(.51243 0 0 .51243 268.94 1139.8)">
+  <rect x="126" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
+  <text fill="#000" font-family="monospace" font-size="110px" font-weight="bold" xml:space="preserve">
+	  <tspan x="196" y="-1270" fill="#ff0">class<tspan fill="#fff"> Ne</tspan></tspan>
+	  <tspan x="196" y="-1160" fill="#ddd">{</tspan>
+	  <tspan x="196" y="-1049"><tspan fill="#ff0">  static</tspan><tspan fill="#ff0"> int</tspan><tspan fill="#fff"> rd</tspan><tspan fill="#ddd">;</tspan></tspan>
+	  <tspan x="196" y="-939" fill="#ddd">};</tspan>
+  </text>
+  <text x="195" y="-742" font-family="monospace" font-size="100px" font-weight="bold">
+	  <tspan x="195" y="-742" fill="#ff2003">Erreur</tspan>
+	  <tspan x="195" y="-646" fill="#ff5741">référence indéfinie </tspan>
+	  <tspan x="195" y="-550" fill="#ff5741">vers « Ne::rd »</tspan>
+  </text>
+ </g>
+ <g transform="matrix(.51243 0 0 .51243 1305.8 1140.3)">
+  <rect x="1829" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
+  <text x="1879" y="-1270" font-family="monospace" font-size="105px" font-weight="bold" xml:space="preserve">
+	  <tspan x="1870" y="-1270" fill="#ff0">class<tspan fill="#fff"> Ne</tspan></tspan>
+	  <tspan x="1870" y="-1160" fill="#ddd">{</tspan>
+	  <tspan x="1870" y="-1049" fill="#ff0">  static</tspan><tspan fill="#0ff"> inline</tspan><tspan fill="#ff0"> int</tspan><tspan fill="#fff"> rd<tspan fill="#ddd">;</tspan></tspan>
+	  <tspan x="1870" y="-939"  fill="#ddd">};</tspan>
+  </text>
+  <text x="1888" y="-550" fill="#0f0" font-family="monospace" font-size="96px" font-weight="bold">Build success</text>
+ </g>
+ <path id="c" fill="#fff" stroke="#000" stroke-width="6" d="m3246 741-11-134-61 55v94"/>
+ <path id="e" fill="#fff" stroke="#000" stroke-width="6" d="m3096 460c0 33 11 84 0 95-11 17-11 17 6 22 11 0 0-6 6 39 0 56 28 72 84 45 89-50 145-145 50-217-50-28-145-6-145 22z"/>
+ <path id="d" fill="#fff" stroke="#000" stroke-width="6" d="m3124 444c-11 17-45-33-33-6 0 17-17 11 6 17 28-11-11-33 0-39s56 33 22 28c22-39-11-22 0-33 17-11 56 17 22 28-33-17 17-61 39-11-22 33-45-28-6-22 22-28 56 28 11 28-11-45 50-39 45 0-11 45-17-33 17-17 33 0 28 67-6 50 0-33 61 6 45 33-6 33-50 0-22-22 28 0 12 77-4 88-17 11 38 4 27 15 6 45-67-8-28-28 39-17 59 92 8 58-50-28 64-64 42-25-22 33-39-84-6-61 0 17-56 28-50 11 17-22 89 22 45 28-45 6 6-84 20-39 11 45-81-17-31-22 28 0 17 28-6 17-33-6-17-50 11-33 45 11-20 72-42 33-28-28 89-72 72-33s-67-45-22-39c31 8-16 40-53 57-39 11 5-102 39-80 17 39-67 39-39 6 39-22 17 67-17 50-22-11 78-17 50-28-28 8-84-6-61-39 28-22 50 28 28 45-28 28-56-28-17-28 39 6 3 75-19 52-22-28 30-58 13-25s-67-6-28-17c28 6-17 45-6 11 6-17 17-45 17-11-6 17-45 22-17 6 11-22-22-22-22 6-17 33 50-39 6-39-45 0-6 45-22 45-72-20-17 33-6 17 11-17-78-22-50-6 28 17 50-6 45-33"/>
+ <use transform="translate(-1975 0)" xlink:href="#c"/>
+ <use transform="translate(-1975 0)" xlink:href="#e"/>
+ <use transform="translate(-1975 0)" xlink:href="#d"/>
+ <g stroke="#000" fill="none" stroke-width="5">
+
+  <g id="long">
+   <path fill="#fff" d="m115 561c16 89 77 130 96 135 81 16 76-72 60-116l31-17c-22-3-46-10-53-25-24-62-25-104-117-102-47-1-72 75-68 129s1 39-14 151c-13 70 51 306-49 341"/>
+   <path d="m171 439c-42 22-116 225-58 599"/>
+   <path d="m236 628c12 16 35 20 46 17"/>
+   <path d="m132 436c-88 30-98 328 29 584"/>
+   <path d="m142 437c-58 57-130 339 77 569"/>
+   <path d="m151 437c-58 56-117 305 90 535"/>
+   <path d="m159 438c-58 57-84 263 123 493"/>
+   <path d="m176 440c-68 60-113 299 94 529"/>
+   <path d="m187 443c-42 22-60 106-45 152"/>
+   <path d="m137 436c-92 64-42 306-84 626"/>
+   <path d="m213 520-1 18"/>
+   <path d="m183 557-22-2"/>
+   <path d="m201 521 3 18"/>
+   <path d="m227 524-7 15"/>
+   <path d="m188 524 9 17"/>
+   <path d="m176 532 15 15"/>
+   <path d="m168 541 17 9"/>
+   <ellipse transform="rotate(-17.801)" cx="26" cy="591" rx="23" ry="15"/>
+   <circle fill="#1f0" cx="216" cy="551" r="6" stroke-width="4"/>
+  </g>
+  <use transform="translate(1900 0)" xlink:href="#long"/>
+
+  <path d="m1132 617c17 1 19 3 19 3s4-14-19-14" stroke-width="6"/>
+  <ellipse transform="matrix(.99981 .019246 -.055901 .99844 0 0)" cx="1191" cy="491" rx="23" ry="7" fill="#fff" stroke-width="4"/>
+  <circle transform="rotate(1.8803)" cx="1165" cy="474" r="5" fill="#0bf" stroke-width="4"/>
+  <g stroke-width="3">
+   <path d="m1163 503s1-13-5-12"/>
+   <path d="m1183 510s0-6 11-5"/>
+   <path d="m1145 506s0-11-11-6"/>
+   <path d="m1156 504s0-13-8-12"/>
+   <path d="m1151 506s0-11-11-12"/>
+   <path d="m1167 504s0-13 6-13"/>
+   <path d="m1173 507s0-13 8-12"/>
+   <path d="m1178 506s0-7 11-7"/>
+   <circle cx="3124" cy="521" r="6" fill="#0bf"/>
+  </g>
+  <path fill="#fff" stroke-width="4" d="m1272 769c-145-68-579-178-584-162s47 26 47 26-9 5-7 12 22 3 22 3-19 3-15 11 24-1 24-1-19 5-17 13c3 8 25 1 25 1l426 127"/>
+  <ellipse cx="3131" cy="521" rx="21" ry="18" stroke-width="6"/>
+  <path d="m3117 507-10-13"/>
+  <path d="m3127 502-3-15"/>
+  <path d="m3144 505 9-14"/>
+  <path d="m3121 502-6-12"/>
+  <path d="m3132 502 1-16"/>
+  <path d="m3137 504 6-17"/>
+  <g stroke-width="2" transform="matrix(5.5735 0 0 5.5735 114.01 -141.62)">
+   <path d="m512 76 18 18"/>
+   <path d="m537 66 6 21"/>
+   <path d="m564 67-5 21"/>
+   <path d="m586 77-14 17"/>
+   <path d="m601 92-19 11"/>
+  </g>
+  <path stroke-width="6" d="m3152 618c0 3-13 14-20 14s-17-11-17-14 10-14 17-14 20 11 20 14z"/>
+  <path stroke-width="4" d="m2137 629c7 33 41 33 41 33"/>
+ </g>
+</svg>
