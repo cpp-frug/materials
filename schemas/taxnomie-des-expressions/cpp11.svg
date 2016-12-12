@@ -30,8 +30,8 @@
      id="namedview231"
      showgrid="false"
      inkscape:zoom="2.1810706"
-     inkscape:cx="272.93931"
-     inkscape:cy="25.140621"
+     inkscape:cx="198.43461"
+     inkscape:cy="98.49909"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -502,7 +502,7 @@
      id="rect169"
      height="14.008"
      width="80.172997"
-     y="407"
+     y="406.33887"
      x="192.373" />
   <rect
      style="fill:none;stroke:#9b59b6;stroke-width:2.06209993"
@@ -658,4 +658,11 @@
        id="path229"
        d="M 438.12,413 316.9,414.5152" />
   </g>
+  <rect
+     style="fill:none;stroke:#27ae60;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect179-3"
+     height="13.588971"
+     width="16.014347"
+     y="406.54837"
+     x="161.86351" />
 </svg>
