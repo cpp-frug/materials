@@ -21,19 +21,19 @@
   </rdf:RDF>
  </metadata>
  <text fill="#000" font-family="Purisa" font-size="85px" font-weight="bold" text-anchor="middle">
-	 <tspan x="1202" y="67"  text-align="center">Grrrrrrr...</tspan>
-	 <tspan x="1202" y="153" text-align="center">je n'arrive pas</tspan>
-	 <tspan x="1202" y="238" text-align="center">à comprendre</tspan>
-	 <tspan x="1202" y="323" text-align="center">cette erreur !</tspan>
+  <tspan x="1202" y="67"  text-align="center">Grrrrrrr...</tspan>
+  <tspan x="1202" y="153" text-align="center">je n'arrive pas</tspan>
+  <tspan x="1202" y="238" text-align="center">à comprendre</tspan>
+  <tspan x="1202" y="323" text-align="center">cette erreur !</tspan>
  </text>
  <text fill="#000" font-size="85px" text-anchor="middle" font-weight="bold">
-	 <tspan x="2055" y="68"  font-family="Purisa">Essaye</tspan>
-	 <tspan x="2055" y="153" font-family="Purisa">avec</tspan>
-	 <tspan x="2055" y="235" font-family="monospace">inline</tspan>
+  <tspan x="2055" y="68"  font-family="Purisa">Essaye</tspan>
+  <tspan x="2055" y="153" font-family="Purisa">avec</tspan>
+  <tspan x="2055" y="235" font-family="monospace">inline</tspan>
  </text>
  <text fill="#000" font-family="Purisa" font-size="85px" font-weight="bold" text-anchor="middle">
-	 <tspan x="3100" y="84">Quoi ? Comme les</tspan>
-	 <tspan x="3100" y="186">fonctions <tspan font-family="monospace">inline</tspan> !</tspan>
+  <tspan x="3100" y="84">Quoi ? Comme les</tspan>
+  <tspan x="3100" y="186">fonctions <tspan font-family="monospace">inline</tspan> !</tspan>
  </text>
  <g font-weight="bold" font-size="120px" font-family="monospace" stroke="#777" stroke-width="32" xml:space="preserve">
  <g transform="matrix(.51243 0 0 .51243 268.94 1139.8)">
@@ -55,7 +55,7 @@
   <text x="1879" y="-1270">
    <tspan x="1870" y="-1270" fill="#ff2">class</tspan><tspan fill="#fff"> Ne</tspan>
    <tspan x="1870" y="-1160" fill="#ddd">{</tspan>
-   <tspan x="1870" y="-1049" fill="#ff2">static</tspan><tspan fill="#2ff">&hairsp;inline</tspan><tspan fill="#ff2">&hairsp;int</tspan><tspan fill="#fff">&hairsp;rd</tspan><tspan fill="#ddd">;</tspan>
+   <tspan x="1870" y="-1049" fill="#ff2">static</tspan><tspan fill="#2ff">&thinsp;inline</tspan><tspan fill="#ff2">&thinsp;int</tspan><tspan fill="#fff">&thinsp;rd</tspan><tspan fill="#ddd">;</tspan>
    <tspan x="1870" y="-939"  fill="#ddd">};</tspan>
   </text>
   <text x="1888" y="-540" fill="#2f2">Build success</text>
