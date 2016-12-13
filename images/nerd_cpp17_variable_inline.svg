@@ -41,7 +41,7 @@
   <text>
    <tspan x="196" y="-1270" fill="#ff2">class<tspan fill="#fff"> Ne</tspan></tspan>
    <tspan x="196" y="-1160" fill="#ddd">{</tspan>
-   <tspan x="196" y="-1049" fill="#ff2">    static</tspan><tspan fill="#ff2"> int</tspan><tspan fill="#fff"> rd</tspan><tspan fill="#ddd">;</tspan>
+   <tspan x="196" y="-1049" fill="#ff2">   static</tspan><tspan fill="#ff2"> int</tspan><tspan fill="#fff"> rd</tspan><tspan fill="#ddd">;</tspan>
    <tspan x="196" y="-939"  fill="#ddd">};</tspan>
   </text>
   <text x="195" y="-742" font-size="110px" fill="#f33">
@@ -55,7 +55,9 @@
   <text x="1879" y="-1270">
    <tspan x="1870" y="-1270" fill="#ff2">class</tspan><tspan fill="#fff"> Ne</tspan>
    <tspan x="1870" y="-1160" fill="#ddd">{</tspan>
+   <tspan font-size="95px">
    <tspan x="1870" y="-1049" fill="#ff2">static</tspan>&#8202;<tspan fill="#2ff">inline</tspan>&#8202;<tspan fill="#ff2">int</tspan>&#8202;<tspan fill="#fff">rd</tspan><tspan fill="#ddd">;</tspan>
+   </tspan>
    <tspan x="1870" y="-939"  fill="#ddd">};</tspan>
   </text>
   <text x="1888" y="-540" fill="#2f2">Build success</text>
