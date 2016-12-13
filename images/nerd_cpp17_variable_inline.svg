@@ -35,9 +35,9 @@
   <tspan x="3100" y="84">Quoi ? Comme les</tspan>
   <tspan x="3100" y="186">fonctions <tspan font-family="monospace">inline</tspan> !</tspan>
  </text>
- <g font-weight="bold" font-size="120px" font-family="monospace" stroke="#777" stroke-width="32" xml:space="preserve">
+ <g font-weight="bold" font-size="120px" font-family="monospace" xml:space="preserve">
  <g transform="matrix(.51243 0 0 .51243 268.94 1139.8)">
-  <rect x="126" y="-1403" width="1478" height="936"/>
+  <rect x="126" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
   <text>
    <tspan x="196" y="-1270" fill="#ff2">class<tspan fill="#fff"> Ne</tspan></tspan>
    <tspan x="196" y="-1160" fill="#ddd">{</tspan>
@@ -51,7 +51,7 @@
   </text>
  </g>
  <g transform="matrix(.51243 0 0 .51243 1305.8 1140.3)">
-  <rect x="1829" y="-1403" width="1478" height="936"/>
+  <rect x="1829" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
   <text x="1879" y="-1270">
    <tspan x="1870" y="-1270" fill="#ff2">class</tspan><tspan fill="#fff"> Ne</tspan>
    <tspan x="1870" y="-1160" fill="#ddd">{</tspan>
