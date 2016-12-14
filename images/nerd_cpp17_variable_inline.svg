@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" width="100%" viewBox="0 -10 3600 1062" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" width="100%" viewBox="40 0 3600 1060" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect id="fond_blanc_semi-transparent" x="40" y="0" width="3600" height="1060" fill="#fff" stroke="#fff" opacity=".3"/>
  <title>Les deux filles nerds résolvent une erreur de link d'une variable membre static non définie en rajoutant inline</title>
  <metadata  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:RDF  xmlns:cc="http://creativecommons.org/ns#">
@@ -20,48 +21,50 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <text fill="#000" font-family="Purisa" font-size="85px" font-weight="bold" text-anchor="middle">
-  <tspan x="1202" y="67"  text-align="center">Grrrrrrr...</tspan>
-  <tspan x="1202" y="153" text-align="center">je n'arrive pas</tspan>
-  <tspan x="1202" y="238" text-align="center">à comprendre</tspan>
-  <tspan x="1202" y="323" text-align="center">cette erreur !</tspan>
- </text>
- <text fill="#000" font-size="85px" text-anchor="middle" font-weight="bold">
-  <tspan x="2055" y="68"  font-family="Purisa">Essaye</tspan>
-  <tspan x="2055" y="153" font-family="Purisa">avec</tspan>
-  <tspan x="2055" y="235" font-family="monospace">inline</tspan>
- </text>
- <text fill="#000" font-family="Purisa" font-size="85px" font-weight="bold" text-anchor="middle">
-  <tspan x="3100" y="84">Quoi ? Comme les</tspan>
-  <tspan x="3100" y="186">fonctions <tspan font-family="monospace">inline</tspan> !</tspan>
- </text>
- <g font-weight="bold" font-size="120px" font-family="monospace" xml:space="preserve">
- <g transform="matrix(.51243 0 0 .51243 268.94 1139.8)">
-  <rect x="126" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
+ <g fill="#000" stroke="#fff" stroke-width="2" font-weight="bolder" font-family="Purisa,fantasy" font-size="85px" text-anchor="middle">
   <text>
-   <tspan x="196" y="-1270" fill="#ff2">class<tspan fill="#fff"> Ne</tspan></tspan>
-   <tspan x="196" y="-1160" fill="#ddd">{</tspan>
-   <tspan x="196" y="-1049" fill="#ff2">   static</tspan><tspan fill="#ff2"> int</tspan><tspan fill="#fff"> rd</tspan><tspan fill="#ddd">;</tspan>
-   <tspan x="196" y="-939"  fill="#ddd">};</tspan>
+   <tspan x="1202" y="67"  text-align="center">Grrrrrrr...</tspan>
+   <tspan x="1202" y="153" text-align="center">je n'arrive pas</tspan>
+   <tspan x="1202" y="238" text-align="center">à comprendre</tspan>
+   <tspan x="1202" y="323" text-align="center">cette erreur !</tspan>
   </text>
-  <text x="195" y="-742" font-size="110px" fill="#f33">
-   <tspan x="195" y="-742">Erreur</tspan>
-   <tspan x="195" y="-646">référence indéfinie </tspan>
-   <tspan x="195" y="-550">vers « Ne::rd »</tspan>
+  <text>
+   <tspan x="2055" y="68"  font-family="Purisa">Essaye</tspan>
+   <tspan x="2055" y="153" font-family="Purisa">avec</tspan>
+   <tspan x="2055" y="235" font-family="monospace">inline</tspan>
+  </text>
+  <text>
+   <tspan x="3100" y="84">Quoi ? Comme les</tspan>
+   <tspan x="3100" y="186">fonctions <tspan font-family="monospace">inline</tspan> !</tspan>
   </text>
  </g>
- <g transform="matrix(.51243 0 0 .51243 1305.8 1140.3)">
-  <rect x="1829" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
-  <text x="1879" y="-1270">
-   <tspan x="1870" y="-1270" fill="#ff2">class</tspan><tspan fill="#fff"> Ne</tspan>
-   <tspan x="1870" y="-1160" fill="#ddd">{</tspan>
-   <tspan font-size="105px">
-   <tspan x="1870" y="-1049" fill="#ff2">static</tspan>&#8202;<tspan fill="#2ff">inline</tspan>&#8202;<tspan fill="#ff2">int</tspan>&#8202;<tspan fill="#fff">rd</tspan><tspan fill="#ddd">;</tspan>
-   </tspan>
-   <tspan x="1870" y="-939"  fill="#ddd">};</tspan>
-  </text>
-  <text x="1888" y="-540" fill="#2f2">Build success</text>
- </g>
+ <g stroke="#000" stroke-width="1" font-weight="bold" font-size="120px" font-family="monospace" xml:space="preserve">
+  <g transform="matrix(.51243 0 0 .51243 268.94 1139.8)">
+   <rect x="126" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
+   <text>
+    <tspan x="196" y="-1270" fill="#ff2">class<tspan fill="#fff"> Ne</tspan></tspan>
+    <tspan x="196" y="-1160" fill="#ddd">{</tspan>
+    <tspan x="196" y="-1049" fill="#ff2">   static</tspan><tspan fill="#ff2"> int</tspan><tspan fill="#fff"> rd</tspan><tspan fill="#ddd">;</tspan>
+    <tspan x="196" y="-939"  fill="#ddd">};</tspan>
+   </text>
+   <text x="195" y="-742" font-size="110px" fill="#f33">
+    <tspan x="195" y="-742">Erreur</tspan>
+    <tspan x="195" y="-646">référence indéfinie </tspan>
+    <tspan x="195" y="-550">vers « Ne::rd »</tspan>
+   </text>
+  </g>
+  <g transform="matrix(.51243 0 0 .51243 1305.8 1140.3)">
+   <rect x="1829" y="-1403" width="1478" height="936" stroke="#777" stroke-width="32"/>
+   <text x="1879" y="-1270">
+    <tspan x="1870" y="-1270" fill="#ff2">class</tspan><tspan fill="#fff"> Ne</tspan>
+    <tspan x="1870" y="-1160" fill="#ddd">{</tspan>
+    <tspan font-size="110px">
+    <tspan x="1870" y="-1049" fill="#ff2">static</tspan>&#8202;<tspan fill="#2ff">inline</tspan>&#8202;<tspan fill="#ff2">int</tspan>&#8202;<tspan fill="#fff">rd</tspan><tspan fill="#ddd">;</tspan>
+    </tspan>
+    <tspan x="1870" y="-939"  fill="#ddd">};</tspan>
+   </text>
+   <text x="1888" y="-540" fill="#2f2">Build success</text>
+  </g>
  </g>
  <path id="c" fill="#fff" stroke="#000" stroke-width="6" d="m3246 741-11-134-61 55v94"/>
  <path id="e" fill="#fff" stroke="#000" stroke-width="6" d="m3096 460c0 33 11 84 0 95-11 17-11 17 6 22 11 0 0-6 6 39 0 56 28 72 84 45 89-50 145-145 50-217-50-28-145-6-145 22z"/>
