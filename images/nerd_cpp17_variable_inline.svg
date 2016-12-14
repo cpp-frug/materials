@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" width="100%" viewBox="40 0 3600 1060" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <rect id="fond_blanc_semi-transparent" x="40" y="0" width="3600" height="1060" fill="#fff" stroke="#fff" opacity=".3"/>
+<svg version="1.1" width="100%" viewBox="40 0 3450 1060" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect id="fond_blanc_semi-transparent" x="40" y="0" width="3450" height="1060" fill="#fff" stroke="#fff" opacity=".3"/>
  <title>Les deux filles nerds résolvent une erreur de link d'une variable membre static non définie en rajoutant inline</title>
  <metadata  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:RDF  xmlns:cc="http://creativecommons.org/ns#">
@@ -34,8 +34,8 @@
    <tspan x="2055" y="235" font-family="monospace">inline</tspan>
   </text>
   <text>
-   <tspan x="3100" y="84">Quoi ? Comme les</tspan>
-   <tspan x="3100" y="186">fonctions <tspan font-family="monospace">inline</tspan> !</tspan>
+   <tspan x="3000" y="84">Quoi ? Comme les</tspan>
+   <tspan x="3000" y="186">fonctions <tspan font-family="monospace">inline</tspan> !</tspan>
   </text>
  </g>
  <g stroke="#000" stroke-width="1" font-weight="bold" font-size="120px" font-family="monospace" xml:space="preserve">
