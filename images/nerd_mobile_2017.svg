@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg version="1.1" 
+<svg version="1.1"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 3679 1114" width="100%"
@@ -36,7 +36,7 @@
 </metadata>
 
 <defs>
- <radialGradient id="c" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -2730 -218)" gradientUnits="userSpaceOnUse">
+ <radialGradient id="a" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -2730 -218)" gradientUnits="userSpaceOnUse">
   <stop stop-color="#44a" offset="0"/>
   <stop stop-color="#7c6" offset="1"/>
  </radialGradient>
@@ -46,7 +46,7 @@
  </radialGradient>
 </defs>
 
-<g fill="#000" stroke="#fff" stroke-width="1" font-family="Purisa" font-weight="bolder" font-size="65px" letter-spacing="-0.1em" word-spacing="-0.1em" text-anchor="middle">
+<g fill="#000" stroke="#fff" stroke-width="1" font-family="Purisa" font-weight="bolder" font-size="65" letter-spacing="-4" word-spacing="-4" text-anchor="middle">
  <text>
   <tspan x="360" y="60" >J'utilise toujours</tspan>
   <tspan x="360" y="130">mon bon vieux</tspan>
@@ -60,7 +60,7 @@
  <text>
   <tspan x="2380" y="60" >Faudrait quand même</tspan>
   <tspan x="2380" y="130">se décider à vivre</tspan>
-  <tspan x="2380" y="200">avec notre temps...</tspan>
+  <tspan x="2380" y="200">avec notre temps…</tspan>
  </text>
  <text>
   <tspan x="3275" y="60" >Hé toi qui nos écoute</tspan>
@@ -72,7 +72,7 @@
 <!--les 4 écrans-->
 <g id="2ecrans" opacity=".3" stroke="#444" stroke-width="12">
  <rect x="908" y="233" width="619" height="348" fill="url(#b)"/>
- <rect x="6"   y="233" width="619" height="348" fill="url(#c)"/>
+ <rect x="6"   y="233" width="619" height="348" fill="url(#a)"/>
 </g>
 <use transform="translate(2065)" xlink:href="#2ecrans"/>
 
@@ -118,7 +118,7 @@
   <path d="m394 351 7 18"/>
   <path d="m380 357 13 15"/>
   <path d="m371 370 17 7"/>
-  <circle cx="417" cy="383" r="6" fill="#0d0"/>
+  <circle cx="417" cy="384" r="6" fill="#0d0"/>
  </g>
 </g>
 
@@ -142,15 +142,16 @@
 </g>
 <circle id="ap" cx="1125" cy="425" r="5" fill="#0bf" stroke-width="4"/>
 
-<!--Long #2-->
+<!--Fille cheuveux longs et son fauteil #2-->
 <use transform="translate(2065)" xlink:href="#long"/>
-<path d="m2495 481-73-42 31 75z" stroke="none" fill="#fff"/>
-<path d="m2496 483-26 20" fill="none" stroke="#000" stroke-width="6"/>
+<!--Modification de la forme de la bouche-->
+<path d="m2495 481-73-42 31 75z" stroke="none"/>
+<path d="m2496 483-26 20"/>
 
 <!--Tête court #2-->
-<path id="cou_court_2" d="m3322 604-13-147-65 41v116"/>
+<path id="cou_court_2" d="m3326 604-13-147-65 41v116"/>
 <ellipse cx="3281" cy="393" rx="88" ry="116"/>
-<path d="m3177 395c-30 5 29-62 24-27-5 34-26-58-36-22s34-2 33-13-34-2-19-13c15-12 70-9 31-12-38-3 30-44 30-10s-36-14 21-22 22 80-16 50c-37-30 66-60 16-28-50 31 108-1 57-23-51-21 29 84-7 65s39-42 45-31 24 50 29 68c6 18-67 56-26 53s18-49-14-31 41-71 27-34-59-24-19-17 23 14-17 28c-40 15 28-70 55-36 28 34-80 8-60-7 21-15-62-46 14-41s-132 48-144 86 54-25 6-25c-47 0 63-27 15-38-47-10 6 43 18 25s-81 28-51 46c29 18-32 14-11 51 22 37 29-46-1-41z"/>
+<path d="m3183 395c-30 5 29-62 24-27-5 34-26-58-36-22s34-2 33-13-34-2-19-13c15-12 70-9 31-12-38-3 30-44 30-10s-36-14 21-22 22 80-16 50c-37-30 66-60 16-28-50 31 108-1 57-23-51-21 29 84-7 65s39-42 45-31 24 50 29 68c6 18-67 56-26 53s18-49-14-31 41-71 27-34-59-24-19-17 23 14-17 28c-40 15 28-70 55-36 28 34-80 8-60-7 21-15-62-46 14-41s-132 48-144 86 54-25 6-25c-47 0 63-27 15-38-47-10 6 43 18 25s-81 28-51 46c29 18-32 14-11 51 22 37 29-46-1-41z"/>
 <!--bouche--> 
 <path d="m3282 481c-18 0-43-34-39-40s23 11 40 11 35-13 39-9-22 38-40 38z"/>
 <!--yeux-->
@@ -163,9 +164,9 @@
 <circle id="narine" cx="3275" cy="429" r="2" stroke-width="3"/>
 <use transform="translate(12)" xlink:href="#narine"/>
 <!--Fauteil court #2-->
-<path id="f" d="m3086 568c129 40 267 40 391 1 21 97-31 460-43 486-48 16-243 22-313 4-12-21-61-398-36-492z"/>
+<path d="m3086 568c129 40 267 40 391 1 21 97-31 460-43 486-48 16-243 22-313 4-12-21-61-398-36-492z"/>
 <!--mains-->
-<path id="main" d="m3122 572c-9 16-10 24-3 28s25-28 25-28-11 32-2 36c9 3 26-28 26-28s-7 31 1 34c7 3 22-27 22-27s-8 31-1 33c6 2 15-6 19-22s-11-29-35-34-42-7-51 9z" fill="#fff" stroke="#000" stroke-width="6"/>
+<path id="main" d="m3122 572c-9 16-10 24-3 28s25-28 25-28-11 32-2 36c9 3 26-28 26-28s-7 31 1 34c7 3 22-27 22-27s-8 31-1 33c6 2 15-6 19-22s-11-29-35-34-42-7-51 9z"/>
 <use transform="matrix(-1 0 0 1 6566.5 6)" xlink:href="#main"/> 
- 
+
 </svg>
