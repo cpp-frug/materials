@@ -71,8 +71,8 @@
 
 <!--les 4 écrans-->
 <g id="2ecrans" opacity=".3" stroke="#444" stroke-width="12">
- <rect x="908" y="233" width="619" height="348" fill="url(#b)"/>
  <rect x="6"   y="233" width="619" height="348" fill="url(#a)"/>
+ <rect x="908" y="233" width="619" height="348" fill="url(#b)"/>
 </g>
 <use transform="translate(2065)" xlink:href="#2ecrans"/>
 

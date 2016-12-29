@@ -6,7 +6,7 @@
  <title>Bjarne Stroustrup s'impatiente pour l'intégration des Concepts au standard C++</title>
  <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:RDF xmlns:cc="http://creativecommons.org/ns#">
-   <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-concepts-bjarne-original.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-concepts-bjarne-path.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:format>image/svg+xml</dc:format>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
     <dc:creator>

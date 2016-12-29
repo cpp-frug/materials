@@ -11,7 +11,7 @@
 
 <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#">
-  <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_mobile_2017.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_jeux-de-mots.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
    <dc:format>image/svg+xml</dc:format>
    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
    <dc:creator>
@@ -46,8 +46,8 @@
 
 <!--les 4 écrans-->
 <g id="2ecrans" opacity=".3" stroke="#444" stroke-width="12">
- <rect x="908" y="229" width="619" height="348" fill="url(#b)"/>
  <rect x="6"   y="229" width="619" height="348" fill="url(#a)"/>
+ <rect x="908" y="229" width="619" height="348" fill="url(#b)"/>
 </g>
 <use transform="translate(2065)" xlink:href="#2ecrans"/>
 
