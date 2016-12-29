@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg version="1.1" 
+<svg version="1.1"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 1535 1114" width="50%"
+     viewBox="0 10 1535 1114"
      fill="#fff" stroke="#000" stroke-width="6"
 >
 
@@ -13,7 +13,7 @@
 
 <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#">
-  <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_mobile_2017.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_premiers_mobiles_os_libre.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
    <dc:format>image/svg+xml</dc:format>
    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
    <dc:creator>
@@ -36,7 +36,7 @@
 </metadata>
 
 <defs>
- <radialGradient id="c" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -2730 -218)" gradientUnits="userSpaceOnUse">
+ <radialGradient id="a" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -2730 -218)" gradientUnits="userSpaceOnUse">
   <stop stop-color="#44a" offset="0"/>
   <stop stop-color="#7c6" offset="1"/>
  </radialGradient>
@@ -46,23 +46,23 @@
  </radialGradient>
 </defs>
 
-<g fill="#000" stroke="#fff" stroke-width="1" font-family="Purisa" font-weight="bolder" font-size="65px" letter-spacing="-0.1em" word-spacing="-0.1em" text-anchor="middle">
+<g fill="#000" stroke="#fff" stroke-width="1" font-family="Purisa" font-weight="bolder" font-size="65" letter-spacing="-4" word-spacing="-4" text-anchor="middle">
  <text>
-  <tspan x="360" y="60" >J'utilise toujours</tspan>
-  <tspan x="360" y="130">mon bon vieux</tspan>
-  <tspan x="360" y="200">Neo FreeRunner</tspan>
+  <tspan x="360" y="70" >J'utilise toujours</tspan>
+  <tspan x="360" y="140">mon bon vieux</tspan>
+  <tspan x="360" y="210">Neo FreeRunner</tspan>
  </text>
  <text>
-  <tspan x="1190" y="60" >Et moi, mon bon</tspan>
-  <tspan x="1190" y="130">vieux N900 me suit</tspan>
-  <tspan x="1190" y="200">toujours partout</tspan>
+  <tspan x="1190" y="70" >Et moi, mon bon</tspan>
+  <tspan x="1190" y="140">vieux N900 me suit</tspan>
+  <tspan x="1190" y="210">toujours partout</tspan>
  </text>
 </g>
 
 <!--les 2 écrans-->
 <g id="2ecrans" opacity=".3" stroke="#444" stroke-width="12">
+ <rect x="6"   y="233" width="619" height="348" fill="url(#a)"/>
  <rect x="908" y="233" width="619" height="348" fill="url(#b)"/>
- <rect x="6"   y="233" width="619" height="348" fill="url(#c)"/>
 </g>
 
 <!--bras-->
@@ -107,7 +107,7 @@
   <path d="m394 351 7 18"/>
   <path d="m380 357 13 15"/>
   <path d="m371 370 17 7"/>
-  <circle cx="417" cy="383" r="6" fill="#0d0"/>
+  <circle cx="417" cy="384" r="6" fill="#0d0"/>
  </g>
 </g>
 
