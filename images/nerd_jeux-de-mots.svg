@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 3776 1110" width="100%"
+     fill="#fff" stroke="#000" stroke-width="6"
+>
+
+<title>Les deux filles nerds discutent sur la manipulation des bits au grand bonheur des jeux de mots</title>
+
+<metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <rdf:RDF xmlns:cc="http://creativecommons.org/ns#">
+  <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_mobile_2017.svg" xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <dc:format>image/svg+xml</dc:format>
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   <dc:creator>
+    <cc:Agent>
+     <dc:title>Oliver H</dc:title>
+    </cc:Agent>
+   </dc:creator>
+   <dc:language>fr</dc:language>
+   <dc:date>2016</dc:date>
+   <cc:license  rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+  </cc:Work>
+  <cc:License   rdf:about="http://creativecommons.org/licenses/by/4.0/">
+   <cc:permits  rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+   <cc:permits  rdf:resource="http://creativecommons.org/ns#Distribution"/>
+   <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+   <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+   <cc:permits  rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+  </cc:License>
+ </rdf:RDF>
+</metadata>
+
+<defs>
+ <radialGradient id="a" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -2730 -218)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#44a" offset="0"/>
+  <stop stop-color="#7c6" offset="1"/>
+ </radialGradient>
+ <radialGradient id="b" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -1825 -218)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#8dd" offset="0"/>
+  <stop stop-color="#880" offset="1"/>
+ </radialGradient>
+</defs>
+
+<!--les 4 écrans-->
+<g id="2ecrans" opacity=".3" stroke="#444" stroke-width="12">
+ <rect x="908" y="229" width="619" height="348" fill="url(#b)"/>
+ <rect x="6"   y="229" width="619" height="348" fill="url(#a)"/>
+</g>
+<use transform="translate(2065)" xlink:href="#2ecrans"/>
+
+<!--Bulles pour les dialogues-->
+<g stroke-width="10">
+ <path d="m358 5c-336-3-301 18-289 89 14 85 133 161 133 161s-81-46-49-102c336 71 593 12 594-65 0-73-53-79-389-83z"/>
+ <path d="m1853 86c31 105-121 83-498 81-377-3-530 32-513-79 17-112 149-78 513-78s466-29 498 76z"/>
+ <circle cx="1491" cy="227" r="41"/>
+ <circle cx="1424" cy="297" r="28"/>
+ <circle cx="1355" cy="324" r="15"/>
+ <path d="m2213 5c-572 11-13 338-13 338s-95-83-103-138c538 112 688-210 116-200z"/>
+ <path d="m3274 7c459-3 480-4 496 114 22 162-267 216-267 216s183-55 177-140c-563 19-1044 58-1037-82 7-139 172-104 631-108z"/>
+</g>
+<!--Dialogues-->
+<g fill="#000" stroke="#000" stroke-width="1" font-family="Purisa" font-weight="bold" font-size="53" letter-spacing="-3" word-spacing="-3" text-anchor="middle">
+ <text>
+  <tspan x="394" y="71">Quel champ de bits</tspan>
+  <tspan x="394" y="125">me conseilles-tu ?</tspan>
+ </text>
+ <text>
+  <tspan x="1349" y="71">Surtout ne pas la regarder</tspan>
+  <tspan x="1349" y="125">Elle veut manipuler des bits ?</tspan>
+ </text>
+ <text>
+  <tspan x="2262" y="69"  font-family="Purisa"   >J'ésite entre</tspan>
+  <tspan x="2262" y="123" font-family="monospace">bitfield&lt;short&gt;</tspan>
+  <tspan x="2262" y="178" font-family="Purisa"   >et <tspan font-family="monospace">vector&lt;bool&gt;</tspan></tspan>
+  </text>
+ <text>
+  <tspan x="3223" y="69">Euh… Disons que tu vas être en</tspan>
+  <tspan x="3223" y="123">manque de bits dans un <tspan font-family="monospace">short</tspan> et</tspan>
+  <tspan x="3223" y="178">c'est plus drôle avec des <tspan font-family="monospace">bool</tspan></tspan>
+ </text>
+</g>
+
+<g id="long">
+ <!--Fauteil long #1-->
+ <path d="m328 628s29 13 167 29c-2 31-6 415-17 449-56 9-282-146-314-170-7-28-68-252-51-459 106 103 154 125 153 122"/>
+ <!--Visage longs-->
+ <path d="m340 634c-6-29-17-61-4-90 15-21 43-6 65-10 12-2 21-16 25-26-43-8-54-55-54-55s47 27 59 27c4-20-3-39 9-57 11 1 34-16 10-14-29 5-3-36-3-51 8-39-16-84-56-93-36-8-77 0-105 25-40 47-53 111-62 170-10 81-12 163 3 244 5 31 18 61 14 93"/>
+ <!--Cheuveux longs-->
+ <g fill="none">
+  <path d="m383 263c-29 6-136 59-142 183-29 218 189 206 106 442"/>
+  <path d="m448 322c-147-47-171 88-159 159 18 106 47 200-18 401"/>
+  <path d="m330 269c-106 71-83 313-71 389 29 136 100 41 59 224"/>
+  <path d="m419 281c-86-11-183 265-183 336s53 147 6 265"/>
+  <path d="m437 301c-136-29-173 85-167 179 6 195 194 164 124 407"/>
+ </g>
+ <!--oeuil long-->
+ <ellipse cx="408" cy="380" rx="23" ry="15" stroke-width="5"/>
+ <g stroke-width="4">
+  <path d="m428 351-8 15"/>
+  <path d="m411 345-1 18"/>
+  <path d="m440 360-12 9"/>
+  <path d="m394 347 7 18"/>
+  <path d="m380 353 13 15"/>
+  <path d="m371 366 17 7"/>
+  <circle cx="417" cy="380" r="6" fill="#0d0"/>
+ </g>
+</g>
+
+<ellipse id="tete_court_1" cx="1210" cy="389" rx="88" ry="116"/>
+<path id="cou_court_1" d="m1251 600-13-147-65 41v116"/>
+<path id="cheuveux_court_1" d="m1115 394c-30 5 29-62 24-27-5 34-26-58-36-22s34-2 33-13-34-2-19-13c15-12 70-9 31-12-38-3 30-44 30-10s-36-14 21-22 22 80-16 50c-37-30 55-31 16-16s20-44 57-35c36 9 14 77-6 46-21-31-83 59-95 92s-51 4-19-8c31-12 162 6 145 18-18 12-91 48-72 69s7-35 23-49c17-15 61 87 8 55s77-73 54-34c-24 38-126-71-150-27s66 19 78-2 124 2 77 8 6-103 19-56-63 13-22 10 26-2-4-11-78 39-51 44c26 5 46-8 19-44s68-60 50-19-60-34-20-26c40 7 20 10-20 25s-4-87 23-54c28 34-108 56-73 26 36-30 34 66 4 51-29-15 19 41-13 39-31-2-70-16-44-46 27-30 90-27 63-4-27 24-35-90 6-87s-16 152-40 126c-24-27 17-27 16-55s-75 16-39 13-37 108 8 113-46-54-49-27 20 29 42 7c21-21-30-123-39-89-9 33 54-25 6-25-47 0 63-27 15-38-47-10 15 48 27 30s-90 23-61 41-32 14-11 51c22 37 29-46-1-41z"/>
+<path id="fauteuil_court_1" d="m1015 564c129 40 267 40 391 1 21 97-31 460-43 486-48 16-243 22-313 4-12-21-61-398-36-492z"/>
+
+<!--Fille cheuveux longs et son fauteil #2-->
+<use transform="translate(2065)" xlink:href="#long"/>
+
+<!--Tête court #2-->
+<path id="cou_court_2" d="m3337 638-11-134-61 55v94"/>
+<path id="visage_court_2" d="m3246 503s-13 29-43 27c-4-23-1-54-12-54-17-6-17-6-6-22 11-11 0-61 0-95v6c0-28 95-50 145-22 95 72-27 207-65 218-38 10-58-23-58-23 34-2 38-36 38-36z"/>
+<path id="cheuveux_courts_2" d="m3179 327c23-11-17 34 10 32 26-3-8-37 11-40 20-3 11 34 9 23s35-37 8-33 50 31 14 28 39-59 39-11-41-9-6-22 46.5 56 11 28c-35-28 53-42 45 0s-18-25 17-17c34 9 14 80-6 50-20-29 56 2 45 33s-52-10-22-22 12 77-4 88c-17 11 30-15 27 15s-67-9-28-28c39-18 59 89 8 58-50-31 64-61 42-25s-24-83-6-61c19 22-61 31-50 11s89 22 45 28c-45 6 7-84 20-39s-70-20-31-22c39-3 23 25-6 17-28-8-25-48 11-33 37 14-16 67-42 33-25-34 89-72 72-33s-60-46-22-39-15 43-53 57 13-111 39-80c26 32-73 34-39 6s11 64-17 50 80-26 50-28c-30-1-87-11-61-39 25-28 53 22 28 45-25 22-56-31-17-28s3 77-19 52 30-58 13-25-62-14-28-17-40 47-6 11c35-36-35 18 0-20 20-20-14-12-22 20-9 31 33-32-11-32-45 0 39 47-5 38-45-10-17 33-6 17 11-17-78-29-63-10s56-4 49-18c-7-15-67-6-44-17z"/>
+<path id="aureole" d="m3263 255c-149 5-159 44 0 35 159-8 149-41 0-35z" fill="#ff0" stroke="#fff"/>
+<!--oeuil court #2-->
+<ellipse cx="3225" cy="421" rx="17" ry="2" stroke-width="5"/>
+<g fill="none" stroke-width="3">
+ <path d="m3222 417s1-9-5-12"/>
+ <path d="m3239 419s3-9 8-6"/>
+ <path d="m3208 419s-1-6-7-7"/>
+ <path d="m3217 418s1-9-7-12"/>
+ <path d="m3213 418s-1-9-8-10"/>
+ <path d="m3227 417s-3-11 3-13"/>
+ <path d="m3230 418s-1-11 7-12"/>
+ <path d="m3234 418s2-11 8-9"/>
+</g>
+<!--Fauteil court #2-->
+<path d="m3150 653c175 3 250-86 333-199 20 123-15 389-39 442-33 45-204 199-272 208-12-21-25-410-21-451z"/>
+
+</svg>
