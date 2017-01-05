@@ -58,34 +58,34 @@
  <circle cx="1491" cy="227" r="41"/>
  <circle cx="1424" cy="297" r="28"/>
  <circle cx="1355" cy="324" r="15"/>
- <path d="m2213 5c-572 11-13 338-13 338s-95-83-103-138c538 112 688-210 116-200z"/>
+ <path d="m2268 5c-208 3-291 3-287 107 5 105 219 231 219 231s-95-83-103-138c269 56 466-6 472-99 5-93-92-104-301-101z"/>
  <path d="m3274 7c459-3 480-4 496 114 22 162-267 216-267 216s183-55 177-140c-563 19-1044 58-1037-82 7-139 172-104 631-108z"/>
 </g>
 <!--Dialogues-->
 <g fill="#000" stroke="#000" stroke-width="1" font-family="Purisa" font-weight="bold" font-size="53" letter-spacing="-3" word-spacing="-3" text-anchor="middle">
  <text>
-  <tspan x="394" y="71">Quel champ de bits</tspan>
-  <tspan x="394" y="125">me conseilles-tu ?</tspan>
+  <tspan x="394" y="75">Quel champ de bits</tspan>
+  <tspan x="394" y="135">me conseilles-tu ?</tspan>
  </text>
  <text>
-  <tspan x="1349" y="71">Surtout ne pas la regarder</tspan>
-  <tspan x="1349" y="125">Elle veut manipuler des bits ?</tspan>
+  <tspan x="1349" y="72">Surtout ne pas la regarder</tspan>
+  <tspan x="1349" y="135">Elle veut manipuler des bits ?</tspan>
  </text>
  <text>
-  <tspan x="2262" y="69"  font-family="Purisa"   >J'ésite entre</tspan>
-  <tspan x="2262" y="123" font-family="monospace">bitfield&lt;short&gt;</tspan>
-  <tspan x="2262" y="178" font-family="Purisa"   >et <tspan font-family="monospace">vector&lt;bool&gt;</tspan></tspan>
+  <tspan x="2275" y="72"  font-family="Purisa"   >J'hésite entre</tspan>
+  <tspan x="2275" y="123" font-family="monospace">bitfield&lt;short&gt;</tspan>
+  <tspan x="2275" y="178" font-family="Purisa"   >et <tspan font-family="monospace">vector&lt;bool&gt;</tspan></tspan>
   </text>
  <text>
-  <tspan x="3223" y="69">Euh… Disons que tu vas être en</tspan>
-  <tspan x="3223" y="123">manque de bits dans un <tspan font-family="monospace">short</tspan> et</tspan>
-  <tspan x="3223" y="178">c'est plus drôle avec des <tspan font-family="monospace">bool</tspan></tspan>
+  <tspan x="3230" y="69">Euh… Disons que tu vas être en</tspan>
+  <tspan x="3230" y="125">manque de bits dans un <tspan font-family="monospace">short</tspan> et</tspan>
+  <tspan x="3230" y="182">c'est plus drôle avec des <tspan font-family="monospace">bool</tspan></tspan>
  </text>
 </g>
 
 <g id="long">
  <!--Fauteil long #1-->
- <path d="m328 628s29 13 167 29c-2 31-6 415-17 449-56 9-282-146-314-170-7-28-68-252-51-459 106 103 154 125 153 122"/>
+ <path fill="#eee" d="m328 628s29 13 167 29c-2 31-6 415-17 449-56 9-282-146-314-170-7-28-68-252-51-459 106 103 154 125 153 122"/>
  <!--Visage longs-->
  <path d="m340 634c-6-29-17-61-4-90 15-21 43-6 65-10 12-2 21-16 25-26-43-8-54-55-54-55s47 27 59 27c4-20-3-39 9-57 11 1 34-16 10-14-29 5-3-36-3-51 8-39-16-84-56-93-36-8-77 0-105 25-40 47-53 111-62 170-10 81-12 163 3 244 5 31 18 61 14 93"/>
  <!--Cheuveux longs-->
@@ -112,7 +112,7 @@
 <ellipse id="tete_court_1" cx="1210" cy="389" rx="88" ry="116"/>
 <path id="cou_court_1" d="m1251 600-13-147-65 41v116"/>
 <path id="cheuveux_court_1" d="m1115 394c-30 5 29-62 24-27-5 34-26-58-36-22s34-2 33-13-34-2-19-13c15-12 70-9 31-12-38-3 30-44 30-10s-36-14 21-22 22 80-16 50c-37-30 55-31 16-16s20-44 57-35c36 9 14 77-6 46-21-31-83 59-95 92s-51 4-19-8c31-12 162 6 145 18-18 12-91 48-72 69s7-35 23-49c17-15 61 87 8 55s77-73 54-34c-24 38-126-71-150-27s66 19 78-2 124 2 77 8 6-103 19-56-63 13-22 10 26-2-4-11-78 39-51 44c26 5 46-8 19-44s68-60 50-19-60-34-20-26c40 7 20 10-20 25s-4-87 23-54c28 34-108 56-73 26 36-30 34 66 4 51-29-15 19 41-13 39-31-2-70-16-44-46 27-30 90-27 63-4-27 24-35-90 6-87s-16 152-40 126c-24-27 17-27 16-55s-75 16-39 13-37 108 8 113-46-54-49-27 20 29 42 7c21-21-30-123-39-89-9 33 54-25 6-25-47 0 63-27 15-38-47-10 15 48 27 30s-90 23-61 41-32 14-11 51c22 37 29-46-1-41z"/>
-<path id="fauteuil_court_1" d="m1015 564c129 40 267 40 391 1 21 97-31 460-43 486-48 16-243 22-313 4-12-21-61-398-36-492z"/>
+<path id="fauteuil_court_1" fill="#eee" d="m1015 564c129 40 267 40 391 1 21 97-31 460-43 486-48 16-243 22-313 4-12-21-61-398-36-492z"/>
 
 <!--Fille cheuveux longs et son fauteil #2-->
 <use transform="translate(2065)" xlink:href="#long"/>
@@ -135,6 +135,6 @@
  <path d="m3234 418s2-11 8-9"/>
 </g>
 <!--Fauteil court #2-->
-<path d="m3150 653c175 3 250-86 333-199 20 123-15 389-39 442-33 45-204 199-272 208-12-21-25-410-21-451z"/>
+<path fill="#eee" d="m3150 653c175 3 250-86 333-199 20 123-15 389-39 442-33 45-204 199-272 208-12-21-25-410-21-451z"/>
 
 </svg>
