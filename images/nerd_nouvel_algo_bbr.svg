@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="#fff" stroke="#000" stroke-width="6" version="1.1" viewBox="0 0 3586 1348" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect x="6" y="465" width="619" height="348" fill="url(#c)" opacity=".3" stroke="#444" stroke-width="12"/>
+ <rect id="a" x="895" y="465" width="619" height="348" fill="url(#b)" opacity=".3" stroke="#444" stroke-width="12"/>
+ <image x="2042" y="465" width="619" height="348" opacity=".3" stroke="#444444" xlink:href="data:image/png;base64,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 "/>
+ <rect x="2042" y="465" width="619" height="348" fill="none" opacity=".3" stroke="#444" stroke-width="12"/>
+ <use transform="translate(2067)" width="100%" height="100%" xlink:href="#a"/>
+ <title>Les deux filles nerds implémentent BBR, un nouvel algorithme d'évitement de cogestion TCP pour remplacer les 12 autres algorithmes. Mais à la fin, l'algorithme BBR, intégré dans Linux-4.9, n'est pas le meilleur dans tous les cas. Et les filles se rendent compte que maintenant elles font face à 13 algorithme et aucun pour remplacer les autres dans tous les cas !</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_nouvel_algo_bbr.svg">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Oliver H</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:language>fr</dc:language>
+    <dc:date>2016</dc:date>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <radialGradient id="c" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -2730 18)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#44a" offset="0"/>
+   <stop stop-color="#7c6" offset="1"/>
+  </radialGradient>
+  <radialGradient id="b" cx="516" cy="185" r="54" gradientTransform="matrix(6 0 0 3 -1838 18)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#8dd" offset="0"/>
+   <stop stop-color="#880" offset="1"/>
+  </radialGradient>
+ </defs>
+ <use transform="translate(-2092 -16)" width="100%" height="100%" xlink:href="#d"/>
+ <path d="m315 866s29 13 167 29c-2 31-6 415-17 449-56 9-282-146-314-170-7-28-68-252-51-459 106 103 154 125 153 122" fill="#eee"/>
+ <path d="m327 870c-6-29-17-61-4-90 15-21 43-6 65-10 12-2 22-25 26-35-13-2-32 1-32 1s22-9 34-9c4-20-1-50 11-68 11 1 34-16 10-14-29 5-3-36-3-51 8-39-16-84-56-93-36-8-73-3-107 33s-51 103-60 162c-10 81-12 163 3 244 5 31 19 108-11 168"/>
+ <g transform="translate(-13 236)" fill="none">
+  <path d="m391 265c-29 6-144 57-150 181-29 218 189 206 106 442"/>
+  <path d="m448 322c-147-47-171 88-159 159 18 106 47 200-18 401"/>
+  <path d="m336 265c-106 71-89 317-77 393 29 136 100 41 59 224"/>
+  <path d="m421 281c-86-11-185 265-185 336s53 147 6 265"/>
+  <path d="m437 301c-136-29-173 85-167 179 6 195 194 164 124 407"/>
+ </g>
+ <ellipse cx="395" cy="616" rx="23" ry="15" stroke-width="5"/>
+ <g stroke-width="4">
+  <path d="m415 587-8 15"/>
+  <path d="m398 581-1 18"/>
+  <path d="m426 597-12 9"/>
+  <path d="m381 583 7 18"/>
+  <path d="m367 589 13 15"/>
+  <path d="m358 602 17 7"/>
+  <circle cx="404" cy="616" r="6" fill="#0d0"/>
+ </g>
+ <path id="e" d="m1002 800c129 40 267 40 391 1 21 97-31 460-43 486-48 16-243 22-313 4-12-21-61-398-36-492z" fill="#eee"/>
+ <use transform="translate(1175)" width="100%" height="100%" xlink:href="#e"/>
+ <path d="m2400 1143c-12-180-3-290 46-353s114-236-49-234-69 284-88 381 47 220 48 228" fill="#fff" stroke="#000" stroke-width="6"/>
+ <g fill="none" stroke="#000" stroke-width="6">
+  <path d="m2394 556c17 86-35 552-66 600"/>
+  <path d="m2409 555c125 69-19 252 25 326 52 87-16 255-16 255"/>
+  <path d="m2400 555c-92 8-28 242-65 328-33 75-34 268-34 268"/>
+  <path d="m2390 557c-116 81-22 207-31 273s-64 182-78 314"/>
+  <path d="m2400 555c82 49-71 484-18 611"/>
+  <path d="m2400 555c-181 30 38 190-175 550"/>
+  <path d="m2240 1123c76-89-24-204 76-291s2-199 113-274c148 81-24 189-20 303 5 113 38 270 38 270"/>
+  <path d="m2268 1151c6-5 6-192 27-254s20-269 105-337c111 131-17 241-38 302s-47 284-47 284"/>
+ </g>
+ <g id="d" transform="translate(-13 236)">
+  <path d="m3337 638-11-134-61 55v94"/>
+  <path d="m3246 503s-13 29-43 27c-4-23-1-54-12-54-17-6-17-6-6-22 11-11 0-61 0-95v6c0-28 95-50 145-22 95 72-27 207-65 218-38 10-58-23-58-23 34-2 38-36 38-36z"/>
+  <path d="m3179 327c23-11-17 34 10 32 26-3-8-37 11-40 20-3 11 34 9 23s35-37 8-33 50 31 14 28 39-59 39-11-41-9-6-22 46 56 11 28c-35-28 53-42 45 0s-18-25 17-17c34 9 14 80-6 50-20-29 56 2 45 33s-52-10-22-22 12 77-4 88c-17 11 30-15 27 15s-67-9-28-28c39-18 59 89 8 58-50-31 64-61 42-25s-24-83-6-61c19 22-61 31-50 11s89 22 45 28c-45 6 7-84 20-39s-70-20-31-22c39-3 23 25-6 17-28-8-25-48 11-33 37 14-16 67-42 33-25-34 89-72 72-33s-60-46-22-39-15 43-53 57 13-111 39-80c26 32-73 34-39 6s11 64-17 50 80-26 50-28c-30-1-87-11-61-39 25-28 53 22 28 45-25 22-56-31-17-28s3 77-19 52 30-58 13-25-62-14-28-17-40 47-6 11c35-36-35 18 0-20 20-20-14-12-22 20-9 31 33-32-11-32-45 0 39 47-5 38-45-10-17 33-6 17 11-17-78-29-63-10s56-4 49-18c-7-15-67-6-44-17z"/>
+  <ellipse cx="3224" cy="427" rx="18" ry="11" stroke-width="5"/>
+  <g fill="none" stroke-width="3">
+   <path d="m3222 417s1-9-5-12"/>
+   <path d="m3239 419s3-9 8-6"/>
+   <path d="m3208 419s-1-6-7-7"/>
+   <path d="m3217 418s1-9-7-12"/>
+   <path d="m3213 418s-1-9-8-10"/>
+   <path d="m3227 417s-3-11 3-13"/>
+   <path d="m3230 418s-1-11 7-12"/>
+   <path d="m3234 418s2-11 8-9"/>
+  </g>
+  <circle cx="3219" cy="427" r="6" fill="#5a5aff" stroke-width="4"/>
+ </g>
+ <path d="m3137 889c175 3 250-86 333-199 20 123-15 389-39 442-33 45-204 199-272 208-12-21-25-410-21-451z" fill="#eee"/>
+ <path d="m3191 769 57-60 7 81-56-14z" fill="#fff" stroke="none"/>
+ <g fill="none" stroke="#000">
+  <path d="m3190 766c21-26 72-17 72-17-46 5-68 25-68 25" stroke-width="6"/>
+  <g stroke-width="30">
+   <path d="m2981 499 130 74"/>
+   <path d="m3108 372 71 133"/>
+   <path d="m3287 325-8 155"/>
+   <path d="m3467 396-89 120"/>
+   <path d="m3566 514-136 65"/>
+  </g>
+ </g>
+ <g stroke-width="10">
+  <path d="m592 129c-498-9-587 49-587 177s11 150 406 158c394 8 121 78 121 78s90-18 142-73c443-14 489-31 489-166 0-136-72-165-571-174z"/>
+  <path d="m1828 1174c0 166 1 168-612 169s-612-3-613-150c0-147 33-190 346-328-453 218-66 145 235 146 644 1 643-3 643 164z"/>
+  <path d="m2370 5c-713 0-715 4-714 222s-19 223 365 361c0 0-187-46-162-151 1238 13 1234 58 1234-191 1-248-10-241-723-241z"/>
+  <path d="m3314 1114c0 228-4 227-364 228-361 1-365 0-365-228s2-230 162-230c161 0 259-10 413-91-109 73-222 91-34 92 188 0 187 1 187 229z"/>
+ </g>
+ <g font-size="96px" font-weight="bold" letter-spacing="0px" stroke="none" stroke-width="1px" text-anchor="middle" word-spacing="0px">
+  <text x="583" y="236" fill="#000" font-family="Purisa" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:53px" xml:space="preserve"><tspan x="583" y="236" text-align="center" style="line-height:1em">Aucun des 12</tspan><tspan x="583" y="332" text-align="center" style="line-height:1em">algos de congestion</tspan><tspan x="583" y="428" text-align="center" style="line-height:1em">n'est parfait</tspan></text>
+  <text x="1216" y="1118" fill="#000" font-family="Purisa" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20px" xml:space="preserve"><tspan x="1216" y="1118" text-align="center" style="line-height:1em">Yaka créer l'algo</tspan><tspan x="1216" y="1214" text-align="center" style="line-height:1em">ultime qui fonctionne</tspan><tspan x="1216" y="1310" text-align="center" style="line-height:1em">dans tous les cas</tspan></text>
+  <text x="1793" y="721" fill="#9a9a9a" font-family="sans-serif" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20px" xml:space="preserve"><tspan x="1793" y="721" text-align="center" style="line-height:1em">3 ans</tspan><tspan x="1793" y="817" text-align="center" style="line-height:1em">plus</tspan><tspan x="1793" y="913" text-align="center" style="line-height:1em">tard…</tspan></text>
+  <text x="2366" y="111" fill="#000" font-family="Purisa" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:53px" xml:space="preserve"><tspan x="2366" y="111" text-align="center" style="line-height:1em">Notre algo BBR est</tspan><tspan x="2366" y="207" text-align="center" style="line-height:1em">intégré dans Linux 4.9</tspan><tspan x="2366" y="303" text-align="center" style="line-height:1em">Mais ce n'est pas le</tspan><tspan x="2366" y="399" text-align="center" style="line-height:1em">meilleur dans tous les cas</tspan></text>
+  <text x="2956" y="995" fill="#000" font-family="Purisa" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:53px" xml:space="preserve"><tspan x="2956" y="995" text-align="center" style="line-height:1em">Mince ! On a</tspan><tspan x="2956" y="1091" text-align="center" style="line-height:1em">maintenant</tspan><tspan x="2956" y="1187" text-align="center" style="line-height:1em">13 algos de</tspan><tspan x="2956" y="1283" text-align="center" style="line-height:1em">congestion !</tspan></text>
+ </g>
+</svg>
