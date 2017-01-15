@@ -125,12 +125,12 @@ Améliorations notables
 La macro [**`__has_include()`**](http://en.cppreference.com/w/cpp/preprocessor/include) vérifie si l’en-tête est disponible pour inclusion.
 
 ```cpp
-#if    __has_include(<filesystem>)
-#  include           <filesystem>
-#elif  __has_include(<experimental/filesystem>)
-#  include           <experimental/filesystem>
+#if   __has_include(<filesystem>)
+#           include <filesystem>
+#elif __has_include(<experimental/filesystem>)
+#           include <experimental/filesystem>
 #elif __has_include(<boost/filesystem.hpp>)
-#  include          <boost/filesystem.hpp>
+#           include <boost/filesystem.hpp>
 #else
 #  error Ne trouve aucune en-tête filesystem
 #endif
