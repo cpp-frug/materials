@@ -93,7 +93,7 @@ Deux alternatives pour vérifier le support des fonctionnalités C++ :
 Cette seconde série de macros est plus élégante, mais nécessite un compilateur récent. Voici un exemple d'utilisation :
 
 ```cpp
-#if __cpp_experimental_concepts
+#ifdef __cpp_experimental_concepts
    template<typename T>
    bool pareil (T&& a, T&& b) requires EqualityComparable<T>
    { return a == b; }
@@ -103,7 +103,7 @@ Cette seconde série de macros est plus élégante, mais nécessite un compilate
    { return a == b; }
 #endif
 
-#if __cpp_lib_experimental_filesystem
+#ifdef __cpp_lib_experimental_filesystem
 #  include <filesystem>
    void archiver()
    { std::filesystem::copy("fichier.txt","archive.txt"); }
