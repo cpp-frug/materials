@@ -17,7 +17,7 @@ Score   | 100
 
 Le C++ a bientôt la quarantaine et pourtant très actif en ce moment avec la finalisation de la prochaine version C++17. Profitons‐en pour faire le point avec une série d’articles sur le C++. Cette première dépêche nous dévoile la face cachée du C++, et donc peut intéresser tous les lecteurs _LinuxFr.org_. :-)
 
-![Évolution du langage C++](https://cpp-frug.github.io/materials/images/cpp-evolution-path.svg)
+[![Évolution du langage C++](https://cpp-frug.github.io/materials/images/cpp-evolution-path.svg)](https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-evolution-original.svg)
 
 ----
 
