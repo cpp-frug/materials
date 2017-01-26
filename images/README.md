@@ -3,7 +3,7 @@ Ce répertoire contient des images sous licence libre a propos du C++
 C++ Complexe
 ------------
 
-Auteur    | Contribution           | License
+Auteur    | Contribution           | Licence
 ----------|------------------------|----------
 Oliver H  | Ébauche                | CC-BY-SA-3.0
 AKP       | Dessin à la main       | CC-BY-SA-3.0
@@ -31,7 +31,7 @@ Trois versions :
 
 1. L'ébauche originelle au crayon ;
 2. La version SVG avec les balises `<text>` et donc nécessite de la présence de la police Purisa ;
-3. Celle avec les textes remplacés par des chemins `<path>` donc ne peuvant plus être édités.
+3. Celle avec les textes remplacés par des chemins `<path>` donc ne pouvant plus être édités.
 
 ![ébauche au crayon](http://cpp-frug.github.io/materials/images/cpp-complexe-draft.png)
 
@@ -42,7 +42,7 @@ Trois versions :
 Évolution du langage C++
 ------------------------
 
-Auteur    | Contribution           | License
+Auteur    | Contribution           | Licence
 ----------|------------------------|----------
 Jae-Zun   | Prototypage            | CC-BY-SA-3.0
 Florent B | Dessin à la main       | CC-BY-SA-3.0
@@ -51,8 +51,8 @@ Oliver H  | Numérisation et textes | CC-BY-SA-3.0
 
 Analogie entre chaque version C++ et l'évolution de l'homme.
 Le singe est associé à "C with Classes", puis "C++2.0" et "C++98"
-pour des ancetres plus proches de homo sapiens qui se redressent de plus en plus.
-Après homo sapiens (C++03), les descendaants se courbent de plus en plus (C++11, C++14)
+pour des ancêtres plus proches de homo sapiens qui se redressent de plus en plus.
+Après homo sapiens (C++03), les descendants se courbent de plus en plus (C++11, C++14)
 pour se retrouver devant un ordinateur (C++17).
 Au dessus de ce dernier homme, un texte "Cool  On va pouvoir coder".
 
@@ -65,8 +65,8 @@ La réalisation de cette image s'est basée principalement sur quatre logiciels 
 
 Deux versions :
 
-1. L'originale avec les balises `<text>` et donc dépent si la police Purisa est installée sur la machine ;
-2. Celle avec les texts remplacé par des chemins `<path>` donc on ne peut plus éditer les textes.
+1. L'originale avec les balises `<text>` et donc dépend si la police Purisa est installée sur la machine ;
+2. Celle avec les textes remplacé par des chemins `<path>` donc on ne peut plus éditer les textes.
 
 ![Version originale avec les balises <text>](http://cpp-frug.github.io/materials/images/cpp-evolution-original.svg)
 
@@ -75,7 +75,7 @@ Deux versions :
 C++17 Président
 ---------------
 
-Auteur    | Contribution                                | License
+Auteur    | Contribution                                | Licence
 ----------|---------------------------------------------|----------
 Oliver H  | Dessin, textes, numérisation, vectorisation | CC-BY-SA-3.0
 
@@ -92,7 +92,7 @@ La réalisation de cette image s'est basée principalement sur deux logiciels :
 Bjarne impatient pour les Concepts
 ----------------------------------
 
-Auteur    | Contribution           | License
+Auteur    | Contribution           | Licence
 ----------|------------------------|----------
 Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
 [H. Harendal](https://plus.google.com/118235370450570590297) ([ADF](http://arkandis.tuxfamily.org/)) | Police [Gillius N°2](http://arkandis.tuxfamily.org/adffonts.html) inspirée de [Gill Sans](https://fr.wikipedia.org/wiki/Gill_Sans) | GPL v2 (avec exception)
@@ -102,7 +102,7 @@ En 2003, Bjarne Stroustrup propose la première version des Concepts.
 Ce "comic strip" imagine alors Bjarne demander
 l'intégration des Concepts pour chacune des versions de C++ :
 C++03, C++11, C++14, C++17... et à chaque fois les Concepts ne sont pas intégrés.
-Sur la dernière vignette, les Concepts sont enfins intégrés (de très nombreuses décennies plus tard).
+Sur la dernière vignette, les Concepts sont enfin intégrés (de très nombreuses décennies plus tard).
 Sur cette dernière vignette est dessinée une pierre tombale avec une voix qui sort "Ce n'est pas trop tôt !".
 
 La réalisation de cette image s'est basée sur quatre logiciels :
@@ -123,7 +123,7 @@ Deux versions :
 Chantons déçus C++17
 --------------------
 
-Auteur    | Contribution                                   | License
+Auteur    | Contribution                                   | Licence
 ----------|------------------------------------------------|----------
 Guss      | Idée d'un chaton triste *Concept & Réflexion*  |
 Ziyue     | Dessin à la main (crayon)                      | CC-BY-SA-3.0
@@ -149,7 +149,7 @@ Ci-dessous le dessin original dessinée par Ziyue avant les améliorations réal
 C++17 sauve une écolière
 ------------------------
 
-Auteur    | Contribution                                   | License
+Auteur    | Contribution                                   | Licence
 ----------|------------------------------------------------|----------
 Ziyue     | Dessin à la main (crayon)                      | CC-BY-SA-3.0
 Oliver H  | Numérisation, changements importants et textes | CC-BY-SA-3.0
@@ -183,7 +183,7 @@ Six images générées = deux format (JPEG et WebP) et trois codes C++ écrits s
 Compilé c'est Testé
 -------------------
 
-Auteur    | Contribution           | License
+Auteur    | Contribution           | Licence
 ----------|------------------------|----------
 Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
 
@@ -211,7 +211,7 @@ Deux versions :
 Un bogue dans le livre de Bjarne
 --------------------------------
 
-Auteur    | Contribution           | License
+Auteur    | Contribution           | Licence
 ----------|------------------------|----------
 Oliver H  | Idée, dessin et textes | CC-BY-SA-3.0
 
@@ -225,3 +225,34 @@ La réalisation de cette image s'est basée sur quatre logiciels :
 - [GREYC's Magic for Image Computing](http://gmic.eu/) pour son filtre *Vector Painting* ;
 
 ![Bjarne propose de changer le C++ pour corriger son livre qu'il tient dans ses mains](http://cpp-frug.github.io/materials/images/cpp17-bjarne-ordre-evaluation.png)
+
+Les fonctions libres
+--------------------
+
+Auteur                   | Contribution | Licence
+-------------------------|--------------|----------
+lmg HS                   | Idées        | -
+Oliver H                 | Dessin       | CC BY-SA 4.0
+FreeSeamlessTextures.com | Texture      | CC BY
+
+Cette illustrations contient de nombreux messages.
+
+Deux prisons sont représentées en arrière plan. La première est celle des fonctions membres. La seconde prison est celle des spécifications techniques (TS) qui ne sont pas (encore) intégrées au standard. Un bonhomme derrière les barreaux de cette prison représente le TS "Unified Call Syntaxe". Celui-ci se dit qu'il vient de prendre trois ans ferme (car il n'a pas été intégré Au C++17, et il sera peut être intégré à C++20).
+
+Trois bonhommes sortent de la première prison : `empty()`, `data()` et `size()` car ces fonctions deviennent également des fonctions libres à partir de C++17. Voici leur dialogue :
+
+* `empty()` : Que faire maintenant que nous ne sommes plus cantonnés aux classes ?
+* `data()` : Étendre les autres types d'objet.
+* `size()` : Et faciliter la programmation générique.
+
+Dehors, les attendent deux filles : `begin()` et `end()`. Ces deux fonctions étaient les seules fonctions membres à avoir été devenues également fonctions libres (C++11). `begin()` leur fait signe et leur dit "Coucou, par ici les fonctions libres". `end()` accueille une autre fille en lui disant "Salut `string_view`". Cette fille s'oriente vers `end()` et tourne le dos au lecteur qui remarque son pantalon taille basse et son string.
+
+La réalisation de cette image a pu être possible grâce à plusieurs logiciels libres :
+
+- [Simple Scan](https://launchpad.net/simple-scan)
+- GIMP
+- Inkscape
+- Scour
+- Geany
+
+![Les fonctions empty(), data() et size() sortent de la prison "class" et rejoignent les fonctions begin() et end() qui les accueillent. Ces deux dernières fonctions accueillent également string_view. Derrières les barreaux de la prison des spécifications techniques, Unified-Call-Syntax va devoir y rester trois ans pour tenter de sortir avec C++20](fonctions_libres.svg)

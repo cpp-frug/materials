@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg version="1.1" viewBox="50 0 584 373" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/fonctions_libres.svg">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Oliver H</dc:title>
+     </cc:Agent>
+     <cc:Agent>
+      <dc:title>FreeSeamlessTextures.com</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:language>fr</dc:language>
+    <dc:date>2017</dc:date>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <pattern id="oldpaint" width="128" height="128" patternUnits="userSpaceOnUse">
+   <!--texture provided by FreeSeamlessTextures.com under License CC BY-->
+   <image width="128" height="128" xlink:href="data:image/jpeg;base64,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"/>
+  </pattern>
+ </defs>
+ <path d="m323 29-35 10v283l35 8" stroke="#666" stroke-width="2px"/>
+ <path d="m323 29-35 10v283l35 8" fill="url(#oldpaint)" opacity=".8" stroke="#666" stroke-width="2px"/>
+ <path id="facade" d="m50 373v-372l257 26v305.4z" fill="url(#oldpaint)" stroke="#666" stroke-width="2px"/>
+ <use transform="matrix(.81 0 0 .81 283 28)" xlink:href="#facade"/>
+ <path id="porte_class" d="m120 361v-171l130-4v155" fill="#ccc" stroke="#111"/>
+ <use id="porte_TS" transform="matrix(.81 0 0 .81 287 27.5)" xlink:href="#porte_class"/>
+<!--Ouvertres-->
+ <path id="c" d="m216 109v-56l-52-4v59z" fill="#ffd"/>
+ <use transform="matrix(1.06 0 0 1.06 -95 -9)" xlink:href="#c"/>
+ <use transform="matrix(.939 0 0 .939 87 8)" xlink:href="#c"/>
+ <use transform="matrix(.8 0 0 .8 290 29)" xlink:href="#c"/>
+ <use transform="matrix(.76 0 0 .76 355 35)" xlink:href="#c"/>
+<!--Prisonier-->
+ <path d="m488 118s-3-18 12-18 10 18 10 19" fill="#fb0076" stroke="#000"/>
+ <circle cx="500.5" cy="92" r="10" fill="#fcdceb" stroke="#000"/>
+ <path d="m496 98c3-3 7-3 10 0" fill="none" stroke="#b50052"/>
+ <circle id="n" cx="496.5" cy="90" r="2" fill="#fff" stroke="#000"/>
+ <circle id="m" cx="496.5" cy="91" r="1"/>
+ <use transform="translate(8.5)" xlink:href="#n"/>
+ <use transform="translate(8.5)" xlink:href="#m"/>
+<!--Barreaux-->
+ <path id="a" d="m178 51v56m27-54v55m-13 0v-56m-28 56 52 2v-57l-52-4z" fill="none" stroke="#666" stroke-width="3"/>
+ <use transform="matrix(1.06 0 0 1.06 -95 -9)" xlink:href="#a"/>
+ <use transform="matrix(.939 0 0 .939 87 8)" xlink:href="#a"/>
+ <use transform="matrix(.8 0 0 .8 290 29)" xlink:href="#a"/>
+ <use transform="matrix(.76 0 0 .76 355 35)" xlink:href="#a"/>
+<!--Mains du prisonier-->
+ <path id="main" d="m487 103c2-2 7 0 7 1s-5 1-5 1 5 0 5 2c0 1-5 2-5 2s5 0 5 2c0 1-5 2-5 2s5 0 5 1-5 3-7 1-2-10 0-12z" fill="#fcdceb" stroke="#000" stroke-width="1px"/>
+ <use transform="matrix(-1 0 0 1 1001 0)" xlink:href="#main"/>
+<!--Textes sur les prisons-->
+ <g fill-opacity=".4" font-family="monospace" font-weight="bold" stroke="#000" text-anchor="middle">
+  <text transform="rotate(-1)" x="173" y="186" font-size="48px">class</text>
+  <text x="430" y="153" font-size="35px">Technical</text>
+  <text transform="rotate(-1)" x="427" y="185" font-size="24px">Specifications</text>
+ </g>
+<!--data-->
+ <g id="data" fill="#eee" stroke="#000" stroke-width="2">
+  <path d="m172.5 277v3c0 2-4-1-9 5-9 8-24 7-25 9s6 2 6 2-8 1-7 4c0.5 2 8-2 8-2s-8 6-6 7 7-4 7-4-6 7-3 7c2.5 0 13-18 31-19s22 21 25 21c2.5 1-1-8-1-8s5 8 7 7c1.5-2-5-9-5-9s8 6 9 4c1.5-1-7-6-7-6s9 2 8-1c-0.5-2-16-2-20-10s-13-4-13-9 6-1 7-4c-2 0-5-2-6-6 3 2 8 3 9 2 0-2 4-3 5-5 1-1-2-1-3-2 0-14-6-19-18-15s-9 27 1 29z"/>
+  <path d="m164 264 41-12"/>
+  <path d="m180 316s3 16 2 23-12 13-10 18c1 5 7 3 7 5s-3 3-3 3l-10-7s11-16 12-22-5-13-6-13-8 11-14 16-17 5-20 9 1 9-1 10c-2 2-6-1-6-1l2-14s17-3 22-8c6-5 11-20 11-20z"/>
+ </g>
+ <circle cx="186" cy="263" r="1"/>
+<!--Géant Vert-->
+ <g id="geant_vert" fill="#adf0ae" stroke="#19401a" stroke-width="2">
+  <path d="m325.5 353-19-108 2 48-20 46 20 6s3 4-2 6-27-7-27-7l22-51-8-117-17 30c2 64-11 67-6-3 0 0 15-26 19-31s7-3 8-5-1-4-2-6c-3-7 1-26 7-25s2 10 3 11c2 2 4 2 5 4s-6-2-4 5c-1 2-6-3-6-3 1 8 2 8 5 8 1 2-3 2-3 4s7 0 11 3c2 1 19 43 29 54 0 0 12 9 11 11s-13-9-13-9 11 17 10 19c-2 2-12-17-12-17s6 20 4 21-7-20-7-20-2 16-4 15c-1.5-1 1.5-16 1.5-16-1-15-13.5-35-20.5-50 2 22 0 45 3 67 4 32 11 65 16 97l18-10s4 1 2 6-26 16-26 16z"/>
+  <path d="m297 237 17-1"/>
+  <path d="m291.5 126 7 12"/>
+  <path d="m289.5 139 7 4"/>
+  <path d="m289.5 129 8 10"/>
+  <path d="m288.5 134 8 7"/>
+  <path d="m299.5 126 3 10"/>
+  <path d="m295.5 126 5 10"/>
+ </g>
+ <circle id="oeuil_geant_vert" cx="303" cy="145" r="1"/>
+<!--Data-->
+ <g fill="#e5fbff" stroke="#212968" stroke-width="2">
+  <path d="m247.5 237-6 23c3 9 31 7 35 2l6-24"/>
+  <ellipse cx="265" cy="236" rx="18" ry="6"/>
+  <path d="m255.5 248a1 1 0 0 1 -1 1 1 1 0 0 1 -1 -1 1 1 0 0 1 1 -1 1 1 0 0 1 1 1" fill="none" stroke="#000"/>
+  <path d="m266.5 250a1 1 0 0 1 -1 1 1 1 0 0 1 -1 -1 1 1 0 0 1 1 -1 1 1 0 0 1 1 1" fill="none" stroke="#000"/>
+  <path d="m265.5 256c-4 6-15 2-14-3" fill="none" stroke="#000"/>
+  <path d="m241 271-13.7 32c4 6 25 7 29 0l13-32"/>
+  <path d="m261.5 267c7 1 11 3 8 5s-12 3-20 2c-7-1-11-3-8-5s12-3 20-2z"/>
+  <path d="m221.5 308-27 36 9 8 5-5-7-4 27-29"/>
+  <path d="m221.5 308c1-2 4-1 6 0s3 3 2 5-4 1-6 0-3-3-2-5z"/>
+  <path d="m245.5 321 7 33 14-5-2-5-6 3-4-29"/>
+  <path d="m249.5 317c3-1 6-1 5 1 0 1-2 2-4 3-3 1-6 1-5-1 0-1 2-2 4-3z"/>
+  <path d="m230 273s-19 18-19 20c0 1 5.5-2 5.5-2s-5 3-4 5 5-3 5-3-4 5-3 6 5-4 5-4-3 5 0 5c2 0 15-21 15-21"/>
+  <path d="m229 275a3 5 0 0 1 3 -4 3 5 0 0 1 3 6 3 5 0 0 1 -3 4 3 5 0 0 1 -3 -6"/>
+  <path d="m270.5 282 9 14s18-16 17-19-5 2-5 2 5-7 3-8-6 6-6 6 4-7 1-7-9 17-9 17l-5-11"/>
+  <path d="m271.5 277a2 4.5 30 0 1 4 -2 2 4.5 30 0 1 -1 5 2 4.5 30 0 1 -4 2 2 4.5 30 0 1 1 -5"/>
+ </g>
+<!--Begin End-->
+ <g fill="#fdd" stroke="#000">
+  <path d="m465.5 220-16-16s-7-1-7-2 6 0 6 0-6-3-5-4 6 3 6 3-4-5-3-6 4 5 4 5 0-5 1-5 1 7 1 7l16 16"/>
+  <path d="m458.5 267 2 42s-9 6-7 8 12-4.7 12-4.7l4-47.3 10 43s-7 6-4 7 8-6 8-6l-2-47"/>
+  <path d="m519 229 15-33s8 0 7-1c0-2-5-1-5-1s6-3 5-5c-1-1-6 4-6 4s5-5 3-6-4 5-4 5 0-5-1-4c-1 0-1 6-1 6l-16 28"/>
+  <path id="visage_begin" d="m466 213c2 0 3-4 3-4s-3 1-5 1c-2-1-3-3-3-3l1-1s-3-8 4-9 17 10 24 29"/>
+  <use transform="matrix(-1 0 0 1 986 2)" xlink:href="#visage_begin"/>
+  <path d="m469 217 8-22s-2-6-1-6c1-1 2 4 2 4s1-6 2-6 0 6 0 6 2-6 3-5-2 6-2 6 4-3 4-2c1 1-5 4-5 4l-7 24 4 26 19 18-53 11 21-30 1-17s-5-3-4-5c0-2 5-5 5-5"/>
+  <path id="end_pied" d="m513.5 261c-1 13 2 30-4 43 0 0 13 7 14 5s-6-9-6-9l7-39c4 13 10 28 11 42 0 0 13-1 13-4s-8-3-8-3l-5-37"/>
+  <path d="m514.6 216-13-23s2-7 0-8c-1-1-2 6-2 6s-1-7-3-7 1 8 1 8-4-7-5-5 3 7 3 7-4-3-5-1c0 2 7 3 7 3l17 33 1 16-16 23 52-5-25-19-3-14s3-3 2-6-5-4-5-4"/>
+  <path id="i" d="m463.5 198s14.5 11 15 28" fill="none" stroke="#000"/>
+  <path id="g" d="m465 197c4 0 16 6 20 29" fill="none" stroke="#000"/>
+  <path id="h" d="m465 197.5s16 9 17 29" fill="none" stroke="#000"/>
+  <use transform="matrix(-1 0 0 1 986 2)" xlink:href="#i"/>
+  <use transform="matrix(-1 0 0 1 986 2)" xlink:href="#g"/>
+  <use transform="matrix(-1 0 0 1 986 2)" xlink:href="#h"/>
+  <circle id="d" cx="464" cy="203" r="1" fill="#000" stroke="none"/>
+  <use transform="matrix(-1 0 0 1 985 2)" xlink:href="#d"/>
+  <use transform="matrix(-1 0 0 1 987.5 2)" xlink:href="#d"/>
+ </g>
+<!--string_view-->
+ <path d="m593 324c-2-12 6-20 6-20 1-4-13-32-13-32l-19-19s-8 1-8-1 7-1 7-1-8-3-7-5 8 4 8 4-7-7-5-8 6 7 6 7-3-8-1-8 3 8 3 8 1-4 3-3c1 1-2 5-2 5l19.5 14c3-6-11-20-1-23s8 17 14 21l13-25s-4-7-2-8 3 7 3 7 1-8 3-8-1 8-1 8 4-7 5-6c2 1-4 7-4 7s6-4 6-2-7 4-7 4l-11 28 3 21s0 9 3 13c0 0 13 8 4 20" fill="#fed" stroke="#000" stroke-linejoin="round"/>
+ <path d="m586 244s12 26 10 45" fill="none" stroke="#000"/>
+ <path d="m588 243s13 36 12 48" fill="none" stroke="#000"/>
+ <path d="m590 242 13.9 48" fill="none" stroke="#000"/>
+ <path d="m592 242s9 38 16 44" fill="none" stroke="#000"/>
+ <path d="m594 243s7 31 15 39" fill="none" stroke="#000"/>
+ <path id="string_haut" d="m597 306 13 5l9-5" fill="none" stroke="#f00"/>
+ <path id="string_bas" d="m608.5 322c3-5 2.5-9 1.5-11" fill="none" stroke="#f00"/>
+ <path id="pantalon" d="m634.5 369-11-1c2-5 5-1 5-2-11-17-22-27-20-43-3.5 11-12 14-12 17 3 10 10 14 13.5 24h-11c2-6 5-1 6-3-1-3-16-19-16-23-1-4 0-13 4-24 10 7 21 7 29-1 1 6-7 21-3 27s12 20 15 29z" fill="#449" stroke="#000" stroke-linejoin="round"/>
+<!--Bulles (Phylactères)-->
+ <path d="m114 63c53 0 72 3 72 42s-15 40-85 40c0 0 4 83 52 114-39.5-18-58-114-58-114-32-1-41-6-42-39 0-34 8-43 61-43z" fill="#fff" stroke="#000" stroke-width="2"/>
+ <path d="m271 100c0 30 5 32-54 33 0 0-2 79 19 107-17.5-19-23.5-108-23.5-108-15 0-21.5-4-22.5-34-2-31 6-33 41.5-33.5s39.5 5.5 39.5 35.5z" fill="#fff" stroke="#000" stroke-width="2"/>
+ <path d="m356 59c53 0 62 8 61 29s-9 31-73 32l-28 24 17-24c-24 0-39-10-39-34 0-25 9-26 61-27z" fill="#fff" stroke="#000" stroke-width="2"/>
+ <path d="m583 145c37 0 49 6 49 24s-19 16-69 16c0 0-13 19-28 23 17-9 21-23 21-23-10 0-18 1-18-16s8-23 45-24z" fill="#fff" stroke="#000" stroke-width="2"/>
+ <path d="m400 280c36 0 43-11 43-32-1-21 1-25-18-28l20-9-29 8c-44 2-55-2-54 26s3 35 39 35z" fill="#fff" stroke="#000" stroke-width="2"/>
+ <path d="m543 5c71 0 88 1 87 18s-37 18-88 18-86 0-86-19 16-17 87-17z" fill="#fff" stroke="#000" stroke-width="2"/>
+ <circle cx="528" cy="85" r="4" fill="#fff" stroke="#000" stroke-width="2"/>
+ <circle cx="540" cy="75" r="6" fill="#fff" stroke="#000" stroke-width="2"/>
+ <circle cx="546" cy="56" r="8" fill="#fff" stroke="#000" stroke-width="2"/>
+<!--Textes-->
+ <g font-family="monospace" font-size="11px" font-weight="bold" text-anchor="middle">
+  <text x="174" y="307">empty</text>
+  <text transform="rotate(-35)" x="34" y="383">data</text>
+  <text transform="rotate(-94)" x="-219" y="293">size</text>
+  <text transform="rotate(-11)" x="413" y="350">begin</text>
+  <text transform="rotate(-5)" x="498" y="308">end</text>
+  <text transform="rotate(6)" x="504" y="2">Unified</text>
+  <text transform="rotate(5)" x="504" y="20">Call</text>
+  <text transform="rotate(4)" x="504" y="37">Syntax</text>
+ </g>
+ <g font-family="Purisa" font-size="13px" font-weight="bold" stroke-width="1px" text-anchor="middle">
+  <text>
+   <tspan x="123" y="78">Que faire</tspan>
+   <tspan x="123" y="93">maintenant que</tspan>
+   <tspan x="123" y="108">nous ne sommes</tspan>
+   <tspan x="123" y="123">plus cantonnés</tspan>
+   <tspan x="120" y="137">aux classes ?</tspan>
+  </text>
+  <text>
+   <tspan x="236" y="82">Étendre</tspan>
+   <tspan x="235" y="97">les autres</tspan>
+   <tspan x="235" y="111">types</tspan>
+   <tspan x="235" y="126">d'objet</tspan>
+  </text>
+  <text>
+   <tspan x="359" y="81">Et faciliter la</tspan>
+   <tspan x="359" y="95">programmation</tspan>
+   <tspan x="359" y="110">générique</tspan>
+  </text>
+  <text>
+   <tspan x="410" y="234">Coucou</tspan>
+   <tspan x="407" y="247">Par ici les</tspan>
+   <tspan x="407" y="261">fonctions</tspan>
+   <tspan x="404" y="274">libres</tspan>
+  </text>
+  <text>
+   <tspan x="547" y="22">Je viens de prendre</tspan>
+   <tspan x="539" y="35">trois ans ferme</tspan>
+  </text>
+  <text>
+   <tspan x="589" y="162">Salut</tspan>
+   <tspan x="585" y="176" font-family="monospace">string_view</tspan>
+  </text>
+ </g>
+</svg>
