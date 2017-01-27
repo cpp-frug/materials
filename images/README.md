@@ -234,6 +234,7 @@ Auteur                   | Contribution | Licence
 lmg HS                   | Idées        | -
 Oliver H                 | Dessin       | CC BY-SA 4.0
 FreeSeamlessTextures.com | Texture      | CC BY
+Émilie                   | Suggestions d'améliorations | -
 
 Cette illustrations contient de nombreux messages.
 
