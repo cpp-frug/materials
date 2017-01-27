@@ -256,4 +256,4 @@ La réalisation de cette image a pu être possible grâce à plusieurs logiciels
 - Scour
 - Geany
 
-![Les fonctions empty(), data() et size() sortent de la prison "class" et rejoignent les fonctions begin() et end() qui les accueillent. Ces deux dernières fonctions accueillent également string_view. Derrières les barreaux de la prison des spécifications techniques, Unified-Call-Syntax va devoir y rester trois ans pour tenter de sortir avec C++20](fonctions_libres.svg)
+![Les fonctions empty, data() et size() sortent de la prison "class" et rejoignent les fonctions begin() et end() qui les accueillent. Ces deux dernières fonctions accueillent également string_view. Derrières les barreaux de la prison des spécifications techniques, Unified-Call-Syntax va devoir y rester trois ans pour tenter de sortir avec C++20](http://cpp-frug.github.io/materials/images/fonctions_libres.svg)
