@@ -7,17 +7,18 @@
    <cc:Work xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="https://github.com/cpp-frug/materials/blob/gh-pages/images/nerd_cpp17_variable_inline.svg">
     <dc:format>image/svg+xml</dc:format>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:creator><cc:Agent><dc:title>Oliver H</dc:title></cc:Agent></dc:creator>
+    <dc:creator>Oliver H</dc:creator>
     <dc:language>fr</dc:language>
     <dc:date>2016</dc:date>
-    <cc:license  rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
    </cc:Work>
-   <cc:License   rdf:about="http://creativecommons.org/licenses/by/4.0/">
-    <cc:permits  rdf:resource="http://creativecommons.org/ns#Reproduction"/>
-    <cc:permits  rdf:resource="http://creativecommons.org/ns#Distribution"/>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
     <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
     <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
-    <cc:permits  rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
    </cc:License>
   </rdf:RDF>
  </metadata>
