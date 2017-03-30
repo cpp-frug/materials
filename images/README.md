@@ -246,7 +246,7 @@ Trois bonhommes sortent de la première prison : `empty()`, `data()` et `size()`
 * `data()` : Étendre les autres types d'objet.
 * `size()` : Et faciliter la programmation générique.
 
-Dehors, les attendent deux filles : `begin()` et `end()`. Ces deux fonctions étaient les seules fonctions membres à avoir été devenues également fonctions libres (C++11). `begin()` leur fait signe et leur dit "Coucou, par ici les fonctions libres". `end()` accueille une autre fille en lui disant "Salut `string_view`". Cette fille s'oriente vers `end()` et tourne le dos au lecteur qui remarque son pantalon taille basse et son string.
+Dehors, les attendent deux filles : `begin()` et `end()`. Ces deux fonctions étaient les seules fonctions membres à avoir été devenues également fonctions libres (C++11). La fonction `begin()` leur fait signe et leur dit "Coucou, par ici les fonctions libres". Quant à la fonction `end()`, elle accueille une autre fille en lui disant "Salut `string_view`". Cette fille s'oriente vers `end()` et tourne le dos au lecteur qui remarque son pantalon taille basse et son string.
 
 La réalisation de cette image a pu être possible grâce à plusieurs logiciels libres :
 
