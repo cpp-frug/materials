@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+width="585" height="607" viewBox="0 0 585 607"
+fill="#fff" stroke="#000" stroke-width="2">
+<metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <dc:source>https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-concepts-bjarne-path.2011.face.svg</dc:source>
+  <dc:format>image/svg+xml</dc:format>
+  <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+  <dc:creator>Oliver H</dc:creator>
+  <dc:language>fr</dc:language>
+  <dc:date>2017</dc:date>
+  <dc:rights>CC BY-SA 3.0</dc:rights>
+ </rdf:RDF>
+</metadata>
+<g id="cheuveux">
+ <path d="m90 304c-20 54-40 92-90 120"/>
+ <path d="m95 282c-20 54-40 92-90 120"/>
+ <path d="m93 273c-20 51-40 94-90 120"/>
+ <path d="m103 213c-20 58-40 103-90 140"/>
+ <path d="m105 196c-20 64-50 106-100 150"/>
+ <path d="m123 143c-20 63-50 109-100 150"/>
+ <path d="m133 124c-30 40-50 104-100 136"/>
+ <path d="m170 64s-40-7-60 46c-10 52-20 65-80 132"/>
+ <path d="m205 35c-40 2-60 8-90 40"/>
+</g>
+<use transform="matrix(-1 0 0 1 585 0)" xlink:href="#cheuveux"/>
+<ellipse id="crane" cx="293" cy="303" rx="200" ry="300" stroke-width="7"/>
+<g transform="translate(13 -26)" stroke-width="4">
+ <path d="m114 257c17-47 89-49 123-30 51 32-16 116-60 114-34 2-72-42-63-84z"/>
+ <g transform="matrix(-1,0,0,1,559,0)">
+  <path d="m114 257c17-47 89-49 123-30 51 32-16 116-60 114-34 2-72-42-63-84z"/>
+ </g>
+ <path d="m221 220 116 1"/>
+ <path d="m254 248h50"/>
+</g>
+<circle cx="273" cy="357" r="5"/>
+<circle cx="313" cy="357" r="5"/>
+<circle cx="193" cy="262" r="16"/>
+<circle cx="393" cy="262" r="16"/>
+<ellipse cx="293" cy="457" rx="36" ry="28"/>
+ </svg>

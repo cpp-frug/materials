@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+width="581" height="607" viewBox="0 0 581 607"
+fill="#fff" stroke="#000" stroke-width="2">
+<metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <dc:source>https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-concepts-bjarne-path.2017.face.svg</dc:source>
+  <dc:format>image/svg+xml</dc:format>
+  <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+  <dc:creator>Oliver H</dc:creator>
+  <dc:language>fr</dc:language>
+  <dc:date>2017</dc:date>
+  <dc:rights>CC BY-SA 3.0</dc:rights>
+ </rdf:RDF>
+</metadata>
+<g id="cheuveux">
+ <path d="m121 144c-20 63-50 109-100 150"/>
+ <path d="m101 214c-20 58-40 103-90 140"/>
+ <path d="m91 274c-20 51-40 94-90 120"/>
+</g>
+<use transform="matrix(-1 0 0 1 581 0)" xlink:href="#cheuveux"/>
+<ellipse id="crane" cx="290" cy="303" rx="200" ry="300" stroke-width="7"/>
+<g transform="translate(10 -26)" stroke-width="4">
+ <path d="m114 257c17-47 89-49 123-30 51 32-16 116-60 114-34 2-72-42-63-84z"/>
+ <g transform="matrix(-1,0,0,1,559,0)">
+  <path d="m114 257c17-47 89-49 123-30 51 32-16 116-60 114-34 2-72-42-63-84z"/>
+ </g>
+ <path d="m221 220 116 1"/>
+ <path d="m254 248h50"/>
+</g>
+<g>
+ <g id="narines">
+  <circle cx="270" cy="358" r="5"/>
+  <circle cx="310" cy="358" r="5"/>
+ </g>
+ <g id="yeux_sceptiques" transform="translate(-3680 -17)">
+  <path id="oeuil_sceptique" d="m3850 278c20-6 50 2 60 18-10 9-40-1-60-18z"/>
+  <use transform="matrix(-1,0,0,1,7940,0)" xlink:href="#oeuil_sceptique"/>
+ </g>
+ <rect transform="matrix(.9672 -.254 .2851 .9585 0 0)" x="90" y="523" width="108" height="19"/>
+</g>
+</svg>
