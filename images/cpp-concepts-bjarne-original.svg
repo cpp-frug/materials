@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <!-- Cleaned Inkscape's tags by hand -->
-<svg width="4400" height="1080" fill="none" stroke="#000" stroke-width="2" version="1.1" viewBox="0 40 4400 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" viewBox="0 40 4400 1080" width="110em"
+     fill="none" stroke="#000" stroke-width="2"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <rect id="fond_blanc_semi-transparent" y="40" width="4400" height="1080" fill="#fff" opacity=".4" stroke="#fff"/>
  <title>Bjarne Stroustrup s'impatiente pour l'intégration des Concepts au standard C++</title>
  <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
