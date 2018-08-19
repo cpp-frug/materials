@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.0" viewBox="0 0 1326 523" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" width="60em" viewBox="0 0 1326 523" xmlns="http://www.w3.org/2000/svg">
  <title>Évolution du langage C++</title>
  <rect width="1326" height="523" fill="#fff" opacity=".2"/>
  <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -44,16 +44,16 @@
  <g font-family="Purisa" font-size="37px" letter-spacing="-.3px"><!--Reste du texte-->
   <text x="50" y="258">C with</text>
   <text x="48" y="296">Classes</text>
-  <text x="220" y="169">C++ 2.0</text>
+  <text x="220" y="169">C++2.0</text>
   <text x="408" y="75">C++98</text>
   <text x="534" y="29">C++03</text>
   <text x="759" y="52">C++11</text>
   <text x="911" y="75">C++14</text>
   <text x="1100" y="102">C++17</text>
-  <text x="1105" y="161">Cool</text>
-  <text x="1110" y="191">On va</text>
-  <text x="1124" y="218">pouvoir</text>
-  <text x="1130" y="250">coder</text>
+  <text x="1100" y="160">Cool</text>
+  <text x="1125" y="190">on va</text>
+  <text x="1150" y="220">pouvoir</text>
+  <text x="1174" y="250">coder</text>
 <!--Fond gris siège--> </g>
  <path d="m1049 360.1c-5 1.4-8 43.4-5 48 2 2.9 7 2.5 10 1.3 4-1.4 8-8.8 9-14.6 1-11.4-10-36.1-14-34.7z" fill="#222" fill-opacity=".1"/>
  <path d="m1052 419.1c-4-0.8-4 12.4-4 12.4l31 15.5 18 1.6 22-6.1 7-22.4s-16 11.7-37 13.2c-24 1.7-32-13.5-37-14.2z" fill="#222" fill-opacity=".1"/>
