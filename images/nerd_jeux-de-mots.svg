@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <svg version="1.1"
+     viewBox="0 0 3776 1110" width="65em"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 3776 1110" width="100%"
      fill="#fff" stroke="#000" stroke-width="6"
 >
 
@@ -66,7 +66,7 @@
  </text>
  <text>
   <tspan x="1349" y="72">Surtout ne pas la regarder</tspan>
-  <tspan x="1349" y="135">elle veut manipuler des bits</tspan>
+  <tspan x="1349" y="135">elle veut manipuler des xxx</tspan>
  </text>
  <text>
   <tspan x="2275" y="72"  font-family="Purisa"   >J'hésite entre</tspan>

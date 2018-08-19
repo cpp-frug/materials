@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+   version="1.1"
+   viewBox="0 0 3776 1110"
+   width="65em"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,13 +11,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   viewBox="0 0 3776 1110"
-   width="100%"
    fill="#fff"
    stroke="#000"
    stroke-width="6"
-   id="svg7980"
    sodipodi:docname="nerd_jeux-de-mots.svg"
    inkscape:version="1pre3 r">
   <sodipodi:namedview
@@ -201,11 +200,11 @@
       <tspan
          x="1349"
          y="71"
-         id="tspan7883">Surtout ne pas la regarder</tspan>
+         id="tspan7883">Surtout ne pas la regarder.</tspan>
       <tspan
          x="1349"
          y="125"
-         id="tspan7885">Elle veut manipuler des bits ?</tspan>
+         id="tspan7885">Elle veut manipuler des quoi ?</tspan>
     </text>
     <text
        id="text7897"

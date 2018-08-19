@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <svg version="1.1"
+     width="30em"
+     viewBox="0 10 1535 1114"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 10 1535 1114"
      fill="#fff" stroke="#000" stroke-width="6"
-     width="40em"
 >
 
 <rect id="fond_blanc_semi-transparent" x="0" y="0" width="3679" height="1114" stroke="#fff" opacity=".3"/>

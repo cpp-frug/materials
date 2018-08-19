@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" width="100%" viewBox="-1 26 620 212" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
- <rect id="fond_blanc_semi-transparent" x="-1" y="26" width="622" height="212" fill="#fff" stroke="#fff" opacity=".3"/>
+<svg version="1.1" width="65em" viewBox="-1 26 620 212"
+     xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <rect id="fond_blanc_semi_transparent" x="-1" y="26" width="622" height="212" fill="#fff" stroke="#fff" opacity=".3"/>
  <title>Les deux filles nerds ouvrent le concours de jeu de mots à tous les langages</title>
  <metadata>
   <rdf:RDF>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" width="100%" viewBox="-1 26 622 233" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" width="65em" viewBox="-1 26 622 233"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <rect id="fond_blanc_semi-transparent" x="-1" y="26" width="622" height="233" fill="#fff" opacity=".4" stroke="#fff"/>
  <title>Les Nerdettes s'entraînent pour le concours des littéraux hexadécimaux sur LinuxFr.org</title>
  <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -81,7 +82,7 @@
  </text>
  <g font-family="sans-serif" font-size="12">
   <text>
-   <tspan x="181" y="40">Tu bogues</tspan>
+   <tspan x="178" y="40">Tu bogues</tspan>
    <tspan x="176" y="55">du cerveau</tspan>
    <tspan x="173" y="70">ma cocotte ?</tspan>
   </text>

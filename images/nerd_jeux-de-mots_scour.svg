@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg fill="#fff" stroke="#000" stroke-width="6" version="1.1" viewBox="0 0 3776 1110" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" viewBox="0 0 3776 1110" width="65em" xmlns="http://www.w3.org/2000/svg"
+     xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink"
+     fill="#fff" stroke="#000" stroke-width="6">
  <title>Les deux filles nerds discutent sur la manipulation des bits au grand bonheur des jeux de mots</title>
  <metadata>
   <rdf:RDF>
@@ -52,8 +55,8 @@
    <tspan x="394" y="125">me conseilles-tu ?</tspan>
   </text>
   <text>
-   <tspan x="1349" y="71">Surtout ne pas la regarder</tspan>
-   <tspan x="1349" y="125">Elle veut manipuler des bits ?</tspan>
+   <tspan x="1349" y="71">Surtout ne pas la regarder.</tspan>
+   <tspan x="1349" y="125">Elle veut manipuler des quoi ?</tspan>
   </text>
   <text style="line-height:66px">
    <tspan x="2262" y="69" font-family="Purisa" style="line-height:66px">J'hésite entre</tspan>
