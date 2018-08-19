@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.0" viewBox="0 0 1876.4 592.34" xmlns="http://www.w3.org/2000/svg"
-     stroke="#000" stroke-width="1" font-family="Purisa" font-size="53" font-weight="bold" letter-spacing="-2" word-spacing="-9" text-anchor="middle">
+<svg version="1.0" viewBox="0 0 1876.4 592.34" width="60em" stroke="#000" stroke-width="1" xmlns="http://www.w3.org/2000/svg"
+     font-family="Purisa" font-size="53" font-weight="bold" letter-spacing="-2" word-spacing="-9" text-anchor="middle">
 <metadata xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <dc:source>https://github.com/cpp-frug/materials/blob/gh-pages/images/cpp-complexe-cppfrug.svg</dc:source>
