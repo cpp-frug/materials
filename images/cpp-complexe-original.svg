@@ -4,8 +4,8 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <defs>
   <linearGradient id="a" x1="171.37" x2="181.28" y1="343.67" y2="378.15" gradientTransform="matrix(.93944 -.12408 .12408 .93944 1377.8 218.19)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#efef00" offset="0"/>
-   <stop stop-color="#ffff96" offset="1"/>
+   <stop stop-color="#ff0" offset="0"/>
+   <stop stop-color="#ff9" offset="1"/>
   </linearGradient>
  </defs>
  <metadata>
