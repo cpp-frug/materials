@@ -258,14 +258,14 @@ Même si le langage [naît à la fin des années 1970](http://en.cppreference.co
     
 Le tableau suivant liste les différentes versions C++ normalisées, ainsi que le brouillon **C++17** en cours de consolidation. Nous pouvons remarquer le saut considérable du nombre de pages entre **C++03** et **C++11**.
               
-Version   | Pages
-----------|-------
-C++98 [ISO/IEC 14882:1998 1998-09-01](http://www.lirmm.fr/~ducour/Doc-objets/ISO+IEC+14882-1998.pdf) | 776 pages
-C++03 [ISO/IEC 14882:2003 2003-10-15](https://github.com/hstefan/htlib/blob/master/res/INCITS%2BISO%2BIEC%2B14882-2003.pdf) | 786 pages (+ 1 %)
-C++11 [ISO/IEC 14882:2011 2011-09-01](http://new.vk.com/doc100509572_160085962?hash=6801602629449dfa59&dl=27c32949114b3322a2)| 1356 pages (+ 73 %)
-C++11 [Draft N3376 2012-02-28](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3376.pdf)| 1 324 pages
-C++14 [Draft N4296 2014-11-19](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf) | 1 368 pages (+ 3 %)
-C++17 [Draft N4606 2016-07-12](https://github.com/cplusplus/draft/blob/master/papers/n4606.pdf)| 1 586 pages (+ 16 %)
+Date      | ISO/IEC ou Draft                                                                                         | Pages
+--------- | -------------------------------------------------------------------------------------------------------- | -------
+1998-09-01|C++98 [14882:1998](http://www.lirmm.fr/~ducour/Doc-objets/ISO+IEC+14882-1998.pdf)                         |  776 pages
+2003-10-15|C++03 [14882:2003](https://github.com/hstefan/htlib/blob/master/res/INCITS%2BISO%2BIEC%2B14882-2003.pdf)  |  786 pages (+ 1%)
+2011-09-01|C++11 [14882:2011](http://new.vk.com/doc100509572_160085962?hash=6801602629449dfa59&dl=27c32949114b3322a2)| 1356 pages (+73%)
+2012-02-28|C++11 [N3376](http://open-std.org/JTC1/SC22/WG21/docs/papers/2012/n3376.pdf)                              | 1324 pages
+2014-11-19|C++14 [N4296](http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4296.pdf)                              | 1368 pages (+ 3%)
+2016-11-28|C++17 [N4618](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/n4618.pdf)                              | 1587 pages (+16%)
         
 Attention, ce dernier lien est celui du brouillon **C++17** le plus récent lors de la rédaction de cette dépêche. Cette version sera certainement obsolète quelques mois après la publication de cette dépêche.
      
