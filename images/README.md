@@ -15,29 +15,32 @@ Deux collègues discutent :
 
 - C++ est enfin sorti
 - Trop top
-- Va falloir se palucher les 1700 pages du nouveau standard
+- Va falloir se palucher les 1600 pages du standard C++17
 - Gloups
 
 Une note repositionnable (post-it) à la fin du dessin indique :
 _"Il y en a qui ne connaissent pas encore LinuxFr.org"_
-(LinuxFr.org pourrait être remplacé par cppfrug.org...)
+(*LinuxFr.org* peut être remplacé par *C++FRUG...*)
 
 La réalisation de cette image s'est basée principalement sur deux logiciels :
 
 - potrace (vectorisation) ;
 - inkscape.
 
-Trois versions :
+Quatre variantes :
 
 1. L'ébauche originelle au crayon ;
 2. La version SVG avec les balises `<text>` et donc nécessite de la présence de la police Purisa ;
-3. Celle avec les textes remplacés par des chemins `<path>` donc ne pouvant plus être édités.
+3. Celle avec les textes remplacés par des chemins `<path>` donc ne pouvant plus être édités ;
+4. Celle pour une conférence C++Frug
 
 ![ébauche au crayon](http://cpp-frug.github.io/materials/images/cpp-complexe-draft.png)
 
-![Version originale avec les balises <text>](http://cpp-frug.github.io/materials/images/cpp-complexe-original.svg)
+![L'original avec les balises <text>](http://cpp-frug.github.io/materials/images/cpp-complexe-original.svg)
 
-![Version insensible à la présence des polices de caractères](http://cpp-frug.github.io/materials/images/cpp-complexe-path.svg)
+![Replacement des balises <text> par <path> pour ne pas dépendre de la présence de la police de caractères](http://cpp-frug.github.io/materials/images/cpp-complexe-path.svg)
+
+![Variante pour une conférence C++FRUG avec les balises <text>](http://cpp-frug.github.io/materials/images/cpp-complexe-cppfrug.svg)
 
 Évolution du langage C++
 ------------------------
