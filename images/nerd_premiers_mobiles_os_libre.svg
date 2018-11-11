@@ -47,13 +47,13 @@
 <g fill="#000" stroke="#fff" stroke-width="1" font-family="Purisa" font-weight="bolder" font-size="65" letter-spacing="-4" word-spacing="-4" text-anchor="middle">
  <text>
   <tspan x="360" y="70" >J'utilise toujours</tspan>
-  <tspan x="360" y="140">mon bon vieux</tspan>
-  <tspan x="360" y="210">Neo FreeRunner</tspan>
+  <tspan x="360" y="140">mon Neo FreeRunner</tspan>
+  <tspan x="360" y="210">sous OpenMoko</tspan>
  </text>
  <text>
   <tspan x="1190" y="70" >Et moi, mon bon</tspan>
-  <tspan x="1190" y="140">vieux N900 me suit</tspan>
-  <tspan x="1190" y="210">toujours partout</tspan>
+  <tspan x="1190" y="140">N900 toujours</tspan>
+  <tspan x="1190" y="210">sous Maemo</tspan>
  </text>
 </g>
 
