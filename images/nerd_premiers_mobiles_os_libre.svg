@@ -47,13 +47,13 @@
 <g fill="#000" stroke="#fff" stroke-width="1" font-family="Purisa" font-weight="bolder" font-size="65" letter-spacing="-4" word-spacing="-4" text-anchor="middle">
  <text>
   <tspan x="360" y="70" >Mon Neo</tspan>
-  <tspan x="360" y="140">FreeRunner est</tspan>
-  <tspan x="360" y="210">sous OpenMoko</tspan>
+  <tspan x="360" y="140">FreeRunner</tspan>
+  <tspan x="360" y="210">sous QtMoko</tspan>
  </text>
  <text>
-  <tspan x="1190" y="70" >Et moi, mon bon</tspan>
-  <tspan x="1190" y="140">N900 toujours</tspan>
-  <tspan x="1190" y="210">sous Maemo</tspan>
+  <tspan x="1190" y="70" >Mon Xiaomi</tspan>
+  <tspan x="1190" y="140">Mi A1 sous</tspan>
+  <tspan x="1190" y="210">LuneOS ☺️</tspan>
  </text>
 </g>
 
