@@ -36,7 +36,7 @@
    <stop stop-color="#70c56d" offset="1"/>
   </radialGradient>
  </defs>
- <g fill="#000" stroke="#fff" stroke-width="0.2" font-weight="bolder" font-family="Purisa,fantasy,sans" font-size="10" text-anchor="middle">
+ <g fill="#000" stroke="#fff" stroke-width="0.2" font-weight="bolder" font-family="fantasy,sans,Purisa" font-size="10" text-anchor="middle">
   <text>
    <tspan x="53" y="36">Trop cool ce</tspan>
    <tspan x="53" y="50">concours C++</tspan>
